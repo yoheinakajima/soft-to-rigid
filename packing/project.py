@@ -39,6 +39,17 @@ def cell_status(cells, cands):
                               below=any(x.get('verdict') == 'below record' for x in cs),
                               best_polished=min((x['L_polished'] for x in pol), default=None),
                               tightened=len(pol))
+        o = out[c['cell']]
+        o['lowest'] = min(o['best_L'], o['best_polished']) if o['best_polished'] is not None else o['best_L']
+    # within each (campaign, family, n, budget): which methods attain the lowest size of all methods
+    groups = defaultdict(list)
+    for o in out.values():
+        groups[(o['campaign'], o['family'], o['n'], o['budget'])].append(o)
+    for g in groups.values():
+        lo = min(o['lowest'] for o in g)
+        for o in g:
+            o['is_lowest'] = o['lowest'] <= lo * (1 + 1e-9) + 1e-12
+            o['sole_lowest'] = o['is_lowest'] and sum(x['lowest'] <= lo * (1 + 1e-9) + 1e-12 for x in g) == 1
     return out
 
 

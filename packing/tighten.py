@@ -27,7 +27,7 @@ def _init_line(VA, VB):
     return best[1], best[2]
 
 
-def solve(piece_name, container_name, poses, outer=30, trust=0.03, verbose=False):
+def solve(piece_name, container_name, poses, outer=20, trust=0.03, verbose=False):
     if piece_name == 'cube':
         from . import tighten3
         return tighten3.solve_poses(poses)
@@ -132,7 +132,10 @@ def solve(piece_name, container_name, poses, outer=30, trust=0.03, verbose=False
         x, y, t, _, _, _ = unpack(z)
         Lnew, _, Q = geom.legalize(P, C, list(zip(x, y, t)))
         if Lnew < best[0] - 1e-13:
+            gain = best[0] - Lnew
             best = (Lnew, Q)
+            if gain < 1e-11:
+                break
             hist.append(Lnew)
             if verbose:
                 print(it, Lnew)

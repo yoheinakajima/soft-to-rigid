@@ -16,13 +16,13 @@
   for (const f of fams) {
     const fc = cells.filter(c => c.family === f), ni = new Set(fc.map(c => c.n)).size;
     h += `<tr><td><a href="families.html#${f}">${D.families[f].title}</a></td>` + meths.map(m => {
-      const s = fc.filter(c => c.method === m && c.solved).length, w = s / ni;
-      return `<td><span class="cellv" style="background:color-mix(in srgb, var(--good) ${Math.round(w * 55)}%, transparent)">${s}</span></td>`; }).join('') + `<td>${ni}</td></tr>`;
+      const s = fc.filter(c => c.method === m && c.is_lowest).length, u = fc.filter(c => c.method === m && c.sole_lowest).length, w = s / ni;
+      return `<td><span class="cellv" style="background:color-mix(in srgb, var(--good) ${Math.round(w * 55)}%, transparent)">${s}${u ? ` <small>(${u})</small>` : ''}</span></td>`; }).join('') + `<td>${ni}</td></tr>`;
   }
-  const tot = meths.map(m => cells.filter(c => c.method === m && c.solved).length);
-  h += '<tr><th>all</th>' + tot.map(t => `<th>${t}</th>`).join('') + `<th>${inst.size}</th></tr>`;
+  const tot = meths.map(m => [cells.filter(c => c.method === m && c.is_lowest).length, cells.filter(c => c.method === m && c.sole_lowest).length]);
+  h += '<tr><th>all</th>' + tot.map(t => `<th>${t[0]} <small>(${t[1]})</small></th>`).join('') + `<th>${inst.size}</th></tr>`;
   T.innerHTML = h;
-  document.getElementById('matrixcap').textContent = `Campaign ${main}: number of instances where the method reached the best known value after exact tightening (32 runs each, equal budget).`;
+  document.getElementById('matrixcap').textContent = `Campaign ${main}. For each instance, the lowest container size each method reached in 32 runs (after exact tightening). Cells count the instances where the method's lowest is the lowest of all five methods; in brackets, where it is the only one that low.`;
   document.getElementById('findings').innerHTML = D.ledger.findings.slice().reverse().slice(0, 6).map(f => `<li>${f.text}</li>`).join('');
   // path illustrations
   const P = SiteViewers.piece('square'), paths = [

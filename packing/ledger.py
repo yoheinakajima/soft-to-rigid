@@ -23,9 +23,9 @@ from activegraph import Graph, Runtime, behavior, Event
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 DB = os.path.join(ROOT, 'ledger', 'ledger.sqlite')
-POLISH_TOP = 3          # per cell, the best runs sent to tightening ...
+POLISH_TOP = 1          # per cell, the best run is sent to tightening ...
 POLISH_REL = 0.02       # ... if within 2% of the best known value
-POLISH_CAP = 10         # at most this many tightenings per cell
+POLISH_CAP = 3          # at most this many tightenings per cell
 POLISH_GAP = 2e-3       # ... plus every run within this of the best known value
 MATCH_TOL = 1e-9        # tightened size within this of the record = "matches"
 

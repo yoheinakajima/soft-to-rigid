@@ -21,7 +21,7 @@ def sign_test(a_only, b_only):
     return sum(math.comb(n, k) for k in range(a_only, n + 1)) / 2 ** n
 
 
-def breadth(st, cid='C04-breadth'):
+def breadth(st, cid='C04-breadth', methods=None):
     cells = [c for c in st.values() if c['campaign'] == cid]
     if not cells:
         return None
@@ -38,6 +38,7 @@ def breadth(st, cid='C04-breadth'):
                 continue
             rel = [c['median_gap'] / c['record'] for c in cs if c['median_gap'] is not None]
             row[m] = {'instances': len(cs), 'solved': sum(c['solved'] for c in cs), 'below': sum(c['below'] for c in cs),
+                      'lowest': sum(c['is_lowest'] for c in cs), 'sole_lowest': sum(c['sole_lowest'] for c in cs),
                       'raw_hits': sum(c['hits_1e3'] for c in cs), 'runs': sum(c['runs'] for c in cs),
                       'median_relgap': S.median(rel) if rel else None, 'ms_mean': S.mean(c['ms_mean'] for c in cs)}
         out['per_family' if f != 'all' else 'totals'][f] = row

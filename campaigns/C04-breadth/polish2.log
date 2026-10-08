@@ -1,0 +1,11 @@
+C04-breadth: 1445 candidates, 786 to polish
+0 cir-in-squ/n2/grow/B1/default/s1 ok 0.0s
+25 cir-in-squ/n3/sa/B1/default/s14 ok 0.0s
+50 cir-in-squ/n5/rigid/B1/default/s5 ok 0.1s
+75 cir-in-squ/n7/rigid/B1/default/s5 ok 0.1s
+100 cir-in-squ/n9/rigid/B1/default/s5 ok 0.0s
+125 cir-in-squ/n11/grow/B1/default/s13 ok 0.0s
+150 hex-in-squ/n12/grow/B1/default/s26 ok 13.7s
+175 hex-in-squ/n13/rigid/B1/default/s4 ok 9.6s
+200 hex-in-squ/n14/pc/B1/default/s10 ok 10.0s
+225 squ-in-tri/n14/rigid/B1/default/s12 ok 4.4s

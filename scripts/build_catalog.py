@@ -126,6 +126,14 @@ fams['cub-in-cub'] = dict(title='Unit cubes in a cube', dim=3, piece='cube', con
     records={n: rec(v[0], v[1], len(v) > 2) for n, v in cc.items()},
     note='Our n = 12 packing (2.9315185094797, 8 Oct 2026, github.com/yoheinakajima/soft-to-rigid-packing) is the input to this study, not a catalogue entry.')
 
+# ---------- held-out tuning instances above n = 30 (used only by C06-tune-best) ----------
+# squares in square: Squares Project witnesses n-031/037/038; others: Friedman captions (source repo commit of 2026-10-07)
+fams['squ-in-squ']['records'].update({31: rec(6, 'trivial'), 37: rec(6.59861960924436011617837046268, 'Squares Project witness', coords='squares-project'),
+                                       38: rec(6 + r2 / 2, 'Squares Project witness', coords='squares-project')})
+fams['squ-in-cir']['records'].update({31: rec(T('3.52279'), 'D. Lu 2026', True), 33: rec(3.6001082, 'H. Lin 2026 (Hyra; Friedman lists 3.60010+)')})
+fams['tri-in-squ']['records'].update({31: rec(T('3.93107'), 'Loyd 2026', True), 32: rec(T('3.97880'), 'Loyd 2026', True)})
+fams['tri-in-tri']['records'].update({31: rec(T('5.90751'), 'Gomes 2026', True)})
+
 os.makedirs(OUT, exist_ok=True)
 for k, f in fams.items():
     f['family'] = k

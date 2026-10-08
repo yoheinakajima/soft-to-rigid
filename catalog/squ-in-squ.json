@@ -188,6 +188,23 @@
    "finder": "trivial or classical",
    "truncated": false,
    "coords": "squares-project"
+  },
+  "31": {
+   "value": 6.0,
+   "finder": "trivial",
+   "truncated": false
+  },
+  "37": {
+   "value": 6.59861960924436,
+   "finder": "Squares Project witness",
+   "truncated": false,
+   "coords": "squares-project"
+  },
+  "38": {
+   "value": 6.707106781186548,
+   "finder": "Squares Project witness",
+   "truncated": false,
+   "coords": "squares-project"
   }
  },
  "family": "squ-in-squ"

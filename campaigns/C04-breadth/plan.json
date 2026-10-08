@@ -241,5 +241,15 @@
   1
  ],
  "seeds": 32,
- "polish": true
+ "polish": true,
+ "amendments": [
+  {
+   "date": "2026-10-08",
+   "change": "While C04 was running, the author set the headline narrative to the lowest point each method reaches (best of 32 after tightening), not averages. This matches C04's pre-registered primary metric; medians become secondary. Because the method settings were tuned by median (C01-C03), C06 re-tunes by lowest point and C07 repeats this comparison with those settings. Runs and rules of C04 are unchanged."
+  },
+  {
+   "date": "2026-10-08",
+   "change": "Tightening policy reduced before any C04 result was ingested, because tightening every candidate would take longer than the runs: per cell, the best run is tightened if within 2% of the best known value, plus runs within 2e-3 of it, at most three per cell; at most 20 outer iterations, stopping once an iteration gains less than 1e-11. Applies identically to every method. Tightenings already computed are reused when the run is in the new candidate set."
+  }
+ ]
 }

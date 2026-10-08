@@ -167,6 +167,13 @@
    "value": 5.75,
    "finder": "Morandi 2008",
    "truncated": false
+  },
+  "31": {
+   "value": 5.90751,
+   "finder": "Gomes 2026",
+   "truncated": true,
+   "decimals": 5,
+   "tol": 1e-05
   }
  },
  "family": "tri-in-tri"

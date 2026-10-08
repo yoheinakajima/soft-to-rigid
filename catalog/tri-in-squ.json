@@ -203,6 +203,20 @@
    "truncated": true,
    "decimals": 5,
    "tol": 1e-05
+  },
+  "31": {
+   "value": 3.93107,
+   "finder": "Loyd 2026",
+   "truncated": true,
+   "decimals": 5,
+   "tol": 1e-05
+  },
+  "32": {
+   "value": 3.9788,
+   "finder": "Loyd 2026",
+   "truncated": true,
+   "decimals": 5,
+   "tol": 1e-05
   }
  },
  "family": "tri-in-squ"

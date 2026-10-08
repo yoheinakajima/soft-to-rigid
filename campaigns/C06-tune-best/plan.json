@@ -1,0 +1,378 @@
+{
+ "id": "C06-tune-best",
+ "title": "Re-tune every method for its lowest point, on harder held-out instances",
+ "question": "C01-C03 chose each method's settings by median gap, but the question that matters is which method is most likely to produce the lowest packing. On the C01 tuning instances nearly every setting reaches the best known value, so best-of scoring cannot separate settings there. Re-tune on eight harder instances above n = 30 that no other campaign uses.",
+ "hypothesis": "Best-of tuning favours stronger pressure for harden and weaker pressure for rigid and grow than median tuning did (as a re-scoring of C01-C03 suggests).",
+ "decision_rule": "For each method and setting: primary score = mean over the eight instances of the lowest legal size of 16 runs relative to the best known value (lowest is best); tie-break = mean fraction of runs within 1e-4 relative of the best known value. The winner is frozen into methods/<method>-best.json and used by C07. Every method gets one 3x3 grid; no extensions.",
+ "created": "2026-10-08",
+ "amends": "C01-C03 (tuning target changed from median to lowest point at the author's request, 2026-10-08)",
+ "instances": [
+  {
+   "family": "squ-in-squ",
+   "ns": [
+    31,
+    37,
+    38
+   ]
+  },
+  {
+   "family": "squ-in-cir",
+   "ns": [
+    31,
+    33
+   ]
+  },
+  {
+   "family": "tri-in-squ",
+   "ns": [
+    31,
+    32
+   ]
+  },
+  {
+   "family": "tri-in-tri",
+   "ns": [
+    31
+   ]
+  }
+ ],
+ "methods": [
+  "harden",
+  "grow",
+  "rigid",
+  "sa",
+  "pc"
+ ],
+ "budgets": [
+  1
+ ],
+ "seeds": 16,
+ "configs": {
+  "harden": [
+   {
+    "name": "mu0.02_nz1",
+    "params": {
+     "mu": 0.02,
+     "noiseScale": 1
+    }
+   },
+   {
+    "name": "mu0.02_nz2",
+    "params": {
+     "mu": 0.02,
+     "noiseScale": 2
+    }
+   },
+   {
+    "name": "mu0.02_nz8",
+    "params": {
+     "mu": 0.02,
+     "noiseScale": 8
+    }
+   },
+   {
+    "name": "mu0.08_nz1",
+    "params": {
+     "mu": 0.08,
+     "noiseScale": 1
+    }
+   },
+   {
+    "name": "mu0.08_nz2",
+    "params": {
+     "mu": 0.08,
+     "noiseScale": 2
+    }
+   },
+   {
+    "name": "mu0.08_nz8",
+    "params": {
+     "mu": 0.08,
+     "noiseScale": 8
+    }
+   },
+   {
+    "name": "mu0.16_nz1",
+    "params": {
+     "mu": 0.16,
+     "noiseScale": 1
+    }
+   },
+   {
+    "name": "mu0.16_nz2",
+    "params": {
+     "mu": 0.16,
+     "noiseScale": 2
+    }
+   },
+   {
+    "name": "mu0.16_nz8",
+    "params": {
+     "mu": 0.16,
+     "noiseScale": 8
+    }
+   }
+  ],
+  "rigid": [
+   {
+    "name": "mu0.02_nz1",
+    "params": {
+     "mu": 0.02,
+     "noiseScale": 1
+    }
+   },
+   {
+    "name": "mu0.02_nz2",
+    "params": {
+     "mu": 0.02,
+     "noiseScale": 2
+    }
+   },
+   {
+    "name": "mu0.02_nz8",
+    "params": {
+     "mu": 0.02,
+     "noiseScale": 8
+    }
+   },
+   {
+    "name": "mu0.08_nz1",
+    "params": {
+     "mu": 0.08,
+     "noiseScale": 1
+    }
+   },
+   {
+    "name": "mu0.08_nz2",
+    "params": {
+     "mu": 0.08,
+     "noiseScale": 2
+    }
+   },
+   {
+    "name": "mu0.08_nz8",
+    "params": {
+     "mu": 0.08,
+     "noiseScale": 8
+    }
+   },
+   {
+    "name": "mu0.16_nz1",
+    "params": {
+     "mu": 0.16,
+     "noiseScale": 1
+    }
+   },
+   {
+    "name": "mu0.16_nz2",
+    "params": {
+     "mu": 0.16,
+     "noiseScale": 2
+    }
+   },
+   {
+    "name": "mu0.16_nz8",
+    "params": {
+     "mu": 0.16,
+     "noiseScale": 8
+    }
+   }
+  ],
+  "grow": [
+   {
+    "name": "mu0.02_g0.1",
+    "params": {
+     "mu": 0.02,
+     "gamma0": 0.1
+    }
+   },
+   {
+    "name": "mu0.02_g0.2",
+    "params": {
+     "mu": 0.02,
+     "gamma0": 0.2
+    }
+   },
+   {
+    "name": "mu0.02_g0.5",
+    "params": {
+     "mu": 0.02,
+     "gamma0": 0.5
+    }
+   },
+   {
+    "name": "mu0.04_g0.1",
+    "params": {
+     "mu": 0.04,
+     "gamma0": 0.1
+    }
+   },
+   {
+    "name": "mu0.04_g0.2",
+    "params": {
+     "mu": 0.04,
+     "gamma0": 0.2
+    }
+   },
+   {
+    "name": "mu0.04_g0.5",
+    "params": {
+     "mu": 0.04,
+     "gamma0": 0.5
+    }
+   },
+   {
+    "name": "mu0.08_g0.1",
+    "params": {
+     "mu": 0.08,
+     "gamma0": 0.1
+    }
+   },
+   {
+    "name": "mu0.08_g0.2",
+    "params": {
+     "mu": 0.08,
+     "gamma0": 0.2
+    }
+   },
+   {
+    "name": "mu0.08_g0.5",
+    "params": {
+     "mu": 0.08,
+     "gamma0": 0.5
+    }
+   }
+  ],
+  "sa": [
+   {
+    "name": "T0.001_mu0.0025",
+    "params": {
+     "saT0": 0.001,
+     "mu": 0.0025
+    }
+   },
+   {
+    "name": "T0.001_mu0.005",
+    "params": {
+     "saT0": 0.001,
+     "mu": 0.005
+    }
+   },
+   {
+    "name": "T0.001_mu0.02",
+    "params": {
+     "saT0": 0.001,
+     "mu": 0.02
+    }
+   },
+   {
+    "name": "T0.003_mu0.0025",
+    "params": {
+     "saT0": 0.003,
+     "mu": 0.0025
+    }
+   },
+   {
+    "name": "T0.003_mu0.005",
+    "params": {
+     "saT0": 0.003,
+     "mu": 0.005
+    }
+   },
+   {
+    "name": "T0.003_mu0.02",
+    "params": {
+     "saT0": 0.003,
+     "mu": 0.02
+    }
+   },
+   {
+    "name": "T0.01_mu0.0025",
+    "params": {
+     "saT0": 0.01,
+     "mu": 0.0025
+    }
+   },
+   {
+    "name": "T0.01_mu0.005",
+    "params": {
+     "saT0": 0.01,
+     "mu": 0.005
+    }
+   },
+   {
+    "name": "T0.01_mu0.02",
+    "params": {
+     "saT0": 0.01,
+     "mu": 0.02
+    }
+   }
+  ],
+  "pc": [
+   {
+    "name": "kick0.05_relax1200",
+    "params": {
+     "pcKick": 0.05,
+     "pcRelax": 1200
+    }
+   },
+   {
+    "name": "kick0.05_relax4800",
+    "params": {
+     "pcKick": 0.05,
+     "pcRelax": 4800
+    }
+   },
+   {
+    "name": "kick0.05_relax19200",
+    "params": {
+     "pcKick": 0.05,
+     "pcRelax": 19200
+    }
+   },
+   {
+    "name": "kick0.15_relax1200",
+    "params": {
+     "pcKick": 0.15,
+     "pcRelax": 1200
+    }
+   },
+   {
+    "name": "kick0.15_relax4800",
+    "params": {
+     "pcKick": 0.15,
+     "pcRelax": 4800
+    }
+   },
+   {
+    "name": "kick0.15_relax19200",
+    "params": {
+     "pcKick": 0.15,
+     "pcRelax": 19200
+    }
+   },
+   {
+    "name": "kick0.4_relax1200",
+    "params": {
+     "pcKick": 0.4,
+     "pcRelax": 1200
+    }
+   },
+   {
+    "name": "kick0.4_relax4800",
+    "params": {
+     "pcKick": 0.4,
+     "pcRelax": 4800
+    }
+   },
+   {
+    "name": "kick0.4_relax19200",
+    "params": {
+     "pcKick": 0.4,
+     "pcRelax": 19200
+    }
+   }
+  ]
+ },
+ "polish": false
+}

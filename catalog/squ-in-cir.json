@@ -185,6 +185,18 @@
    "truncated": true,
    "decimals": 5,
    "tol": 1e-05
+  },
+  "31": {
+   "value": 3.52279,
+   "finder": "D. Lu 2026",
+   "truncated": true,
+   "decimals": 5,
+   "tol": 1e-05
+  },
+  "33": {
+   "value": 3.6001082,
+   "finder": "H. Lin 2026 (Hyra; Friedman lists 3.60010+)",
+   "truncated": false
   }
  },
  "family": "squ-in-cir"
