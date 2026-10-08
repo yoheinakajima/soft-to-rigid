@@ -1,1 +1,12 @@
-{"method": "pc", "params": {}, "tuned_by": null}
+{
+ "method": "pc",
+ "params": {
+  "pcKick": 0.05,
+  "pcRelax": 19200
+ },
+ "tuned_by": "C03-tune-extend2/kick0.05_relax19200",
+ "tuning_score": {
+  "mean_median_relgap": 0.053706927216240416,
+  "mean_best_relgap": 0.009787137863684103
+ }
+}

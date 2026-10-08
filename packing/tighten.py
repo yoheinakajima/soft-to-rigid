@@ -28,6 +28,9 @@ def _init_line(VA, VB):
 
 
 def solve(piece_name, container_name, poses, outer=30, trust=0.03, verbose=False):
+    if piece_name == 'cube':
+        from . import tighten3
+        return tighten3.solve_poses(poses)
     P, C = geom.piece(piece_name), geom.container(container_name)
     L0, _, poses = geom.legalize(P, C, poses)
     best = (L0, poses)

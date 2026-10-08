@@ -1,1 +1,12 @@
-{"method": "harden", "params": {}, "tuned_by": null}
+{
+ "method": "harden",
+ "params": {
+  "mu": 0.08,
+  "noiseScale": 8
+ },
+ "tuned_by": "C02-tune-extend/mu0.08_nz8",
+ "tuning_score": {
+  "mean_median_relgap": 0.003956113848764264,
+  "mean_best_relgap": 8.690664524739767e-05
+ }
+}

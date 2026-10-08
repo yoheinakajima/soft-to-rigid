@@ -1,0 +1,92 @@
+{
+ "squ-in-cir": {
+  "family": "squ-in-cir",
+  "title": "Unit squares in a circle",
+  "dim": 2,
+  "piece": "square",
+  "container": "circle",
+  "measure": "radius",
+  "sources": [
+   "https://erich-friedman.github.io/packing/squincir/"
+  ]
+ },
+ "squ-in-tri": {
+  "family": "squ-in-tri",
+  "title": "Unit squares in an equilateral triangle",
+  "dim": 2,
+  "piece": "square",
+  "container": "triangle",
+  "measure": "side",
+  "sources": [
+   "https://erich-friedman.github.io/packing/squintri/"
+  ]
+ },
+ "tri-in-squ": {
+  "family": "tri-in-squ",
+  "title": "Unit equilateral triangles in a square",
+  "dim": 2,
+  "piece": "triangle",
+  "container": "square",
+  "measure": "side",
+  "sources": [
+   "https://erich-friedman.github.io/packing/triinsqu/"
+  ]
+ },
+ "tri-in-tri": {
+  "family": "tri-in-tri",
+  "title": "Unit equilateral triangles in an equilateral triangle",
+  "dim": 2,
+  "piece": "triangle",
+  "container": "triangle",
+  "measure": "side",
+  "sources": [
+   "https://erich-friedman.github.io/packing/triintri/"
+  ]
+ },
+ "hex-in-squ": {
+  "family": "hex-in-squ",
+  "title": "Unit regular hexagons in a square",
+  "dim": 2,
+  "piece": "hexagon",
+  "container": "square",
+  "measure": "side",
+  "sources": [
+   "https://erich-friedman.github.io/packing/hexinsqu/"
+  ]
+ },
+ "cub-in-cub": {
+  "family": "cub-in-cub",
+  "title": "Unit cubes in a cube",
+  "dim": 3,
+  "piece": "cube",
+  "container": "cube",
+  "measure": "side",
+  "sources": [
+   "https://erich-friedman.github.io/packing/cubincub/",
+   "https://github.com/Tencent-Hunyuan/Hyra-results"
+  ]
+ },
+ "squ-in-squ": {
+  "family": "squ-in-squ",
+  "title": "Unit squares in a square",
+  "dim": 2,
+  "piece": "square",
+  "container": "square",
+  "measure": "side",
+  "sources": [
+   "https://jlevy.github.io/squares/",
+   "https://kingbird.myphotos.cc/packing/squares_in_squares.html"
+  ]
+ },
+ "cir-in-squ": {
+  "family": "cir-in-squ",
+  "title": "Unit-diameter circles in a square (control: no orientation)",
+  "dim": 2,
+  "piece": "circle",
+  "container": "square",
+  "measure": "side",
+  "sources": [
+   "http://www.packomania.com/csq/csq.html"
+  ]
+ }
+}

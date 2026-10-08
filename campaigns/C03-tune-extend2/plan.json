@@ -1,0 +1,247 @@
+{
+ "id": "C03-tune-extend2",
+ "title": "Second and last grid extension for methods whose winner is still on an edge",
+ "question": "After C01 and C02, the winners for harden (noise x8), sa (T0 = 3e-3) and pc (relax 4800) are on the outer edge of their grids. Grow and rigid winners are interior. Extend once more, as the C02 decision rule requires, then freeze all five methods.",
+ "hypothesis": "None (calibration).",
+ "decision_rule": "Same scoring rule as C01 over C01 + C02 + C03. Freeze the winner of each method into methods/<method>.json regardless of edges.",
+ "created": "2026-10-08",
+ "instances": [
+  {
+   "family": "squ-in-squ",
+   "ns": [
+    10
+   ]
+  },
+  {
+   "family": "tri-in-tri",
+   "ns": [
+    6
+   ]
+  },
+  {
+   "family": "squ-in-cir",
+   "ns": [
+    8
+   ]
+  },
+  {
+   "family": "hex-in-squ",
+   "ns": [
+    5
+   ]
+  },
+  {
+   "family": "tri-in-squ",
+   "ns": [
+    5
+   ]
+  }
+ ],
+ "methods": [
+  "harden",
+  "sa",
+  "pc"
+ ],
+ "budgets": [
+  1
+ ],
+ "seeds": 16,
+ "configs": {
+  "harden": [
+   {
+    "name": "mu0.04_nz8",
+    "params": {
+     "mu": 0.04,
+     "noiseScale": 8
+    }
+   },
+   {
+    "name": "mu0.04_nz16",
+    "params": {
+     "mu": 0.04,
+     "noiseScale": 16
+    }
+   },
+   {
+    "name": "mu0.04_nz32",
+    "params": {
+     "mu": 0.04,
+     "noiseScale": 32
+    }
+   },
+   {
+    "name": "mu0.08_nz8",
+    "params": {
+     "mu": 0.08,
+     "noiseScale": 8
+    }
+   },
+   {
+    "name": "mu0.08_nz16",
+    "params": {
+     "mu": 0.08,
+     "noiseScale": 16
+    }
+   },
+   {
+    "name": "mu0.08_nz32",
+    "params": {
+     "mu": 0.08,
+     "noiseScale": 32
+    }
+   },
+   {
+    "name": "mu0.16_nz8",
+    "params": {
+     "mu": 0.16,
+     "noiseScale": 8
+    }
+   },
+   {
+    "name": "mu0.16_nz16",
+    "params": {
+     "mu": 0.16,
+     "noiseScale": 16
+    }
+   },
+   {
+    "name": "mu0.16_nz32",
+    "params": {
+     "mu": 0.16,
+     "noiseScale": 32
+    }
+   }
+  ],
+  "sa": [
+   {
+    "name": "T0.003_mu0.00125",
+    "params": {
+     "saT0": 0.003,
+     "mu": 0.00125
+    }
+   },
+   {
+    "name": "T0.003_mu0.0025",
+    "params": {
+     "saT0": 0.003,
+     "mu": 0.0025
+    }
+   },
+   {
+    "name": "T0.003_mu0.005",
+    "params": {
+     "saT0": 0.003,
+     "mu": 0.005
+    }
+   },
+   {
+    "name": "T0.01_mu0.00125",
+    "params": {
+     "saT0": 0.01,
+     "mu": 0.00125
+    }
+   },
+   {
+    "name": "T0.01_mu0.0025",
+    "params": {
+     "saT0": 0.01,
+     "mu": 0.0025
+    }
+   },
+   {
+    "name": "T0.01_mu0.005",
+    "params": {
+     "saT0": 0.01,
+     "mu": 0.005
+    }
+   },
+   {
+    "name": "T0.03_mu0.00125",
+    "params": {
+     "saT0": 0.03,
+     "mu": 0.00125
+    }
+   },
+   {
+    "name": "T0.03_mu0.0025",
+    "params": {
+     "saT0": 0.03,
+     "mu": 0.0025
+    }
+   },
+   {
+    "name": "T0.03_mu0.005",
+    "params": {
+     "saT0": 0.03,
+     "mu": 0.005
+    }
+   }
+  ],
+  "pc": [
+   {
+    "name": "kick0.05_relax4800",
+    "params": {
+     "pcKick": 0.05,
+     "pcRelax": 4800
+    }
+   },
+   {
+    "name": "kick0.05_relax9600",
+    "params": {
+     "pcKick": 0.05,
+     "pcRelax": 9600
+    }
+   },
+   {
+    "name": "kick0.05_relax19200",
+    "params": {
+     "pcKick": 0.05,
+     "pcRelax": 19200
+    }
+   },
+   {
+    "name": "kick0.15_relax4800",
+    "params": {
+     "pcKick": 0.15,
+     "pcRelax": 4800
+    }
+   },
+   {
+    "name": "kick0.15_relax9600",
+    "params": {
+     "pcKick": 0.15,
+     "pcRelax": 9600
+    }
+   },
+   {
+    "name": "kick0.15_relax19200",
+    "params": {
+     "pcKick": 0.15,
+     "pcRelax": 19200
+    }
+   },
+   {
+    "name": "kick0.4_relax4800",
+    "params": {
+     "pcKick": 0.4,
+     "pcRelax": 4800
+    }
+   },
+   {
+    "name": "kick0.4_relax9600",
+    "params": {
+     "pcKick": 0.4,
+     "pcRelax": 9600
+    }
+   },
+   {
+    "name": "kick0.4_relax19200",
+    "params": {
+     "pcKick": 0.4,
+     "pcRelax": 19200
+    }
+   }
+  ]
+ },
+ "polish": false
+}

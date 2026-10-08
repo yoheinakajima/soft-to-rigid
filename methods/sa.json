@@ -1,1 +1,12 @@
-{"method": "sa", "params": {}, "tuned_by": null}
+{
+ "method": "sa",
+ "params": {
+  "saT0": 0.003,
+  "mu": 0.0025
+ },
+ "tuned_by": "C02-tune-extend/T0.003_mu0.0025",
+ "tuning_score": {
+  "mean_median_relgap": 0.010187411886527808,
+  "mean_best_relgap": 0.0021366973596053996
+ }
+}

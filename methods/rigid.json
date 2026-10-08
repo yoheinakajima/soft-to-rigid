@@ -1,1 +1,12 @@
-{"method": "rigid", "params": {}, "tuned_by": null}
+{
+ "method": "rigid",
+ "params": {
+  "mu": 0.04,
+  "noiseScale": 2
+ },
+ "tuned_by": "C01-tune/mu0.04_nz2",
+ "tuning_score": {
+  "mean_median_relgap": 0.002723122890267482,
+  "mean_best_relgap": 5.8735645016705364e-05
+ }
+}

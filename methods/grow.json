@@ -1,1 +1,12 @@
-{"method": "grow", "params": {}, "tuned_by": null}
+{
+ "method": "grow",
+ "params": {
+  "mu": 0.04,
+  "gamma0": 0.2
+ },
+ "tuned_by": "C01-tune/mu0.04_g0.2",
+ "tuning_score": {
+  "mean_median_relgap": 0.015018054848097085,
+  "mean_best_relgap": 5.3773072785823214e-05
+ }
+}

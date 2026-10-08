@@ -23,7 +23,9 @@ from activegraph import Graph, Runtime, behavior, Event
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 DB = os.path.join(ROOT, 'ledger', 'ledger.sqlite')
-POLISH_TOP = 3          # per cell, the best runs sent to tightening
+POLISH_TOP = 3          # per cell, the best runs sent to tightening ...
+POLISH_REL = 0.02       # ... if within 2% of the best known value
+POLISH_CAP = 10         # at most this many tightenings per cell
 POLISH_GAP = 2e-3       # ... plus every run within this of the best known value
 MATCH_TOL = 1e-9        # tightened size within this of the record = "matches"
 
@@ -79,6 +81,7 @@ def build_behaviors(H):
     def polisher(event, graph, ctx):
         from . import tighten
         p = event.payload
+        cached = os.path.join(ROOT, 'ledger', 'polished', p['run'].replace('/', '_') + '.json')
         row = None
         for line in open(os.path.join(ROOT, p['file'])):
             if p['run'] in line:
@@ -88,17 +91,21 @@ def build_behaviors(H):
                     break
         F = catalog(row['family'])
         t0 = time.time()
-        try:
-            out = tighten.solve(F['piece'], F['container'], row['poses'])
-        except Exception as e:
-            graph.emit('polish.failed', {'candidate': p['candidate'], 'error': repr(e)})
-            return
+        if os.path.exists(cached):  # computed by packing.polish (same function, same input)
+            out = json.load(open(cached))
+        else:
+            try:
+                out = tighten.solve(F['piece'], F['container'], row['poses'])
+            except Exception as e:
+                graph.emit('polish.failed', {'candidate': p['candidate'], 'error': repr(e)})
+                return
         rec = F['records'].get(str(row['n']))
         gap = out['L'] - rec['value'] if rec else None
         os.makedirs(os.path.join(ROOT, 'ledger', 'polished'), exist_ok=True)
-        fn = os.path.join('ledger', 'polished', row['id'].replace('/', '_') + '.json')
-        json.dump({'run': row['id'], 'family': row['family'], 'n': row['n'], 'L': out['L'], 'L_raw': row['L'],
-                   'poses': out['poses'], 'history': out['history']}, open(os.path.join(ROOT, fn), 'w'))
+        fn = os.path.relpath(cached, ROOT)
+        if not os.path.exists(cached):
+            json.dump({'run': row['id'], 'family': row['family'], 'n': row['n'], 'L': out['L'], 'L_raw': row['L'],
+                       'poses': out['poses'], 'history': out['history']}, open(cached, 'w'))
         graph.patch_object(p['candidate'], {'status': 'polished', 'L_polished': out['L'], 'gap_polished': gap})
         graph.emit('polish.completed', {'candidate': p['candidate'], 'run': row['id'], 'family': row['family'], 'n': row['n'],
                                         'L': out['L'], 'gap': gap, 'record': rec['value'] if rec else None,
@@ -178,7 +185,8 @@ def _cells(campaign, rows, files, polish=True):
         r0 = rs[0]
         cand = []
         for i, r in enumerate(rs):
-            if polish and (i < POLISH_TOP or (r['gap'] is not None and r['gap'] < POLISH_GAP)):
+            rel = r['gap'] / r['record'] if r.get('record') else 0
+            if polish and len(cand) < POLISH_CAP and ((i < POLISH_TOP and rel < POLISH_REL) or (r['gap'] is not None and r['gap'] < POLISH_GAP)):
                 cand.append({'run': r['id'], 'file': files[r['id']], 'L_raw': r['L'], 'gap_raw': r['gap']})
         cells.append({'cell': key, 'campaign': campaign, 'family': r0['family'], 'n': r0['n'], 'method': r0['method'],
                       'budget': r0['budget'], 'config': r0['config'], 'runs': len(rs), 'record': r0.get('record'),

@@ -5,7 +5,7 @@
 // Keeps, per instance × method × config, the replay of the best run so far, plus up to 5 hits.
 'use strict';
 const fs = require('fs'), path = require('path');
-const E2 = require('./engine2d.js');
+const E2 = require('./engine2d.js'), E3 = require('./engine3d.js');
 
 const args = process.argv.slice(2);
 const planPath = args[0];
@@ -50,14 +50,14 @@ for (const j of mine) {
   const cfg = Object.assign({}, mc.params || {}, plan.overrides || {}, j.config.params || {},
     { n: j.n, piece: F.piece, container: F.container, method: mc.method || j.method, seed: j.seed, budget: j.budget });
   let res, err = null;
-  try { res = E2.run(cfg); } catch (e) { err = String(e && e.stack || e); }
+  try { res = (F.dim === 3 ? E3 : E2).run(cfg); } catch (e) { err = String(e && e.stack || e); }
   const row = { id: j.id, campaign: plan.id, family: j.family, n: j.n, method: j.method, budget: j.budget, config: j.config.name, seed: j.seed, t: new Date().toISOString() };
   if (err) { row.error = err; }
   else {
     row.L = res.L; row.Lsoft = round(res.Lsoft, 6); row.record = rec ? rec.value : null;
     row.gap = rec ? res.L - rec.value : null;
     row.ms = res.ms; row.evals = res.evals; row.steps = res.steps;
-    row.poses = res.poses.map(p => [round(p[0], 10), round(p[1], 10), round(p[2], 10)]);
+    row.poses = res.poses.map(p => p.map(v => round(v, 10)));
     // replays: best so far for this instance × method × budget × config, and up to 5 hits
     const bf = bestFile(j);
     let prev = null; try { prev = JSON.parse(fs.readFileSync(bf, 'utf8')); } catch (e) { }
