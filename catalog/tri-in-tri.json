@@ -9,22 +9,22 @@
  ],
  "records": {
   "1": {
-   "value": 1,
+   "value": 1.0,
    "finder": "Trivial",
    "truncated": false
   },
   "2": {
-   "value": 2,
+   "value": 2.0,
    "finder": "Trivial",
    "truncated": false
   },
   "3": {
-   "value": 2,
+   "value": 2.0,
    "finder": "Trivial",
    "truncated": false
   },
   "4": {
-   "value": 2,
+   "value": 2.0,
    "finder": "Trivial",
    "truncated": false
   },
@@ -39,17 +39,17 @@
    "truncated": false
   },
   "7": {
-   "value": 3,
+   "value": 3.0,
    "finder": "Trivial",
    "truncated": false
   },
   "8": {
-   "value": 3,
+   "value": 3.0,
    "finder": "Trivial",
    "truncated": false
   },
   "9": {
-   "value": 3,
+   "value": 3.0,
    "finder": "Trivial",
    "truncated": false
   },
@@ -71,27 +71,31 @@
   "13": {
    "value": 3.992,
    "finder": "Morandi 2008",
-   "truncated": true
+   "truncated": true,
+   "decimals": 3,
+   "tol": 0.001
   },
   "14": {
-   "value": 4,
+   "value": 4.0,
    "finder": "Trivial",
    "truncated": false
   },
   "15": {
-   "value": 4,
+   "value": 4.0,
    "finder": "Trivial",
    "truncated": false
   },
   "16": {
-   "value": 4,
+   "value": 4.0,
    "finder": "Trivial",
    "truncated": false
   },
   "17": {
    "value": 4.465,
    "finder": "Morandi 2008",
-   "truncated": true
+   "truncated": true,
+   "decimals": 3,
+   "tol": 0.001
   },
   "18": {
    "value": 4.5,
@@ -111,32 +115,38 @@
   "21": {
    "value": 4.923,
    "finder": "Morandi 2008",
-   "truncated": true
+   "truncated": true,
+   "decimals": 3,
+   "tol": 0.001
   },
   "22": {
    "value": 4.996,
    "finder": "Morandi 2008",
-   "truncated": true
+   "truncated": true,
+   "decimals": 3,
+   "tol": 0.001
   },
   "23": {
-   "value": 5,
+   "value": 5.0,
    "finder": "Trivial",
    "truncated": false
   },
   "24": {
-   "value": 5,
+   "value": 5.0,
    "finder": "Trivial",
    "truncated": false
   },
   "25": {
-   "value": 5,
+   "value": 5.0,
    "finder": "Trivial",
    "truncated": false
   },
   "26": {
    "value": 5.406,
    "finder": "Frenzley 2026",
-   "truncated": true
+   "truncated": true,
+   "decimals": 3,
+   "tol": 0.001
   },
   "27": {
    "value": 5.5,

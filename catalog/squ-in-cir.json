@@ -36,7 +36,9 @@
   "6": {
    "value": 1.688,
    "finder": "Ellsworth 2023, proved Vu-Le 2026",
-   "truncated": true
+   "truncated": true,
+   "decimals": 3,
+   "tol": 0.001
   },
   "7": {
    "value": 1.8027756377319946,
@@ -46,7 +48,9 @@
   "8": {
    "value": 1.97877,
    "finder": "Cantrell 2002",
-   "truncated": true
+   "truncated": true,
+   "decimals": 5,
+   "tol": 1e-05
   },
   "9": {
    "value": 2.0775962673243327,
@@ -61,7 +65,9 @@
   "11": {
    "value": 2.21386,
    "finder": "Kovacic 2006",
-   "truncated": true
+   "truncated": true,
+   "decimals": 5,
+   "tol": 1e-05
   },
   "12": {
    "value": 2.23606797749979,
@@ -71,7 +77,9 @@
   "13": {
    "value": 2.3607,
    "finder": "Cantrell 2010",
-   "truncated": true
+   "truncated": true,
+   "decimals": 4,
+   "tol": 0.0001
   },
   "14": {
    "value": 2.5,
@@ -81,7 +89,9 @@
   "15": {
    "value": 2.533,
    "finder": "Cantrell 2002",
-   "truncated": true
+   "truncated": true,
+   "decimals": 3,
+   "tol": 0.001
   },
   "16": {
    "value": 2.623094546523247,
@@ -91,7 +101,9 @@
   "17": {
    "value": 2.67687,
    "finder": "Kovacic 2026",
-   "truncated": true
+   "truncated": true,
+   "decimals": 5,
+   "tol": 1e-05
   },
   "18": {
    "value": 2.7414640249326636,
@@ -101,12 +113,16 @@
   "19": {
    "value": 2.8015,
    "finder": "Kovacic 2026",
-   "truncated": true
+   "truncated": true,
+   "decimals": 5,
+   "tol": 1e-05
   },
   "20": {
    "value": 2.893,
    "finder": "Cantrell 2002",
-   "truncated": true
+   "truncated": true,
+   "decimals": 3,
+   "tol": 0.001
   },
   "21": {
    "value": 2.9154759474226504,
@@ -121,12 +137,16 @@
   "23": {
    "value": 3.06738,
    "finder": "Kovacic 2026",
-   "truncated": true
+   "truncated": true,
+   "decimals": 5,
+   "tol": 1e-05
   },
   "24": {
    "value": 3.1094,
    "finder": "Kovacic 2026",
-   "truncated": true
+   "truncated": true,
+   "decimals": 5,
+   "tol": 1e-05
   },
   "25": {
    "value": 3.174503223133547,
@@ -141,22 +161,30 @@
   "27": {
    "value": 3.2605,
    "finder": "Kovacic 2026",
-   "truncated": true
+   "truncated": true,
+   "decimals": 5,
+   "tol": 1e-05
   },
   "28": {
    "value": 3.33147,
    "finder": "Kovacic 2026",
-   "truncated": true
+   "truncated": true,
+   "decimals": 5,
+   "tol": 1e-05
   },
   "29": {
    "value": 3.39309,
    "finder": "Kovacic 2026",
-   "truncated": true
+   "truncated": true,
+   "decimals": 5,
+   "tol": 1e-05
   },
   "30": {
    "value": 3.45962,
    "finder": "Kovacic 2026",
-   "truncated": true
+   "truncated": true,
+   "decimals": 5,
+   "tol": 1e-05
   }
  },
  "family": "squ-in-cir"

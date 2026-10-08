@@ -31,7 +31,9 @@
   "5": {
    "value": 1.803,
    "finder": "Friedman 1996",
-   "truncated": true
+   "truncated": true,
+   "decimals": 3,
+   "tol": 0.001
   },
   "6": {
    "value": 1.901923788646684,
@@ -39,7 +41,7 @@
    "truncated": false
   },
   "7": {
-   "value": 2,
+   "value": 2.0,
    "finder": "Friedman 1996",
    "truncated": false
   },
@@ -51,112 +53,156 @@
   "9": {
    "value": 2.287,
    "finder": "Morandi 2008",
-   "truncated": true
+   "truncated": true,
+   "decimals": 3,
+   "tol": 0.001
   },
   "10": {
    "value": 2.377,
    "finder": "Cantrell 2002",
-   "truncated": true
+   "truncated": true,
+   "decimals": 3,
+   "tol": 0.001
   },
   "11": {
    "value": 2.49,
    "finder": "Morandi 2008",
-   "truncated": true
+   "truncated": true,
+   "decimals": 3,
+   "tol": 0.001
   },
   "12": {
    "value": 2.558,
    "finder": "Kamp 2026",
-   "truncated": true
+   "truncated": true,
+   "decimals": 3,
+   "tol": 0.001
   },
   "13": {
    "value": 2.595,
    "finder": "Cantrell 2002",
-   "truncated": true
+   "truncated": true,
+   "decimals": 3,
+   "tol": 0.001
   },
   "14": {
    "value": 2.726,
    "finder": "Cantrell 2002",
-   "truncated": true
+   "truncated": true,
+   "decimals": 3,
+   "tol": 0.001
   },
   "15": {
    "value": 2.82989,
    "finder": "Loyd 2026",
-   "truncated": true
+   "truncated": true,
+   "decimals": 5,
+   "tol": 1e-05
   },
   "16": {
    "value": 2.9,
    "finder": "Watson 2026",
-   "truncated": true
+   "truncated": true,
+   "decimals": 4,
+   "tol": 0.0001
   },
   "17": {
    "value": 2.982,
    "finder": "Morandi 2008",
-   "truncated": true
+   "truncated": true,
+   "decimals": 3,
+   "tol": 0.001
   },
   "18": {
    "value": 3.051,
    "finder": "Morandi 2008",
-   "truncated": true
+   "truncated": true,
+   "decimals": 3,
+   "tol": 0.001
   },
   "19": {
    "value": 3.12929,
    "finder": "Loyd 2026",
-   "truncated": true
+   "truncated": true,
+   "decimals": 5,
+   "tol": 1e-05
   },
   "20": {
    "value": 3.2305,
    "finder": "Watson 2026",
-   "truncated": true
+   "truncated": true,
+   "decimals": 4,
+   "tol": 0.0001
   },
   "21": {
    "value": 3.31102,
    "finder": "Schadt 2026",
-   "truncated": true
+   "truncated": true,
+   "decimals": 5,
+   "tol": 1e-05
   },
   "22": {
    "value": 3.3757,
    "finder": "Watson 2026",
-   "truncated": true
+   "truncated": true,
+   "decimals": 4,
+   "tol": 0.0001
   },
   "23": {
    "value": 3.4311,
    "finder": "Watson 2026",
-   "truncated": true
+   "truncated": true,
+   "decimals": 4,
+   "tol": 0.0001
   },
   "24": {
    "value": 3.4678,
    "finder": "Schadt 2026",
-   "truncated": true
+   "truncated": true,
+   "decimals": 5,
+   "tol": 1e-05
   },
   "25": {
    "value": 3.537,
    "finder": "Cantrell 2012",
-   "truncated": true
+   "truncated": true,
+   "decimals": 3,
+   "tol": 0.001
   },
   "26": {
    "value": 3.575,
    "finder": "Morandi 2008",
-   "truncated": true
+   "truncated": true,
+   "decimals": 3,
+   "tol": 0.001
   },
   "27": {
    "value": 3.6726,
    "finder": "Watson 2026",
-   "truncated": true
+   "truncated": true,
+   "decimals": 4,
+   "tol": 0.0001
   },
   "28": {
    "value": 3.75707,
    "finder": "Loyd 2026",
-   "truncated": true
+   "truncated": true,
+   "decimals": 5,
+   "tol": 1e-05
   },
   "29": {
    "value": 3.81711,
    "finder": "Loyd 2026",
-   "truncated": true
+   "truncated": true,
+   "decimals": 5,
+   "tol": 1e-05
   },
   "30": {
    "value": 3.86619,
    "finder": "Loyd 2026",
-   "truncated": true
+   "truncated": true,
+   "decimals": 5,
+   "tol": 1e-05
   }
  },
  "family": "tri-in-squ"

@@ -12,14 +12,23 @@ r2, r3, r5 = math.sqrt(2), math.sqrt(3), math.sqrt(5)
 OUT = os.path.join(os.path.dirname(__file__), '..', 'catalog')
 FR = 'https://erich-friedman.github.io/packing/'
 
+class TF(float):
+    """a truncated catalogue value, remembering how many decimals were printed"""
+    dec = None
+
+
 def rec(v, who, trunc=False, coords=None, expr=None):
-    d = {'value': v, 'finder': who, 'truncated': trunc}
+    d = {'value': float(v), 'finder': who, 'truncated': trunc}
+    if trunc:
+        dec = getattr(v, 'dec', None)
+        d['decimals'] = dec
+        d['tol'] = 10.0 ** -dec if dec else 1e-5
     if coords: d['coords'] = coords
     if expr: d['expr'] = expr
     return d
 
-def T(s):  # truncated decimal string
-    return float(s)
+def T(s):  # truncated decimal string, e.g. '2.9000' -> value 2.9 with 4 printed decimals
+    x = TF(s); x.dec = len(s.split('.')[1]); return x
 
 fams = {}
 

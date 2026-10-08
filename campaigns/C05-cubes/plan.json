@@ -1,0 +1,82 @@
+{
+ "id": "C05-cubes",
+ "title": "Cubes in a cube: three paths, two settings",
+ "question": "The n = 12 cube record came from hardening balls into cubes with the original (untuned) schedule. In 3D, at n = 9 to 14, how do harden, grow and rigid compare at the record's budget, with the original settings and with each method's 2D-tuned settings?",
+ "hypothesis": "harden is the only path that gets below 2.93277 at n = 12 under either setting; at n = 9 all three reach Friedman's packing.",
+ "decision_rule": "Same 'solved' metric as C04 (tightened run within 1e-9 of the best known value, 1e-5 if truncated, or below it). Report per n, method and setting. sa and pc are not implemented in 3D; the comparison is limited to the three gradient paths. If a tightened run beats a catalogue value it is certified as in C04.",
+ "created": "2026-10-08",
+ "instances": [
+  {
+   "family": "cub-in-cub",
+   "ns": [
+    9,
+    10,
+    11,
+    12,
+    13,
+    14
+   ]
+  }
+ ],
+ "methods": [
+  "harden",
+  "grow",
+  "rigid"
+ ],
+ "budgets": [
+  3
+ ],
+ "seeds": 32,
+ "polish": true,
+ "configs": {
+  "harden": [
+   {
+    "name": "original",
+    "params": {
+     "mu": 0.02,
+     "noiseScale": 1
+    }
+   },
+   {
+    "name": "tuned2d",
+    "params": {
+     "mu": 0.08,
+     "noiseScale": 8
+    }
+   }
+  ],
+  "grow": [
+   {
+    "name": "original",
+    "params": {
+     "mu": 0.02,
+     "noiseScale": 1,
+     "gamma0": 0.35
+    }
+   },
+   {
+    "name": "tuned2d",
+    "params": {
+     "mu": 0.04,
+     "gamma0": 0.2
+    }
+   }
+  ],
+  "rigid": [
+   {
+    "name": "original",
+    "params": {
+     "mu": 0.02,
+     "noiseScale": 1
+    }
+   },
+   {
+    "name": "tuned2d",
+    "params": {
+     "mu": 0.04,
+     "noiseScale": 2
+    }
+   }
+  ]
+ }
+}

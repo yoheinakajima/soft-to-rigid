@@ -46,7 +46,9 @@
   "8": {
    "value": 5.301,
    "finder": "Cantrell 2002",
-   "truncated": true
+   "truncated": true,
+   "decimals": 3,
+   "tol": 0.001
   },
   "9": {
    "value": 5.309401076758503,
@@ -66,7 +68,9 @@
   "12": {
    "value": 6.301,
    "finder": "Cantrell 2002",
-   "truncated": true
+   "truncated": true,
+   "decimals": 3,
+   "tol": 0.001
   },
   "13": {
    "value": 6.309401076758503,
@@ -91,7 +95,9 @@
   "17": {
    "value": 7.301,
    "finder": "Cantrell 2002",
-   "truncated": true
+   "truncated": true,
+   "decimals": 3,
+   "tol": 0.001
   },
   "18": {
    "value": 7.309401076758503,
@@ -121,7 +127,9 @@
   "23": {
    "value": 8.301,
    "finder": "Cantrell 2002",
-   "truncated": true
+   "truncated": true,
+   "decimals": 3,
+   "tol": 0.001
   },
   "24": {
    "value": 8.309401076758503,
@@ -136,7 +144,9 @@
   "26": {
    "value": 8.60805,
    "finder": "Wolk 2026",
-   "truncated": true
+   "truncated": true,
+   "decimals": 5,
+   "tol": 1e-05
   },
   "27": {
    "value": 8.618802153517006,
@@ -156,7 +166,9 @@
   "30": {
    "value": 9.301,
    "finder": "Cantrell 2002",
-   "truncated": true
+   "truncated": true,
+   "decimals": 3,
+   "tol": 0.001
   }
  },
  "family": "squ-in-tri"

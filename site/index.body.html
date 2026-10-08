@@ -1,0 +1,33 @@
+<header>
+  <div class="eyebrow">packing congruent shapes · 2D and 3D · equal-budget study</div>
+  <h1>Does the path a piece takes through shape space change which packings a search finds?</h1>
+  <p class="lede">To pack n copies of a shape in the smallest container, most searches move rigid pieces. Hardening starts each piece as the disk inscribed in it and grows it into the real shape while the container is pushed inward. This site holds every run of a study that compares hardening with four other paths on seven families of shapes and containers, under the same budget and the same tuning effort.</p>
+  <div class="nums" id="nums"></div>
+</header>
+
+<section>
+  <h2>Five paths</h2>
+  <p>A piece's state is γ·[(1−τ)·P ⊕ τρ·D]: the polygon P scaled toward its incenter, plus a disk of radius τρ, all scaled by γ. Every method is a path through (γ, τ).</p>
+  <div class="paths" id="paths"></div>
+</section>
+
+<section class="wide">
+  <h2>What each path reached</h2>
+  <p class="cap" id="matrixcap"></p>
+  <div class="scroll"><table class="matrix" id="matrix"></table></div>
+</section>
+
+<section>
+  <h2>What we found</h2>
+  <ul class="found" id="findings"></ul>
+  <p class="cap">Each finding links to the runs behind it in the <a href="journal.html">journal</a>.</p>
+</section>
+
+<section>
+  <h2>Check anything</h2>
+  <p>Every run is a line in a campaign's <code>runs.jsonl</code>, planned before it ran. Every packing below a published value is certified twice, in floating point and in exact rational arithmetic. Replays of the best run of every instance and method are on the <a href="families.html">family pages</a>.</p>
+<pre>git clone {{REPO}}.git && cd soft-to-rigid
+node engine/run.js campaigns/C04-breadth/plan.json --limit 5      # rerun any campaign (resumable)
+python3 -m packing.ledger export                                    # the research ledger, as events
+python3 verify.py claims/&lt;claim&gt;/claim.json                         # check a claim</pre>
+</section>

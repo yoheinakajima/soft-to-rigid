@@ -2,3 +2,4 @@ __pycache__/
 *.pyc
 campaigns/*/w*.log
 node_modules/
+_site/

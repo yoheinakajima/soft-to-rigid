@@ -56,12 +56,16 @@
   "10": {
    "value": 6.10469,
    "finder": "Viquerat 2026",
-   "truncated": true
+   "truncated": true,
+   "decimals": 5,
+   "tol": 1e-05
   },
   "11": {
    "value": 6.33218,
    "finder": "Jankowski 2026",
-   "truncated": true
+   "truncated": true,
+   "decimals": 5,
+   "tol": 1e-05
   },
   "12": {
    "value": 6.387355239751741,
@@ -71,7 +75,9 @@
   "13": {
    "value": 6.75549,
    "finder": "Berthold et al. 2026",
-   "truncated": true
+   "truncated": true,
+   "decimals": 5,
+   "tol": 1e-05
   },
   "14": {
    "value": 6.928203230275509,
@@ -81,7 +87,9 @@
   "15": {
    "value": 6.96367,
    "finder": "Jankowski 2026",
-   "truncated": true
+   "truncated": true,
+   "decimals": 5,
+   "tol": 1e-05
   },
   "16": {
    "value": 7.311304485586458,
@@ -91,7 +99,9 @@
   "17": {
    "value": 7.60383,
    "finder": "Jankowski 2026",
-   "truncated": true
+   "truncated": true,
+   "decimals": 5,
+   "tol": 1e-05
   },
   "18": {
    "value": 7.702119491982255,

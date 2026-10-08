@@ -6,7 +6,7 @@ Writes
   campaigns/<C>/REPORT.md      plan, decision, findings, per-instance table
   JOURNAL.md                   the research story in order: campaigns, decisions, findings, claims
   README.md                    the block between <!-- results:start --> and <!-- results:end -->
-  docs/data/*.json             data for the site (families, instances, cells, claims, replay index)
+  site/data/*.json             data for the site (families, instances, cells, claims, replay index)
   paper/numbers.tex            \\newcommand macros for every number quoted in the paper
 """
 import glob, json, math, os, re, statistics as S
@@ -109,7 +109,7 @@ def journal(camps, finds, claims, nevents):
 
 
 def site_data(camps, st, claims, finds):
-    d = os.path.join(ROOT, 'docs', 'data')
+    d = os.path.join(ROOT, 'site', 'data')
     os.makedirs(d, exist_ok=True)
     fams = {}
     for f in glob.glob(os.path.join(ROOT, 'catalog', '*.json')):
@@ -124,6 +124,11 @@ def site_data(camps, st, claims, finds):
         m = re.match(r'campaigns/([^/]+)/replays/(hits/)?(.+)\.json', rel)
         rep.append({'campaign': m.group(1), 'hit': bool(m.group(2)), 'file': rel, 'name': m.group(3)})
     json.dump(rep, open(os.path.join(d, 'replays.json'), 'w'))
+    total = 0
+    for f in glob.glob(os.path.join(ROOT, 'campaigns', '*', 'runs*.jsonl')):
+        total += sum(1 for line in open(f) if line.strip())
+    main = 'C04-breadth' if 'C04-breadth' in camps else sorted(camps)[-1]
+    json.dump({'mainCampaign': main, 'totalRuns': total}, open(os.path.join(d, 'meta.json'), 'w'))
 
 
 def main():

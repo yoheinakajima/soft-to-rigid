@@ -109,7 +109,7 @@ def build_behaviors(H):
         graph.patch_object(p['candidate'], {'status': 'polished', 'L_polished': out['L'], 'gap_polished': gap})
         graph.emit('polish.completed', {'candidate': p['candidate'], 'run': row['id'], 'family': row['family'], 'n': row['n'],
                                         'L': out['L'], 'gap': gap, 'record': rec['value'] if rec else None,
-                                        'truncated': rec.get('truncated') if rec else None, 'file': fn,
+                                        'truncated': rec.get('truncated') if rec else None, 'tol': rec.get('tol') if rec else None, 'file': fn,
                                         'seconds': round(time.time() - t0, 2)})
 
     @behavior(name='judge', on=['polish.completed'])
@@ -121,7 +121,7 @@ def build_behaviors(H):
         if p['gap'] < -MATCH_TOL:
             graph.patch_object(p['candidate'], {'verdict': 'below record'})
             graph.emit('certify.requested', dict(p))
-        elif abs(p['gap']) <= MATCH_TOL or (p.get('truncated') and p['gap'] < 1e-5):
+        elif abs(p['gap']) <= MATCH_TOL or (p.get('truncated') and p['gap'] < p.get('tol', 1e-5)):
             graph.patch_object(p['candidate'], {'verdict': 'matches record'})
         else:
             graph.patch_object(p['candidate'], {'verdict': 'above record'})

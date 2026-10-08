@@ -10,42 +10,42 @@
  ],
  "records": {
   "1": {
-   "value": 1,
+   "value": 1.0,
    "finder": "Trivial",
    "truncated": false
   },
   "2": {
-   "value": 2,
+   "value": 2.0,
    "finder": "Trivial",
    "truncated": false
   },
   "3": {
-   "value": 2,
+   "value": 2.0,
    "finder": "Trivial",
    "truncated": false
   },
   "4": {
-   "value": 2,
+   "value": 2.0,
    "finder": "Trivial",
    "truncated": false
   },
   "5": {
-   "value": 2,
+   "value": 2.0,
    "finder": "Trivial",
    "truncated": false
   },
   "6": {
-   "value": 2,
+   "value": 2.0,
    "finder": "Trivial",
    "truncated": false
   },
   "7": {
-   "value": 2,
+   "value": 2.0,
    "finder": "Trivial",
    "truncated": false
   },
   "8": {
-   "value": 2,
+   "value": 2.0,
    "finder": "Trivial",
    "truncated": false
   },
@@ -72,7 +72,9 @@
   "13": {
    "value": 2.956,
    "finder": "Friedman 1998",
-   "truncated": true
+   "truncated": true,
+   "decimals": 3,
+   "tol": 0.001
   },
   "14": {
    "value": 2.9899494936611664,
@@ -80,67 +82,67 @@
    "truncated": false
   },
   "15": {
-   "value": 3,
+   "value": 3.0,
    "finder": "Trivial",
    "truncated": false
   },
   "16": {
-   "value": 3,
+   "value": 3.0,
    "finder": "Trivial",
    "truncated": false
   },
   "17": {
-   "value": 3,
+   "value": 3.0,
    "finder": "Trivial",
    "truncated": false
   },
   "18": {
-   "value": 3,
+   "value": 3.0,
    "finder": "Trivial",
    "truncated": false
   },
   "19": {
-   "value": 3,
+   "value": 3.0,
    "finder": "Trivial",
    "truncated": false
   },
   "20": {
-   "value": 3,
+   "value": 3.0,
    "finder": "Trivial",
    "truncated": false
   },
   "21": {
-   "value": 3,
+   "value": 3.0,
    "finder": "Trivial",
    "truncated": false
   },
   "22": {
-   "value": 3,
+   "value": 3.0,
    "finder": "Trivial",
    "truncated": false
   },
   "23": {
-   "value": 3,
+   "value": 3.0,
    "finder": "Trivial",
    "truncated": false
   },
   "24": {
-   "value": 3,
+   "value": 3.0,
    "finder": "Trivial",
    "truncated": false
   },
   "25": {
-   "value": 3,
+   "value": 3.0,
    "finder": "Trivial",
    "truncated": false
   },
   "26": {
-   "value": 3,
+   "value": 3.0,
    "finder": "Trivial",
    "truncated": false
   },
   "27": {
-   "value": 3,
+   "value": 3.0,
    "finder": "Trivial",
    "truncated": false
   },
