@@ -1,0 +1,379 @@
+{
+ "id": "C02-tune-extend",
+ "title": "Extend the tuning grid where C01's winner sat on its edge",
+ "question": "In C01 the winning setting of every method except pc's kick lay on the edge of its grid (harden, rigid: mu 0.04 and noise x2; grow: mu 0.04, gamma0 0.2; sa: mu 0.005; pc: relax 1200). Extend each grid past that edge on the same five tuning instances and seeds.",
+ "hypothesis": "Stronger pressure and noise help every gradient method on these small instances; the C01 result that tuned rigid beats tuned harden on median gap (0.0027 vs 0.0092) may persist.",
+ "decision_rule": "Same scoring rule as C01. The overall winner across C01 and C02 for each method is frozen into methods/<method>.json. If a winner is again on an outer edge, run one more extension (at most two in total), then freeze regardless.",
+ "created": "2026-10-08",
+ "instances": [
+  {
+   "family": "squ-in-squ",
+   "ns": [
+    10
+   ]
+  },
+  {
+   "family": "tri-in-tri",
+   "ns": [
+    6
+   ]
+  },
+  {
+   "family": "squ-in-cir",
+   "ns": [
+    8
+   ]
+  },
+  {
+   "family": "hex-in-squ",
+   "ns": [
+    5
+   ]
+  },
+  {
+   "family": "tri-in-squ",
+   "ns": [
+    5
+   ]
+  }
+ ],
+ "methods": [
+  "harden",
+  "grow",
+  "rigid",
+  "sa",
+  "pc"
+ ],
+ "budgets": [
+  1
+ ],
+ "seeds": 16,
+ "configs": {
+  "harden": [
+   {
+    "name": "mu0.04_nz2",
+    "params": {
+     "mu": 0.04,
+     "noiseScale": 2
+    }
+   },
+   {
+    "name": "mu0.04_nz4",
+    "params": {
+     "mu": 0.04,
+     "noiseScale": 4
+    }
+   },
+   {
+    "name": "mu0.04_nz8",
+    "params": {
+     "mu": 0.04,
+     "noiseScale": 8
+    }
+   },
+   {
+    "name": "mu0.08_nz2",
+    "params": {
+     "mu": 0.08,
+     "noiseScale": 2
+    }
+   },
+   {
+    "name": "mu0.08_nz4",
+    "params": {
+     "mu": 0.08,
+     "noiseScale": 4
+    }
+   },
+   {
+    "name": "mu0.08_nz8",
+    "params": {
+     "mu": 0.08,
+     "noiseScale": 8
+    }
+   },
+   {
+    "name": "mu0.16_nz2",
+    "params": {
+     "mu": 0.16,
+     "noiseScale": 2
+    }
+   },
+   {
+    "name": "mu0.16_nz4",
+    "params": {
+     "mu": 0.16,
+     "noiseScale": 4
+    }
+   },
+   {
+    "name": "mu0.16_nz8",
+    "params": {
+     "mu": 0.16,
+     "noiseScale": 8
+    }
+   }
+  ],
+  "rigid": [
+   {
+    "name": "mu0.04_nz2",
+    "params": {
+     "mu": 0.04,
+     "noiseScale": 2
+    }
+   },
+   {
+    "name": "mu0.04_nz4",
+    "params": {
+     "mu": 0.04,
+     "noiseScale": 4
+    }
+   },
+   {
+    "name": "mu0.04_nz8",
+    "params": {
+     "mu": 0.04,
+     "noiseScale": 8
+    }
+   },
+   {
+    "name": "mu0.08_nz2",
+    "params": {
+     "mu": 0.08,
+     "noiseScale": 2
+    }
+   },
+   {
+    "name": "mu0.08_nz4",
+    "params": {
+     "mu": 0.08,
+     "noiseScale": 4
+    }
+   },
+   {
+    "name": "mu0.08_nz8",
+    "params": {
+     "mu": 0.08,
+     "noiseScale": 8
+    }
+   },
+   {
+    "name": "mu0.16_nz2",
+    "params": {
+     "mu": 0.16,
+     "noiseScale": 2
+    }
+   },
+   {
+    "name": "mu0.16_nz4",
+    "params": {
+     "mu": 0.16,
+     "noiseScale": 4
+    }
+   },
+   {
+    "name": "mu0.16_nz8",
+    "params": {
+     "mu": 0.16,
+     "noiseScale": 8
+    }
+   }
+  ],
+  "grow": [
+   {
+    "name": "mu0.04_g0.1",
+    "params": {
+     "mu": 0.04,
+     "gamma0": 0.1
+    }
+   },
+   {
+    "name": "mu0.04_g0.2",
+    "params": {
+     "mu": 0.04,
+     "gamma0": 0.2
+    }
+   },
+   {
+    "name": "mu0.04_g0.3",
+    "params": {
+     "mu": 0.04,
+     "gamma0": 0.3
+    }
+   },
+   {
+    "name": "mu0.08_g0.1",
+    "params": {
+     "mu": 0.08,
+     "gamma0": 0.1
+    }
+   },
+   {
+    "name": "mu0.08_g0.2",
+    "params": {
+     "mu": 0.08,
+     "gamma0": 0.2
+    }
+   },
+   {
+    "name": "mu0.08_g0.3",
+    "params": {
+     "mu": 0.08,
+     "gamma0": 0.3
+    }
+   },
+   {
+    "name": "mu0.16_g0.1",
+    "params": {
+     "mu": 0.16,
+     "gamma0": 0.1
+    }
+   },
+   {
+    "name": "mu0.16_g0.2",
+    "params": {
+     "mu": 0.16,
+     "gamma0": 0.2
+    }
+   },
+   {
+    "name": "mu0.16_g0.3",
+    "params": {
+     "mu": 0.16,
+     "gamma0": 0.3
+    }
+   }
+  ],
+  "sa": [
+   {
+    "name": "T0.0003_mu0.00125",
+    "params": {
+     "saT0": 0.0003,
+     "mu": 0.00125
+    }
+   },
+   {
+    "name": "T0.0003_mu0.0025",
+    "params": {
+     "saT0": 0.0003,
+     "mu": 0.0025
+    }
+   },
+   {
+    "name": "T0.0003_mu0.005",
+    "params": {
+     "saT0": 0.0003,
+     "mu": 0.005
+    }
+   },
+   {
+    "name": "T0.001_mu0.00125",
+    "params": {
+     "saT0": 0.001,
+     "mu": 0.00125
+    }
+   },
+   {
+    "name": "T0.001_mu0.0025",
+    "params": {
+     "saT0": 0.001,
+     "mu": 0.0025
+    }
+   },
+   {
+    "name": "T0.001_mu0.005",
+    "params": {
+     "saT0": 0.001,
+     "mu": 0.005
+    }
+   },
+   {
+    "name": "T0.003_mu0.00125",
+    "params": {
+     "saT0": 0.003,
+     "mu": 0.00125
+    }
+   },
+   {
+    "name": "T0.003_mu0.0025",
+    "params": {
+     "saT0": 0.003,
+     "mu": 0.0025
+    }
+   },
+   {
+    "name": "T0.003_mu0.005",
+    "params": {
+     "saT0": 0.003,
+     "mu": 0.005
+    }
+   }
+  ],
+  "pc": [
+   {
+    "name": "kick0.05_relax1200",
+    "params": {
+     "pcKick": 0.05,
+     "pcRelax": 1200
+    }
+   },
+   {
+    "name": "kick0.05_relax2400",
+    "params": {
+     "pcKick": 0.05,
+     "pcRelax": 2400
+    }
+   },
+   {
+    "name": "kick0.05_relax4800",
+    "params": {
+     "pcKick": 0.05,
+     "pcRelax": 4800
+    }
+   },
+   {
+    "name": "kick0.15_relax1200",
+    "params": {
+     "pcKick": 0.15,
+     "pcRelax": 1200
+    }
+   },
+   {
+    "name": "kick0.15_relax2400",
+    "params": {
+     "pcKick": 0.15,
+     "pcRelax": 2400
+    }
+   },
+   {
+    "name": "kick0.15_relax4800",
+    "params": {
+     "pcKick": 0.15,
+     "pcRelax": 4800
+    }
+   },
+   {
+    "name": "kick0.4_relax1200",
+    "params": {
+     "pcKick": 0.4,
+     "pcRelax": 1200
+    }
+   },
+   {
+    "name": "kick0.4_relax2400",
+    "params": {
+     "pcKick": 0.4,
+     "pcRelax": 2400
+    }
+   },
+   {
+    "name": "kick0.4_relax4800",
+    "params": {
+     "pcKick": 0.4,
+     "pcRelax": 4800
+    }
+   }
+  ]
+ },
+ "polish": false
+}

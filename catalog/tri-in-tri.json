@@ -1,0 +1,163 @@
+{
+ "title": "Unit equilateral triangles in an equilateral triangle",
+ "dim": 2,
+ "piece": "triangle",
+ "container": "triangle",
+ "measure": "side",
+ "sources": [
+  "https://erich-friedman.github.io/packing/triintri/"
+ ],
+ "records": {
+  "1": {
+   "value": 1,
+   "finder": "Trivial",
+   "truncated": false
+  },
+  "2": {
+   "value": 2,
+   "finder": "Trivial",
+   "truncated": false
+  },
+  "3": {
+   "value": 2,
+   "finder": "Trivial",
+   "truncated": false
+  },
+  "4": {
+   "value": 2,
+   "finder": "Trivial",
+   "truncated": false
+  },
+  "5": {
+   "value": 2.732050807568877,
+   "finder": "Friedman 1997 (proved)",
+   "truncated": false
+  },
+  "6": {
+   "value": 2.977081728298996,
+   "finder": "Morandi 2008",
+   "truncated": false
+  },
+  "7": {
+   "value": 3,
+   "finder": "Trivial",
+   "truncated": false
+  },
+  "8": {
+   "value": 3,
+   "finder": "Trivial",
+   "truncated": false
+  },
+  "9": {
+   "value": 3,
+   "finder": "Trivial",
+   "truncated": false
+  },
+  "10": {
+   "value": 3.5,
+   "finder": "Friedman 1997",
+   "truncated": false
+  },
+  "11": {
+   "value": 3.7229707590929486,
+   "finder": "Friedman 1997",
+   "truncated": false
+  },
+  "12": {
+   "value": 3.879385241571817,
+   "finder": "Cantrell 2007",
+   "truncated": false
+  },
+  "13": {
+   "value": 3.992,
+   "finder": "Morandi 2008",
+   "truncated": true
+  },
+  "14": {
+   "value": 4,
+   "finder": "Trivial",
+   "truncated": false
+  },
+  "15": {
+   "value": 4,
+   "finder": "Trivial",
+   "truncated": false
+  },
+  "16": {
+   "value": 4,
+   "finder": "Trivial",
+   "truncated": false
+  },
+  "17": {
+   "value": 4.465,
+   "finder": "Morandi 2008",
+   "truncated": true
+  },
+  "18": {
+   "value": 4.5,
+   "finder": "Friedman 1997",
+   "truncated": false
+  },
+  "19": {
+   "value": 4.666666666666667,
+   "finder": "Morandi 2008",
+   "truncated": false
+  },
+  "20": {
+   "value": 4.861485379546474,
+   "finder": "Morandi 2008",
+   "truncated": false
+  },
+  "21": {
+   "value": 4.923,
+   "finder": "Morandi 2008",
+   "truncated": true
+  },
+  "22": {
+   "value": 4.996,
+   "finder": "Morandi 2008",
+   "truncated": true
+  },
+  "23": {
+   "value": 5,
+   "finder": "Trivial",
+   "truncated": false
+  },
+  "24": {
+   "value": 5,
+   "finder": "Trivial",
+   "truncated": false
+  },
+  "25": {
+   "value": 5,
+   "finder": "Trivial",
+   "truncated": false
+  },
+  "26": {
+   "value": 5.406,
+   "finder": "Frenzley 2026",
+   "truncated": true
+  },
+  "27": {
+   "value": 5.5,
+   "finder": "Friedman 1997",
+   "truncated": false
+  },
+  "28": {
+   "value": 5.5,
+   "finder": "Friedman 1997",
+   "truncated": false
+  },
+  "29": {
+   "value": 5.666666666666667,
+   "finder": "Cantrell 2007",
+   "truncated": false
+  },
+  "30": {
+   "value": 5.75,
+   "finder": "Morandi 2008",
+   "truncated": false
+  }
+ },
+ "family": "tri-in-tri"
+}

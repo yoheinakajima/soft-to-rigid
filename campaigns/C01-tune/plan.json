@@ -1,0 +1,385 @@
+{
+ "id": "C01-tune",
+ "title": "Tune every method on held-out instances with the same effort",
+ "question": "Each method has two hyperparameters that matter. Give every method the same 3 x 3 grid on five tuning instances, pick its best setting by a fixed rule, and freeze it for all later campaigns.",
+ "hypothesis": "None; this is calibration so that later comparisons are not against untuned baselines.",
+ "decision_rule": "For each method, score each setting by the mean over tuning instances of (median legal size / best known - 1) over 16 seeds; ties broken by the mean of the best gap. The winning setting is written to methods/<method>.json and the tuning instances are excluded from headline comparisons.",
+ "created": "2026-10-08",
+ "instances": [
+  {
+   "family": "squ-in-squ",
+   "ns": [
+    10
+   ]
+  },
+  {
+   "family": "tri-in-tri",
+   "ns": [
+    6
+   ]
+  },
+  {
+   "family": "squ-in-cir",
+   "ns": [
+    8
+   ]
+  },
+  {
+   "family": "hex-in-squ",
+   "ns": [
+    5
+   ]
+  },
+  {
+   "family": "tri-in-squ",
+   "ns": [
+    5
+   ]
+  }
+ ],
+ "methods": [
+  "harden",
+  "grow",
+  "rigid",
+  "sa",
+  "pc"
+ ],
+ "budgets": [
+  1
+ ],
+ "seeds": 16,
+ "configs": {
+  "harden": [
+   {
+    "name": "mu0.01_nz0.5",
+    "params": {
+     "mu": 0.01,
+     "noiseScale": 0.5
+    }
+   },
+   {
+    "name": "mu0.01_nz1",
+    "params": {
+     "mu": 0.01,
+     "noiseScale": 1
+    }
+   },
+   {
+    "name": "mu0.01_nz2",
+    "params": {
+     "mu": 0.01,
+     "noiseScale": 2
+    }
+   },
+   {
+    "name": "mu0.02_nz0.5",
+    "params": {
+     "mu": 0.02,
+     "noiseScale": 0.5
+    }
+   },
+   {
+    "name": "mu0.02_nz1",
+    "params": {
+     "mu": 0.02,
+     "noiseScale": 1
+    }
+   },
+   {
+    "name": "mu0.02_nz2",
+    "params": {
+     "mu": 0.02,
+     "noiseScale": 2
+    }
+   },
+   {
+    "name": "mu0.04_nz0.5",
+    "params": {
+     "mu": 0.04,
+     "noiseScale": 0.5
+    }
+   },
+   {
+    "name": "mu0.04_nz1",
+    "params": {
+     "mu": 0.04,
+     "noiseScale": 1
+    }
+   },
+   {
+    "name": "mu0.04_nz2",
+    "params": {
+     "mu": 0.04,
+     "noiseScale": 2
+    }
+   }
+  ],
+  "rigid": [
+   {
+    "name": "mu0.01_nz0.5",
+    "params": {
+     "mu": 0.01,
+     "noiseScale": 0.5
+    }
+   },
+   {
+    "name": "mu0.01_nz1",
+    "params": {
+     "mu": 0.01,
+     "noiseScale": 1
+    }
+   },
+   {
+    "name": "mu0.01_nz2",
+    "params": {
+     "mu": 0.01,
+     "noiseScale": 2
+    }
+   },
+   {
+    "name": "mu0.02_nz0.5",
+    "params": {
+     "mu": 0.02,
+     "noiseScale": 0.5
+    }
+   },
+   {
+    "name": "mu0.02_nz1",
+    "params": {
+     "mu": 0.02,
+     "noiseScale": 1
+    }
+   },
+   {
+    "name": "mu0.02_nz2",
+    "params": {
+     "mu": 0.02,
+     "noiseScale": 2
+    }
+   },
+   {
+    "name": "mu0.04_nz0.5",
+    "params": {
+     "mu": 0.04,
+     "noiseScale": 0.5
+    }
+   },
+   {
+    "name": "mu0.04_nz1",
+    "params": {
+     "mu": 0.04,
+     "noiseScale": 1
+    }
+   },
+   {
+    "name": "mu0.04_nz2",
+    "params": {
+     "mu": 0.04,
+     "noiseScale": 2
+    }
+   }
+  ],
+  "grow": [
+   {
+    "name": "mu0.01_g0.2",
+    "params": {
+     "mu": 0.01,
+     "gamma0": 0.2
+    }
+   },
+   {
+    "name": "mu0.01_g0.35",
+    "params": {
+     "mu": 0.01,
+     "gamma0": 0.35
+    }
+   },
+   {
+    "name": "mu0.01_g0.5",
+    "params": {
+     "mu": 0.01,
+     "gamma0": 0.5
+    }
+   },
+   {
+    "name": "mu0.02_g0.2",
+    "params": {
+     "mu": 0.02,
+     "gamma0": 0.2
+    }
+   },
+   {
+    "name": "mu0.02_g0.35",
+    "params": {
+     "mu": 0.02,
+     "gamma0": 0.35
+    }
+   },
+   {
+    "name": "mu0.02_g0.5",
+    "params": {
+     "mu": 0.02,
+     "gamma0": 0.5
+    }
+   },
+   {
+    "name": "mu0.04_g0.2",
+    "params": {
+     "mu": 0.04,
+     "gamma0": 0.2
+    }
+   },
+   {
+    "name": "mu0.04_g0.35",
+    "params": {
+     "mu": 0.04,
+     "gamma0": 0.35
+    }
+   },
+   {
+    "name": "mu0.04_g0.5",
+    "params": {
+     "mu": 0.04,
+     "gamma0": 0.5
+    }
+   }
+  ],
+  "sa": [
+   {
+    "name": "T0.01_mu0.005",
+    "params": {
+     "saT0": 0.01,
+     "mu": 0.005
+    }
+   },
+   {
+    "name": "T0.01_mu0.02",
+    "params": {
+     "saT0": 0.01,
+     "mu": 0.02
+    }
+   },
+   {
+    "name": "T0.01_mu0.08",
+    "params": {
+     "saT0": 0.01,
+     "mu": 0.08
+    }
+   },
+   {
+    "name": "T0.001_mu0.005",
+    "params": {
+     "saT0": 0.001,
+     "mu": 0.005
+    }
+   },
+   {
+    "name": "T0.001_mu0.02",
+    "params": {
+     "saT0": 0.001,
+     "mu": 0.02
+    }
+   },
+   {
+    "name": "T0.001_mu0.08",
+    "params": {
+     "saT0": 0.001,
+     "mu": 0.08
+    }
+   },
+   {
+    "name": "T0.0001_mu0.005",
+    "params": {
+     "saT0": 0.0001,
+     "mu": 0.005
+    }
+   },
+   {
+    "name": "T0.0001_mu0.02",
+    "params": {
+     "saT0": 0.0001,
+     "mu": 0.02
+    }
+   },
+   {
+    "name": "T0.0001_mu0.08",
+    "params": {
+     "saT0": 0.0001,
+     "mu": 0.08
+    }
+   }
+  ],
+  "pc": [
+   {
+    "name": "kick0.05_relax300",
+    "params": {
+     "pcKick": 0.05,
+     "pcRelax": 300
+    }
+   },
+   {
+    "name": "kick0.05_relax600",
+    "params": {
+     "pcKick": 0.05,
+     "pcRelax": 600
+    }
+   },
+   {
+    "name": "kick0.05_relax1200",
+    "params": {
+     "pcKick": 0.05,
+     "pcRelax": 1200
+    }
+   },
+   {
+    "name": "kick0.15_relax300",
+    "params": {
+     "pcKick": 0.15,
+     "pcRelax": 300
+    }
+   },
+   {
+    "name": "kick0.15_relax600",
+    "params": {
+     "pcKick": 0.15,
+     "pcRelax": 600
+    }
+   },
+   {
+    "name": "kick0.15_relax1200",
+    "params": {
+     "pcKick": 0.15,
+     "pcRelax": 1200
+    }
+   },
+   {
+    "name": "kick0.4_relax300",
+    "params": {
+     "pcKick": 0.4,
+     "pcRelax": 300
+    }
+   },
+   {
+    "name": "kick0.4_relax600",
+    "params": {
+     "pcKick": 0.4,
+     "pcRelax": 600
+    }
+   },
+   {
+    "name": "kick0.4_relax1200",
+    "params": {
+     "pcKick": 0.4,
+     "pcRelax": 1200
+    }
+   }
+  ]
+ },
+ "polish": false,
+ "amendments": [
+  {
+   "date": "2026-10-08",
+   "change": "added \"polish\": false after the runs finished. Execution detail only: tuning runs are not sent to exact tightening. Question, grid and decision rule unchanged."
+  }
+ ]
+}

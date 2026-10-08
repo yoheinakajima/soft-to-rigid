@@ -1,0 +1,163 @@
+{
+ "title": "Unit squares in a circle",
+ "dim": 2,
+ "piece": "square",
+ "container": "circle",
+ "measure": "radius",
+ "sources": [
+  "https://erich-friedman.github.io/packing/squincir/"
+ ],
+ "records": {
+  "1": {
+   "value": 0.7071067811865475,
+   "finder": "Trivial",
+   "truncated": false
+  },
+  "2": {
+   "value": 1.118033988749895,
+   "finder": "Trivial",
+   "truncated": false
+  },
+  "3": {
+   "value": 1.288470508005519,
+   "finder": "Vu-Le 2026 (proved)",
+   "truncated": false
+  },
+  "4": {
+   "value": 1.4142135623730951,
+   "finder": "proved 2026",
+   "truncated": false
+  },
+  "5": {
+   "value": 1.5811388300841898,
+   "finder": "Vu-Le 2026 (proved)",
+   "truncated": false
+  },
+  "6": {
+   "value": 1.688,
+   "finder": "Ellsworth 2023, proved Vu-Le 2026",
+   "truncated": true
+  },
+  "7": {
+   "value": 1.8027756377319946,
+   "finder": "Vu-Le 2026 (proved)",
+   "truncated": false
+  },
+  "8": {
+   "value": 1.97877,
+   "finder": "Cantrell 2002",
+   "truncated": true
+  },
+  "9": {
+   "value": 2.0775962673243327,
+   "finder": "Friedman 1997",
+   "truncated": false
+  },
+  "10": {
+   "value": 2.1213203435596424,
+   "finder": "Friedman 1997",
+   "truncated": false
+  },
+  "11": {
+   "value": 2.21386,
+   "finder": "Kovacic 2006",
+   "truncated": true
+  },
+  "12": {
+   "value": 2.23606797749979,
+   "finder": "Friedman 1997",
+   "truncated": false
+  },
+  "13": {
+   "value": 2.3607,
+   "finder": "Cantrell 2010",
+   "truncated": true
+  },
+  "14": {
+   "value": 2.5,
+   "finder": "Friedman 1997",
+   "truncated": false
+  },
+  "15": {
+   "value": 2.533,
+   "finder": "Cantrell 2002",
+   "truncated": true
+  },
+  "16": {
+   "value": 2.623094546523247,
+   "finder": "Friedman 1997",
+   "truncated": false
+  },
+  "17": {
+   "value": 2.67687,
+   "finder": "Kovacic 2026",
+   "truncated": true
+  },
+  "18": {
+   "value": 2.7414640249326636,
+   "finder": "Cantrell 2002",
+   "truncated": false
+  },
+  "19": {
+   "value": 2.8015,
+   "finder": "Kovacic 2026",
+   "truncated": true
+  },
+  "20": {
+   "value": 2.893,
+   "finder": "Cantrell 2002",
+   "truncated": true
+  },
+  "21": {
+   "value": 2.9154759474226504,
+   "finder": "Friedman 1997",
+   "truncated": false
+  },
+  "22": {
+   "value": 3.032399268543576,
+   "finder": "H. Lin 2026 (Hyra)",
+   "truncated": false
+  },
+  "23": {
+   "value": 3.06738,
+   "finder": "Kovacic 2026",
+   "truncated": true
+  },
+  "24": {
+   "value": 3.1094,
+   "finder": "Kovacic 2026",
+   "truncated": true
+  },
+  "25": {
+   "value": 3.174503223133547,
+   "finder": "H. Lin 2026 (Hyra)",
+   "truncated": false
+  },
+  "26": {
+   "value": 3.2015621187164243,
+   "finder": "Friedman 1997",
+   "truncated": false
+  },
+  "27": {
+   "value": 3.2605,
+   "finder": "Kovacic 2026",
+   "truncated": true
+  },
+  "28": {
+   "value": 3.33147,
+   "finder": "Kovacic 2026",
+   "truncated": true
+  },
+  "29": {
+   "value": 3.39309,
+   "finder": "Kovacic 2026",
+   "truncated": true
+  },
+  "30": {
+   "value": 3.45962,
+   "finder": "Kovacic 2026",
+   "truncated": true
+  }
+ },
+ "family": "squ-in-cir"
+}

@@ -1,0 +1,113 @@
+{
+ "title": "Unit regular hexagons in a square",
+ "dim": 2,
+ "piece": "hexagon",
+ "container": "square",
+ "measure": "side",
+ "sources": [
+  "https://erich-friedman.github.io/packing/hexinsqu/"
+ ],
+ "records": {
+  "1": {
+   "value": 1.9318516525781364,
+   "finder": "Trivial",
+   "truncated": false
+  },
+  "2": {
+   "value": 3.1565965239697253,
+   "finder": "Trivial",
+   "truncated": false
+  },
+  "3": {
+   "value": 3.4919584301709192,
+   "finder": "Morandi 2026",
+   "truncated": false
+  },
+  "4": {
+   "value": 3.7250025969142437,
+   "finder": "Morandi 2026",
+   "truncated": false
+  },
+  "5": {
+   "value": 4.43782217350893,
+   "finder": "Morandi 2026",
+   "truncated": false
+  },
+  "6": {
+   "value": 4.813824682488909,
+   "finder": "Morandi 2026",
+   "truncated": false
+  },
+  "7": {
+   "value": 5.196152422706632,
+   "finder": "Trivial",
+   "truncated": false
+  },
+  "8": {
+   "value": 5.196152422706632,
+   "finder": "Trivial",
+   "truncated": false
+  },
+  "9": {
+   "value": 5.51815354125035,
+   "finder": "Morandi 2026",
+   "truncated": false
+  },
+  "10": {
+   "value": 6.10469,
+   "finder": "Viquerat 2026",
+   "truncated": true
+  },
+  "11": {
+   "value": 6.33218,
+   "finder": "Jankowski 2026",
+   "truncated": true
+  },
+  "12": {
+   "value": 6.387355239751741,
+   "finder": "Morandi 2026",
+   "truncated": false
+  },
+  "13": {
+   "value": 6.75549,
+   "finder": "Berthold et al. 2026",
+   "truncated": true
+  },
+  "14": {
+   "value": 6.928203230275509,
+   "finder": "Trivial",
+   "truncated": false
+  },
+  "15": {
+   "value": 6.96367,
+   "finder": "Jankowski 2026",
+   "truncated": true
+  },
+  "16": {
+   "value": 7.311304485586458,
+   "finder": "Morandi 2026",
+   "truncated": false
+  },
+  "17": {
+   "value": 7.60383,
+   "finder": "Jankowski 2026",
+   "truncated": true
+  },
+  "18": {
+   "value": 7.702119491982255,
+   "finder": "Morandi 2026",
+   "truncated": false
+  },
+  "19": {
+   "value": 7.924682452694517,
+   "finder": "Morandi 2026",
+   "truncated": false
+  },
+  "20": {
+   "value": 7.948953900455057,
+   "finder": "Morandi 2026",
+   "truncated": false
+  }
+ },
+ "family": "hex-in-squ"
+}

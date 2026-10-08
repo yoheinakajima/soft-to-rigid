@@ -1,0 +1,163 @@
+{
+ "title": "Unit equilateral triangles in a square",
+ "dim": 2,
+ "piece": "triangle",
+ "container": "square",
+ "measure": "side",
+ "sources": [
+  "https://erich-friedman.github.io/packing/triinsqu/"
+ ],
+ "records": {
+  "1": {
+   "value": 0.9659258262890682,
+   "finder": "Trivial",
+   "truncated": false
+  },
+  "2": {
+   "value": 1.224744871391589,
+   "finder": "Trivial",
+   "truncated": false
+  },
+  "3": {
+   "value": 1.478397839480233,
+   "finder": "Friedman 1996",
+   "truncated": false
+  },
+  "4": {
+   "value": 1.5773502691896257,
+   "finder": "Friedman 1996",
+   "truncated": false
+  },
+  "5": {
+   "value": 1.803,
+   "finder": "Friedman 1996",
+   "truncated": true
+  },
+  "6": {
+   "value": 1.901923788646684,
+   "finder": "Friedman 1996",
+   "truncated": false
+  },
+  "7": {
+   "value": 2,
+   "finder": "Friedman 1996",
+   "truncated": false
+  },
+  "8": {
+   "value": 2.098076211353316,
+   "finder": "Friedman 1996",
+   "truncated": false
+  },
+  "9": {
+   "value": 2.287,
+   "finder": "Morandi 2008",
+   "truncated": true
+  },
+  "10": {
+   "value": 2.377,
+   "finder": "Cantrell 2002",
+   "truncated": true
+  },
+  "11": {
+   "value": 2.49,
+   "finder": "Morandi 2008",
+   "truncated": true
+  },
+  "12": {
+   "value": 2.558,
+   "finder": "Kamp 2026",
+   "truncated": true
+  },
+  "13": {
+   "value": 2.595,
+   "finder": "Cantrell 2002",
+   "truncated": true
+  },
+  "14": {
+   "value": 2.726,
+   "finder": "Cantrell 2002",
+   "truncated": true
+  },
+  "15": {
+   "value": 2.82989,
+   "finder": "Loyd 2026",
+   "truncated": true
+  },
+  "16": {
+   "value": 2.9,
+   "finder": "Watson 2026",
+   "truncated": true
+  },
+  "17": {
+   "value": 2.982,
+   "finder": "Morandi 2008",
+   "truncated": true
+  },
+  "18": {
+   "value": 3.051,
+   "finder": "Morandi 2008",
+   "truncated": true
+  },
+  "19": {
+   "value": 3.12929,
+   "finder": "Loyd 2026",
+   "truncated": true
+  },
+  "20": {
+   "value": 3.2305,
+   "finder": "Watson 2026",
+   "truncated": true
+  },
+  "21": {
+   "value": 3.31102,
+   "finder": "Schadt 2026",
+   "truncated": true
+  },
+  "22": {
+   "value": 3.3757,
+   "finder": "Watson 2026",
+   "truncated": true
+  },
+  "23": {
+   "value": 3.4311,
+   "finder": "Watson 2026",
+   "truncated": true
+  },
+  "24": {
+   "value": 3.4678,
+   "finder": "Schadt 2026",
+   "truncated": true
+  },
+  "25": {
+   "value": 3.537,
+   "finder": "Cantrell 2012",
+   "truncated": true
+  },
+  "26": {
+   "value": 3.575,
+   "finder": "Morandi 2008",
+   "truncated": true
+  },
+  "27": {
+   "value": 3.6726,
+   "finder": "Watson 2026",
+   "truncated": true
+  },
+  "28": {
+   "value": 3.75707,
+   "finder": "Loyd 2026",
+   "truncated": true
+  },
+  "29": {
+   "value": 3.81711,
+   "finder": "Loyd 2026",
+   "truncated": true
+  },
+  "30": {
+   "value": 3.86619,
+   "finder": "Loyd 2026",
+   "truncated": true
+  }
+ },
+ "family": "tri-in-squ"
+}

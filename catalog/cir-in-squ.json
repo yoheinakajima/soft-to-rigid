@@ -1,0 +1,193 @@
+{
+ "title": "Unit-diameter circles in a square (control: no orientation)",
+ "dim": 2,
+ "piece": "circle",
+ "container": "square",
+ "measure": "side",
+ "sources": [
+  "http://www.packomania.com/csq/csq.html"
+ ],
+ "records": {
+  "1": {
+   "value": 1.0,
+   "finder": "Packomania (csq)",
+   "truncated": false,
+   "coords": "packomania"
+  },
+  "2": {
+   "value": 1.7071067811891847,
+   "finder": "Packomania (csq)",
+   "truncated": false,
+   "coords": "packomania"
+  },
+  "3": {
+   "value": 1.9659258262909993,
+   "finder": "Packomania (csq)",
+   "truncated": false,
+   "coords": "packomania"
+  },
+  "4": {
+   "value": 2.0,
+   "finder": "Packomania (csq)",
+   "truncated": false,
+   "coords": "packomania"
+  },
+  "5": {
+   "value": 2.414213562367821,
+   "finder": "Packomania (csq)",
+   "truncated": false,
+   "coords": "packomania"
+  },
+  "6": {
+   "value": 2.6641005886824565,
+   "finder": "Packomania (csq)",
+   "truncated": false,
+   "coords": "packomania"
+  },
+  "7": {
+   "value": 2.866025403784594,
+   "finder": "Packomania (csq)",
+   "truncated": false,
+   "coords": "packomania"
+  },
+  "8": {
+   "value": 2.9318516525790725,
+   "finder": "Packomania (csq)",
+   "truncated": false,
+   "coords": "packomania"
+  },
+  "9": {
+   "value": 2.999999999994,
+   "finder": "Packomania (csq)",
+   "truncated": false,
+   "coords": "packomania"
+  },
+  "10": {
+   "value": 3.373720761624265,
+   "finder": "Packomania (csq)",
+   "truncated": false,
+   "coords": "packomania"
+  },
+  "11": {
+   "value": 3.511254751710269,
+   "finder": "Packomania (csq)",
+   "truncated": false,
+   "coords": "packomania"
+  },
+  "12": {
+   "value": 3.572478777148558,
+   "finder": "Packomania (csq)",
+   "truncated": false,
+   "coords": "packomania"
+  },
+  "13": {
+   "value": 3.7315239144298693,
+   "finder": "Packomania (csq)",
+   "truncated": false,
+   "coords": "packomania"
+  },
+  "14": {
+   "value": 3.8660254037854553,
+   "finder": "Packomania (csq)",
+   "truncated": false,
+   "coords": "packomania"
+  },
+  "15": {
+   "value": 3.9318516525819986,
+   "finder": "Packomania (csq)",
+   "truncated": false,
+   "coords": "packomania"
+  },
+  "16": {
+   "value": 4.0,
+   "finder": "Packomania (csq)",
+   "truncated": false,
+   "coords": "packomania"
+  },
+  "17": {
+   "value": 4.26633017374718,
+   "finder": "Packomania (csq)",
+   "truncated": false,
+   "coords": "packomania"
+  },
+  "18": {
+   "value": 4.328201177351357,
+   "finder": "Packomania (csq)",
+   "truncated": false,
+   "coords": "packomania"
+  },
+  "19": {
+   "value": 4.453730469662893,
+   "finder": "Packomania (csq)",
+   "truncated": false,
+   "coords": "packomania"
+  },
+  "20": {
+   "value": 4.489041676430204,
+   "finder": "Packomania (csq)",
+   "truncated": false,
+   "coords": "packomania"
+  },
+  "21": {
+   "value": 4.6790099794392,
+   "finder": "Packomania (csq)",
+   "truncated": false,
+   "coords": "packomania"
+  },
+  "22": {
+   "value": 4.7319225454867855,
+   "finder": "Packomania (csq)",
+   "truncated": false,
+   "coords": "packomania"
+  },
+  "23": {
+   "value": 4.863703305146059,
+   "finder": "Packomania (csq)",
+   "truncated": false,
+   "coords": "packomania"
+  },
+  "24": {
+   "value": 4.931851652559336,
+   "finder": "Packomania (csq)",
+   "truncated": false,
+   "coords": "packomania"
+  },
+  "25": {
+   "value": 5.0,
+   "finder": "Packomania (csq)",
+   "truncated": false,
+   "coords": "packomania"
+  },
+  "26": {
+   "value": 5.188749101950633,
+   "finder": "Packomania (csq)",
+   "truncated": false,
+   "coords": "packomania"
+  },
+  "27": {
+   "value": 5.239991520021953,
+   "finder": "Packomania (csq)",
+   "truncated": false,
+   "coords": "packomania"
+  },
+  "28": {
+   "value": 5.337726847160409,
+   "finder": "Packomania (csq)",
+   "truncated": false,
+   "coords": "packomania"
+  },
+  "29": {
+   "value": 5.407560008814945,
+   "finder": "Packomania (csq)",
+   "truncated": false,
+   "coords": "packomania"
+  },
+  "30": {
+   "value": 5.454284165416308,
+   "finder": "Packomania (csq)",
+   "truncated": false,
+   "coords": "packomania"
+  }
+ },
+ "family": "cir-in-squ"
+}

@@ -1,0 +1,163 @@
+{
+ "title": "Unit squares in an equilateral triangle",
+ "dim": 2,
+ "piece": "square",
+ "container": "triangle",
+ "measure": "side",
+ "sources": [
+  "https://erich-friedman.github.io/packing/squintri/"
+ ],
+ "records": {
+  "1": {
+   "value": 2.1547005383792515,
+   "finder": "Trivial",
+   "truncated": false
+  },
+  "2": {
+   "value": 3.1547005383792515,
+   "finder": "Trivial",
+   "truncated": false
+  },
+  "3": {
+   "value": 3.232050807568877,
+   "finder": "Friedman 1997",
+   "truncated": false
+  },
+  "4": {
+   "value": 4.1547005383792515,
+   "finder": "Friedman 1997",
+   "truncated": false
+  },
+  "5": {
+   "value": 4.309401076758503,
+   "finder": "Friedman 1997",
+   "truncated": false
+  },
+  "6": {
+   "value": 4.309401076758503,
+   "finder": "Friedman 1997",
+   "truncated": false
+  },
+  "7": {
+   "value": 5.1547005383792515,
+   "finder": "Friedman 1997",
+   "truncated": false
+  },
+  "8": {
+   "value": 5.301,
+   "finder": "Cantrell 2002",
+   "truncated": true
+  },
+  "9": {
+   "value": 5.309401076758503,
+   "finder": "Friedman 1997",
+   "truncated": false
+  },
+  "10": {
+   "value": 5.464101615137754,
+   "finder": "Friedman 1997",
+   "truncated": false
+  },
+  "11": {
+   "value": 6.1547005383792515,
+   "finder": "Friedman 1997",
+   "truncated": false
+  },
+  "12": {
+   "value": 6.301,
+   "finder": "Cantrell 2002",
+   "truncated": true
+  },
+  "13": {
+   "value": 6.309401076758503,
+   "finder": "Friedman 1997",
+   "truncated": false
+  },
+  "14": {
+   "value": 6.464101615137754,
+   "finder": "Friedman 1997",
+   "truncated": false
+  },
+  "15": {
+   "value": 6.464101615137754,
+   "finder": "Friedman 1997",
+   "truncated": false
+  },
+  "16": {
+   "value": 7.1547005383792515,
+   "finder": "Friedman 1997",
+   "truncated": false
+  },
+  "17": {
+   "value": 7.301,
+   "finder": "Cantrell 2002",
+   "truncated": true
+  },
+  "18": {
+   "value": 7.309401076758503,
+   "finder": "Friedman 1997",
+   "truncated": false
+  },
+  "19": {
+   "value": 7.464101615137754,
+   "finder": "Friedman 1997",
+   "truncated": false
+  },
+  "20": {
+   "value": 7.616954722204242,
+   "finder": "H. Lin 2026 (Hyra)",
+   "truncated": false
+  },
+  "21": {
+   "value": 7.618802153517007,
+   "finder": "Friedman 1997",
+   "truncated": false
+  },
+  "22": {
+   "value": 8.154700538379252,
+   "finder": "Friedman 1997",
+   "truncated": false
+  },
+  "23": {
+   "value": 8.301,
+   "finder": "Cantrell 2002",
+   "truncated": true
+  },
+  "24": {
+   "value": 8.309401076758503,
+   "finder": "Friedman 1997",
+   "truncated": false
+  },
+  "25": {
+   "value": 8.464101615137753,
+   "finder": "Friedman 1997",
+   "truncated": false
+  },
+  "26": {
+   "value": 8.60805,
+   "finder": "Wolk 2026",
+   "truncated": true
+  },
+  "27": {
+   "value": 8.618802153517006,
+   "finder": "Friedman 1997",
+   "truncated": false
+  },
+  "28": {
+   "value": 8.773502691896258,
+   "finder": "Friedman 1997",
+   "truncated": false
+  },
+  "29": {
+   "value": 9.154700538379252,
+   "finder": "Friedman 1997",
+   "truncated": false
+  },
+  "30": {
+   "value": 9.301,
+   "finder": "Cantrell 2002",
+   "truncated": true
+  }
+ },
+ "family": "squ-in-tri"
+}

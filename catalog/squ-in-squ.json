@@ -1,0 +1,194 @@
+{
+ "title": "Unit squares in a square",
+ "dim": 2,
+ "piece": "square",
+ "container": "square",
+ "measure": "side",
+ "sources": [
+  "https://jlevy.github.io/squares/",
+  "https://kingbird.myphotos.cc/packing/squares_in_squares.html"
+ ],
+ "records": {
+  "1": {
+   "value": 1,
+   "finder": "trivial or classical",
+   "truncated": false,
+   "coords": "squares-project"
+  },
+  "2": {
+   "value": 2,
+   "finder": "trivial or classical",
+   "truncated": false,
+   "coords": "squares-project"
+  },
+  "3": {
+   "value": 2,
+   "finder": "trivial or classical",
+   "truncated": false,
+   "coords": "squares-project"
+  },
+  "4": {
+   "value": 2,
+   "finder": "trivial or classical",
+   "truncated": false,
+   "coords": "squares-project"
+  },
+  "5": {
+   "value": 2.7071067811865475,
+   "finder": "G\u00f6bel 1979",
+   "truncated": false,
+   "coords": "squares-project"
+  },
+  "6": {
+   "value": 3,
+   "finder": "trivial or classical",
+   "truncated": false,
+   "coords": "squares-project"
+  },
+  "7": {
+   "value": 3,
+   "finder": "trivial or classical",
+   "truncated": false,
+   "coords": "squares-project"
+  },
+  "8": {
+   "value": 3,
+   "finder": "trivial or classical",
+   "truncated": false,
+   "coords": "squares-project"
+  },
+  "9": {
+   "value": 3,
+   "finder": "trivial or classical",
+   "truncated": false,
+   "coords": "squares-project"
+  },
+  "10": {
+   "value": 3.7071067811865475,
+   "finder": "G\u00f6bel 1979",
+   "truncated": false,
+   "coords": "squares-project"
+  },
+  "11": {
+   "value": 3.87708359002281,
+   "finder": "Trump 1979",
+   "truncated": false,
+   "coords": "squares-project"
+  },
+  "12": {
+   "value": 4,
+   "finder": "trivial or classical",
+   "truncated": false,
+   "coords": "squares-project"
+  },
+  "13": {
+   "value": 4,
+   "finder": "trivial or classical",
+   "truncated": false,
+   "coords": "squares-project"
+  },
+  "14": {
+   "value": 4,
+   "finder": "trivial or classical",
+   "truncated": false,
+   "coords": "squares-project"
+  },
+  "15": {
+   "value": 4,
+   "finder": "trivial or classical",
+   "truncated": false,
+   "coords": "squares-project"
+  },
+  "16": {
+   "value": 4,
+   "finder": "trivial or classical",
+   "truncated": false,
+   "coords": "squares-project"
+  },
+  "17": {
+   "value": 4.67553009360455,
+   "finder": "Bidwell 1998",
+   "truncated": false,
+   "coords": "squares-project"
+  },
+  "18": {
+   "value": 4.822875655532295,
+   "finder": "H\u00e4m\u00e4l\u00e4inen 1980",
+   "truncated": false,
+   "coords": "squares-project"
+  },
+  "19": {
+   "value": 4.885618083164127,
+   "finder": "Wainwright 1979",
+   "truncated": false,
+   "coords": "squares-project"
+  },
+  "20": {
+   "value": 5,
+   "finder": "trivial or classical",
+   "truncated": false,
+   "coords": "squares-project"
+  },
+  "21": {
+   "value": 5,
+   "finder": "trivial or classical",
+   "truncated": false,
+   "coords": "squares-project"
+  },
+  "22": {
+   "value": 5,
+   "finder": "trivial or classical",
+   "truncated": false,
+   "coords": "squares-project"
+  },
+  "23": {
+   "value": 5,
+   "finder": "trivial or classical",
+   "truncated": false,
+   "coords": "squares-project"
+  },
+  "24": {
+   "value": 5,
+   "finder": "trivial or classical",
+   "truncated": false,
+   "coords": "squares-project"
+  },
+  "25": {
+   "value": 5,
+   "finder": "trivial or classical",
+   "truncated": false,
+   "coords": "squares-project"
+  },
+  "26": {
+   "value": 5.621320343559643,
+   "finder": "Friedman 1997",
+   "truncated": false,
+   "coords": "squares-project"
+  },
+  "27": {
+   "value": 5.707106781186548,
+   "finder": "G\u00f6bel 1979",
+   "truncated": false,
+   "coords": "squares-project"
+  },
+  "28": {
+   "value": 5.82444461667405,
+   "finder": "Ellsworth 2025",
+   "truncated": false,
+   "coords": "squares-project"
+  },
+  "29": {
+   "value": 5.93383346267692,
+   "finder": "Schadt 2025",
+   "truncated": false,
+   "coords": "squares-project"
+  },
+  "30": {
+   "value": 6,
+   "finder": "trivial or classical",
+   "truncated": false,
+   "coords": "squares-project"
+  }
+ },
+ "family": "squ-in-squ"
+}
