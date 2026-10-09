@@ -161,7 +161,7 @@ def main():
     rows = [rf"{m} & {f(pr[f'{m}/n20']['steps'])} & {f(pr[f'{m}/n30']['steps'])} & {f(pr[f'{m}/n20']['pair_evals'])} & {f(pr[f'{m}/n30']['pair_evals'])} & {f(pr[f'{m}/n20']['ms'])} & {f(pr[f'{m}/n30']['ms'])} & {round(100 * d['eligible_fraction'][m])}\% \\"
             for m in METHODS if f'{m}/n20' in pr]
     open(os.path.join(ROOT, 'paper', 'tables', 'diag.tex'), 'w').write(
-        '\\begin{table}[h]\\centering\\small\n\\begin{tabular}{lrrrrrrr}\n\\toprule\n'
+        '\\begin{table}[ht]\\centering\\small\n\\begin{tabular}{lrrrrrrr}\n\\toprule\n'
         r'method & \multicolumn{2}{c}{steps (sa: moves) per run} & \multicolumn{2}{c}{pair evaluations per run} & \multicolumn{2}{c}{ms per run} & best run \\' '\n'
         r' & $n=20$ & $n=30$ & $n=20$ & $n=30$ & $n=20$ & $n=30$ & tightened \\' '\n\\midrule\n' + '\n'.join(rows) +
         '\n\\bottomrule\n\\end{tabular}\n\\caption{Work per run (C07, squares in a square, mean over 32 runs) wall-clock milliseconds per run on one core (Node.js), and the share of instances on which each method\'s best run was within 2\\% of the best known value and so was tightened (all families). Gradient paths are matched in steps; the baselines stop once they exceed a reference hardening run\'s pair evaluations.}\\label{tab:diag}\n\\end{table}\n')

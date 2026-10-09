@@ -5,7 +5,7 @@ replays and claim folders are copied from the repository so every link resolves.
 import datetime, glob, os, shutil, subprocess
 HERE = os.path.dirname(os.path.abspath(__file__)); ROOT = os.path.dirname(HERE); OUT = os.path.join(ROOT, '_site')
 REPO = os.environ.get('SITE_REPO', 'https://github.com/yoheinakajima/soft-to-rigid')
-PAGES = {'index': ('Soft-to-Rigid Packing', 'Does the path a piece takes through shape space change which packings a search finds? An equal-budget study across 2D and 3D families, with every run replayable.'),
+PAGES = {'index': ('Soft-to-Rigid Packing', 'Hardening disks into polygons as a search to run beside rigid starts: where it finds packings others miss, where it loses, with every run replayable.'),
          'families': ('Families and Replays', 'Every instance, every method, with replays of the best runs.'),
          'journal': ('Research Journal', 'Every campaign in order: question, expectation, rule, result, decision.'),
          'claims': ('Certified Claims', 'Packings below published values, with verifiers.')}
@@ -40,7 +40,7 @@ abstract = open(os.path.join(ROOT, 'paper', 'sections', 'abstract.tex')).read()
 import re as _re
 nums = dict(_re.findall(r'\\newcommand\{\\(\w+)\}\{([^}]*)\}', open(os.path.join(ROOT, 'paper', 'numbers.tex')).read()))
 abstract = _re.sub(r'\\(\w+)\{\}', lambda m: nums.get(m.group(1), m.group(0)), abstract).replace('{,}', ',')
-body = f'''<header><div class="eyebrow">paper · draft rebuilt with every commit</div><h1>Soft-to-Rigid: Packing Congruent Shapes by Hardening Disks into Polygons</h1>
+body = f'''<header><div class="eyebrow">paper · draft rebuilt with every commit</div><h1>Soft-to-Rigid: Shape Continuation as a Complementary Search for Packing Congruent Shapes</h1>
 <p class="lede">{abstract}</p><div class="links"><a href="paper.pdf">PDF</a><a href="{{{{REPO}}}}/tree/main/paper">LaTeX source</a><a href="journal.html">Journal</a></div></header>
 <section class="wide"><object data="paper.pdf" type="application/pdf" style="width:100%;height:85vh;border:1px solid var(--rule)"><p><a href="paper.pdf">Download the PDF</a>.</p></object></section>'''
 open(os.path.join(OUT, 'paper.html'), 'w').write((head + body + foot).replace('{{TITLE}}', 'Paper').replace('{{DESC}}', 'Soft-to-Rigid: the paper').replace('{{SCRIPTS}}', '')

@@ -1,4 +1,4 @@
-\begin{thebibliography}{60}
+\begin{thebibliography}{64}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -80,6 +80,12 @@ A.~Bortfeldt and G.~W{\"a}scher.
 \newblock \emph{European Journal of Operational Research}, 229\penalty0
   (1):\penalty0 1--20, 2013.
 \newblock \doi{10.1016/j.ejor.2012.12.006}.
+
+\bibitem[{@BuilderOfAgents}(2026)]{n13repo}
+{@BuilderOfAgents}.
+\newblock 13 unit cubes in a cube: soft-to-rigid, continued.
+\newblock \url{https://github.com/tronford/cubes-in-cube-n13}, 2026.
+\newblock Commit c9b9b4e, 9 October 2026.
 
 \bibitem[Dolan and Mor{\'e}(2002)]{Dolan2002}
 E.~D. Dolan and J.~J. Mor{\'e}.
@@ -325,6 +331,14 @@ Y.~Nakajima.
   \url{https://github.com/yoheinakajima/soft-to-rigid-packing},
   doi:10.5281/zenodo.23248095, 2026{\natexlab{b}}.
 
+\bibitem[Nakajima(2026{\natexlab{c}})]{softtorigidpacking}
+Y.~Nakajima.
+\newblock soft-to-rigid-packing: code and certificate for 12 unit cubes in a
+  cube.
+\newblock \url{https://github.com/yoheinakajima/soft-to-rigid-packing},
+  2026{\natexlab{c}}.
+\newblock doi:10.5281/zenodo.23248095.
+
 \bibitem[Novikov et~al.(2025)Novikov, V{\~u}, Eisenberger, Dupont, Huang,
   et~al.]{Novikov2025}
 A.~Novikov, N.~V{\~u}, M.~Eisenberger, E.~Dupont, P.-S. Huang, et~al.
@@ -419,5 +433,18 @@ G.~W{\"a}scher, H.~Hau{\ss}ner, and H.~Schumann.
 \newblock \emph{European Journal of Operational Research}, 183\penalty0
   (3):\penalty0 1109--1130, 2007.
 \newblock \doi{10.1016/j.ejor.2005.12.047}.
+
+\bibitem[Yudhiono(2026)]{tesseractrepo}
+H.~Yudhiono.
+\newblock Tesseracts in a box.
+\newblock \url{https://github.com/hockyy/tesseract-packing}, 2026.
+\newblock Commit e75c790, 9 October 2026.
+
+\bibitem[Zarzuelo(2026)]{platonicrepo}
+A.~Zarzuelo.
+\newblock platonic-packing: {P}latonic solids in {P}latonic containers by
+  soft-to-rigid continuation.
+\newblock \url{https://github.com/alejandrozu/platonic-packing}, 2026.
+\newblock Commit cd6d4bf, 9 October 2026; the search was still running.
 
 \end{thebibliography}

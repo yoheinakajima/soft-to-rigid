@@ -95,13 +95,13 @@ def main(workers=2):
     nums += [rf'\newcommand{{\DecReached{k}}}{{{res["reached"][p]}}}' for k, p in (('Rigid', 'always-rigid'), ('Harden', 'always-harden'), ('Pilot', 'pilot'))]
     open(os.path.join(ROOT, 'paper', 'decision.tex'), 'w').write('\n'.join(nums) + '\n')
     L = [r'\begin{table}[t]\centering\small', r'\begin{tabular}{lrcccc}', r'\toprule',
-         r'family & $N$ & harden : rigid & pilot : rigid & pilot chose harden & reached (rigid / harden / pilot) \\', r'\midrule']
+         r'family & $N$ & harden : rigid & pilot : rigid & pilot chose harden & reached (r / h / p) \\', r'\midrule']
     for f, v in res['families'].items():
         L.append(f"{SHORT[f]} & {v['N']} & {v['harden_vs_rigid']['a_lower']} : {v['harden_vs_rigid']['b_lower']} & {v['pilot_vs_rigid']['a_lower']} : {v['pilot_vs_rigid']['b_lower']} & {v['picked_harden']} & "
                  f"{v['reached']['always-rigid']} / {v['reached']['always-harden']} / {v['reached']['pilot']} \\\\")
     L += [r'\midrule', f"all & {len(allk)} & {hv['a_lower']} : {hv['b_lower']} & {pv['a_lower']} : {pv['b_lower']} & {res['picked_harden']} & "
           f"{res['reached']['always-rigid']} / {res['reached']['always-harden']} / {res['reached']['pilot']} \\\\", r'\bottomrule', r'\end{tabular}',
-          r'\caption{Held-out families (C15), $n=6$--$20$, 64 runs per policy. $a:b$ counts instances where the first policy\textquotesingle s result is lower than the second\textquotesingle s and the reverse. The pilot spends 8 runs on each path, then 48 on the one whose pilot went lower.}',
+          r'\caption{Held-out families (C15), $n=6$--$20$, 64 runs per policy. $a:b$ counts instances where the first policy\textquotesingle s result is lower than the second\textquotesingle s and the reverse. The pilot spends 8 runs on each path, then 48 on the one whose pilot went lower. Reached (r / h / p): instances where always-rigid, always-harden and the pilot reach the best known value.}',
           r'\label{tab:decision}', r'\end{table}']
     open(os.path.join(ROOT, 'paper', 'tables', 'C15.tex'), 'w').write('\n'.join(L) + '\n')
     print(json.dumps({k: res[k] for k in ('pilot_vs_rigid', 'harden_vs_rigid', 'pilot_vs_harden', 'reached', 'picked_harden')}, indent=1))

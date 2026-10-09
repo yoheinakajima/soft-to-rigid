@@ -688,6 +688,69 @@
   "rigid_instances_all3": 14,
   "rigid_instances_some_not_all": 2
  },
+ "C16-squares-long": {
+  "N": 14,
+  "lowest": {
+   "harden": 13,
+   "grow": 7,
+   "rigid": 8,
+   "sa": 9,
+   "pc": 6
+  },
+  "sole": {
+   "harden": 5,
+   "grow": 0,
+   "rigid": 0,
+   "sa": 1,
+   "pc": 0
+  },
+  "reached": {
+   "harden": 12,
+   "grow": 7,
+   "rigid": 8,
+   "sa": 9,
+   "pc": 6
+  },
+  "sole_instances": {
+   "harden": [
+    17,
+    19,
+    26,
+    28,
+    29
+   ],
+   "grow": [],
+   "rigid": [],
+   "sa": [
+    27
+   ],
+   "pc": []
+  },
+  "harden_vs_rigid": {
+   "a_lower": 6,
+   "b_lower": 0,
+   "ties": 8,
+   "p_lower": 0.03125,
+   "a_only_reached": 4,
+   "b_only_reached": 0,
+   "p_reached": 0.125
+  },
+  "reached_only": {
+   "harden": [
+    17,
+    19,
+    26,
+    29
+   ],
+   "grow": [],
+   "rigid": [],
+   "sa": [
+    27
+   ],
+   "pc": []
+  },
+  "below_catalogue": []
+ },
  "C13-budget-clean": {
   "instances": 28,
   "1x32": {

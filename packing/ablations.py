@@ -143,6 +143,8 @@ def long_squares():
             out['reached'][m] += low_[(n, m)] <= rec + tol
     H = {('squ-in-squ', n): low_[(n, 'harden')] for n in ns}; R = {('squ-in-squ', n): low_[(n, 'rigid')] for n in ns}
     out['harden_vs_rigid'] = pairwise(H, R, sorted(H))
+    out['reached_only'] = {m: [n for n in ns if low_[(n, m)] <= catalog_tol('squ-in-squ', n)[0] + catalog_tol('squ-in-squ', n)[1]
+                               and all(low_[(n, o)] > catalog_tol('squ-in-squ', n)[0] + catalog_tol('squ-in-squ', n)[1] for o in M if o != m)] for m in M}
     out['below_catalogue'] = [n for n in ns if min(low_[(n, m)] for m in M) < catalog_tol('squ-in-squ', n)[0] * (1 - 1e-9)]
     return out
 
@@ -189,6 +191,8 @@ def main():
         hv = ls['harden_vs_rigid']
         nums += [rf'\newcommand{{\LongHLower}}{{{hv["a_lower"]}}}', rf'\newcommand{{\LongRLower}}{{{hv["b_lower"]}}}', rf'\newcommand{{\LongP}}{{{fmt_p(hv["p_lower"])}}}',
                  rf'\newcommand{{\LongHardenSoleNs}}{{{", ".join(str(n) for n in ls["sole_instances"]["harden"]) or "none"}}}',
+                 rf'\newcommand{{\LongHardenOnlyReachedNs}}{{{", ".join(str(n) for n in ls["reached_only"]["harden"]) or "none"}}}',
+                 rf'\newcommand{{\LongSaOnlyReachedNs}}{{{", ".join(str(n) for n in ls["reached_only"]["sa"]) or "none"}}}',
                  rf'\newcommand{{\LongBelow}}{{{len(ls["below_catalogue"])}}}']
     b = budget() if done('C13-budget-clean') else None
     if b:

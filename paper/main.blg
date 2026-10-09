@@ -9,45 +9,45 @@ Warning--empty year in friedmansurvey
 Warning--empty year in packomania
 Warning--empty year in hyra
 Warning--empty year in squaresproject
-You've used 60 entries,
+You've used 64 entries,
             2773 wiz_defined-function locations,
-            1005 strings with 16227 characters,
-and the built_in function-call counts, 28059 in all, are:
-= -- 2532
-> -- 1687
-< -- 34
-+ -- 576
-- -- 513
-* -- 2321
-:= -- 4355
-add.period$ -- 223
-call.type$ -- 60
-change.case$ -- 347
-chr.to.int$ -- 57
-cite$ -- 126
-duplicate$ -- 1177
-empty$ -- 2241
-format.name$ -- 601
-if$ -- 5841
-int.to.chr$ -- 4
+            1024 strings with 16918 characters,
+and the built_in function-call counts, 29273 in all, are:
+= -- 2644
+> -- 1727
+< -- 38
++ -- 593
+- -- 525
+* -- 2375
+:= -- 4542
+add.period$ -- 239
+call.type$ -- 64
+change.case$ -- 363
+chr.to.int$ -- 60
+cite$ -- 134
+duplicate$ -- 1237
+empty$ -- 2369
+format.name$ -- 617
+if$ -- 6105
+int.to.chr$ -- 5
 int.to.str$ -- 1
 missing$ -- 44
-newline$ -- 351
-num.names$ -- 240
-pop$ -- 691
+newline$ -- 375
+num.names$ -- 256
+pop$ -- 739
 preamble$ -- 1
-purify$ -- 289
+purify$ -- 301
 quote$ -- 0
-skip$ -- 927
+skip$ -- 974
 stack$ -- 0
-substring$ -- 963
-swap$ -- 99
+substring$ -- 971
+swap$ -- 104
 text.length$ -- 5
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 650
+type$ -- 694
 warning$ -- 6
-while$ -- 247
+while$ -- 259
 width$ -- 0
-write$ -- 850
+write$ -- 906
 (There were 6 warnings)

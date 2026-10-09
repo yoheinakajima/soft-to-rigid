@@ -1,7 +1,7 @@
 \begin{table}[t]\centering\small
 \begin{tabular}{lrcccc}
 \toprule
-family & $N$ & harden : rigid & pilot : rigid & pilot chose harden & reached (rigid / harden / pilot) \\
+family & $N$ & harden : rigid & pilot : rigid & pilot chose harden & reached (r / h / p) \\
 \midrule
 pentagons in square & 15 & 1 : 8 & 0 : 1 & 3 & 8 / 4 / 8 \\
 octagons in square & 15 & 0 : 3 & 0 : 0 & 6 & 11 / 9 / 11 \\
@@ -11,6 +11,6 @@ triangles in circle & 15 & 2 : 4 & 2 : 1 & 3 & 11 / 10 / 12 \\
 all & 60 & 3 : 17 & 2 : 3 & 20 & 40 / 32 / 41 \\
 \bottomrule
 \end{tabular}
-\caption{Held-out families (C15), $n=6$--$20$, 64 runs per policy. $a:b$ counts instances where the first policy\textquotesingle s result is lower than the second\textquotesingle s and the reverse. The pilot spends 8 runs on each path, then 48 on the one whose pilot went lower.}
+\caption{Held-out families (C15), $n=6$--$20$, 64 runs per policy. $a:b$ counts instances where the first policy\textquotesingle s result is lower than the second\textquotesingle s and the reverse. The pilot spends 8 runs on each path, then 48 on the one whose pilot went lower. Reached (r / h / p): instances where always-rigid, always-harden and the pilot reach the best known value.}
 \label{tab:decision}
 \end{table}
