@@ -42,7 +42,7 @@ where $r=\gamma\tau\rho$, $\operatorname{sd}_{ij}$ is the signed distance betwee
 \end{algorithmic}
 \end{algorithm}
 
-\paragraph{Step details.} Each momentum step updates velocities as $v\leftarrow0.85\,v-0.04\,\nabla E$ (container size: $v_L\leftarrow0.85\,v_L-0.02\,(\mu+\partial E/\partial L)$), caps a piece's translation step at $0.03R/\!\sqrt2$ and its rotation at $0.03$ rad, then adds Gaussian noise. With noise multiplier $\nu$ (Appendix, frozen settings), the positional noise is $0.015\,\nu\,(1-u)$ during compression and $0.004\,\nu\,(1-u)$ during the path, where $u\in[0,1]$ is progress through the phase, and the angular noise is $1.5$ times the positional noise. The implementation is \texttt{engine/engine2d.js}.
+\paragraph{Step details.} Each momentum step updates velocities as $v\leftarrow0.85\,v-0.04\,\nabla E$ (container size: $v_L\leftarrow0.85\,v_L-0.02\,(\mu+\partial E/\partial L)$), caps a piece's translation step at $0.03\sqrt2\,R$ ($R$ the circumradius) and its rotation at $0.03$ rad, then adds Gaussian noise. With noise multiplier $\nu$ (Appendix, frozen settings), the positional noise is $0.015\,\nu\,(1-u)$ during compression and $0.004\,\nu\,(1-u)$ during the path, where $u\in[0,1]$ is progress through the phase, and the angular noise is $1.5$ times the positional noise. The implementation is \texttt{engine/engine2d.js}.
 
 \begin{figure}[t]\centering
 \includegraphics[width=\linewidth]{figures/strip_squ19}\\[2pt]
