@@ -290,7 +290,12 @@ function runPath(cfg) {
   const nC = Math.round(cfg.compress * B), nM = Math.round(cfg.morph * B), nS = Math.round(cfg.settle * B);
   const total = nC + nM + nS, every = Math.max(1, Math.floor(total / cfg.frames));
   const path = cfg.path; // {gamma0, tau0}
+  const areaC = P.k ? Math.PI * P.rho * P.rho / P.area : 1; // inscribed-disk share of the piece's area
   const shapeAt = (u) => { // u in [0,1] along the morph
+    if (path.area) { // grow-area: rigid polygon scaled so its area follows harden's area schedule
+      const t = 1 - u; st.tau = 0; st.gam = Math.sqrt(1 - (1 - areaC) * t * t); return;
+    }
+    if (path.snap) { st.gam = 1; st.tau = u === 0 ? 1 : 0; return; } // snap: disks, then polygons at once
     st.gam = path.gamma0 + (1 - path.gamma0) * u;
     st.tau = path.tau0 * (1 - u);
   };
@@ -438,6 +443,8 @@ const METHOD_PATHS = {
   'harden-half': { gamma0: 1, tau0: 0.5 },      // ablation: start half-rounded
   'harden-quarter': { gamma0: 1, tau0: 0.25 },
   grow: { gamma0: 0.35, tau0: 0 },
+  snap: { gamma0: 1, tau0: 1, snap: true },          // ablation: disk compression, then rigid polygons at once
+  'grow-area': { gamma0: 1, tau0: 0, area: true },  // ablation: rigid growth with harden's area schedule
   rigid: { gamma0: 1, tau0: 0 },
 };
 function run(cfg) {

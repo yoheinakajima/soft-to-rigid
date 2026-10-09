@@ -1,0 +1,190 @@
+{
+ "created": "2026-10-09",
+ "budgets": [
+  3,
+  1
+ ],
+ "polish": true,
+ "instances": [
+  {
+   "family": "squ-in-squ",
+   "ns": [
+    11,
+    17,
+    23,
+    29
+   ]
+  },
+  {
+   "family": "squ-in-cir",
+   "ns": [
+    11,
+    17,
+    23,
+    29
+   ]
+  },
+  {
+   "family": "squ-in-tri",
+   "ns": [
+    11,
+    17,
+    23,
+    29
+   ]
+  },
+  {
+   "family": "tri-in-tri",
+   "ns": [
+    11,
+    17,
+    23,
+    29
+   ]
+  },
+  {
+   "family": "tri-in-squ",
+   "ns": [
+    11,
+    17,
+    23,
+    29
+   ]
+  },
+  {
+   "family": "hex-in-squ",
+   "ns": [
+    8,
+    12,
+    16,
+    20
+   ]
+  },
+  {
+   "family": "cir-in-squ",
+   "ns": [
+    11,
+    17,
+    23,
+    29
+   ]
+  }
+ ],
+ "title": "Longer runs or more runs? A clean budget study",
+ "question": "C09 changed run length and restart count together and used instances selected for disagreement. Here, on 28 instances fixed in advance (n = 11, 17, 23, 29 per family; hexagons n = 8, 12, 16, 20), harden-best and rigid-best get (a) budget 3 with seeds 1-32, compared with C07 at budget 1 with the same 32 seeds, and (b) budget 1 with seeds 33-96, so that 96 short runs can be compared with 32 runs three times as long at equal total cost.",
+ "hypothesis": "Both paths improve with longer runs; hardening improves more, as in C09.",
+ "decision_rule": "Metric: lowest tightened size over the stated runs, per instance. Report, per budget arm, counts of instances where each path is lowest and solved, and the two-sided sign test of harden vs rigid; and, at equal total cost, 3x32 vs 1x96 per path. Tightening policy as C07.",
+ "methods": [
+  "harden-best",
+  "rigid-best"
+ ],
+ "id": "C13-budget-clean",
+ "arms": [
+  {
+   "budget": 3,
+   "seeds": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32
+   ]
+  },
+  {
+   "budget": 1,
+   "seeds": [
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83,
+    84,
+    85,
+    86,
+    87,
+    88,
+    89,
+    90,
+    91,
+    92,
+    93,
+    94,
+    95,
+    96
+   ]
+  }
+ ]
+}

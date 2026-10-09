@@ -1,0 +1,8 @@
+{
+ "method": "snap",
+ "params": {
+  "mu": 0.16,
+  "noiseScale": 8
+ },
+ "tuned_by": "shares harden-best settings (C06) so only the path differs"
+}

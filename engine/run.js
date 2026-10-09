@@ -20,9 +20,12 @@ const methodCfg = (m) => { const p = path.join(methodsDir, m + '.json'); return 
 
 // ---- expand jobs ----
 const jobs = [];
-for (const inst of plan.instances) for (const n of inst.ns) for (const m of plan.methods) for (const B of plan.budgets) {
+// arms: [{budget, seeds}] lets each budget have its own seed list; otherwise budgets x seeds
+const arms = plan.arms || plan.budgets.map(B => ({ budget: B, seeds: plan.seeds }));
+for (const inst of plan.instances) for (const n of inst.ns) for (const m of plan.methods) for (const arm of arms) {
+  const B = arm.budget;
   const configs = (plan.configs && (plan.configs[m] || plan.configs['*'])) || [{ name: 'default' }];
-  for (const cf of configs) for (const seed of seedList(plan.seeds)) {
+  for (const cf of configs) for (const seed of seedList(arm.seeds)) {
     const id = `${inst.family}/n${n}/${m}/B${B}/${cf.name}/s${seed}`;
     jobs.push({ id, family: inst.family, n, method: m, budget: B, config: cf, seed });
   }
