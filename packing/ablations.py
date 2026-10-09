@@ -145,6 +145,24 @@ def long_squares():
     out['harden_vs_rigid'] = pairwise(H, R, sorted(H))
     out['reached_only'] = {m: [n for n in ns if low_[(n, m)] <= catalog_tol('squ-in-squ', n)[0] + catalog_tol('squ-in-squ', n)[1]
                                and all(low_[(n, o)] > catalog_tol('squ-in-squ', n)[0] + catalog_tol('squ-in-squ', n)[1] for o in M if o != m)] for m in M}
+    REPEAT = {19, 28, 29}   # harden and rigid runs identical to C09's (same seeds, budget 10, deterministic)
+    keep = [n for n in ns if n not in REPEAT]
+    out['harden_vs_rigid_new_only'] = pairwise({('squ-in-squ', n): low_[(n, 'harden')] for n in keep}, {('squ-in-squ', n): low_[(n, 'rigid')] for n in keep}, [('squ-in-squ', n) for n in keep])
+    rows = []
+    for n in ns:
+        rec, tol = catalog_tol('squ-in-squ', n)
+        lo = min(low_[(n, m)] for m in M)
+        cells = []
+        for m in M:
+            g = low_[(n, m)] - rec
+            t = r'\checkmark' if g <= tol else f'{g:.3f}'
+            cells.append(r'\textbf{%s}' % t if low_[(n, m)] <= lo * (1 + 1e-9) + 1e-12 else t)
+        rows.append(f"{n}{'$^\\dagger$' if n in REPEAT else ''} & {rec:.5f} & " + ' & '.join(cells) + r' \\')
+    T = [r'\begin{table}[t]\centering\small', r'\begin{tabular}{rrccccc}', r'\toprule', r'$n$ & best known & harden & grow & rigid & sa & pc \\', r'\midrule'] + rows + [
+         r'\bottomrule', r'\end{tabular}',
+         r'\caption{Squares in a square at ten times the base budget (C16, 16 runs per method). \checkmark: reaches the best known value; otherwise the gap to it. Bold: lowest of the five. $^\dagger$: hardening and rigid runs repeat C09 exactly (same seeds and budget, deterministic runs).}',
+         r'\label{tab:long}', r'\end{table}']
+    open(os.path.join(ROOT, 'paper', 'tables', 'C16.tex'), 'w').write('\n'.join(T) + '\n')
     out['below_catalogue'] = [n for n in ns if min(low_[(n, m)] for m in M) < catalog_tol('squ-in-squ', n)[0] * (1 - 1e-9)]
     return out
 
@@ -188,6 +206,9 @@ def main():
         for m in ('harden', 'grow', 'rigid', 'sa', 'pc'):
             k = m.capitalize()
             nums += [rf'\newcommand{{\Long{k}Lowest}}{{{ls["lowest"][m]}}}', rf'\newcommand{{\Long{k}Sole}}{{{ls["sole"][m]}}}', rf'\newcommand{{\Long{k}Reached}}{{{ls["reached"][m]}}}']
+        hn = ls['harden_vs_rigid_new_only']
+        nums.append(rf'\newcommand{{\LongHardenOnlyReachedNewNs}}{{{" and ".join(str(n) for n in ls["reached_only"]["harden"] if n not in (19, 28, 29)) or "none"}}}')
+        nums += [rf'\newcommand{{\LongNewHLower}}{{{hn["a_lower"]}}}', rf'\newcommand{{\LongNewRLower}}{{{hn["b_lower"]}}}', rf'\newcommand{{\LongNewP}}{{{fmt_p(hn["p_lower"])}}}', rf'\newcommand{{\LongNewN}}{{{hn["a_lower"] + hn["b_lower"] + hn["ties"]}}}']
         hv = ls['harden_vs_rigid']
         nums += [rf'\newcommand{{\LongHLower}}{{{hv["a_lower"]}}}', rf'\newcommand{{\LongRLower}}{{{hv["b_lower"]}}}', rf'\newcommand{{\LongP}}{{{fmt_p(hv["p_lower"])}}}',
                  rf'\newcommand{{\LongHardenSoleNs}}{{{", ".join(str(n) for n in ls["sole_instances"]["harden"]) or "none"}}}',

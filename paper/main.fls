@@ -299,6 +299,12 @@ INPUT ./sections/learned.tex
 INPUT ./sections/learned.tex
 INPUT ./sections/learned.tex
 INPUT sections/learned.tex
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmtt10.tfm
+INPUT ./tables/C16.tex
+INPUT ./tables/C16.tex
+INPUT ./tables/C16.tex
+INPUT ./tables/C16.tex
+INPUT tables/C16.tex
 INPUT ./tables/ablations.tex
 INPUT ./tables/ablations.tex
 INPUT ./tables/ablations.tex
@@ -328,7 +334,6 @@ INPUT ./sections/limits.tex
 INPUT ./sections/limits.tex
 INPUT ./sections/limits.tex
 INPUT sections/limits.tex
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmtt10.tfm
 INPUT ./main.bbl
 INPUT ./main.bbl
 INPUT main.bbl
@@ -383,4 +388,5 @@ INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb

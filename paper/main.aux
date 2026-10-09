@@ -91,56 +91,61 @@
 \@writefile{toc}{\contentsline {paragraph}{Design.}{6}{section*.10}\protected@file@percent }
 \@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Cubes in a cube (C05): lowest side over 32 runs at the record budget, after tightening. The best known column excludes our earlier $n=12$ record ($2.93152$), which these runs try to reproduce. Bold: lowest in the row.}}{7}{table.1}\protected@file@percent }
 \newlabel{tab:cubes}{{1}{7}{Cubes in a cube (C05): lowest side over 32 runs at the record budget, after tightening. The best known column excludes our earlier $n=12$ record ($2.93152$), which these runs try to reproduce. Bold: lowest in the row}{table.1}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Instances on which each method's lowest size is the lowest of all five, on the 28{} instances of C14, under three tightening treatments of the same C07 runs.}}{7}{table.2}\protected@file@percent }
+\newlabel{tab:refine}{{2}{7}{Instances on which each method's lowest size is the lowest of all five, on the \RefN {} instances of C14, under three tightening treatments of the same C07 runs}{table.2}{}}
 \@writefile{toc}{\contentsline {paragraph}{Result.}{7}{section*.11}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{How often does a method get there?}{7}{section*.12}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Lowest point by family (C07; every method tuned for its lowest point, 32 runs per instance, matched budget). Each cell: number of instances on which the method\textquotesingle s lowest tightened size is the lowest of all five methods; in brackets, on how many it is the only method that low. Bold: most per family.}}{8}{table.2}\protected@file@percent }
-\newlabel{tab:main}{{2}{8}{Lowest point by family (C07; every method tuned for its lowest point, 32 runs per instance, matched budget). Each cell: number of instances on which the method\textquotesingle s lowest tightened size is the lowest of all five methods; in brackets, on how many it is the only method that low. Bold: most per family}{table.2}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Instances on which each method's lowest size is the lowest of all five, by $n$ (C07). Small instances are mostly ties; differences open up from $n\approx 11$.}}{8}{table.3}\protected@file@percent }
-\newlabel{tab:range}{{3}{8}{Instances on which each method's lowest size is the lowest of all five, by $n$ (C07). Small instances are mostly ties; differences open up from $n\approx 11$}{table.3}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Lowest point by family (C07; every method tuned for its lowest point, 32 runs per instance, matched budget). Each cell: number of instances on which the method\textquotesingle s lowest tightened size is the lowest of all five methods; in brackets, on how many it is the only method that low. Bold: most per family.}}{8}{table.3}\protected@file@percent }
+\newlabel{tab:main}{{3}{8}{Lowest point by family (C07; every method tuned for its lowest point, 32 runs per instance, matched budget). Each cell: number of instances on which the method\textquotesingle s lowest tightened size is the lowest of all five methods; in brackets, on how many it is the only method that low. Bold: most per family}{table.3}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces Instances on which each method's lowest size is the lowest of all five, by $n$ (C07). Small instances are mostly ties; differences open up from $n\approx 11$.}}{8}{table.4}\protected@file@percent }
+\newlabel{tab:range}{{4}{8}{Instances on which each method's lowest size is the lowest of all five, by $n$ (C07). Small instances are mostly ties; differences open up from $n\approx 11$}{table.4}{}}
+\@writefile{toc}{\contentsline {paragraph}{How often does a method get there?}{8}{section*.12}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {6}What we learned}{8}{section.6}\protected@file@percent }
 \newlabel{sec:learned}{{6}{8}{What we learned}{section.6}{}}
 \@writefile{toc}{\contentsline {paragraph}{Where hardening differs.}{8}{section*.13}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{With more time on squares.}{8}{section*.14}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Hardening against rigid starts on every instance (C07): which of the two reaches the lower size, and by how much. Blank cells were held out for tuning.}}{9}{figure.2}\protected@file@percent }
 \newlabel{fig:heatmap}{{2}{9}{Hardening against rigid starts on every instance (C07): which of the two reaches the lower size, and by how much. Blank cells were held out for tuning}{figure.2}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Share of $k$-run subsets of the observed 32 runs (C07) that include a run reaching the best known value, $1-\binom  {32-s}{k}/\binom  {32}{k}$ for $s$ successful runs, on six instances where the gradient paths differ. This is a without-replacement estimate from one pool; it is 1 at $k=32$ whenever $s>0$. Runs not selected for tightening count with their legalised size.}}{9}{figure.3}\protected@file@percent }
 \newlabel{fig:bestofk}{{3}{9}{Share of $k$-run subsets of the observed 32 runs (C07) that include a run reaching the best known value, $1-\binom {32-s}{k}/\binom {32}{k}$ for $s$ successful runs, on six instances where the gradient paths differ. This is a without-replacement estimate from one pool; it is 1 at $k=32$ whenever $s>0$. Runs not selected for tightening count with their legalised size}{figure.3}{}}
+\@writefile{toc}{\contentsline {paragraph}{With more time on squares.}{9}{section*.14}\protected@file@percent }
 \@writefile{toc}{\contentsline {paragraph}{Separating the disk start from the gradual path.}{9}{section*.15}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces Which part of hardening matters (C11, C12; harden and rigid from C07, same seeds, settings and budget). Each cell $a:b$ counts the instances on which the first method\textquotesingle s lowest size is lower than the second\textquotesingle s, and the reverse; the rest are ties. \emph  {snap} compresses disks as hardening does, then switches to polygons at once; \emph  {grow-area} keeps rigid polygons whose area follows hardening\textquotesingle s.}}{10}{table.4}\protected@file@percent }
-\newlabel{tab:ablate}{{4}{10}{Which part of hardening matters (C11, C12; harden and rigid from C07, same seeds, settings and budget). Each cell $a:b$ counts the instances on which the first method\textquotesingle s lowest size is lower than the second\textquotesingle s, and the reverse; the rest are ties. \emph {snap} compresses disks as hardening does, then switches to polygons at once; \emph {grow-area} keeps rigid polygons whose area follows hardening\textquotesingle s}{table.4}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces Squares in a square at ten times the base budget (C16, 16 runs per method). \text  {$\mathsurround \z@ \mathchar "458$}: reaches the best known value; otherwise the gap to it. Bold: lowest of the five. $^\dagger $: hardening and rigid runs repeat C09 exactly (same seeds and budget, deterministic runs).}}{10}{table.5}\protected@file@percent }
+\newlabel{tab:long}{{5}{10}{Squares in a square at ten times the base budget (C16, 16 runs per method). \checkmark : reaches the best known value; otherwise the gap to it. Bold: lowest of the five. $^\dagger $: hardening and rigid runs repeat C09 exactly (same seeds and budget, deterministic runs)}{table.5}{}}
 \@writefile{toc}{\contentsline {paragraph}{What the pieces do.}{10}{section*.16}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Does choosing the path transfer to new families?}{10}{section*.17}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces What pieces do after compression, on the best run of each C07 instance with $n\ge 6$ (orange: hardening; blue: rigid; large dots: the method alone reached the lowest size). Left: mean distance moved; middle: mean rotation, modulo the piece's symmetry (for hardening this includes turning while pieces are still nearly round and orientation costs almost nothing); right: share of pieces with no edge within $2^\circ $ of a container edge (square and triangle containers).}}{11}{figure.4}\protected@file@percent }
-\newlabel{fig:mechanism}{{4}{11}{What pieces do after compression, on the best run of each C07 instance with $n\ge 6$ (orange: hardening; blue: rigid; large dots: the method alone reached the lowest size). Left: mean distance moved; middle: mean rotation, modulo the piece's symmetry (for hardening this includes turning while pieces are still nearly round and orientation costs almost nothing); right: share of pieces with no edge within $2^\circ $ of a container edge (square and triangle containers)}{figure.4}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces Held-out families (C15), $n=6$--$20$, 64 runs per policy. $a:b$ counts instances where the first policy\textquotesingle s result is lower than the second\textquotesingle s and the reverse. The pilot spends 8 runs on each path, then 48 on the one whose pilot went lower. Reached (r / h / p): instances where always-rigid, always-harden and the pilot reach the best known value.}}{11}{table.5}\protected@file@percent }
-\newlabel{tab:decision}{{5}{11}{Held-out families (C15), $n=6$--$20$, 64 runs per policy. $a:b$ counts instances where the first policy\textquotesingle s result is lower than the second\textquotesingle s and the reverse. The pilot spends 8 runs on each path, then 48 on the one whose pilot went lower. Reached (r / h / p): instances where always-rigid, always-harden and the pilot reach the best known value}{table.5}{}}
-\@writefile{toc}{\contentsline {paragraph}{Partly soft starts.}{11}{section*.18}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {6}{\ignorespaces How soft the start must be (C08): on the 40 most contested instances of C07, the number of instances where each starting softness $\tau _0$ reaches the lowest size (32 runs each, all other settings equal; ties counted for every tied value).}}{12}{table.6}\protected@file@percent }
-\newlabel{tab:tau}{{6}{12}{How soft the start must be (C08): on the 40 most contested instances of C07, the number of instances where each starting softness $\tau _0$ reaches the lowest size (32 runs each, all other settings equal; ties counted for every tied value)}{table.6}{}}
-\@writefile{toc}{\contentsline {paragraph}{Longer runs, or more runs?}{12}{section*.19}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Two paths, or more runs of one?}{12}{section*.20}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Tuning decides comparisons.}{12}{section*.21}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {7}When to use it, and downstream use}{12}{section.7}\protected@file@percent }
-\newlabel{sec:matters}{{7}{12}{When to use it, and downstream use}{section.7}{}}
-\@writefile{toc}{\contentsline {paragraph}{When to add hardening.}{12}{section*.22}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {6}{\ignorespaces Which part of hardening matters (C11, C12; harden and rigid from C07, same seeds, settings and budget). Each cell $a:b$ counts the instances on which the first method\textquotesingle s lowest size is lower than the second\textquotesingle s, and the reverse; the rest are ties. \emph  {snap} compresses disks as hardening does, then switches to polygons at once; \emph  {grow-area} keeps rigid polygons whose area follows hardening\textquotesingle s.}}{11}{table.6}\protected@file@percent }
+\newlabel{tab:ablate}{{6}{11}{Which part of hardening matters (C11, C12; harden and rigid from C07, same seeds, settings and budget). Each cell $a:b$ counts the instances on which the first method\textquotesingle s lowest size is lower than the second\textquotesingle s, and the reverse; the rest are ties. \emph {snap} compresses disks as hardening does, then switches to polygons at once; \emph {grow-area} keeps rigid polygons whose area follows hardening\textquotesingle s}{table.6}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces What pieces do after compression, on the best run of each C07 instance with $n\ge 6$ (orange: hardening; blue: rigid; large dots: the method alone reached the lowest size). Left: mean net displacement; middle: mean net rotation, modulo the piece's symmetry (for hardening this includes turning while pieces are still nearly round and orientation costs almost nothing); right: share of pieces with no edge within $2^\circ $ of a container edge (square and triangle containers).}}{11}{figure.4}\protected@file@percent }
+\newlabel{fig:mechanism}{{4}{11}{What pieces do after compression, on the best run of each C07 instance with $n\ge 6$ (orange: hardening; blue: rigid; large dots: the method alone reached the lowest size). Left: mean net displacement; middle: mean net rotation, modulo the piece's symmetry (for hardening this includes turning while pieces are still nearly round and orientation costs almost nothing); right: share of pieces with no edge within $2^\circ $ of a container edge (square and triangle containers)}{figure.4}{}}
+\@writefile{toc}{\contentsline {paragraph}{Does choosing the path transfer to new families?}{11}{section*.17}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {7}{\ignorespaces Held-out families (C15), $n=6$--$20$, 64 runs per policy. $a:b$ counts instances where the first policy\textquotesingle s result is lower than the second\textquotesingle s and the reverse. The pilot spends 8 runs on each path, then 48 on the one whose pilot went lower. Reached (r / h / p): instances where always-rigid, always-harden and the pilot reach the best known value.}}{12}{table.7}\protected@file@percent }
+\newlabel{tab:decision}{{7}{12}{Held-out families (C15), $n=6$--$20$, 64 runs per policy. $a:b$ counts instances where the first policy\textquotesingle s result is lower than the second\textquotesingle s and the reverse. The pilot spends 8 runs on each path, then 48 on the one whose pilot went lower. Reached (r / h / p): instances where always-rigid, always-harden and the pilot reach the best known value}{table.7}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {8}{\ignorespaces How soft the start must be (C08): on the 40 most contested instances of C07, the number of instances where each starting softness $\tau _0$ reaches the lowest size (32 runs each, all other settings equal; ties counted for every tied value).}}{12}{table.8}\protected@file@percent }
+\newlabel{tab:tau}{{8}{12}{How soft the start must be (C08): on the 40 most contested instances of C07, the number of instances where each starting softness $\tau _0$ reaches the lowest size (32 runs each, all other settings equal; ties counted for every tied value)}{table.8}{}}
+\@writefile{toc}{\contentsline {paragraph}{Partly soft starts.}{12}{section*.18}\protected@file@percent }
 \citation{softtorigidpacking}
 \citation{n13repo}
 \citation{platonicrepo}
 \citation{Berthold2026}
 \citation{tesseractrepo}
+\@writefile{toc}{\contentsline {paragraph}{Longer runs, or more runs?}{13}{section*.19}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Two paths, or more runs of one?}{13}{section*.20}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Tuning decides comparisons.}{13}{section*.21}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {7}When to use it, and downstream use}{13}{section.7}\protected@file@percent }
+\newlabel{sec:matters}{{7}{13}{When to use it, and downstream use}{section.7}{}}
+\@writefile{toc}{\contentsline {paragraph}{When to add hardening.}{13}{section*.22}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Downstream use.}{13}{section*.23}\protected@file@percent }
 \citation{Wascher2007,Bennell2008,Leao2020}
 \citation{Jones2014,Gardeyn2025}
 \citation{AnjosVannelli2002,Luo2008}
 \citation{Torquato2018,Wang2018}
 \citation{Bortfeldt2013,Araujo2019}
-\@writefile{toc}{\contentsline {paragraph}{Downstream use.}{13}{section*.23}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Other settings.}{13}{section*.24}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {8}Limitations and open directions}{13}{section.8}\protected@file@percent }
-\newlabel{sec:limits}{{8}{13}{Limitations and open directions}{section.8}{}}
-\@writefile{toc}{\contentsline {paragraph}{Limitations.}{13}{section*.25}\protected@file@percent }
 \citation{Gardeyn2025}
 \citation{Berthold2026}
 \citation{n13repo,platonicrepo}
+\@writefile{toc}{\contentsline {paragraph}{Other settings.}{14}{section*.24}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {8}Limitations and open directions}{14}{section.8}\protected@file@percent }
+\newlabel{sec:limits}{{8}{14}{Limitations and open directions}{section.8}{}}
+\@writefile{toc}{\contentsline {paragraph}{Limitations.}{14}{section*.25}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Open directions.}{14}{section*.26}\protected@file@percent }
 \citation{Jiao2008}
 \citation{platonicrepo}
 \citation{tesseractrepo}
@@ -157,14 +162,13 @@
 \bibcite{Bennell2010}{{6}{2010}{{Bennell et~al.}}{{Bennell, Scheithauer, Stoyan, and Romanova}}}
 \bibcite{Bennell2008}{{7}{2008}{{Bennell and Oliveira}}{{}}}
 \bibcite{Berthold2026}{{8}{2026}{{Berthold et~al.}}{{Berthold, Kamp, Mexi, Pokutta, and P{\'o}lik}}}
-\@writefile{toc}{\contentsline {paragraph}{Open directions.}{14}{section*.26}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Reproducibility.}{14}{section*.27}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Acknowledgements.}{14}{section*.28}\protected@file@percent }
 \bibcite{Birattari2005}{{9}{2007}{{Birattari and Dorigo}}{{}}}
 \bibcite{blake}{{10}{1987}{{Blake and Zisserman}}{{}}}
 \bibcite{Bortfeldt2013}{{11}{2013}{{Bortfeldt and W{\"a}scher}}{{}}}
 \bibcite{n13repo}{{12}{2026}{{@BuilderOfAgents}}{{}}}
 \bibcite{Dolan2002}{{13}{2002}{{Dolan and Mor{\'e}}}{{}}}
+\@writefile{toc}{\contentsline {paragraph}{Reproducibility.}{15}{section*.27}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Acknowledgements.}{15}{section*.28}\protected@file@percent }
 \bibcite{Donev2005a}{{14}{2005}{{Donev et~al.}}{{Donev, Torquato, and Stillinger}}}
 \bibcite{Dowsland1998}{{15}{1998}{{Dowsland et~al.}}{{Dowsland, Dowsland, and Bennell}}}
 \bibcite{Egeblad2007}{{16}{2007}{{Egeblad et~al.}}{{Egeblad, Nielsen, and Odgaard}}}
@@ -216,16 +220,16 @@
 \bibcite{Wascher2007}{{62}{2007}{{W{\"a}scher et~al.}}{{W{\"a}scher, Hau{\ss }ner, and Schumann}}}
 \bibcite{tesseractrepo}{{63}{2026}{{Yudhiono}}{{}}}
 \bibcite{platonicrepo}{{64}{2026}{{Zarzuelo}}{{}}}
-\@writefile{lot}{\contentsline {table}{\numberline {7}{\ignorespaces Longer schedules (C09) on the 20 most contested instances: number of instances where each path reaches the lower of the two lowest sizes (ties counted for both), and where it reaches the best known value. Budget 1 is C07 (32 runs); budgets 3 and 10 use 16 runs.}}{18}{table.7}\protected@file@percent }
-\newlabel{tab:budget}{{7}{18}{Longer schedules (C09) on the 20 most contested instances: number of instances where each path reaches the lower of the two lowest sizes (ties counted for both), and where it reaches the best known value. Budget 1 is C07 (32 runs); budgets 3 and 10 use 16 runs}{table.7}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {8}{\ignorespaces Settings tuned by median gap (C04). Same layout as Table~\ref {tab:main}.}}{18}{table.8}\protected@file@percent }
-\newlabel{tab:median}{{8}{18}{Settings tuned by median gap (C04). Same layout as Table~\ref {tab:main}}{table.8}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {A}Supplementary material}{18}{appendix.A}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Campaigns.}{18}{section*.30}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Frozen settings.}{18}{section*.31}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Longer schedules, first attempt (C09).}{18}{section*.32}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {9}{\ignorespaces Work per run (C07, squares in a square, mean over 32 runs) wall-clock milliseconds per run on one core (Node.js), and the share of instances on which each method's best run was within 2\% of the best known value and so was tightened (all families). Gradient paths are matched in steps; the baselines stop once they exceed a reference hardening run's pair evaluations.}}{19}{table.9}\protected@file@percent }
-\newlabel{tab:diag}{{9}{19}{Work per run (C07, squares in a square, mean over 32 runs) wall-clock milliseconds per run on one core (Node.js), and the share of instances on which each method's best run was within 2\% of the best known value and so was tightened (all families). Gradient paths are matched in steps; the baselines stop once they exceed a reference hardening run's pair evaluations}{table.9}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Lowest size reached per instance and method, relative to the best known value (C07). Points on the bottom row reach it.}}{19}{figure.5}\protected@file@percent }
-\newlabel{fig:gaps}{{5}{19}{Lowest size reached per instance and method, relative to the best known value (C07). Points on the bottom row reach it}{figure.5}{}}
-\gdef \@abspage@last{19}
+\@writefile{toc}{\contentsline {section}{\numberline {A}Supplementary material}{19}{appendix.A}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Campaigns.}{19}{section*.30}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Frozen settings.}{19}{section*.31}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Longer schedules, first attempt (C09).}{19}{section*.32}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {9}{\ignorespaces Longer schedules (C09) on the 20 most contested instances: number of instances where each path reaches the lower of the two lowest sizes (ties counted for both), and where it reaches the best known value. Budget 1 is C07 (32 runs); budgets 3 and 10 use 16 runs.}}{20}{table.9}\protected@file@percent }
+\newlabel{tab:budget}{{9}{20}{Longer schedules (C09) on the 20 most contested instances: number of instances where each path reaches the lower of the two lowest sizes (ties counted for both), and where it reaches the best known value. Budget 1 is C07 (32 runs); budgets 3 and 10 use 16 runs}{table.9}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {10}{\ignorespaces Settings tuned by median gap (C04). Same layout as Table~\ref {tab:main}.}}{20}{table.10}\protected@file@percent }
+\newlabel{tab:median}{{10}{20}{Settings tuned by median gap (C04). Same layout as Table~\ref {tab:main}}{table.10}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {11}{\ignorespaces Work per run (C07, squares in a square, mean over 32 runs) wall-clock milliseconds per run on one core (Node.js), and the share of instances on which each method's best run was within 2\% of the best known value and so was tightened (all families). Gradient paths are matched in steps; the baselines stop once they exceed a reference hardening run's pair evaluations.}}{20}{table.11}\protected@file@percent }
+\newlabel{tab:diag}{{11}{20}{Work per run (C07, squares in a square, mean over 32 runs) wall-clock milliseconds per run on one core (Node.js), and the share of instances on which each method's best run was within 2\% of the best known value and so was tightened (all families). Gradient paths are matched in steps; the baselines stop once they exceed a reference hardening run's pair evaluations}{table.11}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Lowest size reached per instance and method, relative to the best known value (C07). Points on the bottom row reach it.}}{21}{figure.5}\protected@file@percent }
+\newlabel{fig:gaps}{{5}{21}{Lowest size reached per instance and method, relative to the best known value (C07). Points on the bottom row reach it}{figure.5}{}}
+\gdef \@abspage@last{21}

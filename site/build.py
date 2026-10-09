@@ -40,7 +40,7 @@ abstract = open(os.path.join(ROOT, 'paper', 'sections', 'abstract.tex')).read()
 import re as _re
 nums = dict(_re.findall(r'\\newcommand\{\\(\w+)\}\{([^}]*)\}', open(os.path.join(ROOT, 'paper', 'numbers.tex')).read()))
 abstract = _re.sub(r'\\(\w+)\{\}', lambda m: nums.get(m.group(1), m.group(0)), abstract).replace('{,}', ',')
-body = f'''<header><div class="eyebrow">paper · draft rebuilt with every commit</div><h1>Soft-to-Rigid: Shape Continuation as a Complementary Search for Packing Congruent Shapes</h1>
+body = f'''<header><div class="eyebrow">paper · draft rebuilt with every commit</div><h1>Soft-to-Rigid: Shape Continuation as an Alternative Search for Packing Congruent Shapes</h1>
 <p class="lede">{abstract}</p><div class="links"><a href="paper.pdf">PDF</a><a href="{{{{REPO}}}}/tree/main/paper">LaTeX source</a><a href="journal.html">Journal</a></div></header>
 <section class="wide"><object data="paper.pdf" type="application/pdf" style="width:100%;height:85vh;border:1px solid var(--rule)"><p><a href="paper.pdf">Download the PDF</a>.</p></object></section>'''
 open(os.path.join(OUT, 'paper.html'), 'w').write((head + body + foot).replace('{{TITLE}}', 'Paper').replace('{{DESC}}', 'Soft-to-Rigid: the paper').replace('{{SCRIPTS}}', '')

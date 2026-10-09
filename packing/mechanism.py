@@ -2,10 +2,11 @@
 
     python3 -m packing.mechanism    # -> analysis/mechanism.json, paper/figures/mechanism.pdf, paper/mechanism.tex
 
-For the best run of harden and rigid on every C07 instance (its replay), with polygons k = 3, 4, 6:
-  move    mean distance a piece's centre travels from the end of compression to the end of the run (unit side)
-  turn    mean |change of orientation| over the same interval, modulo the piece's symmetry 2pi/k (degrees)
-  order   orientational order |mean exp(i k theta)| when corners appear (first frame with tau <= 0.5; harden only)
+For the best run (lowest legalised size, before tightening) of harden and rigid on every C07 instance (its replay), with polygons k = 3, 4, 6:
+  move    mean net displacement of a piece's centre from the end of compression to the end of the run (unit side)
+  turn    mean net |change of orientation| between the same two frames, modulo the piece's symmetry 2pi/k (degrees)
+  order   orientational order |mean exp(i k theta)| at the middle recorded frame of the morph phase (the same step of the
+          schedule for every path; for hardening tau is about 0.5 there)
   tilt    share of pieces in the final packing with no edge within 2 degrees of parallel to a container edge
           (square and triangle containers only)
 """
@@ -43,9 +44,9 @@ def measure(R):
     sym = 2 * math.pi / k
     turn = math.degrees(S.mean(adiff(b[3 * i + 2], a[3 * i + 2], sym) for i in range(n)))
     order = None
-    corner = [f for f in F if f['ph'] == 'morph' and f['u'] <= 0.5]
-    if corner:
-        p = corner[0]['p']
+    morph = [f for f in F if f['ph'] == 'morph']
+    if morph:
+        p = morph[len(morph) // 2]['p']
         c = sum(math.cos(k * p[3 * i + 2]) for i in range(n)) / n; s = sum(math.sin(k * p[3 * i + 2]) for i in range(n)) / n
         order = math.hypot(c, s)
     tilt = None
@@ -83,7 +84,7 @@ def main():
     lab = {'squ-in-squ': 'sq/sq', 'squ-in-cir': 'sq/cir', 'squ-in-tri': 'sq/tri', 'tri-in-tri': 'tri/tri', 'tri-in-squ': 'tri/sq', 'hex-in-squ': 'hex/sq'}
     col = {'harden': '#d17a22', 'rigid': '#2f5d8a'}
     fig, axs = plt.subplots(1, 3, figsize=(7.2, 1.9))
-    for ax, key, ttl in zip(axs, ('move', 'turn', 'tilt'), ('distance moved after compression\n(unit sides)', 'rotation after compression (deg)', 'share of tilted pieces, final')):
+    for ax, key, ttl in zip(axs, ('move', 'turn', 'tilt'), ('net displacement after compression\n(unit sides)', 'net rotation after compression (deg)', 'share of tilted pieces, final')):
         for j, fam in enumerate(FAMS):
             for d, m in ((-0.18, 'harden'), (0.18, 'rigid')):
                 ys = [(v[m][key], v[m]['sole']) for (f, n), v in out.items() if f == fam and m in v and v[m][key] is not None]

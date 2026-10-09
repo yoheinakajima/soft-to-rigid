@@ -749,6 +749,15 @@
    ],
    "pc": []
   },
+  "harden_vs_rigid_new_only": {
+   "a_lower": 3,
+   "b_lower": 0,
+   "ties": 8,
+   "p_lower": 0.25,
+   "a_only_reached": 2,
+   "b_only_reached": 0,
+   "p_reached": 0.5
+  },
   "below_catalogue": []
  },
  "C13-budget-clean": {
