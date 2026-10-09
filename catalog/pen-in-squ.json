@@ -1,0 +1,119 @@
+{
+ "title": "Unit regular pentagons in a square",
+ "dim": 2,
+ "piece": "pentagon",
+ "container": "square",
+ "measure": "side",
+ "sources": [
+  "https://erich-friedman.github.io/packing/peninsqu/"
+ ],
+ "heldout": true,
+ "records": {
+  "6": {
+   "value": 3.88299,
+   "finder": "Found by Haowei Lin in July 2026",
+   "truncated": true,
+   "decimals": 5,
+   "tol": 1e-05
+  },
+  "7": {
+   "value": 4.18037,
+   "finder": "Found by Nicolas Campailla in May 2026",
+   "truncated": true,
+   "decimals": 5,
+   "tol": 1e-05
+  },
+  "8": {
+   "value": 4.3819,
+   "finder": "Found by Aristotle Papowitz in July 2026",
+   "truncated": true,
+   "decimals": 5,
+   "tol": 1e-05
+  },
+  "9": {
+   "value": 4.60032,
+   "finder": "Found by Yanis Gomes in October 2026",
+   "truncated": true,
+   "decimals": 5,
+   "tol": 1e-05
+  },
+  "10": {
+   "value": 4.90581,
+   "finder": "Found by Jonathan Viquerat in June 2026",
+   "truncated": true,
+   "decimals": 5,
+   "tol": 1e-05
+  },
+  "11": {
+   "value": 5.11555,
+   "finder": "Found by Jonathan Viquerat in August 2026",
+   "truncated": true,
+   "decimals": 5,
+   "tol": 1e-05
+  },
+  "12": {
+   "value": 5.23221,
+   "finder": "Found by Timo Berthold et al in May 2026",
+   "truncated": true,
+   "decimals": 5,
+   "tol": 1e-05
+  },
+  "13": {
+   "value": 5.52102,
+   "finder": "Found by Jake Loyd in June 2026",
+   "truncated": true,
+   "decimals": 5,
+   "tol": 1e-05
+  },
+  "14": {
+   "value": 5.69659,
+   "finder": "Found by Jake Loyd in June 2026",
+   "truncated": true,
+   "decimals": 5,
+   "tol": 1e-05
+  },
+  "15": {
+   "value": 5.90118,
+   "finder": "Found by Jonathan Viquerat in August 2026",
+   "truncated": true,
+   "decimals": 5,
+   "tol": 1e-05
+  },
+  "16": {
+   "value": 6.06451,
+   "finder": "Found by Aapo Lipponen in October 2026",
+   "truncated": true,
+   "decimals": 5,
+   "tol": 1e-05
+  },
+  "17": {
+   "value": 6.23761,
+   "finder": "Found by Jonathan Viquerat in June 2026",
+   "truncated": true,
+   "decimals": 5,
+   "tol": 1e-05
+  },
+  "18": {
+   "value": 6.32565,
+   "finder": "Found by Bhavithran Ananthan in July 2026",
+   "truncated": true,
+   "decimals": 5,
+   "tol": 1e-05
+  },
+  "19": {
+   "value": 6.55781,
+   "finder": "Found by Jake Loyd in June 2026",
+   "truncated": true,
+   "decimals": 5,
+   "tol": 1e-05
+  },
+  "20": {
+   "value": 6.66135,
+   "finder": "Found by Haowei Lin in July 2026",
+   "truncated": true,
+   "decimals": 5,
+   "tol": 1e-05
+  }
+ },
+ "family": "pen-in-squ"
+}

@@ -134,6 +134,83 @@ fams['squ-in-cir']['records'].update({31: rec(T('3.52279'), 'D. Lu 2026', True),
 fams['tri-in-squ']['records'].update({31: rec(T('3.93107'), 'Loyd 2026', True), 32: rec(T('3.97880'), 'Loyd 2026', True)})
 fams['tri-in-tri']['records'].update({31: rec(T('5.90751'), 'Gomes 2026', True)})
 
+# ---------- held-out families (C15 only; not used to develop or tune any method) ----------
+# Parsed from the captions of Friedman's pages in github.com/erich-friedman/erich-friedman.github.io at commit
+# f25f3625821c833350917703fc9f9e7405ef80e5 (8 Oct 2026); a caption's decimal with "+" is stored as truncated.
+HELDOUT = {
+  'pen-in-squ': ('Unit regular pentagons in a square', 'pentagon', 'square', 'side', 'peninsqu', {
+     6: ('3.88299', True, 'Found by Haowei Lin in July 2026'),
+     7: ('4.18037', True, 'Found by Nicolas Campailla in May 2026'),
+     8: ('4.38190', True, 'Found by Aristotle Papowitz in July 2026'),
+     9: ('4.60032', True, 'Found by Yanis Gomes in October 2026'),
+     10: ('4.90581', True, 'Found by Jonathan Viquerat in June 2026'),
+     11: ('5.11555', True, 'Found by Jonathan Viquerat in August 2026'),
+     12: ('5.23221', True, 'Found by Timo Berthold et al in May 2026'),
+     13: ('5.52102', True, 'Found by Jake Loyd in June 2026'),
+     14: ('5.69659', True, 'Found by Jake Loyd in June 2026'),
+     15: ('5.90118', True, 'Found by Jonathan Viquerat in August 2026'),
+     16: ('6.06451', True, 'Found by Aapo Lipponen in October 2026'),
+     17: ('6.23761', True, 'Found by Jonathan Viquerat in June 2026'),
+     18: ('6.32565', True, 'Found by Bhavithran Ananthan in July 2026'),
+     19: ('6.55781', True, 'Found by Jake Loyd in June 2026'),
+     20: ('6.66135', True, 'Found by Haowei Lin in July 2026'),
+  }),
+  'oct-in-squ': ('Unit regular octagons in a square', 'octagon', 'square', 'side', 'octinsqu', {
+     6: ('6.51126', True, 'Found by Jonathan Viquerat in May 2026'),
+     7: ('7.03553', True, 'Found by Jonathan Viquerat in May 2026'),
+     8: ('7.24264', True, 'Trivial'),
+     9: ('7.24264', True, 'Trivial'),
+     10: ('8.24264', True, 'Found by Jonathan Viquerat in May 2026'),
+     11: ('8.57596', True, 'Found by Jonathan Viquerat in May 2026'),
+     12: ('8.81586', True, 'Found by Jonathan Viquerat in May 2026'),
+     13: ('9.19909', True, 'Found by Jonathan Viquerat in May 2026'),
+     14: ('9.44974', True, 'Found by Jonathan Viquerat in May 2026'),
+     15: ('9.65685', True, 'Trivial'),
+     16: ('9.65685', True, 'Trivial'),
+     17: ('10.44973', True, 'Found by Jonathan Viquerat in May 2026'),
+     18: ('10.60832', True, 'Found by Jonathan Viquerat in May 2026'),
+     19: ('10.96620', True, 'Found by Haowei Lin in July 2026'),
+     20: ('11.10493', True, 'Found by Jonathan Viquerat in May 2026'),
+  }),
+  'hex-in-tri': ('Unit regular hexagons in an equilateral triangle', 'hexagon', 'triangle', 'side', 'hexintri', {
+     6: ('6.89897', True, 'Found by Jonathan Viquerat in April 2026'),
+     7: ('8', False, 'Trivial'),
+     8: ('8.3333', True, 'Found by Erich Friedman in April 2015'),
+     9: ('8.64494', True, 'Found by Bhavithran Ananthan in July 2026'),
+     10: ('8.6602', True, 'Trivial'),
+     11: ('9.54823', True, 'Found by Jonathan Viquerat in April 2026'),
+     12: ('9.96429', True, 'Found by Bhavithran Ananthan in July 2026'),
+     13: ('10.28857', True, 'Found by Bhavithran Ananthan in July 2026'),
+     14: ('10.3923', True, 'Trivial'),
+     15: ('10.3923', True, 'Trivial'),
+     16: ('11.36383', True, 'Found by Timo Berthold et al in May 2026'),
+     17: ('11.63453', True, 'Found by Aapo Lipponen in October 2026'),
+     18: ('11.91421', True, 'Found by Jake Loyd in May 2026'),
+     19: ('12', False, 'Trivial'),
+     20: ('12.1243', True, 'Trivial'),
+  }),
+  'tri-in-cir': ('Unit equilateral triangles in a circle', 'triangle', 'circle', 'radius', 'triincir', {
+     6: ('1', False, 'Trivial'),
+     7: ('1.152', True, '?'),
+     8: ('1.263', True, 'Found by Maurizio Morandi in April 2008'),
+     9: ('1.314', True, 'Found by David W. Cantrell in July 2002'),
+     10: ('1.38468', True, 'Found by Jonathan Viquerat in June 2026'),
+     11: ('1.466', True, 'Found by David W. Cantrell in August 2012'),
+     12: ('1.507', True, 'Found by David W. Cantrell in October 2005'),
+     13: ('1.527', True, '?'),
+     14: ('1.60448', True, 'Found by Jake Loyd in June 2026'),
+     15: ('1.636', True, 'Found by David W. Cantrell in July 2002'),
+     16: ('1.687', True, 'Found by Maurizio Morandi in April 2008'),
+     17: ('1.730', True, 'Found by David W. Cantrell in July 2005'),
+     18: ('1.80176', True, 'Found by Jake Loyd in June 2026'),
+     19: ('1.825', True, 'Found by Haym Hirsh in August 2019'),
+     20: ('1.874', True, '?'),
+  }),
+}
+for k, (title, piece, cont, meas, page, rr) in HELDOUT.items():
+    fams[k] = dict(title=title, dim=2, piece=piece, container=cont, measure=meas, sources=[FR + page + '/'], heldout=True,
+                   records={n: rec(T(v) if tr else float(v), who, tr) for n, (v, tr, who) in rr.items()})
+
 os.makedirs(OUT, exist_ok=True)
 for k, f in fams.items():
     f['family'] = k

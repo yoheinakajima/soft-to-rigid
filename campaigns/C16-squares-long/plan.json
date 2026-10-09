@@ -1,0 +1,41 @@
+{
+ "title": "Squares in a square at ten times the budget",
+ "question": "Hardening's clearest advantage is on squares in a square, and the hardest instances are n >= 17. Here all five tuned methods get ten times the base budget (sa and pc matched to a hardening run at that budget, as in C07) on n = 17..30, 16 runs each, to see whether hardening reaches packings none of the others reach when every method has more time.",
+ "hypothesis": "Hardening is the only method to reach the lowest size on at least one instance; no run goes below a catalogue value.",
+ "instances": [
+  {
+   "family": "squ-in-squ",
+   "ns": [
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30
+   ]
+  }
+ ],
+ "methods": [
+  "harden-best",
+  "grow-best",
+  "rigid-best",
+  "sa-best",
+  "pc-best"
+ ],
+ "budgets": [
+  10
+ ],
+ "seeds": 16,
+ "polish": true,
+ "decision_rule": "Same metric and tightening policy as C07. Report per method the instances where its lowest size is the lowest of all five and where it is the only one that low, reached counts, and the exact two-sided sign test of harden vs rigid on instances where exactly one is lower. Any tightened packing below a catalogue value is certified (float and exact) before it is mentioned.",
+ "id": "C16-squares-long",
+ "created": "2026-10-09"
+}

@@ -1,0 +1,115 @@
+{
+ "title": "Unit regular hexagons in an equilateral triangle",
+ "dim": 2,
+ "piece": "hexagon",
+ "container": "triangle",
+ "measure": "side",
+ "sources": [
+  "https://erich-friedman.github.io/packing/hexintri/"
+ ],
+ "heldout": true,
+ "records": {
+  "6": {
+   "value": 6.89897,
+   "finder": "Found by Jonathan Viquerat in April 2026",
+   "truncated": true,
+   "decimals": 5,
+   "tol": 1e-05
+  },
+  "7": {
+   "value": 8.0,
+   "finder": "Trivial",
+   "truncated": false
+  },
+  "8": {
+   "value": 8.3333,
+   "finder": "Found by Erich Friedman in April 2015",
+   "truncated": true,
+   "decimals": 4,
+   "tol": 0.0001
+  },
+  "9": {
+   "value": 8.64494,
+   "finder": "Found by Bhavithran Ananthan in July 2026",
+   "truncated": true,
+   "decimals": 5,
+   "tol": 1e-05
+  },
+  "10": {
+   "value": 8.6602,
+   "finder": "Trivial",
+   "truncated": true,
+   "decimals": 4,
+   "tol": 0.0001
+  },
+  "11": {
+   "value": 9.54823,
+   "finder": "Found by Jonathan Viquerat in April 2026",
+   "truncated": true,
+   "decimals": 5,
+   "tol": 1e-05
+  },
+  "12": {
+   "value": 9.96429,
+   "finder": "Found by Bhavithran Ananthan in July 2026",
+   "truncated": true,
+   "decimals": 5,
+   "tol": 1e-05
+  },
+  "13": {
+   "value": 10.28857,
+   "finder": "Found by Bhavithran Ananthan in July 2026",
+   "truncated": true,
+   "decimals": 5,
+   "tol": 1e-05
+  },
+  "14": {
+   "value": 10.3923,
+   "finder": "Trivial",
+   "truncated": true,
+   "decimals": 4,
+   "tol": 0.0001
+  },
+  "15": {
+   "value": 10.3923,
+   "finder": "Trivial",
+   "truncated": true,
+   "decimals": 4,
+   "tol": 0.0001
+  },
+  "16": {
+   "value": 11.36383,
+   "finder": "Found by Timo Berthold et al in May 2026",
+   "truncated": true,
+   "decimals": 5,
+   "tol": 1e-05
+  },
+  "17": {
+   "value": 11.63453,
+   "finder": "Found by Aapo Lipponen in October 2026",
+   "truncated": true,
+   "decimals": 5,
+   "tol": 1e-05
+  },
+  "18": {
+   "value": 11.91421,
+   "finder": "Found by Jake Loyd in May 2026",
+   "truncated": true,
+   "decimals": 5,
+   "tol": 1e-05
+  },
+  "19": {
+   "value": 12.0,
+   "finder": "Trivial",
+   "truncated": false
+  },
+  "20": {
+   "value": 12.1243,
+   "finder": "Trivial",
+   "truncated": true,
+   "decimals": 4,
+   "tol": 0.0001
+  }
+ },
+ "family": "hex-in-tri"
+}

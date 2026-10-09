@@ -1,0 +1,101 @@
+{
+ "title": "Does choosing the path pay on families never used before?",
+ "question": "C07-C13 show that the better path depends on the family, but that was learned on seven families. Here four families never used to develop, tune or analyse any method (pentagons in a square, octagons in a square, hexagons in a triangle, triangles in a circle; n = 6..20; best known values parsed from Friedman's captions at a pinned commit) test a decision procedure rather than a description. Each instance gets 64 harden-best and 64 rigid-best runs at budget 1, with the frozen C06 settings, from which three policies of 64 runs each are formed: always-rigid (rigid seeds 1-64), always-harden (harden seeds 1-64), and pilot (harden seeds 1-8 and rigid seeds 1-8, then seeds 9-56 of the path whose pilot reached the lower legalised size; ties go to rigid).",
+ "hypothesis": "From the mechanism hypotheses in the paper (orientation matters late; odd and near-round pieces gain nothing): pentagons and triangles in a circle favour rigid starts or tie; octagons and hexagons in a triangle mostly tie. The pilot policy is at least as good as always-rigid.",
+ "pre_registration_note": "Before this plan was written, one smoke-test run per family (seed 3, n = 8, harden and rigid) was made to check the geometry; nothing else about these families was looked at.",
+ "instances": [
+  {
+   "family": "pen-in-squ",
+   "ns": [
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+   ]
+  },
+  {
+   "family": "oct-in-squ",
+   "ns": [
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+   ]
+  },
+  {
+   "family": "hex-in-tri",
+   "ns": [
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+   ]
+  },
+  {
+   "family": "tri-in-cir",
+   "ns": [
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+   ]
+  }
+ ],
+ "methods": [
+  "harden-best",
+  "rigid-best"
+ ],
+ "budgets": [
+  1
+ ],
+ "seeds": 64,
+ "polish": true,
+ "scoring": "Each policy's result on an instance is the tightened size of the run with the lowest legalised size in its 64-run set (exactly one tightening per policy and instance, by the same tightening code as C07; packing/decision.py). Reached = within the catalogue tolerance of the best known value.",
+ "decision_rule": "Primary: pilot vs always-rigid, counting instances where each policy's result is strictly lower (relative 1e-9); exact two-sided sign test. If the pilot is lower on more instances with p < 0.05, the paper reports path choice by pilot as a method that transfers to new families; if p >= 0.05, it reports no detected benefit (not equivalence); if always-rigid is lower with p < 0.05, it reports that the pilot costs more than it gains. Secondary, descriptive: per family, always-harden vs always-rigid counts, compared with the hypotheses above; the number of instances on which the pilot picked harden; reached counts per policy.",
+ "id": "C15-heldout-decision",
+ "created": "2026-10-09"
+}

@@ -1,0 +1,119 @@
+{
+ "title": "Unit regular octagons in a square",
+ "dim": 2,
+ "piece": "octagon",
+ "container": "square",
+ "measure": "side",
+ "sources": [
+  "https://erich-friedman.github.io/packing/octinsqu/"
+ ],
+ "heldout": true,
+ "records": {
+  "6": {
+   "value": 6.51126,
+   "finder": "Found by Jonathan Viquerat in May 2026",
+   "truncated": true,
+   "decimals": 5,
+   "tol": 1e-05
+  },
+  "7": {
+   "value": 7.03553,
+   "finder": "Found by Jonathan Viquerat in May 2026",
+   "truncated": true,
+   "decimals": 5,
+   "tol": 1e-05
+  },
+  "8": {
+   "value": 7.24264,
+   "finder": "Trivial",
+   "truncated": true,
+   "decimals": 5,
+   "tol": 1e-05
+  },
+  "9": {
+   "value": 7.24264,
+   "finder": "Trivial",
+   "truncated": true,
+   "decimals": 5,
+   "tol": 1e-05
+  },
+  "10": {
+   "value": 8.24264,
+   "finder": "Found by Jonathan Viquerat in May 2026",
+   "truncated": true,
+   "decimals": 5,
+   "tol": 1e-05
+  },
+  "11": {
+   "value": 8.57596,
+   "finder": "Found by Jonathan Viquerat in May 2026",
+   "truncated": true,
+   "decimals": 5,
+   "tol": 1e-05
+  },
+  "12": {
+   "value": 8.81586,
+   "finder": "Found by Jonathan Viquerat in May 2026",
+   "truncated": true,
+   "decimals": 5,
+   "tol": 1e-05
+  },
+  "13": {
+   "value": 9.19909,
+   "finder": "Found by Jonathan Viquerat in May 2026",
+   "truncated": true,
+   "decimals": 5,
+   "tol": 1e-05
+  },
+  "14": {
+   "value": 9.44974,
+   "finder": "Found by Jonathan Viquerat in May 2026",
+   "truncated": true,
+   "decimals": 5,
+   "tol": 1e-05
+  },
+  "15": {
+   "value": 9.65685,
+   "finder": "Trivial",
+   "truncated": true,
+   "decimals": 5,
+   "tol": 1e-05
+  },
+  "16": {
+   "value": 9.65685,
+   "finder": "Trivial",
+   "truncated": true,
+   "decimals": 5,
+   "tol": 1e-05
+  },
+  "17": {
+   "value": 10.44973,
+   "finder": "Found by Jonathan Viquerat in May 2026",
+   "truncated": true,
+   "decimals": 5,
+   "tol": 1e-05
+  },
+  "18": {
+   "value": 10.60832,
+   "finder": "Found by Jonathan Viquerat in May 2026",
+   "truncated": true,
+   "decimals": 5,
+   "tol": 1e-05
+  },
+  "19": {
+   "value": 10.9662,
+   "finder": "Found by Haowei Lin in July 2026",
+   "truncated": true,
+   "decimals": 5,
+   "tol": 1e-05
+  },
+  "20": {
+   "value": 11.10493,
+   "finder": "Found by Jonathan Viquerat in May 2026",
+   "truncated": true,
+   "decimals": 5,
+   "tol": 1e-05
+  }
+ },
+ "family": "oct-in-squ"
+}

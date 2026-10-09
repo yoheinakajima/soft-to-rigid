@@ -1,0 +1,83 @@
+{
+ "title": "Does the tightening policy decide the comparison?",
+ "question": "C07 tightens a method's best run only if it is within 2% of the best known value, which happened for 56% of perturbation-compression's best runs against 97-100% for the gradient paths. Here no new runs are made: on the 28 instances fixed by C13 (n = 11, 17, 23, 29 per family; hexagons 8, 12, 16, 20), the three runs with the lowest legalised size of every method in C07 are tightened, with no eligibility condition, and the lowest-of-five comparison is recomputed without tightening, with this equal tightening, and under the C07 policy.",
+ "hypothesis": "Equal tightening raises sa and pc counts but does not change which method is lowest most often.",
+ "instances": [
+  {
+   "family": "squ-in-squ",
+   "ns": [
+    11,
+    17,
+    23,
+    29
+   ]
+  },
+  {
+   "family": "squ-in-cir",
+   "ns": [
+    11,
+    17,
+    23,
+    29
+   ]
+  },
+  {
+   "family": "squ-in-tri",
+   "ns": [
+    11,
+    17,
+    23,
+    29
+   ]
+  },
+  {
+   "family": "tri-in-tri",
+   "ns": [
+    11,
+    17,
+    23,
+    29
+   ]
+  },
+  {
+   "family": "tri-in-squ",
+   "ns": [
+    11,
+    17,
+    23,
+    29
+   ]
+  },
+  {
+   "family": "hex-in-squ",
+   "ns": [
+    8,
+    12,
+    16,
+    20
+   ]
+  },
+  {
+   "family": "cir-in-squ",
+   "ns": [
+    11,
+    17,
+    23,
+    29
+   ]
+  }
+ ],
+ "methods": [
+  "harden-best",
+  "grow-best",
+  "rigid-best",
+  "sa-best",
+  "pc-best"
+ ],
+ "source_campaign": "C07-breadth-best",
+ "runs": "none (tightening only)",
+ "scoring": "Tightened results are stored in campaigns/C14-equal-refine/tightened/ (a C07 run already tightened by the C07 policy is copied, since tightening is deterministic); packing/refine.py.",
+ "decision_rule": "Report, under each of the three treatments, the per-method count of instances where the method's lowest size is the lowest of all five, and the tightening time per method. If the method with the most lowest-of-five instances changes between the C07 policy and equal tightening, the paper says the C07 ranking depends on the tightening policy.",
+ "id": "C14-equal-refine",
+ "created": "2026-10-09"
+}

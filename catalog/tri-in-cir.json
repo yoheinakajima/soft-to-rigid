@@ -1,0 +1,117 @@
+{
+ "title": "Unit equilateral triangles in a circle",
+ "dim": 2,
+ "piece": "triangle",
+ "container": "circle",
+ "measure": "radius",
+ "sources": [
+  "https://erich-friedman.github.io/packing/triincir/"
+ ],
+ "heldout": true,
+ "records": {
+  "6": {
+   "value": 1.0,
+   "finder": "Trivial",
+   "truncated": false
+  },
+  "7": {
+   "value": 1.152,
+   "finder": "?",
+   "truncated": true,
+   "decimals": 3,
+   "tol": 0.001
+  },
+  "8": {
+   "value": 1.263,
+   "finder": "Found by Maurizio Morandi in April 2008",
+   "truncated": true,
+   "decimals": 3,
+   "tol": 0.001
+  },
+  "9": {
+   "value": 1.314,
+   "finder": "Found by David W. Cantrell in July 2002",
+   "truncated": true,
+   "decimals": 3,
+   "tol": 0.001
+  },
+  "10": {
+   "value": 1.38468,
+   "finder": "Found by Jonathan Viquerat in June 2026",
+   "truncated": true,
+   "decimals": 5,
+   "tol": 1e-05
+  },
+  "11": {
+   "value": 1.466,
+   "finder": "Found by David W. Cantrell in August 2012",
+   "truncated": true,
+   "decimals": 3,
+   "tol": 0.001
+  },
+  "12": {
+   "value": 1.507,
+   "finder": "Found by David W. Cantrell in October 2005",
+   "truncated": true,
+   "decimals": 3,
+   "tol": 0.001
+  },
+  "13": {
+   "value": 1.527,
+   "finder": "?",
+   "truncated": true,
+   "decimals": 3,
+   "tol": 0.001
+  },
+  "14": {
+   "value": 1.60448,
+   "finder": "Found by Jake Loyd in June 2026",
+   "truncated": true,
+   "decimals": 5,
+   "tol": 1e-05
+  },
+  "15": {
+   "value": 1.636,
+   "finder": "Found by David W. Cantrell in July 2002",
+   "truncated": true,
+   "decimals": 3,
+   "tol": 0.001
+  },
+  "16": {
+   "value": 1.687,
+   "finder": "Found by Maurizio Morandi in April 2008",
+   "truncated": true,
+   "decimals": 3,
+   "tol": 0.001
+  },
+  "17": {
+   "value": 1.73,
+   "finder": "Found by David W. Cantrell in July 2005",
+   "truncated": true,
+   "decimals": 3,
+   "tol": 0.001
+  },
+  "18": {
+   "value": 1.80176,
+   "finder": "Found by Jake Loyd in June 2026",
+   "truncated": true,
+   "decimals": 5,
+   "tol": 1e-05
+  },
+  "19": {
+   "value": 1.825,
+   "finder": "Found by Haym Hirsh in August 2019",
+   "truncated": true,
+   "decimals": 3,
+   "tol": 0.001
+  },
+  "20": {
+   "value": 1.874,
+   "finder": "?",
+   "truncated": true,
+   "decimals": 3,
+   "tol": 0.001
+  }
+ },
+ "family": "tri-in-cir"
+}
