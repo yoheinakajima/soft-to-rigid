@@ -4,9 +4,9 @@ Every number is converted to an exact rational and checked with no rounding:
   * rotations: t = tan(theta/2) is rationalised and cos = (1-t^2)/(1+t^2), sin = 2t/(1+t^2), which is an
     exact rotation; it differs from the stated theta by about 1e-13 rad.
   * pieces: each vertex is the float vertex of the unit polygon scaled by (1 + 1e-8), taken as an exact
-    rational. This polygon contains the true unit polygon with a margin of about 1e-8 x inradius, far more
-    than the rotation and rounding discrepancies (< 1e-12), so a valid packing of the inflated pieces is a
-    valid packing of the true ones. Circles are inflated to radius (1 + 1e-8)/2.
+    rational. enclosure() proves exactly, in Q(sqrt 3), that this polygon contains the true unit polygon with a
+    margin of 1e-9, more than the rotation and rounding discrepancies (< 1e-12), so a valid packing of the
+    inflated pieces is a valid packing of the true ones. Circles are inflated to radius (1 + 1e-8)/2.
   * container: the square is |x|, |y| < s/2; the circle x^2 + y^2 < s^2; the triangle's walls involve sqrt(3)
     and are checked as numbers a + b*sqrt(3) with rational a, b, whose sign is decided exactly.
   * pairs: for each pair, a rational direction u (from the best floating-point separating axis) is

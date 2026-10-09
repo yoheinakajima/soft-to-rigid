@@ -1,6 +1,6 @@
 # Journal
 
-*Generated from the ledger (`ledger/events.jsonl`, 55134 events) by `packing/project.py`. Do not edit.*
+*Generated from the ledger (`ledger/events.jsonl`, 57389 events) by `packing/project.py`. Do not edit.*
 
 Every campaign was planned before it ran. Each entry gives the question, what we expected, what happened, and what we decided.
 
@@ -104,6 +104,7 @@ Repeat C04 exactly (same 188 instances, 32 seeds, budget, tightening policy) wit
 - **Rule:** Headline metric (pre-registered): per instance, each method's lowest tightened size over 32 runs; an instance is solved by a method if that lowest size is within 1e-9 of the best known value (within the printed precision when the catalogue value is truncated) or below it. Report, per family and overall, the number of instances where each method attains the lowest size among the five (ties counted for all tied methods), and the number solved. One-sided sign test of harden vs each method on instances solved by exactly one of the two. Medians are reported only as secondary information. Same tightening policy as C04.
 - **Found:** Main comparison with every method tuned for its lowest point (188 instances, 32 runs each, equal budget, after exact tightening). Instances where the method's lowest size is the lowest of all five: rigid 155, grow 144, harden 142, sa 125, pc 72; the only method that low: rigid 16, harden 13, grow 9, sa 6, pc 1. Best known value reached: rigid 133, grow 129, harden 125, sa 115, pc 71. Sign tests (instances solved by exactly one of the pair): rigid vs harden 14 vs 6 (one-sided p = 0.058), grow vs harden 13 vs 9, harden vs sa 21 vs 11, harden vs pc 59 vs 5. Best-of tuning helped sa most (69 to 115 instances solved). No packing below a published value; 43 instances unsolved by every method.
 - **Found:** The family pattern survives re-tuning. Squares in a square: harden's lowest is the lowest of all methods on 27 of 28 instances and the only one that low on 5; with identical settings, rigid is lowest on 23. harden alone reaches Wainwright's n = 19 packing (and Trump's n = 11). Triangles in a square and in a triangle: rigid is lowest on 22 and 26 instances against harden's 14 and 18. Run as a pair, harden and rigid together solve 139 instances, more than any pair without harden (rigid and grow: 137), though with twice the runs.
+- **Found:** Correction to wording (after review): budgets are matched in steps for the gradient paths and in reference pair evaluations for sa and pc (pc overshoots up to 1.8x); tightening is constrained numerical optimisation, not exact; p-values in the paper are exact two-sided (rigid vs harden 14 vs 6, p = 0.12). The counts above are unchanged. Rigid's lead is about the width of the seed-bootstrap 95% intervals (rigid 139-153, harden 126-140, grow 123-138).
 - **Decided:** Same conclusion as C04 under lowest-point tuning: no general superiority for hardening (rigid solves more, p = 0.058); hardening is the path for squares in a square, rigid or grow for triangles. Next: C08 (how soft the start must be, on the 40 most contested instances), C09 (longer budgets on 20 of them) and C10 (does adding hardening runs beat adding more rigid runs).
 
 [Full report](campaigns/C07-breadth-best/REPORT.md)
@@ -157,6 +158,7 @@ Hardening differs from rigid starts in two ways: pieces are compressed as disks 
 - **Expected:** On squares in a square, harden reaches lower sizes than snap (the gradual path matters); on other families snap and rigid are similar.
 - **Rule:** Same metric and tightening policy as C07. For each family, count instances where harden, snap and rigid (C07, same seeds and settings) attain the lowest of the three, and solved counts; report the two-sided exact sign test of harden vs snap over instances solved by exactly one. If harden and snap do not differ on squares in a square, the paper attributes hardening's advantage there to the disk-compressed start rather than to the path.
 - **Found:** Snap (disks compressed as in hardening, then polygons at once) behaves like rigid starts: lower on 20 instances each, 148 ties. Hardening differs from snap by family: lower on 6 squares-in-square instances against 0, while snap is lower on 8 triangles-in-triangle instances against 0 and 14 vs 6 triangles in a square. Over all 188 instances harden vs snap lower 17 vs 36 (two-sided p = 0.013). The gradual change of shape, not the disk-compressed start, carries hardening's effect in both directions.
+- **Found:** Correction (supersedes the wording of the C11 and C12 findings after an independent check): snap and grow-area show no detectable difference from rigid starts (20 vs 20 and 15 vs 14 instances lower); this is non-detection, not equivalence. Hardening differs from both in the same family-dependent directions (squares in a square in hardening's favour, triangles against), which suggests the gradual rounding is responsible, but the pre-registered tests on squares in a square are inconclusive (2 vs 0 solved-only discordant), so by the plans' rule the advantage there is attributed to the disk-compressed start. Treat the path explanation as post hoc.
 - **Decided:** Per the pre-registered rule (two-sided sign test over instances solved by exactly one of harden and snap): squares in a square 2 vs 0, p = 0.5, not separated, so the pre-registered conclusion attributes hardening's advantage there to the disk-compressed start. Recorded with the caveat that the rule has no power at two discordant instances, and that the descriptive evidence (snap = rigid; harden lower than snap 6-0 on squares, higher 0-8 on triangles in a triangle) points to the gradual path. The paper reports both.
 
 [Full report](campaigns/C11-snap/REPORT.md)
@@ -170,7 +172,21 @@ Hardening also changes how much area each piece occupies over time. grow-area ke
 - **Expected:** On squares in a square, harden reaches lower sizes than grow-area (changing shape, not only size, matters).
 - **Rule:** As C11, comparing harden with grow-area (and rigid, from C07).
 - **Found:** Grow-area (rigid polygons scaled so their area follows hardening's schedule) behaves like rigid starts: lower on 15 vs 14 instances, 159 ties. Hardening differs from it as from snap: squares in a square 5 vs 1, triangles in a triangle 1 vs 8, triangles in a square 5 vs 11. Neither the disk-compressed start (C11) nor the area schedule reproduces hardening's effect; the rounding of the pieces does.
+- **Found:** Correction (after review): grow-area shows no detectable difference from rigid starts (15 vs 14 lower); harden vs grow-area 20 vs 31 overall (p = 0.16), squares in a square 5 vs 1, triangles in a triangle 1 vs 8. Under C11's rule the squares-in-square test is inconclusive (2 vs 0). Neither ablation reproduces hardening's pattern, which makes rounding the likeliest explanation, but these experiments do not establish it.
 - **Decided:** As C11's rule: squares in a square, instances solved by exactly one of harden and grow-area 2 vs 0 (p = 0.5), not separated by the pre-registered test; triangles in a triangle 0 vs 6 (p = 0.031) in grow-area's favour. Recorded together with the lower-size counts; the paper reports grow-area alongside snap as an ablation.
 
 [Full report](campaigns/C12-grow-area/REPORT.md)
+
+## C13-budget-clean — Longer runs or more runs? A clean budget study
+
+*Planned 2026-10-09 · status: closed*
+
+C09 changed run length and restart count together and used instances selected for disagreement. Here, on 28 instances fixed in advance (n = 11, 17, 23, 29 per family; hexagons n = 8, 12, 16, 20), harden-best and rigid-best get (a) budget 3 with seeds 1-32, compared with C07 at budget 1 with the same 32 seeds, and (b) budget 1 with seeds 33-96, so that 96 short runs can be compared with 32 runs three times as long at equal total cost.
+
+- **Expected:** Both paths improve with longer runs; hardening improves more, as in C09.
+- **Rule:** Metric: lowest tightened size over the stated runs, per instance. Report, per budget arm, counts of instances where each path is lowest and solved, and the two-sided sign test of harden vs rigid; and, at equal total cost, 3x32 vs 1x96 per path. Tightening policy as C07.
+- **Found:** On 28 instances fixed in advance, harden vs rigid lower: 7 vs 2 with 32 base runs, 4 vs 3 with 32 runs at 3x budget, 6 vs 2 with 96 base runs (all p >= 0.18). Longer runs improved rigid (5 lower, 0 higher than base) more than harden (4 vs 3). At equal cost, 3x longer and 3x more runs did about equally (harden 3 vs 3, rigid 3 vs 2). C09's indication that hardening gains more from longer runs does not replicate.
+- **Decided:** Per the rule: no arm separates harden and rigid (two-sided sign tests p = 0.18, 1, 0.29). The hypothesis that hardening improves more with longer runs is not supported; the paper withdraws the C09 claim and reports C09 only in the appendix as confounded.
+
+[Full report](campaigns/C13-budget-clean/REPORT.md)
 

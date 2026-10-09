@@ -13,6 +13,7 @@
 ## Findings
 
 - Snap (disks compressed as in hardening, then polygons at once) behaves like rigid starts: lower on 20 instances each, 148 ties. Hardening differs from snap by family: lower on 6 squares-in-square instances against 0, while snap is lower on 8 triangles-in-triangle instances against 0 and 14 vs 6 triangles in a square. Over all 188 instances harden vs snap lower 17 vs 36 (two-sided p = 0.013). The gradual change of shape, not the disk-compressed start, carries hardening's effect in both directions.
+- Correction (supersedes the wording of the C11 and C12 findings after an independent check): snap and grow-area show no detectable difference from rigid starts (20 vs 20 and 15 vs 14 instances lower); this is non-detection, not equivalence. Hardening differs from both in the same family-dependent directions (squares in a square in hardening's favour, triangles against), which suggests the gradual rounding is responsible, but the pre-registered tests on squares in a square are inconclusive (2 vs 0 solved-only discordant), so by the plans' rule the advantage there is attributed to the disk-compressed start. Treat the path explanation as post hoc.
 
 ## Results
 

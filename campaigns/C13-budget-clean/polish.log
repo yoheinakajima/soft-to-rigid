@@ -1,0 +1,9 @@
+C13-budget-clean: 229 candidates, 199 to polish
+0 hex-in-squ/n8/harden-best/B1/default/s80 ok 0.8s
+25 squ-in-cir/n11/harden-best/B3/default/s16 ok 0.7s
+50 tri-in-squ/n11/harden-best/B3/default/s12 ok 2.3s
+75 hex-in-squ/n16/rigid-best/B3/default/s7 ok 9.6s
+100 squ-in-tri/n17/harden-best/B3/default/s25 ok 1.9s
+125 cir-in-squ/n23/rigid-best/B3/default/s14 ok 2.5s
+150 tri-in-squ/n23/rigid-best/B3/default/s27 ok 44.2s
+175 squ-in-squ/n29/rigid-best/B3/default/s32 ok 13.0s

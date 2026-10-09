@@ -13,6 +13,7 @@
 ## Findings
 
 - Grow-area (rigid polygons scaled so their area follows hardening's schedule) behaves like rigid starts: lower on 15 vs 14 instances, 159 ties. Hardening differs from it as from snap: squares in a square 5 vs 1, triangles in a triangle 1 vs 8, triangles in a square 5 vs 11. Neither the disk-compressed start (C11) nor the area schedule reproduces hardening's effect; the rounding of the pieces does.
+- Correction (after review): grow-area shows no detectable difference from rigid starts (15 vs 14 lower); harden vs grow-area 20 vs 31 overall (p = 0.16), squares in a square 5 vs 1, triangles in a triangle 1 vs 8. Under C11's rule the squares-in-square test is inconclusive (2 vs 0). Neither ablation reproduces hardening's pattern, which makes rounding the likeliest explanation, but these experiments do not establish it.
 
 ## Results
 

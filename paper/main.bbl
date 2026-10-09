@@ -1,4 +1,4 @@
-\begin{thebibliography}{64}
+\begin{thebibliography}{65}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -152,11 +152,18 @@ E.~Friedman.
 \newblock \url{https://erich-friedman.github.io/packing/}, {\natexlab{a}}.
 \newblock Source repository commit of 7 October 2026.
 
-\bibitem[Friedman({\natexlab{b}})]{friedmansurvey}
+\bibitem[Friedman({\natexlab{b}})]{friedmancubes}
+E.~Friedman.
+\newblock Cubes in cubes.
+\newblock Erich's Packing Center,
+  \url{https://erich-friedman.github.io/packing/cubincub/}, {\natexlab{b}}.
+\newblock Updated 3 July 2026; accessed 8 October 2026.
+
+\bibitem[Friedman({\natexlab{c}})]{friedmansurvey}
 E.~Friedman.
 \newblock Packing unit squares in squares: a survey and new results.
 \newblock Electronic Journal of Combinatorics, Dynamic Survey DS7,
-  {\natexlab{b}}.
+  {\natexlab{c}}.
 \newblock Squares-in-squares catalogue now maintained by D.~Ellsworth,
   \url{https://kingbird.myphotos.cc/packing/squares_in_squares.html}.
 

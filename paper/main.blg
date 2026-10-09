@@ -4,49 +4,50 @@ The top-level auxiliary file: main.aux
 The style file: abbrvnat.bst
 Database file #1: refs.bib
 Warning--empty year in friedmancenter
+Warning--empty year in friedmancubes
 Warning--empty year in friedmansurvey
 Warning--empty year in packomania
 Warning--empty year in hyra
 Warning--empty year in squaresproject
-You've used 64 entries,
+You've used 65 entries,
             2773 wiz_defined-function locations,
-            1035 strings with 17514 characters,
-and the built_in function-call counts, 31148 in all, are:
-= -- 2769
-> -- 2025
-< -- 35
-+ -- 687
-- -- 621
-* -- 2639
-:= -- 4872
-add.period$ -- 237
-call.type$ -- 64
-change.case$ -- 396
+            1039 strings with 17665 characters,
+and the built_in function-call counts, 31456 in all, are:
+= -- 2797
+> -- 2035
+< -- 36
++ -- 692
+- -- 624
+* -- 2655
+:= -- 4918
+add.period$ -- 241
+call.type$ -- 65
+change.case$ -- 400
 chr.to.int$ -- 62
-cite$ -- 133
-duplicate$ -- 1266
-empty$ -- 2388
-format.name$ -- 715
-if$ -- 6446
-int.to.chr$ -- 3
+cite$ -- 136
+duplicate$ -- 1281
+empty$ -- 2420
+format.name$ -- 719
+if$ -- 6512
+int.to.chr$ -- 4
 int.to.str$ -- 1
 missing$ -- 49
-newline$ -- 373
-num.names$ -- 256
-pop$ -- 775
+newline$ -- 379
+num.names$ -- 260
+pop$ -- 790
 preamble$ -- 1
-purify$ -- 333
+purify$ -- 336
 quote$ -- 0
-skip$ -- 1014
+skip$ -- 1022
 stack$ -- 0
-substring$ -- 1014
-swap$ -- 104
+substring$ -- 1016
+swap$ -- 106
 text.length$ -- 6
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 689
-warning$ -- 5
-while$ -- 263
+type$ -- 700
+warning$ -- 6
+while$ -- 266
 width$ -- 0
-write$ -- 907
-(There were 5 warnings)
+write$ -- 921
+(There were 6 warnings)

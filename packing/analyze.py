@@ -159,7 +159,7 @@ def main():
                 t = f"{v['lowest']:.5f}"
                 cells.append((r'\textbf{%s}' % t if v['lowest'] <= lo * (1 + 1e-9) else t) + ('$^*$' if v['below'] else ''))
             L.append(f'{n} & {rec:.5f} & ' + ' & '.join(cells) + r'\\')
-        L += [r'\bottomrule', r'\end{tabular}', r'\caption{Cubes in a cube (C05): lowest side over 32 runs at the record budget, after tightening. Bold: lowest in the row; $^*$: below the best known value.}', r'\label{tab:cubes}', r'\end{table}']
+        L += [r'\bottomrule', r'\end{tabular}', r'\caption{Cubes in a cube (C05): lowest side over 32 runs at the record budget, after tightening. The best known column excludes our earlier $n=12$ record ($2.93152$), which these runs try to reproduce. Bold: lowest in the row; $^*$: below the best known value.}', r'\label{tab:cubes}', r'\end{table}']
         open(os.path.join(ROOT, 'paper', 'tables', 'C05-cubes.tex'), 'w').write('\n'.join(L) + '\n')
         below = sorted({(c['n'], c['method'], c['config']) for c in cub if c['below']})
         def best(m):

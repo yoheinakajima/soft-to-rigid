@@ -28,8 +28,8 @@
   h += '<tr><th>all</th>' + tot.map(t => `<th>${t[0]} <small>(${t[1]})</small></th>`).join('') + `<th>${inst.size}</th></tr>`;
   T.innerHTML = h;
   document.getElementById('matrixcap').textContent = `Campaign ${main}. For each instance, the lowest container size each method reached in 32 runs (after exact tightening). Cells count the instances where the method's lowest is the lowest of all five methods; in brackets, where it is the only one that low.`;
-  const order = ['C07-breadth-best', 'C10-portfolio', 'C09-budget', 'C08-start-shape', 'C05-cubes', 'C03-tune-extend2'];
-  document.getElementById('findings').innerHTML = order.map(c => D.ledger.findings.find(f => f.campaign === c && !f.text.startsWith('Precision note'))).filter(Boolean).map(f => `<li><span class="mono">${f.campaign}</span> ${f.text}</li>`).join('');
+  const order = ['C07-breadth-best', 'C11-snap', 'C12-grow-area', 'C13-budget-clean', 'C10-portfolio', 'C08-start-shape', 'C05-cubes'];
+  document.getElementById('findings').innerHTML = order.map(c => D.ledger.findings.findLast(f => f.campaign === c && !f.text.startsWith('Precision note'))).filter(Boolean).map(f => `<li><span class="mono">${f.campaign}</span> ${f.text}</li>`).join('');
   // path illustrations
   const P = SiteViewers.piece('square'), paths = [
     ['harden', 'γ = 1, τ: 1 → 0', (u) => [1, 1 - u]], ['grow', 'τ = 0, γ: 0.2 → 1', (u) => [0.2 + 0.8 * u, 0]],

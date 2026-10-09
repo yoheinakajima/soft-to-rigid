@@ -121,7 +121,7 @@ def main():
                      rf'\newcommand{{\Bud{k}HReached}}{{{b[a]["harden_reached"]}}}', rf'\newcommand{{\Bud{k}RReached}}{{{b[a]["rigid_reached"]}}}']
         for m, k in (('harden', 'H'), ('rigid', 'R')):
             lv, lb = b[m + '_longer_vs_more'], b[m + '_longer_vs_base']
-            nums += [rf'\newcommand{{\BudLonger{k}}}{{{lv["a_lower"]}}}', rf'\newcommand{{\BudMore{k}}}{{{lv["b_lower"]}}}', rf'\newcommand{{\BudLMP{k}}}{{{fmt_p(lv["p_lower"])}}}',
+            nums += [rf'\newcommand{{\BudLvML{k}}}{{{lv["a_lower"]}}}', rf'\newcommand{{\BudLvMM{k}}}{{{lv["b_lower"]}}}', rf'\newcommand{{\BudLMP{k}}}{{{fmt_p(lv["p_lower"])}}}',
                      rf'\newcommand{{\BudGain{k}}}{{{lb["a_lower"]}}}', rf'\newcommand{{\BudLoss{k}}}{{{lb["b_lower"]}}}']
         nums.append(rf'\newcommand{{\BudN}}{{{b["instances"]}}}')
     # table: per family, harden vs snap, snap vs rigid, harden vs grow-area (instances where the first / second is lower)

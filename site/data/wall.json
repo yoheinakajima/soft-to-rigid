@@ -112,7 +112,7 @@
 "dim": 2
 },
 {
-"file": "campaigns/C07-breadth-best/replays/tri-in-tri_n29_harden-best_B1_default.json",
+"file": "campaigns/C13-budget-clean/replays/tri-in-tri_n29_harden-best_B1_default.json",
 "family": "tri-in-tri",
 "n": 29,
 "method": "harden",
@@ -133,7 +133,7 @@
 "dim": 3
 },
 {
-"file": "campaigns/C07-breadth-best/replays/cir-in-squ_n29_harden-best_B1_default.json",
+"file": "campaigns/C13-budget-clean/replays/cir-in-squ_n29_harden-best_B1_default.json",
 "family": "cir-in-squ",
 "n": 29,
 "method": "harden",
@@ -154,7 +154,7 @@
 "dim": 2
 },
 {
-"file": "campaigns/C07-breadth-best/replays/hex-in-squ_n20_harden-best_B1_default.json",
+"file": "campaigns/C13-budget-clean/replays/hex-in-squ_n20_harden-best_B1_default.json",
 "family": "hex-in-squ",
 "n": 20,
 "method": "harden",
@@ -189,7 +189,7 @@
 "dim": 2
 },
 {
-"file": "campaigns/C07-breadth-best/replays/hex-in-squ_n16_harden-best_B1_default.json",
+"file": "campaigns/C13-budget-clean/replays/hex-in-squ_n16_harden-best_B1_default.json",
 "family": "hex-in-squ",
 "n": 16,
 "method": "harden",
@@ -217,7 +217,7 @@
 "dim": 2
 },
 {
-"file": "campaigns/C07-breadth-best/replays/tri-in-tri_n23_harden-best_B1_default.json",
+"file": "campaigns/C13-budget-clean/replays/tri-in-tri_n23_harden-best_B1_default.json",
 "family": "tri-in-tri",
 "n": 23,
 "method": "harden",
