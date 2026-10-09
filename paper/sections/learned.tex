@@ -1,0 +1,19 @@
+\section{What we learned}\label{sec:learned}
+\paragraph{The path matters, and which path depends on the family.} For squares in a square, hardening's lowest size is the lowest of all methods on \CsevenSquInSquHardenLowest{} of \CsevenSquInSquN{} instances and the only one that low on \CsevenSquInSquHardenSole{}; with identical settings, rigid starts manage \CsevenSquInSquRigidLowest{}. Hardening alone reaches Trump's $n=11$ and Wainwright's $n=19$ packings (Figure~\ref{fig:strip}). These are packings in which a group of squares sits tilted between axis-aligned ones, so orientation has to be decided after the neighbours are in place, which is what a disk-first path does. For triangles the order reverses: rigid starts are lowest on \CsevenTriInSquRigidLowest{} instances of triangles in a square against \CsevenTriInSquHardenLowest{} for hardening, and \CsevenTriInTriRigidLowest{} against \CsevenTriInTriHardenLowest{} in a triangle. A triangle's inscribed disk covers only 60\% of its area (a square's covers 79\%), so a hardening triangle packing grows the most during the morph and must rearrange the most. On the control family all gradient paths agree, as they should.
+
+\begin{figure}[t]\centering
+\includegraphics[width=\linewidth]{figures/strip_squ19}
+\caption{One hardening run for 19 squares (C07): disks are compressed, harden into squares, and settle into Wainwright's packing (side $3+4\sqrt2/3$). Every replay is on the project site.}\label{fig:strip}
+\end{figure}
+
+\paragraph{Partly soft starts.} Varying only the starting softness $\tau_0$ on the \CtauN{} most contested instances (Table~\ref{tab:tau}), the counts of instances where each value reaches the lowest size are \CtauOne, \CtauHalf, \CtauQuarter{} and \CtauZero{} for $\tau_0=1, 0.5, 0.25, 0$. Squares in a square favour soft starts (\CtauSquares{}); triangles favour rigid or slightly rounded ones (\CtauTriangles{}). A half-rounded start is never far from the best value of $\tau_0$, which makes it a reasonable default when nothing is known about the family.
+
+\input{tables/C08-start-shape}
+
+\paragraph{More time.} With three and ten times the budget on the \CbudgetN{} most contested instances (Table~\ref{tab:budget}), \BudgetSummary
+
+\input{tables/C09-budget}
+
+\paragraph{Two paths beat one.} Because the paths fail on different families, they complement each other. At equal total budget, 32 rigid runs plus 32 hardening runs solve \PortRigidHarden{} of the \CsevenInstances{} instances, against \PortRigidSixtyFour{} for 64 rigid runs and \PortRigidGrow{} for 32 rigid plus 32 growing runs (instances solved by exactly one portfolio: \PortSign, one-sided $p=\PortP$). \PortfolioSummary
+
+\paragraph{Tuning decides comparisons.} Our first experiments compared hardening with rigid starts that inherited the hardening schedule, and hardening looked uniformly better. Tuned with the same effort, rigid starts became as good overall. Re-tuning for the lowest point instead of the median changed every method's settings (stronger pressure and noise for the gradient paths) and helped simulated annealing most, but did not change which path wins on which family.

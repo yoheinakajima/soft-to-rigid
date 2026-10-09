@@ -41,7 +41,7 @@ def main(campaign, workers):
                 r = json.loads(line)
                 rows[r['id']] = r
                 files[r['id']] = os.path.relpath(f, ROOT)
-    cells = _cells(campaign, list(rows.values()), files, plan.get('polish', True))
+    cells = _cells(campaign, list(rows.values()), files, plan.get('polish', True), plan.get('polish_rel'), plan.get('polish_cap'), plan.get('polish_gap'))
     todo = [rows[c['run']] for cell in cells for c in cell['candidates'] if not os.path.exists(polished_path(c['run']))]
     todo.sort(key=lambda r: r['n'])
     print(f'{campaign}: {sum(len(c["candidates"]) for c in cells)} candidates, {len(todo)} to polish', flush=True)

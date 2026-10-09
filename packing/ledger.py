@@ -178,7 +178,10 @@ def emit(G, type_, payload):
     G.emit(Event(id=G.ids.event(), type=type_, payload=payload))
 
 
-def _cells(campaign, rows, files, polish=True):
+def _cells(campaign, rows, files, polish=True, rel_lim=None, cap=None, gap_lim=None):
+    rel_lim = POLISH_REL if rel_lim is None else rel_lim
+    cap = POLISH_CAP if cap is None else cap
+    gap_lim = POLISH_GAP if gap_lim is None else gap_lim
     by = {}
     for r in rows:
         if 'error' in r:
@@ -192,7 +195,7 @@ def _cells(campaign, rows, files, polish=True):
         cand = []
         for i, r in enumerate(rs):
             rel = r['gap'] / r['record'] if r.get('record') else 0
-            if polish and len(cand) < POLISH_CAP and ((i < POLISH_TOP and rel < POLISH_REL) or (r['gap'] is not None and r['gap'] < POLISH_GAP)):
+            if polish and len(cand) < cap and ((i < POLISH_TOP and rel < rel_lim) or (r['gap'] is not None and r['gap'] < gap_lim)):
                 cand.append({'run': r['id'], 'file': files[r['id']], 'L_raw': r['L'], 'gap_raw': r['gap']})
         cells.append({'cell': key, 'campaign': campaign, 'family': r0['family'], 'n': r0['n'], 'method': r0['method'],
                       'budget': r0['budget'], 'config': r0['config'], 'runs': len(rs), 'record': r0.get('record'),
@@ -224,7 +227,7 @@ def ingest(campaign):
                 files[r['id']] = rel
     errors = [r for r in rows if 'error' in r]
     emit(G, 'runs.ingested', {'campaign': campaign, 'files': digests, 'runs': len(rows), 'errors': len(errors),
-                              'error_ids': [r['id'] for r in errors][:50], 'cells': _cells(campaign, rows, files, plan.get('polish', True))})
+                              'error_ids': [r['id'] for r in errors][:50], 'cells': _cells(campaign, rows, files, plan.get('polish', True), plan.get('polish_rel'), plan.get('polish_cap'), plan.get('polish_gap'))})
     rt.run_until_idle()
     print(f'ingested {campaign}: {len(rows)} runs, {len(errors)} errors; ledger has {len(G.events)} events')
 

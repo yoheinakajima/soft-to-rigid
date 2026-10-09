@@ -22,12 +22,11 @@ fams = json.load(open(os.path.join(ROOT, 'site', 'data', 'families.json')))
 
 
 def best_gap(c):
-    g = c['best_gap'] if c.get('best_polished') is None else min(c['best_gap'], c['best_polished'] - c['record'])
-    return max(g, 0) / c['record']
+    return max(c['lowest'] - c['record'], 0) / c['record']
 
 
-def fig_gaps(cid='C04-breadth'):
-    cs = [c for c in cells if c['campaign'] == cid]
+def fig_gaps(cid='C07-breadth-best'):
+    cs = [dict(c, method=c['method'].replace('-best', '')) for c in cells if c['campaign'] == cid]
     fl = [f for f in ['squ-in-squ', 'squ-in-cir', 'squ-in-tri', 'tri-in-tri', 'tri-in-squ', 'hex-in-squ', 'cir-in-squ'] if any(c['family'] == f for c in cs)]
     if not fl:
         return
@@ -40,7 +39,7 @@ def fig_gaps(cid='C04-breadth'):
                 continue
             xs = [p[0] for p in pts]; ys = [max(p[1], 1e-7) for p in pts]
             ax.plot(xs, ys, MK[m], color=COL[m], ms=2.6, mew=0.8, label=m, alpha=0.9, mfc='none' if m in ('rigid', 'sa') else COL[m])
-        ax.set_yscale('log'); ax.set_ylim(5e-8, 1); ax.set_title(fams[f]['title'].replace('Unit ', '').replace('equilateral ', '').replace('regular ', ''), fontsize=7.5)
+        ax.set_yscale('log'); ax.set_ylim(5e-8, 1); ax.set_title({'squ-in-squ': 'squares in a square', 'squ-in-cir': 'squares in a circle', 'squ-in-tri': 'squares in a triangle', 'tri-in-tri': 'triangles in a triangle', 'tri-in-squ': 'triangles in a square', 'hex-in-squ': 'hexagons in a square', 'cir-in-squ': 'circles in a square (control)'}[f], fontsize=7.5)
         ax.axhline(1e-6, color='#bbb', lw=0.5); ax.set_xlabel('n', labelpad=1)
     for ax in axs.flat[len(fl):]:
         ax.axis('off')
@@ -76,7 +75,7 @@ def fig_strip(replay_path, name, k=6):
     """k frames of one replay, from disks to the final packing."""
     R = json.load(open(replay_path))
     F = R['frames']; idx = [round(i * (len(F) - 1) / (k - 1)) for i in range(k)]
-    fig, axs = plt.subplots(1, k, figsize=(7.2, 7.2 / k + 0.25))
+    fig, axs = plt.subplots(1, k, figsize=(7.2, 7.2 / k + 0.55))
     P = geom.piece(R['piece'])
     for ax, i in zip(axs, idx):
         f = F[i]; g, u = f['g'], f['u']
@@ -105,7 +104,7 @@ def fig_strip(replay_path, name, k=6):
                 ax.add_patch(Polygon(pts, closed=True, color=col, alpha=0.85, lw=0.3, ec='white'))
         sp = (L * 0.62 if R['container'] != 'circle' else L * 1.05)
         ax.set_xlim(-sp, sp); ax.set_ylim(-sp, sp); ax.set_aspect('equal'); ax.axis('off')
-        ax.set_title(f"{f['ph']}  τ={u:.2f}\nsize {L:.3f}", fontsize=6.5)
+        ax.set_title(f"{f['ph']}, τ = {u:.2f}\nsize {L:.3f}", fontsize=6.5)
     fig.tight_layout(pad=0.3)
     for ext in ('pdf', 'png'):
         fig.savefig(os.path.join(OUT, f'{name}.{ext}'), dpi=220)

@@ -1,0 +1,12 @@
+\section{Introduction}
+How small a container holds $n$ copies of a given shape? For unit squares in a square the question goes back to Erd\H{o}s and Graham \cite{erdosgraham}; catalogues now cover squares, triangles, hexagons and cubes in squares, triangles, circles and cubes \cite{friedmancenter,squaresproject}, and most entries are best known packings found by search rather than proved optimal. Almost every search moves rigid pieces: simulated annealing \cite{kirkpatrick}, perturbation and compression \cite{gensane}, or growing the pieces in size \cite{lubachevsky}.
+
+This paper changes the pieces instead. \emph{Hardening} starts every piece as the disk inscribed in it, compresses the disks under inward pressure on the container, and deforms them into the real shape while the pressure continues, in the spirit of graduated non-convexity \cite{blake}. A disk has no orientation, so the pieces are already densely packed when their corners appear and rotation becomes a choice. On squares this recovers several classical packings from random starts, and in 3D it found a packing of 12 unit cubes in a cube smaller than the best known one \cite{nakajima12}.
+
+Here we ask whether that is a property of the path or of the problems we tried. We compare hardening with four other paths through shape space on seven families of shapes and containers (\totalruns{} runs in \ncampaigns{} campaigns), with equal budgets and equal tuning effort. Since a packing search is judged by the best packing it ever finds, the comparison is by the \emph{lowest} container size each method reaches, after exact tightening. Our findings:
+\begin{itemize}\itemsep1pt
+\item No path is best everywhere. Over all families, rigid starts with the same schedule reach the lowest size about as often as hardening or slightly more often (Table~\ref{tab:main}).
+\item Which path wins depends on the family. For squares in a square, hardening reaches the lowest size on almost every instance and is often the only method that does; for triangles, rigid or growing starts are better (Section~\ref{sec:learned}).
+\item The two classical rigid baselines, simulated annealing and perturbation--compression, are far behind every gradient path at this budget.
+\end{itemize}
+Every run can be replayed, every claim verified, and every decision traced in the repository and its site; each experiment was planned in writing before it ran.

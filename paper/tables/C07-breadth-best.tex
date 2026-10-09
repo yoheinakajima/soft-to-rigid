@@ -1,0 +1,20 @@
+\begin{table}[t]\centering\small
+\begin{tabular}{lrccccc}
+\toprule
+family & $N$ & \textbf{harden} & \textbf{grow} & \textbf{rigid} & \textbf{sa} & \textbf{pc} \\
+\midrule
+squares in square & 28 & \textbf{27 (5)} & 21 & 23 (1) & 21 & 17 \\
+squares in circle & 28 & 16 (6) & \textbf{17 (4)} & 15 (3) & 14 (2) & 8 \\
+squares in triangle & 29 & 28 & 27 & \textbf{29} & 24 & 8 \\
+triangles in triangle & 28 & 18 & 24 (2) & \textbf{26 (4)} & 19 & 10 \\
+triangles in square & 28 & 14 (2) & 17 (3) & \textbf{22 (7)} & 9 & 5 \\
+hexagons in square & 18 & 15 & 14 & \textbf{16 (1)} & 14 (2) & 9 \\
+circles in square (control) & 29 & \textbf{24} & \textbf{24} & \textbf{24} & \textbf{24 (2)} & 15 (1) \\
+\midrule
+all & 188 & 142 (13) & 144 (9) & \textbf{155 (16)} & 125 (6) & 72 (1) \\
+reached best known & & 125 & 129 & 133 & 115 & 71 \\
+\bottomrule
+\end{tabular}
+\caption{Lowest point by family (C07; every method tuned for its lowest point, 32 runs per instance, equal budget). Each cell: number of instances on which the method\textquotesingle s lowest tightened size is the lowest of all five methods; in brackets, on how many it is the only method that low. Bold: most per family.}
+\label{tab:main}
+\end{table}

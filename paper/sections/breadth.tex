@@ -1,0 +1,13 @@
+\section{A wider, fair test}\label{sec:breadth}
+\paragraph{Design.} Seven families: unit squares in a square, a circle and a triangle; unit triangles in a triangle and a square; unit hexagons in a square; and, as a control, unit-diameter circles in a square, where hardening changes nothing because a disk is already a disk. Best known values come from the Squares Project \cite{squaresproject}, Friedman's catalogue \cite{friedmancenter} and Packomania \cite{packomania}; truncated catalogue values (``$2.956+$'') count as reached within their printed precision. All $n$ from 2 to 30 (to 20 for hexagons) are used, \CsevenInstances{} instances in all, minus five reserved for tuning.
+
+Each method was tuned twice, with the same effort: a $3\times3$ grid on held-out instances, scored first by median gap (campaigns C01--C03) and then by the lowest size reached (C06, on harder held-out instances with $n>30$). Each method then ran 32 times per instance with an equal budget of pair evaluations, and the best run of each instance and method was tightened. Every campaign's plan, including its decision rule, was committed before its first run; changes after a campaign started are recorded as amendments.
+
+\paragraph{Result.} Table~\ref{tab:main} counts, per family, the instances on which each method's lowest size is the lowest of all five. Rigid starts reach the lowest size most often overall (\CsevenRigidLowest{} instances, against \CsevenGrowLowest{} for grow and \CsevenHardenLowest{} for harden), and reach the best known value most often (\CsevenRigidSolved{} against \CsevenGrowSolved{} and \CsevenHardenSolved{}). Over instances solved by exactly one of the two, rigid against harden is \CsevenSignRigid{} (one-sided $p=\CsevenSignPRigid$). Simulated annealing improved most from tuning for the lowest point and is competitive on several families; perturbation--compression stays far behind at this budget. No run went below a published value, and \CsevenUnsolved{} instances were solved by no method. The median-tuned comparison (C04, Table~\ref{tab:median} in the appendix) gives the same ordering.
+
+\input{tables/C07-breadth-best}
+
+\begin{figure}[t]\centering
+\includegraphics[width=\linewidth]{figures/gaps}
+\caption{Lowest size reached per instance, relative to the best known value (C07). Points on the bottom row reach it.}\label{fig:gaps}
+\end{figure}

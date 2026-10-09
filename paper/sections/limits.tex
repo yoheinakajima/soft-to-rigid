@@ -1,0 +1,10 @@
+\section{Limitations and open directions}\label{sec:limits}
+\paragraph{Limitations.} These are search results, not optimality proofs. Each instance had 32 runs per method at a fixed budget; the n = 12 cube record needed 192. Budgets were matched in pair evaluations, which favours methods with cheap evaluations less than wall-clock matching would; mean times per run are in the repository. The rigid baselines are our implementations, tuned on a $3\times3$ grid; tuned winners often sat on a grid edge, and we did not extend the second tuning round, as pre-registered. In 3D only the three gradient paths were compared. Catalogue values come from captions and witnesses as of October 2026, and truncated values are only known to their printed precision.
+
+\paragraph{Open directions.}
+\begin{itemize}\itemsep1pt
+\item \emph{Choosing the path per instance.} The family pattern suggests a rule: harden when the best packings are expected to tilt pieces into a lattice of a similar shape (squares in squares), start rigid when the piece's inscribed disk is a poor proxy for it (triangles). A cheap pilot of both paths, then a budget split by early results, is a natural next step.
+\item \emph{Other paths.} Paths through other shape families (an ellipse for a rectangle, a rounded octahedron for a cube), or paths that harden pieces one at a time.
+\item \emph{Larger $n$ and 3D.} Most unsolved instances have $n\ge17$; 3D families beyond cubes (tetrahedra and octahedra in a cube) were not attempted.
+\item \emph{Mixed and non-convex pieces.} The rounded-shape construction needs a convex core; non-convex pieces would need a different family of intermediate shapes.
+\end{itemize}
