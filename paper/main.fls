@@ -258,6 +258,7 @@ INPUT ./sections/method.tex
 INPUT ./sections/method.tex
 INPUT ./sections/method.tex
 INPUT sections/method.tex
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmtt10.tfm
 INPUT ./figures/strip_squ19.pdf
 INPUT ./figures/strip_squ19.pdf
 INPUT ./figures/strip_squ19.pdf
@@ -299,7 +300,6 @@ INPUT ./sections/learned.tex
 INPUT ./sections/learned.tex
 INPUT ./sections/learned.tex
 INPUT sections/learned.tex
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmtt10.tfm
 INPUT ./tables/C16.tex
 INPUT ./tables/C16.tex
 INPUT ./tables/C16.tex

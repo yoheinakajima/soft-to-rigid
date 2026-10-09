@@ -93,6 +93,11 @@ def main(workers=2):
             rf'\newcommand{{\DecTies}}{{{pv["ties"]}}}', rf'\newcommand{{\DecP}}{{{fp(pv["p"])}}}', rf'\newcommand{{\DecHLower}}{{{hv["a_lower"]}}}',
             rf'\newcommand{{\DecHRLower}}{{{hv["b_lower"]}}}', rf'\newcommand{{\DecHP}}{{{fp(hv["p"])}}}', rf'\newcommand{{\DecPicked}}{{{res["picked_harden"]}}}']
     nums += [rf'\newcommand{{\DecReached{k}}}{{{res["reached"][p]}}}' for k, p in (('Rigid', 'always-rigid'), ('Harden', 'always-harden'), ('Pilot', 'pilot'))]
+    tp = os.path.join(ROOT, 'analysis', 'C15_tightened_pilot.json')   # post-hoc check, scripts/c15_tightened_pilot.py
+    if os.path.exists(tp):
+        t = json.load(open(tp))
+        nums += [rf'\newcommand{{\DecTPicked}}{{{t["picked_harden_tightened"]}}}', rf'\newcommand{{\DecTChanged}}{{{len(t["changed"])}}}',
+                 rf'\newcommand{{\DecTLower}}{{{t["tightened_pilot_vs_rigid"][0]}}}', rf'\newcommand{{\DecTRLower}}{{{t["tightened_pilot_vs_rigid"][1]}}}']
     open(os.path.join(ROOT, 'paper', 'decision.tex'), 'w').write('\n'.join(nums) + '\n')
     L = [r'\begin{table}[t]\centering\small', r'\begin{tabular}{lrcccc}', r'\toprule',
          r'family & $N$ & harden : rigid & pilot : rigid & pilot chose harden & reached (r / h / p) \\', r'\midrule']

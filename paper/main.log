@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.10.2)  9 OCT 2026 14:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.10.2)  9 OCT 2026 15:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -496,41 +496,40 @@ put line 28.
 <figures/strip_squ19.pdf, id=207, 520.34402pt x 126.4725pt>
 File: figures/strip_squ19.pdf Graphic file (type pdf)
 <use figures/strip_squ19.pdf>
-Package pdftex.def Info: figures/strip_squ19.pdf  used on input line 46.
+Package pdftex.def Info: figures/strip_squ19.pdf  used on input line 48.
 (pdftex.def)             Requested size: 469.75502pt x 114.18314pt.
 <figures/strip_tri12.pdf, id=208, 518.41678pt x 106.2674pt>
 File: figures/strip_tri12.pdf Graphic file (type pdf)
 <use figures/strip_tri12.pdf>
-Package pdftex.def Info: figures/strip_tri12.pdf  used on input line 47.
+Package pdftex.def Info: figures/strip_tri12.pdf  used on input line 49.
 (pdftex.def)             Requested size: 469.75502pt x 96.29321pt.
  [4]) (./sections/story.tex [5]
 (./tables/C05-cubes.tex)) (./sections/breadth.tex [6 <./figures/strip_squ19.pdf
-> <./figures/strip_tri12.pdf>] (./tables/C07-breadth-best.tex)
-<figures/heatmap.pdf, id=345, 520.34402pt x 171.27989pt>
+> <./figures/strip_tri12.pdf>] [7] (./tables/C07-breadth-best.tex)
+<figures/heatmap.pdf, id=356, 520.34402pt x 171.27989pt>
 File: figures/heatmap.pdf Graphic file (type pdf)
 <use figures/heatmap.pdf>
 Package pdftex.def Info: figures/heatmap.pdf  used on input line 31.
 (pdftex.def)             Requested size: 469.75502pt x 154.63658pt.
- [7]
-<figures/bestofk.pdf, id=356, 520.34402pt x 112.0185pt>
+<figures/bestofk.pdf, id=359, 520.34402pt x 112.0185pt>
 File: figures/bestofk.pdf Graphic file (type pdf)
 <use figures/bestofk.pdf>
 Package pdftex.def Info: figures/bestofk.pdf  used on input line 38.
 (pdftex.def)             Requested size: 469.75502pt x 101.13362pt.
 )
-(./sections/learned.tex [8] (./tables/C16.tex) [9 <./figures/heatmap.pdf> <./fi
-gures/bestofk.pdf>] (./tables/ablations.tex) [10]
-<figures/mechanism.pdf, id=491, 520.34402pt x 137.313pt>
+(./sections/learned.tex [8] (./tables/C16.tex) [9 <./figures/heatmap.pdf>]
+[10 <./figures/bestofk.pdf>] (./tables/ablations.tex)
+<figures/mechanism.pdf, id=493, 520.34402pt x 137.313pt>
 File: figures/mechanism.pdf Graphic file (type pdf)
 <use figures/mechanism.pdf>
 Package pdftex.def Info: figures/mechanism.pdf  used on input line 19.
 (pdftex.def)             Requested size: 469.75502pt x 123.97026pt.
- [11 <./figures/mechanism.pdf>] (./tables/C15.tex) (./tables/C08-start-shape.te
-x) [12])
+ [11] (./tables/C15.tex)
+(./tables/C08-start-shape.tex [12 <./figures/mechanism.pdf>]))
 (./sections/matters.tex [13]) (./sections/limits.tex [14])) (./main.bbl
 [15] [16] [17]) (./sections/appendix.tex [18] (./tables/C09-budget.tex)
 (./tables/C04-breadth.tex) (./tables/diag.tex)
-<figures/gaps.pdf, id=653, 520.34402pt x 252.945pt>
+<figures/gaps.pdf, id=657, 520.34402pt x 252.945pt>
 File: figures/gaps.pdf Graphic file (type pdf)
 <use figures/gaps.pdf>
 Package pdftex.def Info: figures/gaps.pdf  used on input line 17.
@@ -546,13 +545,13 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 0EA1C64C2447CF0C35FCC7492E20DECF;1267.
  ) 
 Here is how much of TeX's memory you used:
- 12785 strings out of 476106
- 194531 string characters out of 5793933
- 1947975 words of memory out of 5000000
- 34407 multiletter control sequences out of 15000+600000
+ 12794 strings out of 476106
+ 194638 string characters out of 5793933
+ 1945975 words of memory out of 5000000
+ 34415 multiletter control sequences out of 15000+600000
  571070 words of font info for 86 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
- 75i,11n,79p,2329b,704s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,11n,79p,2556b,680s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </root/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1095.600pk> </
 root/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm0600.600pk> </root/
 .texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm0800.600pk></usr/share/t
@@ -577,10 +576,10 @@ s/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
 mtt9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msa
 m10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm
 10.pfb>
-Output written on main.pdf (21 pages, 598998 bytes).
+Output written on main.pdf (21 pages, 602818 bytes).
 PDF statistics:
- 892 PDF objects out of 1000 (max. 8388607)
- 547 compressed objects within 6 object streams
- 144 named destinations out of 1000 (max. 500000)
+ 898 PDF objects out of 1000 (max. 8388607)
+ 552 compressed objects within 6 object streams
+ 145 named destinations out of 1000 (max. 500000)
  103 words of extra memory for PDF output out of 10000 (max. 10000000)
 

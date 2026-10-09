@@ -154,6 +154,13 @@ def main():
     for k, v in d['per_run'].items():
         m, n = k.split('/')
         nums.append(r'\newcommand{\Steps%s%s}{%s}' % (m.capitalize(), {'n10': 'Ten', 'n20': 'Twenty', 'n30': 'Thirty'}[n], f"{v['steps']:,}".replace(',', '{,}')))
+    rb = os.path.join(ROOT, 'analysis', 'reference_budget.json')   # written by scripts/reference_budget.js
+    if os.path.exists(rb):
+        ref = json.load(open(rb))
+        for n, key in ((20, 'Twenty'), (30, 'Thirty')):
+            hm = d['per_run'][f'harden/n{n}']['pair_evals']
+            nums += [r'\newcommand{\RefEvals%s}{%s}' % (key, f"{ref[f'sa-best/n{n}']:,}".replace(',', '{,}')),
+                     r'\newcommand{\RefRatio%s}{%.2f}' % (key, ref[f'sa-best/n{n}'] / hm)]
     open(os.path.join(ROOT, 'paper', 'stats.tex'), 'w').write('\n'.join(nums) + '\n')
     # diagnostics table
     pr = d['per_run']; f = lambda v: f"{v:,}".replace(',', '{,}')

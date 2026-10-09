@@ -1,0 +1,29 @@
+{
+ "instances": 60,
+ "picked_harden_tightened": 3,
+ "picked_harden_raw": 20,
+ "changed": [
+  "hex-in-tri/n6",
+  "hex-in-tri/n10",
+  "hex-in-tri/n11",
+  "hex-in-tri/n12",
+  "hex-in-tri/n14",
+  "hex-in-tri/n17",
+  "hex-in-tri/n18",
+  "hex-in-tri/n19",
+  "oct-in-squ/n7",
+  "oct-in-squ/n8",
+  "oct-in-squ/n14",
+  "oct-in-squ/n15",
+  "oct-in-squ/n17",
+  "oct-in-squ/n18",
+  "pen-in-squ/n7",
+  "pen-in-squ/n12",
+  "tri-in-cir/n14"
+ ],
+ "tightened_pilot_vs_rigid": [
+  2,
+  3,
+  1.0
+ ]
+}
