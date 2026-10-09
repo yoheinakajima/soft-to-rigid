@@ -245,13 +245,13 @@
       const a = document.createElement('a'); a.className = 'wcell'; a.href = it.href || '#';
       a.innerHTML = `<canvas></canvas><span class="wlab"><b>${it.label}</b><i>${it.method}</i></span><span class="wnum"></span>`;
       root.appendChild(a);
-      cells.push({ it, a, cv: a.querySelector('canvas'), num: a.querySelector('.wnum'), D: null, vis: false, off: opts.sync ? 0 : (i * 0.618034) % 1 * (PLAY + HOLD), span: null, az: i * 0.7 });
+      cells.push({ it, a, cv: a.querySelector('canvas'), num: a.querySelector('.wnum'), D: null, vis: false, off: opts.stagger ? (i * 0.618034) % 1 * (PLAY + HOLD) : 0, span: null, az: i * 0.7 });
     }
     const load = (c) => { if (c.D || c.loading) return; c.loading = true; fetch(c.it.file).then(r => r.json()).then(D => { c.D = D; }).catch(() => { c.a.classList.add('wfail'); }); };
     const io = new IntersectionObserver(es => es.forEach(e => { const c = cells.find(c => c.a === e.target); c.vis = e.isIntersecting; if (c.vis) load(c); }), { rootMargin: '200px' });
     cells.forEach(c => io.observe(c.a));
     let paused = reduce;
-    const t0 = performance.now();
+    let t0 = performance.now();   // one clock for every tile, so all replays run in step
     function frame(now) {
       const T = (now - t0) / 1000, colors = { ink: css('--ink'), panel: css('--panel'), sq: css('--sq'), blob: css('--blob'), ref: css('--ref') };
       for (const c of cells) {
@@ -263,11 +263,11 @@
         ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.clearRect(0, 0, W, W);
         if (c.it.dim === 3) {
           if (!paused) c.az += 0.004;
-          const want = (c.it.method === 'grow' ? f.L : Math.max(f.L, D.record || 0)) * 0.98 + 0.25 * (c.it.method === 'grow' ? f.g : 1); c.span = c.span === null ? want : c.span + (want - c.span) * 0.12;
+          const want = (/grow/.test(c.it.method) ? f.L : Math.max(f.L, D.record || 0)) * 0.98 + 0.25 * (/grow/.test(c.it.method) ? f.g : 1); c.span = c.span === null ? want : c.span + (want - c.span) * 0.12;
           const sc = W / (2 * c.span); ctx.setTransform(sc, 0, 0, -sc, W / 2, W / 2);
           draw3d(ctx, D, f, c.az, Object.assign({ lw: 1 / sc }, colors));
         } else {
-          const P = piece(D.piece), want = outerR(D.container, c.it.method === 'grow' ? f.L : Math.max(f.L, D.record || 0)) * 1.04 + 0.15 * (c.it.method === 'grow' ? f.g : 1);
+          const P = piece(D.piece), want = outerR(D.container, /grow/.test(c.it.method) ? f.L : Math.max(f.L, D.record || 0)) * 1.04 + 0.15 * (/grow/.test(c.it.method) ? f.g : 1);
           c.span = c.span === null ? want : c.span + (want - c.span) * 0.12;
           const sc = W / (2 * c.span); ctx.setTransform(sc, 0, 0, -sc, W / 2, W / 2);
           ctx.lineWidth = 1.6 / sc; ctx.strokeStyle = colors.ink; containerPath(ctx, D.container, f.L); ctx.stroke();
@@ -283,7 +283,7 @@
       requestAnimationFrame(frame);
     }
     requestAnimationFrame(frame);
-    return { toggle() { paused = !paused; return paused; }, get paused() { return paused; } };
+    return { toggle() { paused = !paused; if (!paused) t0 = performance.now(); return paused; }, get paused() { return paused; } };
   }
 
   window.SiteViewers = { wall, replay2d, replay3d, verify2d, verify3d, piece, piecePath, containerPath };
