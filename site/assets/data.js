@@ -3,8 +3,8 @@ window.SiteData = {
   async load() {
     if (this._d) return this._d;
     const get = (u) => fetch(u).then(r => r.json());
-    const [families, cells, ledger, replays, meta, wall] = await Promise.all([get('data/families.json'), get('data/cells.json'), get('data/ledger.json'), get('data/replays.json'), get('data/meta.json'), get('data/wall.json').catch(() => [])]);
-    this._d = { families, cells, ledger, replays, wall, ...meta };
+    const [families, cells, ledger, replays, meta, wall, summary] = await Promise.all([get('data/families.json'), get('data/cells.json'), get('data/ledger.json'), get('data/replays.json'), get('data/meta.json'), get('data/wall.json').catch(() => []), get('data/summary.json').catch(() => ({}))]);
+    this._d = { families, cells, ledger, replays, wall, summary, ...meta };
     return this._d;
   },
   replayFile(D, c) { // best-run replay for a cell

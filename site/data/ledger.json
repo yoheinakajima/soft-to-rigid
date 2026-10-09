@@ -175,6 +175,16 @@
    "status": "closed",
    "decision": "Hypothesis confirmed: hardening is the only method to reach the lowest size on five instances (17, 19, 26, 28, 29); no run went below a catalogue value, so nothing to certify. Harden vs rigid 6 vs 0, p = 0.031.",
    "closed": "2026-10-09"
+  },
+  "C14-equal-refine": {
+   "cid": "C14-equal-refine",
+   "title": "Does the tightening policy decide the comparison?",
+   "question": "C07 tightens a method's best run only if it is within 2% of the best known value, which happened for 56% of perturbation-compression's best runs against 97-100% for the gradient paths. Here no new runs are made: on the 28 instances fixed by C13 (n = 11, 17, 23, 29 per family; hexagons 8, 12, 16, 20), the three runs with the lowest legalised size of every method in C07 are tightened, with no eligibility condition, and the lowest-of-five comparison is recomputed without tightening, with this equal tightening, and under the C07 policy.",
+   "hypothesis": "Equal tightening raises sa and pc counts but does not change which method is lowest most often.",
+   "decision_rule": "Report, under each of the three treatments, the per-method count of instances where the method's lowest size is the lowest of all five, and the tightening time per method. If the method with the most lowest-of-five instances changes between the C07 policy and equal tightening, the paper says the C07 ranking depends on the tightening policy.",
+   "created": "2026-10-09",
+   "status": "closed (analysis of existing runs, no new runs)",
+   "decision": "Per the rule: the method with the most lowest-of-five instances (harden on these 28) is the same under equal tightening and the C07 policy, so the paper does not say the ranking depends on the tightening policy; it reports the gains of sa and pc and that untightened comparisons would mislead."
   }
  },
  "findings": [
@@ -370,6 +380,15 @@
    "evidence": [
     "C16-squares-long/squ-in-squ/n19/harden-best/B10/default",
     "C09-budget/squ-in-squ/n19/harden-best/B10/default"
+   ]
+  },
+  {
+   "text": "Current summary (supersedes the wording of earlier C07 notes): rigid starts reach the lowest size on 155 of 188 instances, grow 144, harden 142, sa 125, pc 72. Hardening is lowest on 27 of 28 squares-in-square instances and the only method that low on 5, including Trump's n = 11 and Wainwright's n = 19; on triangles rigid or growing starts are better. Within seed-pool resampling (a sensitivity check, not a confidence statement) rigid's count exceeds hardening's in 99% of resamples. Exact two-sided sign test over instances solved by exactly one: rigid 14, harden 6, p = 0.12.",
+   "campaign": "C07-breadth-best",
+   "date": "2026-10-09",
+   "evidence": [
+    "C07-breadth-best/squ-in-squ/n11/harden-best/B1/default",
+    "C07-breadth-best/squ-in-squ/n19/harden-best/B1/default"
    ]
   }
  ],

@@ -37,6 +37,7 @@
     ctx.closePath();
   }
   function frameAt(F, t) { // t in [0,1] -> interpolated frame
+    t = Math.min(1, Math.max(0, t || 0));
     const x = t * (F.length - 1), i = Math.min(F.length - 2, Math.floor(x)), w = x - i;
     return { A: F[i], B: F[i + 1], w, ph: (w < 0.5 ? F[i] : F[i + 1]).ph, L: F[i].L + (F[i + 1].L - F[i].L) * w,
       g: F[i].g + (F[i + 1].g - F[i].g) * w, u: F[i].u + (F[i + 1].u - F[i].u) * w };
@@ -76,7 +77,7 @@
       hud.innerHTML = `<b>${f.ph}</b> · size <b>${f.L.toFixed(4)}</b>` + (D.record ? ` · best known ${D.record.toFixed(4)}` : '');
     }
     let last = performance.now();
-    function tick(now) { if (!alive) return; const dt = Math.min(0.1, (now - last) / 1000); last = now; if (st.playing) st.t = Math.min(1, st.t + dt / (opts.seconds || 10)); st.sync(); draw(); requestAnimationFrame(tick); }
+    function tick(now) { if (!alive) return; const dt = Math.max(0, Math.min(0.1, (now - last) / 1000)); last = now; if (st.playing) st.t = Math.min(1, st.t + dt / (opts.seconds || 10)); st.sync(); draw(); requestAnimationFrame(tick); }
     requestAnimationFrame(tick);
     return { stop: () => { alive = false; } };
   }
@@ -111,7 +112,7 @@
     let last = performance.now();
     function tick(now) {
       if (!alive) return;
-      const dt = Math.min(0.1, (now - last) / 1000); last = now; if (st.playing) st.t = Math.min(1, st.t + dt / 12); st.sync();
+      const dt = Math.max(0, Math.min(0.1, (now - last) / 1000)); last = now; if (st.playing) st.t = Math.min(1, st.t + dt / 12); st.sync();
       const f = frameAt(D.frames, st.t), s = 0.5 * f.g * (1 - f.u), r = 0.5 * f.g * f.u, G = geo(s, r);
       if (box) grp.remove(box); box = edges(f.L, new THREE.Color(css('--ink')), false); grp.add(box);
       const blob = new THREE.Color(css('--blob')), hard = new THREE.Color(css('--sq'));
@@ -244,7 +245,7 @@
       const a = document.createElement('a'); a.className = 'wcell'; a.href = it.href || '#';
       a.innerHTML = `<canvas></canvas><span class="wlab"><b>${it.label}</b><i>${it.method}</i></span><span class="wnum"></span>`;
       root.appendChild(a);
-      cells.push({ it, a, cv: a.querySelector('canvas'), num: a.querySelector('.wnum'), D: null, vis: false, off: (i * 0.618034) % 1 * (PLAY + HOLD), span: null, az: i * 0.7 });
+      cells.push({ it, a, cv: a.querySelector('canvas'), num: a.querySelector('.wnum'), D: null, vis: false, off: opts.sync ? 0 : (i * 0.618034) % 1 * (PLAY + HOLD), span: null, az: i * 0.7 });
     }
     const load = (c) => { if (c.D || c.loading) return; c.loading = true; fetch(c.it.file).then(r => r.json()).then(D => { c.D = D; }).catch(() => { c.a.classList.add('wfail'); }); };
     const io = new IntersectionObserver(es => es.forEach(e => { const c = cells.find(c => c.a === e.target); c.vis = e.isIntersecting; if (c.vis) load(c); }), { rootMargin: '200px' });

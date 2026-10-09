@@ -1,39 +1,52 @@
 <header>
-  <div class="eyebrow">packing congruent shapes · 2D and 3D · equal-budget study</div>
+  <div class="eyebrow">packing congruent shapes · controlled study · every run replayable</div>
   <h1>Shape continuation as an alternative search for packing congruent shapes</h1>
-  <p class="lede">Most packing searches move rigid pieces. Hardening starts every piece as the disk inscribed in it and rounds it into the real shape while the container is pushed inward. Tested against four other methods at matched budget and tuning, it is not a better default: rigid starts win most often. It is a different search: on squares in a square it reaches classical packings the others miss, and it loses on triangles and on families held out from development. Every run of the study is here, replayable.</p>
+  <p class="lede">Most searches for dense packings move rigid pieces. <em>Hardening</em> starts every piece as the disk inscribed in it and deforms it into the target shape while the container is pushed inward. Tested against four other searches at matched budget and tuning, it is not a better default. It is a different search: it reaches packings the others miss on squares in a square, and loses on triangles and on families held out from development.</p>
+  <div class="links"><a href="paper.html">Paper</a><a href="journal.html">Journal of every experiment</a><a href="families.html">All instances and replays</a><a href="{{REPO}}">Code and data</a></div>
   <div class="nums" id="nums"></div>
 </header>
 
 <section class="wide">
   <div class="wallhead"><h2 id="walltitle">Searches, side by side</h2><button type="button" id="wallbtn">Pause</button></div>
-  <p class="cap">Each tile replays the best run of one method on one instance, from random start to final packing: orange pieces are still soft, blue ones are hard. Squares, triangles, hexagons and disks in squares, circles and triangles, and cubes in a cube (drawn in software, slowly rotating). Tiles are chosen by a fixed rule (largest instances where the run reached the best known value) and link to their family page. The number is the container size.</p>
+  <p class="cap">Each tile replays one method's best run on one instance, from random start to final packing: orange pieces are still soft, blue ones are hard. Squares, triangles, hexagons and disks in squares, circles and triangles, and cubes in a cube (slowly rotating). Tiles are chosen by a fixed rule (the largest instances where the run reached the best known value) and link to their family page. The number is the container size.</p>
   <div class="wall" id="wall"></div>
 </section>
 
 <section>
-  <h2>Five paths</h2>
-  <p>A piece's state is γ·[(1−τ)·P ⊕ τρ·D]: the polygon P scaled toward its incenter, plus a disk of radius τρ, all scaled by γ. Every method is a path through (γ, τ).</p>
+  <h2>The answer, in four lines</h2>
+  <ol class="answer" id="answer"></ol>
+  <p class="cap">Each line links to the experiment behind it in the <a href="journal.html">journal</a>. Details and caveats are in the <a href="paper.html">paper</a>.</p>
+</section>
+
+<section class="wide">
+  <h2>Same instance, two searches</h2>
+  <p class="cap">Hardening (left) and rigid starts (right) on the same instance, each the best of its runs. The first two are where hardening reaches a packing nothing else did; the last two are where it loses.</p>
+  <div class="pairs" id="pairs"></div>
+</section>
+
+<section>
+  <h2>The paths</h2>
+  <p>A piece's state is γ·[(1−τ)·P ⊕ τρ·D]: the polygon P scaled toward its incenter, plus a disk of radius τρ, all scaled by γ. Hardening, growing and rigid starts are paths through (γ, τ) on the same schedule; simulated annealing (sa) and perturbation–compression (pc) are classical rigid baselines. Two ablations separate the parts of hardening: <em>snap</em> compresses disks and then switches to polygons at once, and <em>grow-area</em> grows rigid polygons along hardening's area schedule.</p>
   <div class="paths" id="paths"></div>
 </section>
 
 <section class="wide">
-  <h2>What each path reached</h2>
+  <h2>Main comparison, by family</h2>
   <p class="cap" id="matrixcap"></p>
   <div class="scroll"><table class="matrix" id="matrix"></table></div>
 </section>
 
 <section>
-  <h2>What we found</h2>
+  <h2>The study, experiment by experiment</h2>
+  <p>Each experiment (campaign) was planned in writing, with its decision rule, before it ran. The latest recorded finding of each is below, in the order that tells the story; later findings correct earlier ones where needed, and nothing is deleted.</p>
   <ul class="found" id="findings"></ul>
-  <p class="cap">Each finding links to the runs behind it in the <a href="journal.html">journal</a>.</p>
 </section>
 
 <section>
   <h2>Check anything</h2>
-  <p>Every run is a line in a campaign's <code>runs.jsonl</code>, planned before it ran. Every packing below a published value is certified twice, in floating point and in exact rational arithmetic. Replays of the best run of every instance and method are on the <a href="families.html">family pages</a>.</p>
+  <p>Every run is a line in a campaign's <code>runs.jsonl</code>. Every number in the paper is generated from an event log of plans, runs, findings and decisions. Replays of the best run of every instance and method are on the <a href="families.html">family pages</a>.</p>
 <pre>git clone {{REPO}}.git && cd soft-to-rigid
-node engine/run.js campaigns/C07-breadth-best/plan.json   # rerun any campaign (resumable, deterministic)
-python3 -m packing.ledger export                                    # the research ledger, as events
-python3 verify.py claims/&lt;claim&gt;/claim.json                         # check a claim</pre>
+node engine/run.js campaigns/C07-breadth-best/plan.json --worker 0 --of 1   # rerun a campaign (deterministic per seed)
+python3 -m packing.ledger rebuild                                          # rebuild the research ledger
+python3 -m packing.project && python3 -m packing.analyze                    # regenerate reports, site data, paper numbers</pre>
 </section>

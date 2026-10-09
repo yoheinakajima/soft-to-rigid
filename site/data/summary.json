@@ -1,0 +1,174 @@
+{
+ "C07": {
+  "instances": 188,
+  "lowest": {
+   "harden": 142,
+   "grow": 144,
+   "rigid": 155,
+   "sa": 125,
+   "pc": 72
+  },
+  "squ": {
+   "N": 28,
+   "harden_lowest": 27,
+   "harden_sole": 5,
+   "rigid_lowest": 23
+  }
+ },
+ "C16": {
+  "N": 14,
+  "harden_only": [
+   17,
+   19,
+   26,
+   29
+  ],
+  "sa_only": [
+   27
+  ],
+  "repeats": [
+   19,
+   28,
+   29
+  ],
+  "reached": {
+   "harden": 12,
+   "grow": 7,
+   "rigid": 8,
+   "sa": 9,
+   "pc": 6
+  },
+  "lowest": {
+   "harden": 13,
+   "grow": 7,
+   "rigid": 8,
+   "sa": 9,
+   "pc": 6
+  }
+ },
+ "C11": {
+  "squ-in-squ": {
+   "a_lower": 6,
+   "b_lower": 0,
+   "ties": 22,
+   "p_lower": 0.03125,
+   "a_only_reached": 2,
+   "b_only_reached": 0,
+   "p_reached": 0.5
+  },
+  "tri-in-tri": {
+   "a_lower": 0,
+   "b_lower": 8,
+   "ties": 20,
+   "p_lower": 0.0078125,
+   "a_only_reached": 0,
+   "b_only_reached": 6,
+   "p_reached": 0.03125
+  },
+  "snap_vs_rigid": {
+   "a_lower": 20,
+   "b_lower": 20,
+   "ties": 148,
+   "p_lower": 1.0,
+   "a_only_reached": 6,
+   "b_only_reached": 4,
+   "p_reached": 0.75390625
+  }
+ },
+ "C12": {
+  "area_vs_rigid": {
+   "a_lower": 15,
+   "b_lower": 14,
+   "ties": 159,
+   "p_lower": 1.0,
+   "a_only_reached": 2,
+   "b_only_reached": 1,
+   "p_reached": 1.0
+  }
+ },
+ "C15": {
+  "N": 60,
+  "harden_vs_rigid": {
+   "a_lower": 3,
+   "b_lower": 17,
+   "ties": 40,
+   "p": 0.0025768280029296875
+  },
+  "pilot_vs_rigid": {
+   "a_lower": 2,
+   "b_lower": 3,
+   "ties": 55,
+   "p": 1.0
+  },
+  "reached": {
+   "always-rigid": 40,
+   "always-harden": 32,
+   "pilot": 41
+  }
+ },
+ "C14": {
+  "instances": 28,
+  "raw": {
+   "harden": 6,
+   "grow": 19,
+   "rigid": 3,
+   "sa": 1,
+   "pc": 0
+  },
+  "equal_top3": {
+   "harden": 23,
+   "grow": 20,
+   "rigid": 19,
+   "sa": 17,
+   "pc": 4
+  },
+  "c07_policy": {
+   "harden": 24,
+   "grow": 20,
+   "rigid": 18,
+   "sa": 14,
+   "pc": 2
+  },
+  "tighten_seconds_mean": {
+   "harden": 13.5,
+   "grow": 13.2,
+   "rigid": 11.6,
+   "sa": 17.5,
+   "pc": 34.3
+  }
+ },
+ "pairs": [
+  {
+   "campaign": "C07-breadth-best",
+   "family": "squ-in-squ",
+   "n": 19,
+   "why": "Wainwright's packing: only hardening reaches it",
+   "harden": "campaigns/C07-breadth-best/replays/squ-in-squ_n19_harden-best_B1_default.json",
+   "rigid": "campaigns/C10-portfolio/replays/squ-in-squ_n19_rigid-best_B1_default.json"
+  },
+  {
+   "campaign": "C16-squares-long",
+   "family": "squ-in-squ",
+   "n": 26,
+   "why": "at 10x budget only hardening reaches the best known packing",
+   "harden": "campaigns/C16-squares-long/replays/squ-in-squ_n26_harden-best_B10_default.json",
+   "rigid": "campaigns/C16-squares-long/replays/squ-in-squ_n26_rigid-best_B10_default.json"
+  },
+  {
+   "campaign": "C07-breadth-best",
+   "family": "tri-in-tri",
+   "n": 12,
+   "why": "triangles: rigid starts reach the best known packing, hardening does not",
+   "harden": "campaigns/C07-breadth-best/replays/tri-in-tri_n12_harden-best_B1_default.json",
+   "rigid": "campaigns/C10-portfolio/replays/tri-in-tri_n12_rigid-best_B1_default.json"
+  },
+  {
+   "campaign": "C15-heldout-decision",
+   "family": "pen-in-squ",
+   "n": 19,
+   "why": "held-out pentagons: rigid starts reach the best known packing, hardening does not",
+   "harden": "campaigns/C15-heldout-decision/replays/pen-in-squ_n19_harden-best_B1_default.json",
+   "rigid": "campaigns/C15-heldout-decision/replays/pen-in-squ_n19_rigid-best_B1_default.json"
+  }
+ ]
+}

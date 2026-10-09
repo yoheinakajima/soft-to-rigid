@@ -1,8 +1,8 @@
 # Journal
 
-*Generated from the ledger (`ledger/events.jsonl`, 61483 events) by `packing/project.py`. Do not edit.*
+*Generated from the ledger (`ledger/events.jsonl`, 61490 events) by `packing/project.py`. Do not edit.*
 
-Every campaign was planned before it ran. Each entry gives the question, what we expected, what happened, and what we decided.
+Every campaign was planned before it ran; amendments, exploratory analyses and post-hoc checks are marked as such. Each entry gives the question, what we expected, what happened, and what we decided. Later findings on a campaign correct or qualify earlier ones.
 
 ## C00-reproduce — Does the new general engine reproduce the earlier squares results?
 
@@ -105,6 +105,7 @@ Repeat C04 exactly (same 188 instances, 32 seeds, budget, tightening policy) wit
 - **Found:** Main comparison with every method tuned for its lowest point (188 instances, 32 runs each, equal budget, after exact tightening). Instances where the method's lowest size is the lowest of all five: rigid 155, grow 144, harden 142, sa 125, pc 72; the only method that low: rigid 16, harden 13, grow 9, sa 6, pc 1. Best known value reached: rigid 133, grow 129, harden 125, sa 115, pc 71. Sign tests (instances solved by exactly one of the pair): rigid vs harden 14 vs 6 (one-sided p = 0.058), grow vs harden 13 vs 9, harden vs sa 21 vs 11, harden vs pc 59 vs 5. Best-of tuning helped sa most (69 to 115 instances solved). No packing below a published value; 43 instances unsolved by every method.
 - **Found:** The family pattern survives re-tuning. Squares in a square: harden's lowest is the lowest of all methods on 27 of 28 instances and the only one that low on 5; with identical settings, rigid is lowest on 23. harden alone reaches Wainwright's n = 19 packing (and Trump's n = 11). Triangles in a square and in a triangle: rigid is lowest on 22 and 26 instances against harden's 14 and 18. Run as a pair, harden and rigid together solve 139 instances, more than any pair without harden (rigid and grow: 137), though with twice the runs.
 - **Found:** Correction to wording (after review): budgets are matched in steps for the gradient paths and in reference pair evaluations for sa and pc (pc overshoots up to 1.8x); tightening is constrained numerical optimisation, not exact; p-values in the paper are exact two-sided (rigid vs harden 14 vs 6, p = 0.12). The counts above are unchanged. Rigid's lead is about the width of the seed-bootstrap 95% intervals (rigid 139-153, harden 126-140, grow 123-138).
+- **Found:** Current summary (supersedes the wording of earlier C07 notes): rigid starts reach the lowest size on 155 of 188 instances, grow 144, harden 142, sa 125, pc 72. Hardening is lowest on 27 of 28 squares-in-square instances and the only method that low on 5, including Trump's n = 11 and Wainwright's n = 19; on triangles rigid or growing starts are better. Within seed-pool resampling (a sensitivity check, not a confidence statement) rigid's count exceeds hardening's in 99% of resamples. Exact two-sided sign test over instances solved by exactly one: rigid 14, harden 6, p = 0.12.
 - **Decided:** Same conclusion as C04 under lowest-point tuning: no general superiority for hardening (rigid solves more, p = 0.058); hardening is the path for squares in a square, rigid or grow for triangles. Next: C08 (how soft the start must be, on the 40 most contested instances), C09 (longer budgets on 20 of them) and C10 (does adding hardening runs beat adding more rigid runs).
 
 [Full report](campaigns/C07-breadth-best/REPORT.md)
@@ -189,6 +190,19 @@ C09 changed run length and restart count together and used instances selected fo
 - **Decided:** Per the rule: no arm separates harden and rigid (two-sided sign tests p = 0.18, 1, 0.29). The hypothesis that hardening improves more with longer runs is not supported; the paper withdraws the C09 claim and reports C09 only in the appendix as confounded.
 
 [Full report](campaigns/C13-budget-clean/REPORT.md)
+
+## C14-equal-refine — Does the tightening policy decide the comparison?
+
+*Planned 2026-10-09 · status: closed (analysis of existing runs, no new runs)*
+
+C07 tightens a method's best run only if it is within 2% of the best known value, which happened for 56% of perturbation-compression's best runs against 97-100% for the gradient paths. Here no new runs are made: on the 28 instances fixed by C13 (n = 11, 17, 23, 29 per family; hexagons 8, 12, 16, 20), the three runs with the lowest legalised size of every method in C07 are tightened, with no eligibility condition, and the lowest-of-five comparison is recomputed without tightening, with this equal tightening, and under the C07 policy.
+
+- **Expected:** Equal tightening raises sa and pc counts but does not change which method is lowest most often.
+- **Rule:** Report, under each of the three treatments, the per-method count of instances where the method's lowest size is the lowest of all five, and the tightening time per method. If the method with the most lowest-of-five instances changes between the C07 policy and equal tightening, the paper says the C07 ranking depends on the tightening policy.
+- **Found:** Equal tightening (top 3 runs of every method, no eligibility gate) on the 28 C13 instances: lowest-of-five counts harden 23, grow 20, rigid 19, sa 17, pc 4, against 24, 20, 18, 14, 2 under the C07 policy; the order is unchanged and sa and pc gain a few instances. Untightened (legalised) sizes give a different order (grow 19, harden 6, rigid 3, sa 1, pc 0). Mean tightening time per run: pc 34 s, sa 18 s, gradient paths 12-14 s.
+- **Decided:** Per the rule: the method with the most lowest-of-five instances (harden on these 28) is the same under equal tightening and the C07 policy, so the paper does not say the ranking depends on the tightening policy; it reports the gains of sa and pc and that untightened comparisons would mislead.
+
+[Full report](campaigns/C14-equal-refine/REPORT.md)
 
 ## C15-heldout-decision — Does choosing the path pay on families never used before?
 

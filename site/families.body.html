@@ -8,11 +8,12 @@
   <figure class="viewer" id="viewer" style="margin:0; max-width:560px">
     <div class="stage"><canvas></canvas><div class="hud">Choose a replay below.</div></div>
     <div class="ctl"><button type="button">Play</button><input type="range" min="0" max="1000" value="0" aria-label="Scrub the replay"></div>
-    <figcaption class="cap" id="vcap">Each row's ▶ plays the best of that method's 32 runs: pieces start as disks (orange) or full shapes (blue), the container shrinks under pressure, and the last frame is the legalised packing. Dashed: the best known container.</figcaption>
+    <figcaption class="cap" id="vcap">Each ▶ plays the best of that method's runs in the selected experiment: pieces start as disks (orange) or full shapes (blue), the container shrinks under pressure, and the last frame is the legalised packing. Dashed: the best known container.</figcaption>
   </figure>
 </section>
 <section class="wide">
   <h2>Instances</h2>
-  <p class="cap">Per method: ✓ if a tightened run matches or beats the best known value; raw hits (gap &lt; 10⁻³) out of 32; best raw gap. Campaign <span id="camp"></span>.</p>
+  <p class="cap">Experiment: <span id="camp"></span></p>
+  <p class="cap">Per method: ✓ if a tightened run reaches the best known value; runs within 10⁻³ of it out of all runs; gap of the lowest size to the best known value. The viewer opens on hardening's largest instance.</p>
   <div class="scroll"><table class="inst" id="inst"></table></div>
 </section>

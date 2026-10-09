@@ -52,10 +52,14 @@ packing/    Python
   project.py      projections: reports, journal, site data (incl. the front-page wall), paper numbers
   analyze.py      main tables and macros (exact two-sided sign tests)
   stats.py        bootstrap intervals, best-of-k curves, n-range table, work per run
-  ablations.py    C11 snap, C12 grow-area, C13 clean budget study
+  ablations.py    C11 snap, C12 grow-area, C13 clean budget study, repeated batches, C16
+  decision.py     C15 held-out families: path-choice policies
+  refine.py       C14 equal tightening (no new runs)
+  mechanism.py    what pieces do after compression, from replays
 campaigns/  pre-registered experiments and their raw results
 claims/     certified packings
-scripts/    queue.sh (run campaigns in order), figures.py (paper figures), catalogue builder
+scripts/    queue.sh (run campaigns in order), figures.py (paper figures), catalogue builder,
+            post-hoc checks (c15_tightened_pilot.py, c16_equal_tighten.py, reference_budget.js)
 paper/      the paper; its numbers come from numbers.tex, stats.tex, ablations.tex (all generated)
 site/       templates and viewers; built into _site/ by site/build.py and deployed by CI
 ```

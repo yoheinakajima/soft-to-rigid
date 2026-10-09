@@ -1,21 +1,26 @@
 (async function () {
   const D = await SiteData.load(), meths = ['harden', 'grow', 'rigid', 'sa', 'pc'];
-  const famList = Object.keys(D.families).filter(f => D.cells.some(c => c.family === f));
+  const order = ['squ-in-squ', 'squ-in-cir', 'squ-in-tri', 'tri-in-tri', 'tri-in-squ', 'hex-in-squ', 'cir-in-squ', 'cub-in-cub', 'pen-in-squ', 'oct-in-squ', 'hex-in-tri', 'tri-in-cir'];
+  const famList = Object.keys(D.families).filter(f => D.cells.some(c => c.family === f)).sort((a, b) => (order.indexOf(a) + 99) % 99 - (order.indexOf(b) + 99) % 99);
   let cur = null;
   const chips = document.getElementById('chips');
-  chips.innerHTML = famList.map(f => `<button type="button" data-f="${f}">${D.families[f].title}</button>`).join('');
+  chips.innerHTML = famList.map(f => `<button type="button" data-f="${f}">${D.families[f].title.replace(/^Unit (regular |equilateral )?/, '').replace('Unit-diameter circles', 'disks')}${D.families[f].heldout ? ' · held out' : ''}</button>`).join('');
   chips.onclick = (e) => { const b = e.target.closest('button'); if (b) { location.hash = b.dataset.f; } };
-  window.onhashchange = () => show(location.hash.slice(1) || famList[0]);
-  show(location.hash.slice(1) || famList[0]);
-  function show(f) {
+  const route = () => { const [f, c] = (location.hash.slice(1) || famList[0]).split('/'); show(f, c); };
+  window.onhashchange = route;
+  const CAMPNOTE = { 'C07-breadth-best': 'main comparison: 32 runs per method, base budget', 'C16-squares-long': 'ten times the budget, 16 runs per method',
+    'C15-heldout-decision': 'held-out family: 64 harden and 64 rigid runs', 'C05-cubes': 'cubes: three gradient paths, 32 runs, two settings', 'C04-breadth': 'median-tuned settings (earlier comparison)' };
+  function show(f, want) {
     if (!D.families[f]) f = famList[0];
     const F = D.families[f];
     chips.querySelectorAll('button').forEach(b => b.setAttribute('aria-pressed', b.dataset.f === f));
     document.getElementById('ftitle').textContent = F.title;
     document.getElementById('flede').innerHTML = `Container size is the ${F.measure}. Best known values from ${F.sources.map(s => `<a href="${s}">${new URL(s).hostname}</a>`).join(', ')}.`;
     const camps = [...new Set(D.cells.filter(c => c.family === f).map(c => c.campaign))].sort();
-    const camp = camps.includes(D.mainCampaign) ? D.mainCampaign : camps[camps.length - 1];
-    document.getElementById('camp').textContent = camp;
+    const pref = ['C07-breadth-best', 'C15-heldout-decision', 'C05-cubes', 'C16-squares-long', 'C04-breadth'];
+    const shown = camps.filter(c => pref.includes(c));
+    const camp = shown.includes(want) ? want : (pref.find(c => shown.includes(c)) || camps[camps.length - 1]);
+    document.getElementById('camp').innerHTML = shown.map(c => c === camp ? `<b>${c}</b>` : `<a href="#${f}/${c}">${c}</a>`).join(' · ') + ` <span class="cap">(${CAMPNOTE[camp] || ''})</span>`;
     const cs = D.cells.filter(c => c.family === f && c.campaign === camp).map(c => Object.assign({}, c, { method: c.method.replace('-best', ''), rawMethod: c.method }));
     const ns = [...new Set(cs.map(c => c.n))].sort((a, b) => a - b);
     let h = '<tr><th>n</th><th>best known</th>' + meths.map(m => `<th>${m}</th>`).join('') + '</tr>';
@@ -30,7 +35,8 @@
     }
     const T = document.getElementById('inst'); T.innerHTML = h;
     T.onclick = (e) => { const b = e.target.closest('button'); if (!b) return; T.querySelectorAll('tr').forEach(r => r.classList.remove('sel')); b.closest('tr').classList.add('sel'); play(b.dataset.file); };
-    const firstHarden = T.querySelector('button'); if (firstHarden && cur === null) {}
+    const first = [...T.querySelectorAll('button')].reverse().find(b => /harden/.test(b.dataset.file)) || T.querySelector('button');
+    if (first) { T.querySelectorAll('tr').forEach(r => r.classList.remove('sel')); first.closest('tr').classList.add('sel'); play(first.dataset.file); }
   }
   let handle = null;
   async function play(file) {
@@ -42,4 +48,5 @@
     document.getElementById('vcap').textContent = `${R.method}, seed ${R.seed}: legal size ${R.L.toFixed(6)}` + (R.record ? ` (best known ${R.record.toFixed(6)})` : '') + '.';
     cur = file;
   }
+  route();
 })();

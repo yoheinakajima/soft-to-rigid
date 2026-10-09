@@ -104,3 +104,19 @@ nav.top .home { color: var(--ink); margin-right: auto }
 .wnum { position: absolute; top: 5px; right: 7px; font: 10px var(--f-mono); color: var(--muted); font-variant-numeric: tabular-nums }
 .wfail canvas { opacity: .2 }
 @media (max-width: 420px) { .wall { grid-template-columns: repeat(2, minmax(0, 1fr)) } }
+
+/* front page: answer list and paired replays */
+.answer { margin: 0; padding-left: 1.3em; display: grid; gap: 10px }
+.answer li { padding-left: 4px } .answer b { font-family: var(--f-display) }
+.pairs { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 18px; margin-top: 14px }
+.pair { margin: 0; display: grid; gap: 8px; align-content: start }
+.pair figcaption { font-size: 14px; color: var(--muted); line-height: 1.45 } .pair figcaption b { color: var(--ink); font-family: var(--f-display); display: block }
+.wall.two { grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 0 }
+.found li i { font-style: normal; font-family: var(--f-display); font-weight: 600; color: var(--ink) }
+.found li i::after { content: ' ' }
+article:target { outline: 2px solid var(--good); outline-offset: 6px; border-radius: 4px }
+
+.jindex { display: grid; gap: 4px; margin-bottom: 28px; font-size: 15px }
+.jindex a { text-decoration: none; color: var(--ink) } .jindex a:hover { text-decoration: underline }
+.jindex .mono { display: inline-block; width: 3.2em; color: var(--muted) }
+#journal article { margin-bottom: 28px }

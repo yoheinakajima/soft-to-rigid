@@ -8,7 +8,8 @@
   "measure": "side",
   "sources": [
    "https://erich-friedman.github.io/packing/peninsqu/"
-  ]
+  ],
+  "heldout": true
  },
  "tri-in-cir": {
   "family": "tri-in-cir",
@@ -19,7 +20,8 @@
   "measure": "radius",
   "sources": [
    "https://erich-friedman.github.io/packing/triincir/"
-  ]
+  ],
+  "heldout": true
  },
  "squ-in-cir": {
   "family": "squ-in-cir",
@@ -30,7 +32,8 @@
   "measure": "radius",
   "sources": [
    "https://erich-friedman.github.io/packing/squincir/"
-  ]
+  ],
+  "heldout": false
  },
  "squ-in-tri": {
   "family": "squ-in-tri",
@@ -41,7 +44,8 @@
   "measure": "side",
   "sources": [
    "https://erich-friedman.github.io/packing/squintri/"
-  ]
+  ],
+  "heldout": false
  },
  "tri-in-squ": {
   "family": "tri-in-squ",
@@ -52,7 +56,8 @@
   "measure": "side",
   "sources": [
    "https://erich-friedman.github.io/packing/triinsqu/"
-  ]
+  ],
+  "heldout": false
  },
  "oct-in-squ": {
   "family": "oct-in-squ",
@@ -63,7 +68,8 @@
   "measure": "side",
   "sources": [
    "https://erich-friedman.github.io/packing/octinsqu/"
-  ]
+  ],
+  "heldout": true
  },
  "hex-in-tri": {
   "family": "hex-in-tri",
@@ -74,7 +80,8 @@
   "measure": "side",
   "sources": [
    "https://erich-friedman.github.io/packing/hexintri/"
-  ]
+  ],
+  "heldout": true
  },
  "tri-in-tri": {
   "family": "tri-in-tri",
@@ -85,7 +92,8 @@
   "measure": "side",
   "sources": [
    "https://erich-friedman.github.io/packing/triintri/"
-  ]
+  ],
+  "heldout": false
  },
  "hex-in-squ": {
   "family": "hex-in-squ",
@@ -96,7 +104,8 @@
   "measure": "side",
   "sources": [
    "https://erich-friedman.github.io/packing/hexinsqu/"
-  ]
+  ],
+  "heldout": false
  },
  "cub-in-cub": {
   "family": "cub-in-cub",
@@ -108,7 +117,8 @@
   "sources": [
    "https://erich-friedman.github.io/packing/cubincub/",
    "https://github.com/Tencent-Hunyuan/Hyra-results"
-  ]
+  ],
+  "heldout": false
  },
  "squ-in-squ": {
   "family": "squ-in-squ",
@@ -120,7 +130,8 @@
   "sources": [
    "https://jlevy.github.io/squares/",
    "https://kingbird.myphotos.cc/packing/squares_in_squares.html"
-  ]
+  ],
+  "heldout": false
  },
  "cir-in-squ": {
   "family": "cir-in-squ",
@@ -131,6 +142,7 @@
   "measure": "side",
   "sources": [
    "http://www.packomania.com/csq/csq.html"
-  ]
+  ],
+  "heldout": false
  }
 }

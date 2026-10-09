@@ -103,7 +103,7 @@ def campaign_report(cid, camp, st, finds):
 
 def journal(camps, finds, claims, nevents):
     L = ['# Journal', '', '*Generated from the ledger (`ledger/events.jsonl`, ' + str(nevents) + ' events) by `packing/project.py`. Do not edit.*', '',
-         'Every campaign was planned before it ran. Each entry gives the question, what we expected, what happened, and what we decided.', '']
+         'Every campaign was planned before it ran; amendments, exploratory analyses and post-hoc checks are marked as such. Each entry gives the question, what we expected, what happened, and what we decided. Later findings on a campaign correct or qualify earlier ones.', '']
     for cid in sorted(camps):
         c = camps[cid]
         L += [f"## {cid} — {c['title']}", '', f"*Planned {c.get('created')} · status: {c.get('status')}*", '',
@@ -152,13 +152,48 @@ def wall(rep, st):
     return out
 
 
+def summary(rep, st):
+    """Front-page headline numbers (from analysis/*.json and the cells) and the paired replays."""
+    A = lambda f: json.load(open(os.path.join(ROOT, 'analysis', f))) if os.path.exists(os.path.join(ROOT, 'analysis', f)) else {}
+    c7 = [c for c in st.values() if c['campaign'] == 'C07-breadth-best']
+    cnt = lambda fam, m, k: sum(1 for c in c7 if (fam is None or c['family'] == fam) and c['method'] == m + '-best' and c.get(k))
+    ab, dec, ref = A('ablations.json'), A('C15.json'), A('C14.json')
+    out = {'C07': {'instances': len({(c['family'], c['n']) for c in c7}), 'lowest': {m: cnt(None, m, 'is_lowest') for m in METHODS},
+                   'squ': {'N': len({c['n'] for c in c7 if c['family'] == 'squ-in-squ'}), 'harden_lowest': cnt('squ-in-squ', 'harden', 'is_lowest'),
+                           'harden_sole': cnt('squ-in-squ', 'harden', 'sole_lowest'), 'rigid_lowest': cnt('squ-in-squ', 'rigid', 'is_lowest')}}}
+    if 'C16-squares-long' in ab:
+        L = ab['C16-squares-long']
+        out['C16'] = {'N': L['N'], 'harden_only': L['reached_only']['harden'], 'sa_only': L['reached_only']['sa'], 'repeats': [19, 28, 29],
+                      'reached': L['reached'], 'lowest': L['lowest']}
+    if 'C11-snap' in ab:
+        out['C11'] = {k: ab['C11-snap']['families'][k]['harden_vs_snap'] for k in ('squ-in-squ', 'tri-in-tri')}
+        out['C11']['snap_vs_rigid'] = ab['C11-snap']['all']['snap_vs_rigid']
+    if 'C12-grow-area' in ab:
+        out['C12'] = {'area_vs_rigid': ab['C12-grow-area']['all']['grow-area_vs_rigid']}
+    if dec:
+        out['C15'] = {'N': len(dec['instances']), 'harden_vs_rigid': dec['harden_vs_rigid'], 'pilot_vs_rigid': dec['pilot_vs_rigid'], 'reached': dec['reached']}
+    if ref:
+        out['C14'] = ref
+    have = {r['name']: r['file'] for r in rep if not r['hit']}
+    pairs = []
+    for cid, f, n, B, why in [('C07-breadth-best', 'squ-in-squ', 19, 1, 'Wainwright\'s packing: only hardening reaches it'),
+                              ('C16-squares-long', 'squ-in-squ', 26, 10, 'at 10x budget only hardening reaches the best known packing'),
+                              ('C07-breadth-best', 'tri-in-tri', 12, 1, 'triangles: rigid starts reach the best known packing, hardening does not'),
+                              ('C15-heldout-decision', 'pen-in-squ', 19, 1, 'held-out pentagons: rigid starts reach the best known packing, hardening does not')]:
+        hf, rf = have.get(f'{f}_n{n}_harden-best_B{B}_default'), have.get(f'{f}_n{n}_rigid-best_B{B}_default')
+        if hf and rf:
+            pairs.append({'campaign': cid, 'family': f, 'n': n, 'why': why, 'harden': hf, 'rigid': rf})
+    out['pairs'] = pairs
+    return out
+
+
 def site_data(camps, st, claims, finds):
     d = os.path.join(ROOT, 'site', 'data')
     os.makedirs(d, exist_ok=True)
     fams = {}
     for f in glob.glob(os.path.join(ROOT, 'catalog', '*.json')):
         F = json.load(open(f))
-        fams[F['family']] = {k: F[k] for k in ('family', 'title', 'dim', 'piece', 'container', 'measure', 'sources')}
+        fams[F['family']] = dict({k: F[k] for k in ('family', 'title', 'dim', 'piece', 'container', 'measure', 'sources')}, heldout=bool(F.get('heldout')))
     json.dump(fams, open(os.path.join(d, 'families.json'), 'w'), indent=1)
     json.dump(list(st.values()), open(os.path.join(d, 'cells.json'), 'w'))
     json.dump({'campaigns': camps, 'findings': finds, 'claims': claims}, open(os.path.join(d, 'ledger.json'), 'w'), indent=1)
@@ -169,11 +204,34 @@ def site_data(camps, st, claims, finds):
         rep.append({'campaign': m.group(1), 'hit': bool(m.group(2)), 'file': rel, 'name': m.group(3)})
     json.dump(rep, open(os.path.join(d, 'replays.json'), 'w'))
     json.dump(wall(rep, st), open(os.path.join(d, 'wall.json'), 'w'), indent=0)
+    json.dump(summary(rep, st), open(os.path.join(d, 'summary.json'), 'w'), indent=1)
     total = 0
     for f in glob.glob(os.path.join(ROOT, 'campaigns', '*', 'runs*.jsonl')):
         total += sum(1 for line in open(f) if line.strip())
     main = 'C07-breadth-best' if 'C07-breadth-best' in camps else ('C04-breadth' if 'C04-breadth' in camps else sorted(camps)[-1])
     json.dump({'mainCampaign': main, 'totalRuns': total}, open(os.path.join(d, 'meta.json'), 'w'))
+
+
+def readme_headline():
+    S = json.load(open(os.path.join(ROOT, 'site', 'data', 'summary.json')))
+    L = ['*(generated by `python3 -m packing.project`; do not edit)*', '']
+    J = lambda c: f"[{c.split('-')[0]}](https://yoheinakajima.github.io/soft-to-rigid/journal.html#{c})"
+    if 'C07' in S:
+        c = S['C07']
+        L.append(f"1. **Not a better default.** Tuned with comparable effort, rigid starts reach the lowest container size on {c['lowest']['rigid']} of {c['instances']} instances, hardening on {c['lowest']['harden']} ({J('C07-breadth-best')}).")
+        if 'C16' in S:
+            new = [n for n in S['C16']['harden_only'] if n not in S['C16']['repeats']]
+            L.append(f"2. **A different search.** On squares in a square hardening is lowest on {c['squ']['harden_lowest']} of {c['squ']['N']} instances and the only search that low on {c['squ']['harden_sole']}, including Trump's n = 11 and Wainwright's n = 19; at ten times the budget it alone reaches the best known packing for n = {' and '.join(map(str, new))} ({J('C16-squares-long')}).")
+    if 'C11' in S and 'C12' in S:
+        a, b = S['C11']['snap_vs_rigid'], S['C12']['area_vs_rigid']
+        L.append(f"3. **Consistent with the gradual rounding, not proven.** Compressing disks then switching to polygons at once ({J('C11-snap')}), or growing rigid polygons along hardening's area schedule ({J('C12-grow-area')}), shows no detectable difference from rigid starts ({a['a_lower']}:{a['b_lower']} and {b['a_lower']}:{b['b_lower']} instances lower); the pre-registered test on squares is inconclusive.")
+    if 'C15' in S:
+        h = S['C15']['harden_vs_rigid']
+        L.append(f"4. **It has a cost.** On four families held out from development, hardening is lower than rigid starts on {h['a_lower']} instances and higher on {h['b_lower']}; a short pilot that picks the path per instance does no better than always starting rigid ({J('C15-heldout-decision')}).")
+    rp = os.path.join(ROOT, 'README.md'); s = open(rp).read()
+    if '<!-- headline:start -->' in s:
+        a, z = s.index('<!-- headline:start -->') + len('<!-- headline:start -->'), s.index('<!-- headline:end -->')
+        open(rp, 'w').write(s[:a] + '\n' + '\n'.join(L) + '\n' + s[z:])
 
 
 def readme_block(st, claims):
@@ -197,15 +255,40 @@ def readme_block(st, claims):
     open(rp, 'w').write(s[:a] + '\n' + '\n'.join(L) + '\n' + s[z:])
 
 
+def planned_only(camps):
+    """Campaigns that made no new runs (e.g. C14, tightening only) are never ingested; list them from their plans,
+    with any decision recorded in ledger/notes.jsonl."""
+    notes = [json.loads(l) for l in open(os.path.join(ROOT, 'ledger', 'notes.jsonl')) if l.strip()]
+    for f in sorted(glob.glob(os.path.join(ROOT, 'campaigns', '*', 'plan.json'))):
+        cid = os.path.basename(os.path.dirname(f))
+        if cid in camps:
+            continue
+        p = json.load(open(f))
+        dec = [n['decision'] for n in notes if n.get('type') == 'campaign.closed' and n.get('campaign') == cid]
+        camps[cid] = {'cid': cid, 'title': p.get('title'), 'question': p.get('question'), 'hypothesis': p.get('hypothesis'),
+                      'decision_rule': p.get('decision_rule'), 'created': p.get('created'),
+                      'status': 'closed (analysis of existing runs, no new runs)' if dec else 'planned', 'decision': dec[-1] if dec else None}
+        fs = [n['text'] for n in notes if n.get('type') == 'finding.recorded' and n.get('campaign') == cid]
+        a = os.path.join('analysis', cid.split('-')[0] + '.json')
+        open(os.path.join(ROOT, 'campaigns', cid, 'REPORT.md'), 'w').write('\n'.join(
+            [f"# {cid}: {p.get('title')}", '', '*Generated by `packing/project.py`. This campaign made no new runs; it re-analyses existing ones.*', '',
+             f"**Question.** {p.get('question')}", '', f"**Expected.** {p.get('hypothesis')}", '', f"**Rule.** {p.get('decision_rule')}", '']
+            + [f"**Found.** {t}\n" for t in fs] + ([f"**Decided.** {dec[-1]}", ''] if dec else [])
+            + ([f"Numbers: [`{a}`](../../{a})."] if os.path.exists(os.path.join(ROOT, a)) else [])) + '\n')
+    return camps
+
+
 def main():
     camps, cells, cands, finds, claims, nev = load()
+    camps = planned_only(camps)
     st = cell_status(cells, cands)
     for cid, c in camps.items():
-        if os.path.isdir(os.path.join(ROOT, 'campaigns', cid)):
+        if os.path.isdir(os.path.join(ROOT, 'campaigns', cid)) and any(x['campaign'] == cid for x in st.values()):
             campaign_report(cid, c, st, finds)
     journal(camps, finds, claims, nev)
     site_data(camps, st, claims, finds)
     readme_block(st, claims)
+    readme_headline()
     print(f'projected {len(camps)} campaigns, {len(st)} cells, {len(finds)} findings, {len(claims)} claims')
 
 
