@@ -1,5 +1,10 @@
 (async function () {
   const D = await SiteData.load();
+  // the wall
+  const short = { 'squ-in-squ': 'squares · square', 'squ-in-cir': 'squares · circle', 'squ-in-tri': 'squares · triangle', 'tri-in-tri': 'triangles · triangle', 'tri-in-squ': 'triangles · square', 'hex-in-squ': 'hexagons · square', 'cir-in-squ': 'disks · square', 'cub-in-cub': 'cubes · cube' };
+  const W = SiteViewers.wall(document.getElementById('wall'), D.wall.map(w => Object.assign({}, w, { label: short[w.family] || w.family, method: `n=${w.n} · ${w.method}`, href: `families.html#${w.family}` })));
+  document.getElementById('walltitle').textContent = `${D.wall.length} searches at once`;
+  const wb = document.getElementById('wallbtn'); wb.textContent = W.paused ? 'Play' : 'Pause'; wb.onclick = () => { wb.textContent = W.toggle() ? 'Play' : 'Pause'; };
   const main = D.mainCampaign, cells = D.cells.filter(c => c.campaign === main).map(c => Object.assign({}, c, { method: c.method.replace('-best', '') }));
   const meths = ['harden', 'grow', 'rigid', 'sa', 'pc'];
   const fams = [...new Set(cells.map(c => c.family))];

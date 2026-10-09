@@ -5,6 +5,12 @@
   <div class="nums" id="nums"></div>
 </header>
 
+<section class="wide">
+  <div class="wallhead"><h2 id="walltitle">Searches, side by side</h2><button type="button" id="wallbtn">Pause</button></div>
+  <p class="cap">Each tile replays the best run of one method on one instance, from random start to final packing: orange pieces are still soft, blue ones are hard. Squares, triangles, hexagons and disks in squares, circles and triangles, and cubes in a cube (drawn in software, slowly rotating). Tiles are chosen by a fixed rule (largest instances where the run reached the best known value) and link to their family page. The number is the container size.</p>
+  <div class="wall" id="wall"></div>
+</section>
+
 <section>
   <h2>Five paths</h2>
   <p>A piece's state is γ·[(1−τ)·P ⊕ τρ·D]: the polygon P scaled toward its incenter, plus a disk of radius τρ, all scaled by γ. Every method is a path through (γ, τ).</p>

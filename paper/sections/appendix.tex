@@ -1,7 +1,16 @@
 \appendix
 \section{Supplementary tables}
 \input{tables/C04-breadth}
+\input{tables/diag}
+
+\begin{figure}[h]\centering
+\includegraphics[width=\linewidth]{figures/gaps}
+\caption{Lowest size reached per instance and method, relative to the best known value (C07). Points on the bottom row reach it.}\label{fig:gaps}
+\end{figure}
+
+\paragraph{Longer schedules, first attempt (C09).} C09 gave hardening and rigid starts three and ten times the budget on the \CbudgetN{} instances where the two differed most. It changed run length and restart count together (32 runs at budget 1, 16 at budgets 3 and 10) and selected instances for disagreement, mostly in rigid's favour, so part of its change is regression toward an even split. We report it (Table~\ref{tab:budget}) but draw conclusions about run length only from C13, which fixes these confounds.
+\input{tables/C09-budget}
 
 \paragraph{Frozen settings.} Median-tuned (C01--C03): harden $\mu=0.08$, noise $\times8$; grow $\mu=0.04$, $\gamma_0=0.2$; rigid $\mu=0.04$, noise $\times2$; sa $T_0=3\cdot10^{-3}$, $\mu=0.0025$; pc kick $0.05$, relax $19200$ steps. Lowest-point-tuned (C06): harden and rigid $\mu=0.16$, noise $\times8$; grow $\mu=0.08$, $\gamma_0=0.1$; sa $T_0=10^{-3}$, $\mu=0.02$; pc kick $0.05$, relax $19200$ steps. All are in \texttt{methods/*.json}, each with the campaign and grid point that selected it.
 
-\paragraph{Campaigns.} C00 reproduce the earlier square results; C01--C03 median tuning; C04 breadth (median-tuned); C05 cubes; C06 lowest-point tuning; C07 breadth (lowest-point-tuned, main); C08 starting softness; C09 longer schedules; C10 portfolio. Plans, amendments, raw runs, reports and the decision recorded for each are in \texttt{campaigns/} and the journal.
+\paragraph{Campaigns.} C00 reproduce the earlier square results; C01--C03 median tuning; C04 breadth (median-tuned); C05 cubes; C06 lowest-point tuning; C07 breadth (lowest-point-tuned, main); C08 starting softness; C09 longer schedules (confounded); C10 portfolio; C11 snap; C12 grow-area; C13 clean budget study. Plans, amendments, raw runs, reports and the decision recorded for each are in \texttt{campaigns/} and the journal.

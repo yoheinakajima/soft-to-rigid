@@ -168,5 +168,122 @@
     return { n: cubes.length, s, wall, pair, ok: wall > 0 && pair > 0 };
   }
 
-  window.SiteViewers = { replay2d, replay3d, verify2d, verify3d, piece, piecePath, containerPath };
+
+  // ---------- the wall: many replays animating at once, one canvas each, one shared clock ----------
+  // 3D cells are drawn in software (no WebGL context per cell): with an orthographic camera the outline of a
+  // rounded cube (core box ⊕ ball of radius r) is exactly the convex hull of the projected core corners ⊕ a disk
+  // of radius r; visible core faces, pushed out by r along their normals, are shaded on top. Painter's order.
+  function hull(pts) {
+    pts = pts.slice().sort((a, b) => a[0] - b[0] || a[1] - b[1]);
+    const cr = (o, a, b) => (a[0] - o[0]) * (b[1] - o[1]) - (a[1] - o[1]) * (b[0] - o[0]), lo = [], up = [];
+    for (const p of pts) { while (lo.length > 1 && cr(lo[lo.length - 2], lo[lo.length - 1], p) <= 0) lo.pop(); lo.push(p); }
+    for (let i = pts.length - 1; i >= 0; i--) { const p = pts[i]; while (up.length > 1 && cr(up[up.length - 2], up[up.length - 1], p) <= 0) up.pop(); up.push(p); }
+    return lo.slice(0, -1).concat(up.slice(0, -1));
+  }
+  function roundedHull(ctx, H, r) { // convex polygon (ccw) offset by r
+    ctx.beginPath(); const k = H.length;
+    if (k < 3 || r <= 1e-6) { H.forEach((p, i) => i ? ctx.lineTo(p[0], p[1]) : ctx.moveTo(p[0], p[1])); if (r > 1e-6 && k < 3) ctx.arc(H[0][0], H[0][1], r, 0, 7); ctx.closePath(); return; }
+    for (let e = 0; e < k; e++) {
+      const A = H[e], B = H[(e + 1) % k], C = H[(e + 2) % k];
+      const n1 = Math.atan2(-(B[0] - A[0]), B[1] - A[1]), n2 = Math.atan2(-(C[0] - B[0]), C[1] - B[1]);
+      if (e === 0) ctx.moveTo(A[0] + r * Math.cos(n1), A[1] + r * Math.sin(n1));
+      ctx.lineTo(B[0] + r * Math.cos(n1), B[1] + r * Math.sin(n1)); ctx.arc(B[0], B[1], r, n1, n2, false);
+    }
+    ctx.closePath();
+  }
+  function quatMat(w, x, y, z) { const n = Math.hypot(w, x, y, z) || 1; w /= n; x /= n; y /= n; z /= n;
+    return [[1 - 2 * (y * y + z * z), 2 * (x * y - w * z), 2 * (x * z + w * y)], [2 * (x * y + w * z), 1 - 2 * (x * x + z * z), 2 * (y * z - w * x)], [2 * (x * z - w * y), 2 * (y * z + w * x), 1 - 2 * (x * x + y * y)]]; }
+  function draw3d(ctx, D, f, az, colors) {
+    const el = 0.42, ca = Math.cos(az), sa = Math.sin(az), ce = Math.cos(el), se = Math.sin(el);
+    const view = (v) => { const x1 = ca * v[0] - sa * v[1], y1 = sa * v[0] + ca * v[1]; return [x1, ce * v[2] + se * y1, se * v[2] - ce * y1]; }; // -> [screen x, screen y, depth toward viewer]
+    const light = (() => { const l = [0.35, 0.55, 0.76], m = Math.hypot(...l); return l.map(v => v / m); })();
+    const L = f.L, h = L / 2, corners = [];
+    for (const a of [-h, h]) for (const b of [-h, h]) for (const c of [-h, h]) corners.push(view([a, b, c]));
+    const E = []; for (let i = 0; i < 8; i++) for (let j = i + 1; j < 8; j++) if ([1, 2, 4].includes(i ^ j)) E.push([i, j]);
+    const back = (e) => (corners[e[0]][2] + corners[e[1]][2]) < -0.5 * h;
+    const edge = (e) => { ctx.beginPath(); ctx.moveTo(corners[e[0]][0], corners[e[0]][1]); ctx.lineTo(corners[e[1]][0], corners[e[1]][1]); ctx.stroke(); };
+    ctx.strokeStyle = colors.ink; ctx.globalAlpha = 0.35; E.filter(back).forEach(edge); ctx.globalAlpha = 1;
+    const s = 0.5 * f.g * (1 - f.u), r = 0.5 * f.g * f.u, items = [];
+    for (let i = 0; i < D.n; i++) {
+      const a = f.A.p.slice(7 * i, 7 * i + 7), b = f.B.p.slice(7 * i, 7 * i + 7), w = f.w;
+      const p = [0, 1, 2].map(k => a[k] + (b[k] - a[k]) * w);
+      const dq = a[3] * b[3] + a[4] * b[4] + a[5] * b[5] + a[6] * b[6] < 0 ? -1 : 1; // shortest arc, then normalised lerp
+      const R = quatMat(...[3, 4, 5, 6].map(k => a[k] + (dq * b[k] - a[k]) * w));
+      const ax = [0, 1, 2].map(k => [R[0][k], R[1][k], R[2][k]]);
+      const C = view(p), V = [];
+      for (const u of [-s, s]) for (const v of [-s, s]) for (const t of [-s, s]) V.push(view([0, 1, 2].map(k => p[k] + u * ax[0][k] + v * ax[1][k] + t * ax[2][k])));
+      items.push({ C, V, ax: ax.map(view) });
+    }
+    items.sort((p, q) => p.C[2] - q.C[2]);
+    const fill = mix(colors.sq, colors.blob, Math.min(1, f.u));
+    for (const it of items) {
+      ctx.fillStyle = fill; roundedHull(ctx, hull(it.V.map(v => [v[0], v[1]])), r); ctx.fill();
+      ctx.lineWidth = colors.lw; ctx.strokeStyle = colors.panel; ctx.stroke();
+      if (s > 0.02) for (let k = 0; k < 3; k++) for (const sg of [-1, 1]) { // visible faces of the core, pushed out by r
+        const nrm = it.ax[k].map(v => v * sg); if (nrm[2] <= 0.02) continue;
+        const idx = [0, 1, 2, 3, 4, 5, 6, 7].filter(q => ((q >> (2 - k)) & 1) === (sg > 0 ? 1 : 0));
+        const pts = idx.map(q => [it.V[q][0] + r * nrm[0], it.V[q][1] + r * nrm[1]]);
+        const lam = Math.max(0, nrm[0] * light[0] + nrm[1] * light[1] + nrm[2] * light[2]);
+        ctx.fillStyle = lam > 0.5 ? `rgba(255,255,255,${0.28 * (lam - 0.5) * 2})` : `rgba(0,0,0,${0.22 * (0.5 - lam) * 2})`;
+        ctx.beginPath(); hull(pts).forEach((q, j) => j ? ctx.lineTo(q[0], q[1]) : ctx.moveTo(q[0], q[1])); ctx.closePath(); ctx.fill();
+      }
+      if (r > 0.04) { // soft highlight for the blob phase
+        const gx = it.C[0] - 0.35 * r, gy = it.C[1] + 0.35 * r, gr = ctx.createRadialGradient(gx, gy, 0, gx, gy, r + s * 1.6);
+        gr.addColorStop(0, `rgba(255,255,255,${0.35 * Math.min(1, f.u)})`); gr.addColorStop(1, 'rgba(255,255,255,0)');
+        ctx.fillStyle = gr; roundedHull(ctx, hull(it.V.map(v => [v[0], v[1]])), r); ctx.fill();
+      }
+    }
+    ctx.lineWidth = colors.lw * 1.6; ctx.strokeStyle = colors.ink; E.filter(e => !back(e)).forEach(edge);
+    return Math.max(...corners.map(c => Math.hypot(c[0], c[1])));
+  }
+
+  function wall(root, items, opts) {
+    opts = opts || {};
+    const cells = [], PLAY = opts.seconds || 9, HOLD = 2.2;
+    for (const [i, it] of items.entries()) {
+      const a = document.createElement('a'); a.className = 'wcell'; a.href = it.href || '#';
+      a.innerHTML = `<canvas></canvas><span class="wlab"><b>${it.label}</b><i>${it.method}</i></span><span class="wnum"></span>`;
+      root.appendChild(a);
+      cells.push({ it, a, cv: a.querySelector('canvas'), num: a.querySelector('.wnum'), D: null, vis: false, off: (i * 0.618034) % 1 * (PLAY + HOLD), span: null, az: i * 0.7 });
+    }
+    const load = (c) => { if (c.D || c.loading) return; c.loading = true; fetch(c.it.file).then(r => r.json()).then(D => { c.D = D; }).catch(() => { c.a.classList.add('wfail'); }); };
+    const io = new IntersectionObserver(es => es.forEach(e => { const c = cells.find(c => c.a === e.target); c.vis = e.isIntersecting; if (c.vis) load(c); }), { rootMargin: '200px' });
+    cells.forEach(c => io.observe(c.a));
+    let paused = reduce;
+    const t0 = performance.now();
+    function frame(now) {
+      const T = (now - t0) / 1000, colors = { ink: css('--ink'), panel: css('--panel'), sq: css('--sq'), blob: css('--blob'), ref: css('--ref') };
+      for (const c of cells) {
+        if (!c.vis || !c.D) continue;
+        const cv = c.cv, W = Math.round(cv.clientWidth * Math.min(2, devicePixelRatio || 1)); if (!W) continue;
+        if (cv.width !== W) { cv.width = W; cv.height = W; }
+        const ph = paused ? PLAY : (T + c.off) % (PLAY + HOLD), t = Math.min(1, ph / PLAY), te = t < 0.5 ? 2 * t * t : 1 - 2 * (1 - t) * (1 - t);
+        const f = frameAt(c.D.frames, 0.15 * t + 0.85 * te), D = c.D, ctx = cv.getContext('2d');
+        ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.clearRect(0, 0, W, W);
+        if (c.it.dim === 3) {
+          if (!paused) c.az += 0.004;
+          const want = (c.it.method === 'grow' ? f.L : Math.max(f.L, D.record || 0)) * 0.98 + 0.25 * (c.it.method === 'grow' ? f.g : 1); c.span = c.span === null ? want : c.span + (want - c.span) * 0.12;
+          const sc = W / (2 * c.span); ctx.setTransform(sc, 0, 0, -sc, W / 2, W / 2);
+          draw3d(ctx, D, f, c.az, Object.assign({ lw: 1 / sc }, colors));
+        } else {
+          const P = piece(D.piece), want = outerR(D.container, c.it.method === 'grow' ? f.L : Math.max(f.L, D.record || 0)) * 1.04 + 0.15 * (c.it.method === 'grow' ? f.g : 1);
+          c.span = c.span === null ? want : c.span + (want - c.span) * 0.12;
+          const sc = W / (2 * c.span); ctx.setTransform(sc, 0, 0, -sc, W / 2, W / 2);
+          ctx.lineWidth = 1.6 / sc; ctx.strokeStyle = colors.ink; containerPath(ctx, D.container, f.L); ctx.stroke();
+          const fill = mix(colors.sq, colors.blob, Math.min(1, f.u));
+          for (let i = 0; i < D.n; i++) {
+            const a = f.A.p.slice(3 * i, 3 * i + 3), b = f.B.p.slice(3 * i, 3 * i + 3), w = f.w;
+            piecePath(ctx, P, a[0] + (b[0] - a[0]) * w, a[1] + (b[1] - a[1]) * w, a[2] + (b[2] - a[2]) * w, f.g, f.u);
+            ctx.fillStyle = fill; ctx.fill(); ctx.lineWidth = 0.8 / sc; ctx.strokeStyle = colors.panel; ctx.stroke();
+          }
+        }
+        c.num.textContent = f.L.toFixed(3);
+      }
+      requestAnimationFrame(frame);
+    }
+    requestAnimationFrame(frame);
+    return { toggle() { paused = !paused; return paused; }, get paused() { return paused; } };
+  }
+
+  window.SiteViewers = { wall, replay2d, replay3d, verify2d, verify3d, piece, piecePath, containerPath };
 })();

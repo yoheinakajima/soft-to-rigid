@@ -3,8 +3,11 @@
 \usepackage{amsmath,amssymb,amsthm}
 \usepackage{graphicx,booktabs,hyperref,xcolor}
 \usepackage[numbers]{natbib}
+\usepackage{algorithm,algpseudocode}
 \hypersetup{colorlinks=true,linkcolor=blue!50!black,citecolor=blue!50!black,urlcolor=blue!50!black}
 \input{numbers}
+\input{stats}
+\input{ablations}
 
 \title{Soft-to-Rigid: Packing Congruent Shapes\\ by Hardening Disks into Polygons}
 \author{Yohei Nakajima\thanks{Experiments, code and verification were developed with the assistance of Claude (Anthropic); see the acknowledgements.}}
@@ -24,7 +27,9 @@
 
 \paragraph{Acknowledgements.} Code, experiments and verification were developed with Claude (Anthropic), an AI system, under the author's direction. The author takes responsibility for the content.
 
-\bibliographystyle{plainnat}
+\bibliographystyle{abbrvnat}
+\setlength{\bibsep}{1pt plus 0.3ex}
+\renewcommand{\bibfont}{\footnotesize}
 \bibliography{refs}
 
 \input{sections/appendix}

@@ -91,3 +91,16 @@ nav.top .home { color: var(--ink); margin-right: auto }
 .journal .meta { font: 12px var(--f-mono); color: var(--muted) }
 .journal dl { margin: 0; display: grid; grid-template-columns: max-content 1fr; gap: 4px 12px; font-size: 15.5px } .journal dt { font: 600 13px var(--f-display); color: var(--muted); padding-top: 2px }
 .journal dd { margin: 0 }
+
+/* the wall of replays */
+.wallhead { display: flex; align-items: baseline; justify-content: space-between; gap: 12px }
+.wallhead button { font: 600 13px var(--f-display); background: var(--panel); color: var(--ink); border: 1px solid var(--rule); border-radius: 4px; padding: 4px 12px; cursor: pointer }
+.wall { display: grid; grid-template-columns: repeat(auto-fill, minmax(124px, 1fr)); gap: 8px; margin-top: 14px }
+.wcell { position: relative; display: block; background: var(--panel); border: 1px solid var(--rule); border-radius: 6px; text-decoration: none; overflow: hidden }
+.wcell:hover { border-color: var(--ink) }
+.wcell canvas { display: block; width: 100%; aspect-ratio: 1 }
+.wlab { display: grid; padding: 0 8px 7px; font: 11px/1.3 var(--f-mono); color: var(--muted) }
+.wlab b { font-weight: 600; color: var(--ink) } .wlab i { font-style: normal }
+.wnum { position: absolute; top: 5px; right: 7px; font: 10px var(--f-mono); color: var(--muted); font-variant-numeric: tabular-nums }
+.wfail canvas { opacity: .2 }
+@media (max-width: 420px) { .wall { grid-template-columns: repeat(2, minmax(0, 1fr)) } }

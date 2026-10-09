@@ -4,5 +4,5 @@
  "rigid32+grow32": 137,
  "mixed_only": 4,
  "rigid64_only": 3,
- "p": 0.5
+ "p": 1.0
 }

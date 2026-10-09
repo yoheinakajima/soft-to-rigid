@@ -107,12 +107,51 @@ def fig_strip(replay_path, name, k=6):
         ax.set_title(f"{f['ph']}, τ = {u:.2f}\nsize {L:.3f}", fontsize=6.5)
     fig.tight_layout(pad=0.3)
     for ext in ('pdf', 'png'):
-        fig.savefig(os.path.join(OUT, f'{name}.{ext}'), dpi=220)
+        fig.savefig(os.path.join(OUT, f'{name}.{ext}'), dpi=220, bbox_inches='tight', pad_inches=0.02)
+    plt.close(fig)
+
+
+FAMLAB = {'squ-in-squ': 'squares / square', 'squ-in-cir': 'squares / circle', 'squ-in-tri': 'squares / triangle', 'tri-in-tri': 'triangles / triangle',
+          'tri-in-squ': 'triangles / square', 'hex-in-squ': 'hexagons / square', 'cir-in-squ': 'disks / square (control)'}
+
+
+def fig_heatmap(cid='C07-breadth-best', a='harden', b='rigid'):
+    """Per instance: sign and size of (lowest of a - lowest of b) / best known. Orange: a lower; blue: b lower;
+    grey: equal to 1e-9; dot: both reach the best known value."""
+    from matplotlib.colors import to_rgb
+    cs = {(c['family'], c['n'], c['method'].replace('-best', '')): c for c in cells if c['campaign'] == cid}
+    fl = [f for f in FAMLAB if any(k[0] == f for k in cs)]
+    ns = list(range(2, 31))
+    fig, ax = plt.subplots(figsize=(7.2, 0.26 * len(fl) + 0.55))
+    for r, f in enumerate(fl):
+        for n in ns:
+            ca, cb = cs.get((f, n, a)), cs.get((f, n, b))
+            if not ca or not cb:
+                continue
+            d = (ca['lowest'] - cb['lowest']) / ca['record']
+            if abs(d) <= 1e-9:
+                col = (0.86, 0.86, 0.86)
+            else:
+                w = min(1, max(0.25, (math.log10(abs(d)) + 7) / 6))
+                base = to_rgb(COL[a] if d < 0 else COL[b])
+                col = tuple(1 - w * (1 - x) for x in base)
+            ax.add_patch(plt.Rectangle((n - 0.45, len(fl) - 1 - r - 0.42), 0.9, 0.84, color=col, lw=0))
+            if ca['solved'] and cb['solved']:
+                ax.plot(n, len(fl) - 1 - r, '.', color='#555', ms=1.8)
+    ax.set_xlim(1.4, 30.6); ax.set_ylim(-0.6, len(fl) - 0.4)
+    ax.set_yticks(range(len(fl))); ax.set_yticklabels([FAMLAB[f] for f in reversed(fl)], fontsize=6.5)
+    ax.set_xticks([2, 5, 10, 15, 20, 25, 30]); ax.tick_params(length=0, labelsize=6.5); ax.set_xlabel('n', labelpad=1)
+    for sp in ax.spines.values(): sp.set_visible(False)
+    fig.text(0.01, 0.01, f'orange: {a} lower; blue: {b} lower (darker = larger relative difference, 1e-7 to 1e-1); grey: equal; dot: both reach the best known value', fontsize=5.8, color='#555')
+    fig.tight_layout(rect=(0, 0.05, 1, 1), pad=0.3)
+    for ext in ('pdf', 'png'):
+        fig.savefig(os.path.join(OUT, f'heatmap.{ext}'), dpi=220)
     plt.close(fig)
 
 
 if __name__ == '__main__':
     fig_gaps()
+    fig_heatmap()
     for a in sys.argv[1:]:
         p, name = a.split('=')
         fig_strip(p, name)

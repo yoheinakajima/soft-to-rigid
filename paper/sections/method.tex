@@ -3,20 +3,45 @@
 \[
 P(\gamma,\tau)=\gamma\big[(1-\tau)\,P\;\oplus\;\tau\rho\,D\big],
 \]
-the polygon scaled about its incenter, dilated by a disk of radius $\tau\rho$, and scaled by $\gamma$. At $\tau=1$ it is the inscribed disk, at $\tau=0$ the polygon, and for $\gamma\le1$ every state lies inside the polygon, so moving toward $(\gamma,\tau)=(1,0)$ only grows the piece. A \emph{path} is a schedule for $(\gamma,\tau)$:
+the polygon scaled about its incenter, dilated by a disk of radius $\tau\rho$ (a spheropolygon \cite{AlonsoMarroquin2008}), and scaled by $\gamma$. At $\tau=1$ it is the inscribed disk, at $\tau=0$ the polygon, and for $\gamma\le1$ every state lies inside the polygon, so moving toward $(\gamma,\tau)=(1,0)$ only grows the piece. Two facts describe what the family does. Its support function is
+\[
+h_{P(\gamma,\tau)}(u)=\gamma\big[(1-\tau)\,h_P(u)+\tau\rho\big],
+\]
+so the dependence of a piece's extent on its orientation is scaled down by $(1-\tau)$: rotating a nearly round piece barely changes the energy, and orientation becomes a decision only late in the path. And since $A(P)=\tfrac12\,\mathrm{perimeter}\cdot\rho$, its area at $\gamma=1$ is
+\[
+A(\tau)=A(P)-\big[A(P)-\pi\rho^2\big]\tau^2 ,
+\]
+so a hardening piece gains the area outside its inscribed disk, $21\%$ of a square, $9\%$ of a hexagon and $40\%$ of a triangle. A \emph{path} is a schedule for $(\gamma,\tau)$ during the middle phase of a run (Algorithm~\ref{alg:run}). We compare three:
 \begin{itemize}\itemsep0pt
 \item \textbf{harden}: $\gamma=1$, $\tau:1\to0$ (disks harden into polygons);
 \item \textbf{grow}: $\tau=0$, $\gamma:\gamma_0\to1$ (rigid polygons grow, as in Lubachevsky--Stillinger \cite{lubachevsky});
-\item \textbf{rigid}: $(\gamma,\tau)=(1,0)$ throughout, with the same schedule;
+\item \textbf{rigid}: $(\gamma,\tau)=(1,0)$ throughout, on the same schedule;
 \end{itemize}
-plus two classical baselines on rigid pieces: \textbf{sa}, Metropolis simulated annealing over poses and container size \cite{kirkpatrick}, and \textbf{pc}, perturbation--compression \cite{gensane} (shrink, relax, perturb on failure).
+and two classical baselines on rigid pieces: \textbf{sa}, Metropolis simulated annealing over poses and container size \cite{kirkpatrick}, and \textbf{pc}, perturbation--compression \cite{Gensane2004,gensane} (shrink, relax, perturb on failure). Two further paths serve as ablations: \textbf{snap} compresses disks exactly as harden does and then switches to the polygons at once ($\tau:1\to0$ in one step), and \textbf{grow-area} keeps rigid polygons whose area follows hardening's area schedule ($\tau=0$, $\gamma^2=1-(1-\pi\rho^2/A)\,t^2$ with $t:1\to0$).
 
 \paragraph{Energy.} The container (square, equilateral triangle or circle) is centred at the origin with size $L$. For poses $(x_i,y_i,\theta_i)$,
 \[
 E=\sum_{i<j}\big(2r-\operatorname{sd}_{ij}\big)_+^2+\sum_{i}\sum_{v}\big(\text{wall violation of }v\big)_+^2+\mu L,
 \]
-where $r=\gamma\tau\rho$, $\operatorname{sd}_{ij}$ is the signed distance between the cores (exact vertex--edge distance when apart, minus the separating-axis penetration depth when overlapping) and $v$ ranges over core vertices. The term $\mu L$ is inward pressure. Positions, angles and $L$ follow momentum gradient descent with analytic gradients (checked against finite differences, relative error below $10^{-7}$ on $1.7\times10^4$ components) and decaying Gaussian noise. A run compresses at pressure $3\mu$, follows its path while $L$ settles under pressure $\mu$, then lets $\mu$ decay with rigid pieces. In 3D the same holds for cubes with quaternion orientations \cite{nakajima12}.
+where $r=\gamma\tau\rho$, $\operatorname{sd}_{ij}$ is the signed distance between the cores (exact vertex--edge distance when apart, minus the separating-axis penetration depth when overlapping) and $v$ ranges over core vertices. The term $\mu L$ is inward pressure. Positions, angles and $L$ follow momentum gradient descent with analytic gradients (checked against finite differences, relative error below $10^{-7}$ on $1.7\times10^4$ components) and decaying Gaussian noise. In 3D the same holds for cubes with quaternion orientations and the 15-axis separating test \cite{nakajima12}.
 
-\paragraph{From a run to a certified packing.} Penalties tolerate small overlaps, so every run is \emph{legalised}: centres are scaled apart about their mean until no pair overlaps by more than $10^{-12}$ under the separating-axis test, and the smallest container (translation free) is measured. Near-best runs are then \emph{tightened}: minimise $L$ over poses and one separating line (plane) per nearby pair, with every vertex inside the container, by SLSQP in trust-region outer iterations, keeping a step only if the independently legalised size decreases. A tightened packing below a catalogue value is spread to a clearance of $10^{-6}$ and checked twice: in floating point and in exact rational arithmetic (rational rotations from $\tan(\theta/2)$, pieces inflated by $10^{-8}$, an explicit rational separating direction for every pair).
+\begin{algorithm}[t]\caption{One run of a gradient path (budget factor $B$; base $n_C,n_M,n_S=2500,7500,1500$ steps).}\label{alg:run}
+\small
+\begin{algorithmic}[1]
+\State random poses in a container of area $3.2\times$ the pieces' area; shape $\leftarrow$ path start ($\tau_0$, $\gamma_0$)
+\For{$B n_C$ steps} \Comment{compress}
+\State momentum step on $E$ with pressure $3\mu$, decaying noise
+\EndFor
+\For{$s=0,\dots,Bn_M-1$} \Comment{follow the path}
+\State $(\gamma,\tau)\leftarrow$ path$(s/Bn_M)$; momentum step on $E$ with pressure $\mu$, decaying noise
+\EndFor
+\For{$s=0,\dots,Bn_S-1$} \Comment{settle with the final pieces}
+\State momentum step on $E$ with pressure $\mu\cdot10^{-4s/Bn_S}$, no noise
+\EndFor
+\State legalise: scale centres apart until no pair overlaps; measure the smallest container
+\end{algorithmic}
+\end{algorithm}
 
-\paragraph{Fair comparison.} All five methods are given the same number of pair evaluations per run (that of a \textbf{harden} run at the same $n$) and comparable tuning: $3\times3$ grids over their two main parameters on held-out instances, with fixed scoring rules (Section~\ref{sec:breadth}).
+\paragraph{From a run to a certified packing.} Penalties tolerate small overlaps, so every run is \emph{legalised}: centres are scaled apart about their mean until no pair overlaps by more than $10^{-12}$ under the separating-axis test, and the smallest container (translation free) is measured. Near-best runs are then \emph{tightened} by constrained numerical optimisation: minimise $L$ over poses and one separating line (plane) per nearby pair \cite{Peralta2018}, with every vertex inside the container, by SLSQP \cite{kraft} in trust-region outer iterations, keeping a step only if the independently legalised size decreases. Tightening is a local method and gives no optimality guarantee; it only removes the slack a penalty method leaves. A tightened packing below a catalogue value is spread to a clearance of $10^{-6}$ and checked twice: in floating point, and in exact rational arithmetic. The exact check uses rational rotations from $\tan(\theta/2)$, replaces each piece by a rational polygon scaled by $1+10^{-8}$ and proves, in $\mathbb{Q}(\sqrt3)$, that this polygon contains the true unit polygon with margin $10^{-9}$, and exhibits a rational separating direction for every pair.
+
+\paragraph{Budgets.} A run's budget is its number of steps: every gradient path takes $11{,}500\,B$ steps. Pair evaluations then differ by path, since soft pieces have more near neighbours: at $n=20$ squares in a square a hardening run makes about $1.2\times$ the pair evaluations of a rigid run (Table~\ref{tab:diag} in the appendix), which, if anything, favours hardening. The two baselines are stopped once their pair evaluations exceed those of a reference hardening run at the same $n$; simulated annealing stops within one sweep of that, while perturbation--compression stops only at the end of a relaxation and overshoots by up to $1.7\times$. Wall-clock times are in the repository.

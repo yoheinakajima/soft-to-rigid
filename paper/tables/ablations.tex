@@ -1,0 +1,18 @@
+\begin{table}[t]\centering\small
+\begin{tabular}{lrcccc}
+\toprule
+family & $N$ & harden : snap & snap : rigid & harden : grow-area & grow-area : rigid \\
+\midrule
+squares in square & 28 & 6 : 0 & 1 : 2 & 5 : 1 & 2 : 1 \\
+squares in circle & 28 & 5 : 11 & 10 : 6 & 9 : 8 & 8 : 4 \\
+squares in triangle & 29 & 0 : 1 & 0 : 0 & 0 : 1 & 0 : 0 \\
+triangles in triangle & 28 & 0 : 8 & 0 : 2 & 1 : 8 & 0 : 3 \\
+triangles in square & 28 & 6 : 14 & 8 : 9 & 5 : 11 & 5 : 6 \\
+hexagons in square & 18 & 0 : 2 & 1 : 1 & 0 : 2 & 0 : 0 \\
+disks in square & 29 & 0 : 0 & 0 : 0 & 0 : 0 & 0 : 0 \\
+\midrule all & 188 & 17 : 36 & 20 : 20 & 20 : 31 & 15 : 14 \\
+\bottomrule
+\end{tabular}
+\caption{Which part of hardening matters (C11, C12; harden and rigid from C07, same seeds, settings and budget). Each cell $a:b$ counts the instances on which the first method\textquotesingle s lowest size is lower than the second\textquotesingle s, and the reverse; the rest are ties. \emph{snap} compresses disks as hardening does, then switches to polygons at once; \emph{grow-area} keeps rigid polygons whose area follows hardening\textquotesingle s.}
+\label{tab:ablate}
+\end{table}

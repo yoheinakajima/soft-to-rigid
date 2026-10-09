@@ -2,7 +2,7 @@
 
     python3 -m packing.analyze            # writes analysis/*.json, paper/numbers.tex, paper/tables/*.tex
 
-Pre-registered tests (C04): one-sided sign test of harden vs each other method over instances solved by
+Pre-registered tests (C04): one-sided sign test (the paper quotes exact two-sided p-values, sign_test2) of harden vs each other method over instances solved by
 exactly one of the two. Everything else here is descriptive.
 """
 import json, math, os, statistics as S
@@ -19,6 +19,12 @@ def sign_test(a_only, b_only):
     if n == 0:
         return 1.0
     return sum(math.comb(n, k) for k in range(a_only, n + 1)) / 2 ** n
+
+
+def sign_test2(a_only, b_only):
+    """exact two-sided sign test: 2 * min(one-sided tails), capped at 1. All p-values quoted in the paper use this
+    (the pre-registered C04 rule was one-sided; its one-sided values remain in analysis/*.json)."""
+    return min(1.0, 2 * min(sign_test(a_only, b_only), sign_test(b_only, a_only)))
 
 
 def breadth(st, cid='C04-breadth', methods=None):
@@ -102,7 +108,7 @@ def macros(prefix, b):
     for m, t in b['sign_tests'].items():
         M = m.capitalize()
         out.append(rf'\newcommand{{\{prefix}Sign{M}}}{{{t["harden_only"]} vs {t["other_only"]}}}')
-        p = min(t['p_harden_better'], t['p_other_better'])
+        p = sign_test2(t['harden_only'], t['other_only'])
         out.append(rf'\newcommand{{\{prefix}SignP{M}}}{{{p:.2g}}}')
     out.append(rf'\newcommand{{\{prefix}Instances}}{{{b["instances"]}}}')
     out.append(rf'\newcommand{{\{prefix}Unsolved}}{{{len(b["unique"].get("none", []))}}}')
@@ -126,7 +132,7 @@ def main():
     nums = [r'\newcommand{\builtdate}{%s}' % _t.strftime('%-d %B %Y'), r'\newcommand{\totalruns}{%s}' % f"{sum(c['runs'] for c in st.values()):,}".replace(',', '{,}'),
             r'\newcommand{\ncampaigns}{%d}' % len(camps)]
     for cid, prefix, cap in (('C04-breadth', 'Cfour', 'Settings tuned by median gap (C04). Same layout as Table~\\ref{tab:main}.'),
-                             ('C07-breadth-best', 'Cseven', 'Lowest point by family (C07; every method tuned for its lowest point, 32 runs per instance, equal budget). Each cell: number of instances on which the method\\textquotesingle s lowest tightened size is the lowest of all five methods; in brackets, on how many it is the only method that low. Bold: most per family.')):
+                             ('C07-breadth-best', 'Cseven', 'Lowest point by family (C07; every method tuned for its lowest point, 32 runs per instance, matched budget). Each cell: number of instances on which the method\\textquotesingle s lowest tightened size is the lowest of all five methods; in brackets, on how many it is the only method that low. Bold: most per family.')):
         b = breadth(st, cid)
         if not b:
             continue
@@ -239,7 +245,7 @@ def extra_campaigns(st):
         rg = sum(solved(f, n, 'rigid-best') or solved(f, n, 'grow-best') for f, n in insts)
         a = sum((solved(f, n, 'rigid-best') or solved(f, n, 'harden-best')) and not (solved(f, n, 'rigid-best') or c10[(f, n)]['solved']) for f, n in insts)
         b = sum((solved(f, n, 'rigid-best') or c10[(f, n)]['solved']) and not (solved(f, n, 'rigid-best') or solved(f, n, 'harden-best')) for f, n in insts)
-        p = sign_test(a, b)
+        p = sign_test2(a, b)
         nums += [r'\newcommand{\PortRigidSixtyFour}{%d}' % r64, r'\newcommand{\PortRigidHarden}{%d}' % rh, r'\newcommand{\PortRigidGrow}{%d}' % rg,
                  r'\newcommand{\PortSign}{%d vs %d}' % (a, b), r'\newcommand{\PortP}{%.2g}' % p]
         json.dump({'rigid64': r64, 'rigid32+harden32': rh, 'rigid32+grow32': rg, 'mixed_only': a, 'rigid64_only': b, 'p': p},

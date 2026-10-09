@@ -1,0 +1,282 @@
+[
+{
+"file": "campaigns/C07-breadth-best/replays/squ-in-tri_n28_harden-best_B1_default.json",
+"family": "squ-in-tri",
+"n": 28,
+"method": "harden",
+"dim": 2
+},
+{
+"file": "campaigns/C07-breadth-best/replays/squ-in-cir_n18_harden-best_B1_default.json",
+"family": "squ-in-cir",
+"n": 18,
+"method": "harden",
+"dim": 2
+},
+{
+"file": "campaigns/C07-breadth-best/replays/tri-in-squ_n20_harden-best_B1_default.json",
+"family": "tri-in-squ",
+"n": 20,
+"method": "harden",
+"dim": 2
+},
+{
+"file": "campaigns/C07-breadth-best/replays/squ-in-squ_n26_grow-best_B1_default.json",
+"family": "squ-in-squ",
+"n": 26,
+"method": "grow",
+"dim": 2
+},
+{
+"file": "campaigns/C07-breadth-best/replays/tri-in-squ_n22_harden-best_B1_default.json",
+"family": "tri-in-squ",
+"n": 22,
+"method": "harden",
+"dim": 2
+},
+{
+"file": "campaigns/C07-breadth-best/replays/squ-in-tri_n28_grow-best_B1_default.json",
+"family": "squ-in-tri",
+"n": 28,
+"method": "grow",
+"dim": 2
+},
+{
+"file": "campaigns/C07-breadth-best/replays/hex-in-squ_n19_grow-best_B1_default.json",
+"family": "hex-in-squ",
+"n": 19,
+"method": "grow",
+"dim": 2
+},
+{
+"file": "campaigns/C13-budget-clean/replays/squ-in-cir_n11_harden-best_B1_default.json",
+"family": "squ-in-cir",
+"n": 11,
+"method": "harden",
+"dim": 2
+},
+{
+"file": "campaigns/C07-breadth-best/replays/tri-in-squ_n14_harden-best_B1_default.json",
+"family": "tri-in-squ",
+"n": 14,
+"method": "harden",
+"dim": 2
+},
+{
+"file": "campaigns/C07-breadth-best/replays/tri-in-squ_n20_grow-best_B1_default.json",
+"family": "tri-in-squ",
+"n": 20,
+"method": "grow",
+"dim": 2
+},
+{
+"file": "campaigns/C05-cubes/replays/cub-in-cub_n10_harden_B3_tuned2d.json",
+"family": "cub-in-cub",
+"n": 10,
+"method": "harden",
+"dim": 3
+},
+{
+"file": "campaigns/C07-breadth-best/replays/squ-in-squ_n24_harden-best_B1_default.json",
+"family": "squ-in-squ",
+"n": 24,
+"method": "harden",
+"dim": 2
+},
+{
+"file": "campaigns/C05-cubes/replays/cub-in-cub_n14_harden_B3_tuned2d.json",
+"family": "cub-in-cub",
+"n": 14,
+"method": "harden",
+"dim": 3
+},
+{
+"file": "campaigns/C07-breadth-best/replays/squ-in-cir_n15_harden-best_B1_default.json",
+"family": "squ-in-cir",
+"n": 15,
+"method": "harden",
+"dim": 2
+},
+{
+"file": "campaigns/C07-breadth-best/replays/squ-in-squ_n26_harden-best_B1_default.json",
+"family": "squ-in-squ",
+"n": 26,
+"method": "harden",
+"dim": 2
+},
+{
+"file": "campaigns/C07-breadth-best/replays/cir-in-squ_n30_harden-best_B1_default.json",
+"family": "cir-in-squ",
+"n": 30,
+"method": "harden",
+"dim": 2
+},
+{
+"file": "campaigns/C07-breadth-best/replays/tri-in-tri_n29_harden-best_B1_default.json",
+"family": "tri-in-tri",
+"n": 29,
+"method": "harden",
+"dim": 2
+},
+{
+"file": "campaigns/C05-cubes/replays/cub-in-cub_n13_harden_B3_tuned2d.json",
+"family": "cub-in-cub",
+"n": 13,
+"method": "harden",
+"dim": 3
+},
+{
+"file": "campaigns/C05-cubes/replays/cub-in-cub_n11_harden_B3_tuned2d.json",
+"family": "cub-in-cub",
+"n": 11,
+"method": "harden",
+"dim": 3
+},
+{
+"file": "campaigns/C07-breadth-best/replays/cir-in-squ_n29_harden-best_B1_default.json",
+"family": "cir-in-squ",
+"n": 29,
+"method": "harden",
+"dim": 2
+},
+{
+"file": "campaigns/C07-breadth-best/replays/tri-in-tri_n30_grow-best_B1_default.json",
+"family": "tri-in-tri",
+"n": 30,
+"method": "grow",
+"dim": 2
+},
+{
+"file": "campaigns/C13-budget-clean/replays/squ-in-tri_n29_harden-best_B1_default.json",
+"family": "squ-in-tri",
+"n": 29,
+"method": "harden",
+"dim": 2
+},
+{
+"file": "campaigns/C07-breadth-best/replays/hex-in-squ_n20_harden-best_B1_default.json",
+"family": "hex-in-squ",
+"n": 20,
+"method": "harden",
+"dim": 2
+},
+{
+"file": "campaigns/C07-breadth-best/replays/hex-in-squ_n18_harden-best_B1_default.json",
+"family": "hex-in-squ",
+"n": 18,
+"method": "harden",
+"dim": 2
+},
+{
+"file": "campaigns/C07-breadth-best/replays/squ-in-cir_n13_harden-best_B1_default.json",
+"family": "squ-in-cir",
+"n": 13,
+"method": "harden",
+"dim": 2
+},
+{
+"file": "campaigns/C07-breadth-best/replays/squ-in-squ_n25_harden-best_B1_default.json",
+"family": "squ-in-squ",
+"n": 25,
+"method": "harden",
+"dim": 2
+},
+{
+"file": "campaigns/C07-breadth-best/replays/hex-in-squ_n19_harden-best_B1_default.json",
+"family": "hex-in-squ",
+"n": 19,
+"method": "harden",
+"dim": 2
+},
+{
+"file": "campaigns/C07-breadth-best/replays/hex-in-squ_n16_harden-best_B1_default.json",
+"family": "hex-in-squ",
+"n": 16,
+"method": "harden",
+"dim": 2
+},
+{
+"file": "campaigns/C07-breadth-best/replays/tri-in-squ_n13_harden-best_B1_default.json",
+"family": "tri-in-squ",
+"n": 13,
+"method": "harden",
+"dim": 2
+},
+{
+"file": "campaigns/C07-breadth-best/replays/squ-in-tri_n27_harden-best_B1_default.json",
+"family": "squ-in-tri",
+"n": 27,
+"method": "harden",
+"dim": 2
+},
+{
+"file": "campaigns/C07-breadth-best/replays/squ-in-tri_n25_harden-best_B1_default.json",
+"family": "squ-in-tri",
+"n": 25,
+"method": "harden",
+"dim": 2
+},
+{
+"file": "campaigns/C07-breadth-best/replays/tri-in-tri_n23_harden-best_B1_default.json",
+"family": "tri-in-tri",
+"n": 23,
+"method": "harden",
+"dim": 2
+},
+{
+"file": "campaigns/C05-cubes/replays/cub-in-cub_n12_grow_B3_tuned2d.json",
+"family": "cub-in-cub",
+"n": 12,
+"method": "grow",
+"dim": 3
+},
+{
+"file": "campaigns/C07-breadth-best/replays/squ-in-cir_n21_grow-best_B1_default.json",
+"family": "squ-in-cir",
+"n": 21,
+"method": "grow",
+"dim": 2
+},
+{
+"file": "campaigns/C07-breadth-best/replays/squ-in-squ_n30_harden-best_B1_default.json",
+"family": "squ-in-squ",
+"n": 30,
+"method": "harden",
+"dim": 2
+},
+{
+"file": "campaigns/C05-cubes/replays/cub-in-cub_n9_harden_B3_tuned2d.json",
+"family": "cub-in-cub",
+"n": 9,
+"method": "harden",
+"dim": 3
+},
+{
+"file": "campaigns/C05-cubes/replays/cub-in-cub_n13_grow_B3_tuned2d.json",
+"family": "cub-in-cub",
+"n": 13,
+"method": "grow",
+"dim": 3
+},
+{
+"file": "campaigns/C07-breadth-best/replays/tri-in-tri_n24_harden-best_B1_default.json",
+"family": "tri-in-tri",
+"n": 24,
+"method": "harden",
+"dim": 2
+},
+{
+"file": "campaigns/C05-cubes/replays/cub-in-cub_n12_harden_B3_tuned2d.json",
+"family": "cub-in-cub",
+"n": 12,
+"method": "harden",
+"dim": 3
+},
+{
+"file": "campaigns/C07-breadth-best/replays/tri-in-tri_n27_harden-best_B1_default.json",
+"family": "tri-in-tri",
+"n": 27,
+"method": "harden",
+"dim": 2
+}
+]

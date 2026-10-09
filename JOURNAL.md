@@ -1,6 +1,6 @@
 # Journal
 
-*Generated from the ledger (`ledger/events.jsonl`, 45363 events) by `packing/project.py`. Do not edit.*
+*Generated from the ledger (`ledger/events.jsonl`, 55134 events) by `packing/project.py`. Do not edit.*
 
 Every campaign was planned before it ran. Each entry gives the question, what we expected, what happened, and what we decided.
 
@@ -147,4 +147,30 @@ Run together, harden and rigid solve more instances than either alone, but with 
 - **Decided:** Hypothesis not supported: mixing paths (139) is no better than doubling rigid (138) at equal budget. The paper reports that the paths are complementary by family but that, without knowing the family's character in advance, extra rigid runs are as good as adding hardening runs.
 
 [Full report](campaigns/C10-portfolio/REPORT.md)
+
+## C11-snap — Is it the path or the starting configuration?
+
+*Planned 2026-10-09 · status: closed*
+
+Hardening differs from rigid starts in two ways: pieces are compressed as disks first, and they then harden gradually. snap compresses disks exactly as harden does and then switches to the full polygons at once, with the same settings, seeds and budget. Comparing harden, snap and rigid on all 188 instances separates the effect of the disk-compressed starting configuration from the effect of the gradual path.
+
+- **Expected:** On squares in a square, harden reaches lower sizes than snap (the gradual path matters); on other families snap and rigid are similar.
+- **Rule:** Same metric and tightening policy as C07. For each family, count instances where harden, snap and rigid (C07, same seeds and settings) attain the lowest of the three, and solved counts; report the two-sided exact sign test of harden vs snap over instances solved by exactly one. If harden and snap do not differ on squares in a square, the paper attributes hardening's advantage there to the disk-compressed start rather than to the path.
+- **Found:** Snap (disks compressed as in hardening, then polygons at once) behaves like rigid starts: lower on 20 instances each, 148 ties. Hardening differs from snap by family: lower on 6 squares-in-square instances against 0, while snap is lower on 8 triangles-in-triangle instances against 0 and 14 vs 6 triangles in a square. Over all 188 instances harden vs snap lower 17 vs 36 (two-sided p = 0.013). The gradual change of shape, not the disk-compressed start, carries hardening's effect in both directions.
+- **Decided:** Per the pre-registered rule (two-sided sign test over instances solved by exactly one of harden and snap): squares in a square 2 vs 0, p = 0.5, not separated, so the pre-registered conclusion attributes hardening's advantage there to the disk-compressed start. Recorded with the caveat that the rule has no power at two discordant instances, and that the descriptive evidence (snap = rigid; harden lower than snap 6-0 on squares, higher 0-8 on triangles in a triangle) points to the gradual path. The paper reports both.
+
+[Full report](campaigns/C11-snap/REPORT.md)
+
+## C12-grow-area — Is it the shape change or the area schedule?
+
+*Planned 2026-10-09 · status: closed*
+
+Hardening also changes how much area each piece occupies over time. grow-area keeps pieces as rigid polygons but scales them so their area follows hardening's area schedule exactly, A(tau)/A = 1 - (1 - pi rho^2/A) tau^2, with the same settings, seeds and budget.
+
+- **Expected:** On squares in a square, harden reaches lower sizes than grow-area (changing shape, not only size, matters).
+- **Rule:** As C11, comparing harden with grow-area (and rigid, from C07).
+- **Found:** Grow-area (rigid polygons scaled so their area follows hardening's schedule) behaves like rigid starts: lower on 15 vs 14 instances, 159 ties. Hardening differs from it as from snap: squares in a square 5 vs 1, triangles in a triangle 1 vs 8, triangles in a square 5 vs 11. Neither the disk-compressed start (C11) nor the area schedule reproduces hardening's effect; the rounding of the pieces does.
+- **Decided:** As C11's rule: squares in a square, instances solved by exactly one of harden and grow-area 2 vs 0 (p = 0.5), not separated by the pre-registered test; triangles in a triangle 0 vs 6 (p = 0.031) in grow-area's favour. Recorded together with the lower-size counts; the paper reports grow-area alongside snap as an ablation.
+
+[Full report](campaigns/C12-grow-area/REPORT.md)
 

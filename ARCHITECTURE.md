@@ -41,19 +41,23 @@ Every claim folder holds the claim file (container size at full precision and on
 ```
 engine/     JavaScript simulators (fast inner loop)
   geom2d.js       convex polygons: support, signed distance, separating axis
-  engine2d.js     every 2D method: harden, grow, rigid, sa, pc, and ablations
+  engine2d.js     every 2D method: harden, grow, rigid, sa, pc, and ablations (snap, grow-area)
   engine3d.js     cubes (3D) with the same interface
   run.js          worker: reads a job list, appends to runs.jsonl
 packing/    Python
   catalog.py      families and instances
-  tighten.py      exact tightening (SLSQP, separating lines/planes)
-  certify.py      exact rational certificate
+  tighten.py      constrained numerical tightening (SLSQP, separating lines/planes)
+  certify.py      exact rational certificate (incl. exact Q(sqrt 3) proof that the rational surrogate encloses the true polygon)
   ledger.py       ActiveGraph ledger: ingest, behaviors, findings
-  project.py      projections: reports, journal, site data, paper numbers
+  project.py      projections: reports, journal, site data (incl. the front-page wall), paper numbers
+  analyze.py      main tables and macros (exact two-sided sign tests)
+  stats.py        bootstrap intervals, best-of-k curves, n-range table, work per run
+  ablations.py    C11 snap, C12 grow-area, C13 clean budget study
 campaigns/  pre-registered experiments and their raw results
 claims/     certified packings
-paper/      the paper (short); its numbers come from paper/numbers.tex, generated
-site/       templates; the built site is docs/
+scripts/    queue.sh (run campaigns in order), figures.py (paper figures), catalogue builder
+paper/      the paper; its numbers come from numbers.tex, stats.tex, ablations.tex (all generated)
+site/       templates and viewers; built into _site/ by site/build.py and deployed by CI
 ```
 
 ## Rules

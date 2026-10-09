@@ -1,0 +1,15 @@
+\begin{table}[h]\centering\small
+\begin{tabular}{lrrrrr}
+\toprule
+method & \multicolumn{2}{c}{steps (sa: moves) per run} & \multicolumn{2}{c}{pair evaluations per run} & best run eligible \\
+ & $n=20$ & $n=30$ & $n=20$ & $n=30$ & for tightening \\
+\midrule
+harden & 11{,}500 & 11{,}500 & 418{,}365 & 650{,}532 & 97\% \\
+grow & 11{,}500 & 11{,}500 & 426{,}807 & 668{,}192 & 98\% \\
+rigid & 11{,}500 & 11{,}500 & 348{,}285 & 550{,}494 & 100\% \\
+sa & 66{,}854 & 104{,}043 & 448{,}878 & 714{,}120 & 94\% \\
+pc & 19{,}148 & 20{,}530 & 690{,}285 & 1{,}176{,}434 & 56\% \\
+\bottomrule
+\end{tabular}
+\caption{Work per run (C07, squares in a square, mean over 32 runs) and the share of instances on which each method's best run was within 2\% of the best known value and so was tightened (all families). Gradient paths are matched in steps; the baselines stop once they exceed a reference hardening run's pair evaluations.}\label{tab:diag}
+\end{table}
