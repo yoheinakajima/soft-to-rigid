@@ -249,7 +249,7 @@
   },
   {
    "date": "2026-10-08",
-   "change": "Tightening policy reduced before any C04 result was ingested, because tightening every candidate would take longer than the runs: per cell, the best run is tightened if within 2% of the best known value, plus runs within 2e-3 of it, at most three per cell; at most 20 outer iterations, stopping once an iteration gains less than 1e-11. Applies identically to every method. Tightenings already computed are reused when the run is in the new candidate set."
+   "change": "Tightening policy reduced before any C04 result was ingested, because tightening every candidate would take longer than the runs: per cell, the best run is tightened if within 2% of the best known value, plus runs within 2e-3 of it, at most three per cell; at most 20 outer iterations, stopping once an iteration gains less than 1e-11. Applies identically to every method. Tightenings already computed are reused when the run is in the new candidate set. Tightening also stops after four consecutive outer iterations without improvement (added after 380 tightenings; it only saves time on runs that have stopped improving)."
   }
  ]
 }

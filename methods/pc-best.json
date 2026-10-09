@@ -1,0 +1,12 @@
+{
+ "method": "pc",
+ "params": {
+  "pcKick": 0.05,
+  "pcRelax": 19200
+ },
+ "tuned_by": "C06-tune-best/kick0.05_relax19200",
+ "tuning_score": {
+  "mean_lowest_relgap": 0.05671107202532191,
+  "mean_hit_fraction_1e-4": 0.0
+ }
+}

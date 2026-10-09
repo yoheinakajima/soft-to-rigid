@@ -1,0 +1,12 @@
+{
+ "method": "sa",
+ "params": {
+  "saT0": 0.001,
+  "mu": 0.02
+ },
+ "tuned_by": "C06-tune-best/T0.001_mu0.02",
+ "tuning_score": {
+  "mean_lowest_relgap": 0.05531131129143069,
+  "mean_hit_fraction_1e-4": 0.0
+ }
+}

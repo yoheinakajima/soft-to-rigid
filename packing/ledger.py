@@ -57,9 +57,11 @@ def build_behaviors(H):
     def summarize(event, graph, ctx):
         p = event.payload
         camp = find('campaign', cid=p['campaign'])
+        have_cand = {o.data['run'] for o in H['G'].objects('candidate')}
+        have_cell = {o.data['cell']: o for o in H['G'].objects('cell') if o.data.get('campaign') == p['campaign']}
         for c in p['cells']:
             key = c['cell']
-            prev = find('cell', cell=key)
+            prev = have_cell.get(key)
             if prev:
                 graph.patch_object(prev.id, c)
                 cell_id = prev.id
@@ -69,11 +71,12 @@ def build_behaviors(H):
                 if camp:
                     graph.add_relation(cell_id, camp.id, 'in_campaign')
             for cand in c.get('candidates', []):
-                if find('candidate', run=cand['run']):
+                if cand['run'] in have_cand:
                     continue
                 co = graph.add_object('candidate', dict(cand, cell=key, status='queued'))
                 graph.add_relation(co.id, cell_id, 'from_cell')
-                graph.emit('polish.requested', {'candidate': co.id, 'run': cand['run'], 'file': cand['file']})
+                graph.emit('polish.requested', {'candidate': co.id, 'run': cand['run'], 'file': cand['file'],
+                                                'family': c['family'], 'n': c['n']})
         if camp:
             graph.patch_object(camp.id, {'status': 'running' if not p.get('complete') else 'complete'})
 
@@ -82,13 +85,16 @@ def build_behaviors(H):
         from . import tighten
         p = event.payload
         cached = os.path.join(ROOT, 'ledger', 'polished', p['run'].replace('/', '_') + '.json')
-        row = None
-        for line in open(os.path.join(ROOT, p['file'])):
-            if p['run'] in line:
-                r = json.loads(line)
-                if r['id'] == p['run']:
-                    row = r
-                    break
+        if os.path.exists(cached):
+            row = {'id': p['run'], 'family': p['family'], 'n': p['n']}
+        else:
+            row = None
+            for line in open(os.path.join(ROOT, p['file'])):
+                if p['run'] in line:
+                    r = json.loads(line)
+                    if r['id'] == p['run']:
+                        row = r
+                        break
         F = catalog(row['family'])
         t0 = time.time()
         if os.path.exists(cached):  # computed by packing.polish (same function, same input)
@@ -104,7 +110,7 @@ def build_behaviors(H):
         os.makedirs(os.path.join(ROOT, 'ledger', 'polished'), exist_ok=True)
         fn = os.path.relpath(cached, ROOT)
         if not os.path.exists(cached):
-            json.dump({'run': row['id'], 'family': row['family'], 'n': row['n'], 'L': out['L'], 'L_raw': row['L'],
+            json.dump({'run': row['id'], 'family': row['family'], 'n': row['n'], 'L': out['L'], 'L_raw': row.get('L'),
                        'poses': out['poses'], 'history': out['history']}, open(cached, 'w'))
         graph.patch_object(p['candidate'], {'status': 'polished', 'L_polished': out['L'], 'gap_polished': gap})
         graph.emit('polish.completed', {'candidate': p['candidate'], 'run': row['id'], 'family': row['family'], 'n': row['n'],
@@ -223,16 +229,44 @@ def ingest(campaign):
     print(f'ingested {campaign}: {len(rows)} runs, {len(errors)} errors; ledger has {len(G.events)} events')
 
 
+NOTES = os.path.join(ROOT, 'ledger', 'notes.jsonl')   # the researcher's inputs (findings, decisions), append-only
+
+
+def _note(type_, payload, emit_now=True):
+    with open(NOTES, 'a') as f:
+        f.write(json.dumps({'type': type_, **payload}) + '\n')
+    if emit_now:
+        rt, G = open_ledger()
+        emit(G, type_, payload)
+        rt.run_until_idle()
+
+
 def finding(text, evidence, campaign=None):
-    rt, G = open_ledger()
-    emit(G, 'finding.recorded', {'text': text, 'evidence': evidence, 'campaign': campaign, 'date': time.strftime('%Y-%m-%d')})
-    rt.run_until_idle()
+    _note('finding.recorded', {'text': text, 'evidence': evidence, 'campaign': campaign, 'date': time.strftime('%Y-%m-%d')})
 
 
 def close(campaign, decision):
-    rt, G = open_ledger()
-    emit(G, 'campaign.closed', {'campaign': campaign, 'decision': decision, 'date': time.strftime('%Y-%m-%d')})
-    rt.run_until_idle()
+    _note('campaign.closed', {'campaign': campaign, 'decision': decision, 'date': time.strftime('%Y-%m-%d')})
+
+
+def rebuild(upto=None):
+    """Recreate the ledger from its inputs: for each campaign in order, its plan and results, then the
+    researcher's notes about it (ledger/notes.jsonl, in the order written). Tightenings are reused from
+    ledger/polished/, so a rebuild recomputes nothing that is cached."""
+    for f in (DB, DB + '-wal', DB + '-shm'):
+        if os.path.exists(f):
+            os.remove(f)
+    notes = [json.loads(l) for l in open(NOTES)] if os.path.exists(NOTES) else []
+    for cid in sorted(d for d in os.listdir(os.path.join(ROOT, 'campaigns')) if glob.glob(os.path.join(ROOT, 'campaigns', d, 'runs*.jsonl'))):
+        ingest(cid)
+        mine = [n for n in notes if n.get('campaign') == cid]
+        if mine:
+            rt, G = open_ledger()
+            for n in mine:
+                emit(G, n['type'], {k: v for k, v in n.items() if k != 'type'})
+            rt.run_until_idle()
+        if upto and cid == upto:
+            break
 
 
 def export():
@@ -249,6 +283,7 @@ if __name__ == '__main__':
     a = sub.add_parser('finding'); a.add_argument('text'); a.add_argument('--evidence', nargs='*', default=[]); a.add_argument('--campaign')
     a = sub.add_parser('close'); a.add_argument('campaign'); a.add_argument('decision')
     sub.add_parser('export')
+    a = sub.add_parser('rebuild'); a.add_argument('--upto')
     args = ap.parse_args()
     if args.cmd == 'ingest':
         ingest(args.campaign)
@@ -258,5 +293,7 @@ if __name__ == '__main__':
         close(args.campaign, args.decision)
     elif args.cmd == 'export':
         export()
+    elif args.cmd == 'rebuild':
+        rebuild(args.upto)
     else:
         ap.print_help()

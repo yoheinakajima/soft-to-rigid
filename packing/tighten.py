@@ -38,6 +38,7 @@ def solve(piece_name, container_name, poses, outer=20, trust=0.03, verbose=False
     G = np.array(P['g']) if k else np.zeros((0, 2))
     circ = C.get('circle', False)
     hist = [L0]
+    fails = 0
     for it in range(outer):
         X = np.array([p[0] for p in best[1]]); Y = np.array([p[1] for p in best[1]]); T = np.array([p[2] for p in best[1]])
         L = best[0]
@@ -139,8 +140,10 @@ def solve(piece_name, container_name, poses, outer=20, trust=0.03, verbose=False
             hist.append(Lnew)
             if verbose:
                 print(it, Lnew)
+            fails = 0
         else:
             trust *= 0.5
-            if trust < 1e-7:
+            fails += 1
+            if trust < 1e-7 or fails >= 4:
                 break
     return dict(L=best[0], poses=[list(map(float, q)) for q in best[1]], history=hist, L0=L0)

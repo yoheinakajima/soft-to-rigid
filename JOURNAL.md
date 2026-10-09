@@ -1,6 +1,6 @@
 # Journal
 
-*Generated from the ledger (`ledger/events.jsonl`, 1512 events) by `packing/project.py`. Do not edit.*
+*Generated from the ledger (`ledger/events.jsonl`, 18457 events) by `packing/project.py`. Do not edit.*
 
 Every campaign was planned before it ran. Each entry gives the question, what we expected, what happened, and what we decided.
 
@@ -53,4 +53,31 @@ After C01 and C02, the winners for harden (noise x8), sa (T0 = 3e-3) and pc (rel
 - **Decided:** Frozen into methods/*.json (scripts/score_tuning.py over C01-C03): harden mu 0.08, noise x8; grow mu 0.04, gamma0 0.2; rigid mu 0.04, noise x2; sa T0 3e-3, mu 0.0025; pc kick 0.05, relax 19200. Repeated settings across campaigns reproduce bit-for-bit (same seeds, same results).
 
 [Full report](campaigns/C03-tune-extend2/REPORT.md)
+
+## C04-breadth — Equal-budget comparison of five paths across seven 2D families
+
+*Planned 2026-10-08 · status: closed*
+
+With every method tuned the same way (C01-C03) and given the same number of pair evaluations, which methods reach the best known packing, on which families, and how often?
+
+- **Expected:** H1: after exact tightening, harden reaches the best known value on more instances than each of grow, rigid, sa and pc. H2 (control): on circles, where hardening changes nothing, harden and rigid differ only through their tuned schedule parameters, so any difference there measures parameters, not paths. H3 (exploratory): the gap to the best known value grows with n for every method.
+- **Rule:** Primary metric: an instance is solved by a method if any of its 32 runs, after exact tightening, is within 1e-9 of the best known value (within 1e-5 when the catalogue value is truncated) or below it. Test H1 with a one-sided sign test over instances solved by exactly one of the two methods (alpha 0.05, per pair, no correction; reported with counts). If H1 fails against rigid, the paper does not claim that hardening is the better path in general; it reports where each path wins. Secondary metrics: raw hit rate (raw gap < 1e-3), median relative gap, time per run. Excludes the five tuning instances. Any run whose tightened size is below a catalogue value is certified and reported regardless of method. Tightening policy, identical for every method: in each cell (instance x method) the three best runs are tightened if their raw size is within 2% of the best known value, plus every run within 2e-3 of it, at most ten per cell.
+- **Found:** Main comparison with median-tuned settings (188 instances, 32 runs each, equal budget, lowest point after exact tightening). Instances where each method's lowest size equals the lowest of all five: rigid 155, harden 142, grow 139, sa 72, pc 64; where it is the only method that low: rigid 23, harden 16, grow 11, sa 2, pc 0. Instances solved (best known value reached): rigid 132, harden 121, grow 119, sa 69, pc 63. Pre-registered sign test: rigid solves more instances than harden (18 only-rigid vs 7 only-harden, one-sided p = 0.02); harden vs grow is inconclusive (11 vs 9); harden beats sa (57 vs 5) and pc (59 vs 1). H1 fails against rigid. 46 instances were solved by no method; no packing below a published value was found.
+- **Found:** The advantage depends on the family. Squares in a square: harden's lowest is the lowest of all methods on all 28 instances and the only one that low on 7 (it alone solves n = 11, 17, 26; rigid and grow solve none of these). Squares in a circle: split (harden only-lowest on 7 instances, rigid on 9). Triangles in a square or triangle, hexagons and squares in a triangle: rigid and grow are lower more often; harden is the only lowest on at most one instance per family. Circles (control, where hardening changes nothing): all three gradient paths are equivalent (27 or 28 of 29).
+- **Decided:** By the pre-registered rule, the paper does not claim that hardening is the better path in general: tuned rigid starts solve significantly more instances overall. It reports where each path reaches the lowest point: hardening for squares in a square (and part of squares in a circle), rigid or grow for triangles and hexagons. Because settings were tuned by median, C07 repeats the comparison with settings tuned for the lowest point.
+
+[Full report](campaigns/C04-breadth/REPORT.md)
+
+## C06-tune-best — Re-tune every method for its lowest point, on harder held-out instances
+
+*Planned 2026-10-08 · status: closed*
+
+C01-C03 chose each method's settings by median gap, but the question that matters is which method is most likely to produce the lowest packing. On the C01 tuning instances nearly every setting reaches the best known value, so best-of scoring cannot separate settings there. Re-tune on eight harder instances above n = 30 that no other campaign uses.
+
+- **Expected:** Best-of tuning favours stronger pressure for harden and weaker pressure for rigid and grow than median tuning did (as a re-scoring of C01-C03 suggests).
+- **Rule:** For each method and setting: primary score = mean over the eight instances of the lowest legal size of 16 runs relative to the best known value (lowest is best); tie-break = mean fraction of runs within 1e-4 relative of the best known value. The winner is frozen into methods/<method>-best.json and used by C07. Every method gets one 3x3 grid; no extensions.
+- **Found:** Tuned for their lowest point on eight held-out instances above n = 30, harden and rigid choose the same settings (strongest pressure and noise in the grid). With those settings rigid reaches the lower size on most of these instances (mean lowest gap 0.63% of the best known size, against 1.06% for harden, 1.71% grow, 5.5% sa, 5.7% pc); harden is worst among the gradient paths on triangles.
+- **Decided:** Frozen by scripts/score_best.py into methods/*-best.json: harden and rigid both mu 0.16, noise x8 (identical settings, so C07 compares their paths alone); grow mu 0.08, gamma0 0.1; sa T0 1e-3, mu 0.02; pc kick 0.05, relax 19200. Several winners lie on a grid edge; as pre-registered, no extension.
+
+[Full report](campaigns/C06-tune-best/REPORT.md)
 

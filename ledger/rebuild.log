@@ -1,0 +1,6 @@
+ingested C00-reproduce: 640 runs, 0 errors; ledger has 126 events
+ingested C01-tune: 3600 runs, 0 errors; ledger has 598 events
+ingested C02-tune-extend: 3600 runs, 0 errors; ledger has 1063 events
+ingested C03-tune-extend2: 2160 runs, 0 errors; ledger has 1348 events
+ingested C04-breadth: 30080 runs, 0 errors; ledger has 17700 events
+ingested C06-tune-best: 5760 runs, 0 errors; ledger has 18430 events

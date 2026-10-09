@@ -1,0 +1,53 @@
+{
+ "id": "C08-start-shape",
+ "title": "How soft must the start be? A dose-response on the starting shape",
+ "question": "With every other setting fixed at the shared best-of setting of harden and rigid (mu 0.16, noise x8), vary only how rounded the pieces start: tau0 = 1 (inscribed disk, harden), 0.5, 0.25 and 0 (rigid). Does the lowest point move monotonically with tau0, and does the answer depend on the family?",
+ "hypothesis": "On instances whose best known packing tilts pieces against each other (squares n = 11, 17-19, 26-29 in a square), softer starts reach lower sizes; on triangles and slack grids the reverse.",
+ "decision_rule": "Instances: the contested instances of C07, defined as those where the lowest sizes of harden-best and rigid-best differ by more than 1e-6 relative, capped at 40 by taking the largest relative differences. Metric: lowest tightened size over 32 runs per instance and tau0 (same tightening policy as C04). Report, per family, the number of instances where each tau0 attains the lowest size; test monotonicity descriptively (no significance test).",
+ "created": "2026-10-08",
+ "instances": "filled from C07 by scripts/contested.py before the first run",
+ "methods": [
+  "harden-tau"
+ ],
+ "budgets": [
+  1
+ ],
+ "seeds": 32,
+ "polish": true,
+ "configs": {
+  "harden-tau": [
+   {
+    "name": "tau1",
+    "params": {
+     "mu": 0.16,
+     "noiseScale": 8,
+     "tau0": 1
+    }
+   },
+   {
+    "name": "tau0.5",
+    "params": {
+     "mu": 0.16,
+     "noiseScale": 8,
+     "tau0": 0.5
+    }
+   },
+   {
+    "name": "tau0.25",
+    "params": {
+     "mu": 0.16,
+     "noiseScale": 8,
+     "tau0": 0.25
+    }
+   },
+   {
+    "name": "tau0",
+    "params": {
+     "mu": 0.16,
+     "noiseScale": 8,
+     "tau0": 0
+    }
+   }
+  ]
+ }
+}

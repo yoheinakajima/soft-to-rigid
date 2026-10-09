@@ -1,0 +1,19 @@
+{
+ "id": "C09-budget",
+ "title": "Does a longer schedule change which path finds the lowest point?",
+ "question": "On the contested instances, give harden-best and rigid-best 3x and 10x the budget (32 runs each). Does the gap between the paths close, persist, or reverse with more time, and does either path find a packing below a published value?",
+ "hypothesis": "More time lowers both paths' lowest points; the path that wins at budget 1 on an instance still wins at budget 10 on most instances.",
+ "decision_rule": "Same instances as C08. Metric: lowest tightened size over 32 runs per instance, method and budget. Report the per-budget count of instances where each path is lowest, and certify anything below a catalogue value.",
+ "created": "2026-10-08",
+ "instances": "same as C08",
+ "methods": [
+  "harden-best",
+  "rigid-best"
+ ],
+ "budgets": [
+  3,
+  10
+ ],
+ "seeds": 32,
+ "polish": true
+}

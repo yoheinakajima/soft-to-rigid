@@ -1,0 +1,8 @@
+{
+ "method": "harden",
+ "params": {
+  "mu": 0.16,
+  "noiseScale": 8
+ },
+ "note": "harden with the shared best-of settings; tau0 set per config (C08)"
+}

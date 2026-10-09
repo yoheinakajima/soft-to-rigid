@@ -1,0 +1,12 @@
+{
+ "method": "harden",
+ "params": {
+  "mu": 0.16,
+  "noiseScale": 8
+ },
+ "tuned_by": "C06-tune-best/mu0.16_nz8",
+ "tuning_score": {
+  "mean_lowest_relgap": 0.010604923006049927,
+  "mean_hit_fraction_1e-4": 0.03125
+ }
+}

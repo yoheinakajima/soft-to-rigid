@@ -9,3 +9,7 @@ C04-breadth: 1445 candidates, 786 to polish
 175 hex-in-squ/n13/rigid/B1/default/s4 ok 9.6s
 200 hex-in-squ/n14/pc/B1/default/s10 ok 10.0s
 225 squ-in-tri/n14/rigid/B1/default/s12 ok 4.4s
+250 cir-in-squ/n15/rigid/B1/default/s17 ok 0.8s
+275 squ-in-squ/n15/rigid/B1/default/s10 ok 4.7s
+300 tri-in-tri/n15/rigid/B1/default/s29 ok 2.2s
+325 squ-in-squ/n16/harden/B1/default/s4 ok 37.5s
