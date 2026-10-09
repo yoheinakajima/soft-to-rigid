@@ -88,6 +88,65 @@ def budget():
     return out
 
 
+def batches(workers=2):
+    """Three independent 32-run batches per path at budget 1 on C13's instances: seeds 1-32 (C07), 33-64 and 65-96 (C13).
+    Each batch's result is the tightened size of its lowest-legalised run (tightened here if not already cached)."""
+    from multiprocessing import Pool
+    from .polish import polish_row, polished_path
+    rows = {}
+    for cid in ('C07-breadth-best', 'C13-budget-clean'):
+        for f in glob.glob(os.path.join(ROOT, 'campaigns', cid, 'runs*.jsonl')):
+            for line in open(f):
+                if line.strip():
+                    r = json.loads(line)
+                    if 'error' not in r and r['budget'] == 1 and r['method'] in ('harden-best', 'rigid-best'):
+                        rows[(r['family'], r['n'], r['method'][:-5], r['seed'])] = r
+    insts = sorted({(f, n) for f, n, m, B in runs('C13-budget-clean')})
+    best = {}
+    for f, n in insts:
+        for m in ('harden', 'rigid'):
+            for b, (lo, hi) in enumerate(((1, 32), (33, 64), (65, 96))):
+                rs = [rows[(f, n, m, s)] for s in range(lo, hi + 1) if (f, n, m, s) in rows]
+                best[(f, n, m, b)] = min(rs, key=lambda r: r['L'])
+    todo = [r for r in best.values() if not os.path.exists(polished_path(r['id']))]
+    if todo:
+        with Pool(workers) as pool:
+            for _ in pool.imap_unordered(polish_row, todo):
+                pass
+    val = {k: min(r['L'], json.load(open(polished_path(r['id'])))['L']) for k, r in best.items()}
+    out = {'instances': len(insts), 'per_instance': {}}
+    for f, n in insts:
+        rec, tol = catalog_tol(f, n)
+        out['per_instance'][f'{f}/n{n}'] = {m: [val[(f, n, m, b)] <= rec + tol for b in range(3)] for m in ('harden', 'rigid')}
+    for m in ('harden', 'rigid'):
+        out[m + '_batches_reached'] = sum(sum(v[m]) for v in out['per_instance'].values())
+        out[m + '_instances_all3'] = sum(all(v[m]) for v in out['per_instance'].values())
+        out[m + '_instances_some_not_all'] = sum(any(v[m]) and not all(v[m]) for v in out['per_instance'].values())
+    return out
+
+
+def long_squares():
+    """C16: squares in a square, n = 17..30, budget 10, 16 runs per method."""
+    r = runs('C16-squares-long'); M = ['harden', 'grow', 'rigid', 'sa', 'pc']
+    ns = sorted({n for f, n, m, B in r})
+    low_ = {(n, m): min(r[('squ-in-squ', n, m, 10)].values()) for n in ns for m in M}
+    out = {'N': len(ns), 'lowest': {m: 0 for m in M}, 'sole': {m: 0 for m in M}, 'reached': {m: 0 for m in M}, 'sole_instances': {m: [] for m in M}}
+    for n in ns:
+        rec, tol = catalog_tol('squ-in-squ', n)
+        lo = min(low_[(n, m)] for m in M)
+        at = [m for m in M if low_[(n, m)] <= lo * (1 + 1e-9) + 1e-12]
+        for m in at:
+            out['lowest'][m] += 1
+        if len(at) == 1:
+            out['sole'][at[0]] += 1; out['sole_instances'][at[0]].append(n)
+        for m in M:
+            out['reached'][m] += low_[(n, m)] <= rec + tol
+    H = {('squ-in-squ', n): low_[(n, 'harden')] for n in ns}; R = {('squ-in-squ', n): low_[(n, 'rigid')] for n in ns}
+    out['harden_vs_rigid'] = pairwise(H, R, sorted(H))
+    out['below_catalogue'] = [n for n in ns if min(low_[(n, m)] for m in M) < catalog_tol('squ-in-squ', n)[0] * (1 - 1e-9)]
+    return out
+
+
 def done(cid):
     """a campaign counts once all its runs are in and tightened (scripts/queue.sh logs 'done <cid>')."""
     q = os.path.join(ROOT, 'campaigns', 'queue.log')
@@ -113,6 +172,24 @@ def main():
         for fam, v in r['families'].items():
             a = v['harden_vs_' + new]; b = v[new + '_vs_rigid']
             nums += [rf'\newcommand{{\{key}{MAC[fam]}}}{{{a["a_lower"]}--{a["b_lower"]}}}', rf'\newcommand{{\{key}R{MAC[fam]}}}{{{b["a_lower"]}--{b["b_lower"]}}}']
+    if done('C13-budget-clean'):
+        bt = batches(); res['batches'] = bt
+        nums += [rf'\newcommand{{\BatN}}{{{bt["instances"]}}}'] + [rf'\newcommand{{\Bat{k}{q}}}{{{bt[m + s]}}}' for m, k in (('harden', 'H'), ('rigid', 'R'))
+                 for s, q in (('_batches_reached', 'Reached'), ('_instances_all3', 'All'), ('_instances_some_not_all', 'Some'))]
+        for key, mac in (('squ-in-squ/n11', 'SqEleven'), ('squ-in-squ/n29', 'SqTwentyNine'), ('tri-in-tri/n29', 'TriTwentyNine')):
+            v = bt['per_instance'].get(key)
+            if v:
+                nums += [rf'\newcommand{{\Bat{mac}H}}{{{sum(v["harden"])}}}', rf'\newcommand{{\Bat{mac}R}}{{{sum(v["rigid"])}}}']
+    if done('C16-squares-long'):
+        ls = long_squares(); res['C16-squares-long'] = ls
+        nums.append(rf'\newcommand{{\LongN}}{{{ls["N"]}}}')
+        for m in ('harden', 'grow', 'rigid', 'sa', 'pc'):
+            k = m.capitalize()
+            nums += [rf'\newcommand{{\Long{k}Lowest}}{{{ls["lowest"][m]}}}', rf'\newcommand{{\Long{k}Sole}}{{{ls["sole"][m]}}}', rf'\newcommand{{\Long{k}Reached}}{{{ls["reached"][m]}}}']
+        hv = ls['harden_vs_rigid']
+        nums += [rf'\newcommand{{\LongHLower}}{{{hv["a_lower"]}}}', rf'\newcommand{{\LongRLower}}{{{hv["b_lower"]}}}', rf'\newcommand{{\LongP}}{{{fmt_p(hv["p_lower"])}}}',
+                 rf'\newcommand{{\LongHardenSoleNs}}{{{", ".join(str(n) for n in ls["sole_instances"]["harden"]) or "none"}}}',
+                 rf'\newcommand{{\LongBelow}}{{{len(ls["below_catalogue"])}}}']
     b = budget() if done('C13-budget-clean') else None
     if b:
         res['C13-budget-clean'] = b

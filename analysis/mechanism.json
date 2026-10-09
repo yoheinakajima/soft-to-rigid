@@ -1,0 +1,2650 @@
+{
+ "median": {
+  "squ-in-squ/harden": {
+   "move": 0.451,
+   "turn": 22.962,
+   "order": 0.527,
+   "tilt": 0.131
+  },
+  "squ-in-squ/rigid": {
+   "move": 0.361,
+   "turn": 5.358,
+   "order": 0.924,
+   "tilt": 0.111
+  },
+  "squ-in-cir/harden": {
+   "move": 0.515,
+   "turn": 21.324,
+   "order": 0.302,
+   "tilt": null
+  },
+  "squ-in-cir/rigid": {
+   "move": 0.433,
+   "turn": 21.582,
+   "order": 0.374,
+   "tilt": null
+  },
+  "squ-in-tri/harden": {
+   "move": 0.346,
+   "turn": 23.463,
+   "order": 0.268,
+   "tilt": 0.062
+  },
+  "squ-in-tri/rigid": {
+   "move": 0.173,
+   "turn": 9.249,
+   "order": 0.302,
+   "tilt": 0.033
+  },
+  "tri-in-tri/harden": {
+   "move": 0.53,
+   "turn": 29.761,
+   "order": 0.262,
+   "tilt": 0.0
+  },
+  "tri-in-tri/rigid": {
+   "move": 0.284,
+   "turn": 17.656,
+   "order": 0.254,
+   "tilt": 0.0
+  },
+  "tri-in-squ/harden": {
+   "move": 0.616,
+   "turn": 28.454,
+   "order": 0.121,
+   "tilt": 0.286
+  },
+  "tri-in-squ/rigid": {
+   "move": 0.447,
+   "turn": 25.746,
+   "order": 0.089,
+   "tilt": 0.214
+  },
+  "hex-in-squ/harden": {
+   "move": 0.129,
+   "turn": 15.04,
+   "order": 0.587,
+   "tilt": 0.071
+  },
+  "hex-in-squ/rigid": {
+   "move": 0.107,
+   "turn": 7.29,
+   "order": 0.694,
+   "tilt": 0.0
+  }
+ },
+ "harden_sole_wins": {
+  "squ-in-cir/n25": {
+   "move": 0.7474640173862481,
+   "turn": 20.914258855689468,
+   "order": 0.31014270641773933,
+   "tilt": null,
+   "sole": true,
+   "lowest": true
+  },
+  "squ-in-cir/n27": {
+   "move": 0.6162303465319747,
+   "turn": 20.549089324779228,
+   "order": 0.4376796974903507,
+   "tilt": null,
+   "sole": true,
+   "lowest": true
+  },
+  "squ-in-squ/n11": {
+   "move": 0.4924896972963896,
+   "turn": 25.083590532754556,
+   "order": 0.3903622232102502,
+   "tilt": 0.45454545454545453,
+   "sole": true,
+   "lowest": true
+  },
+  "squ-in-cir/n29": {
+   "move": 1.037950982873983,
+   "turn": 22.988926341790613,
+   "order": 0.2839827091568737,
+   "tilt": null,
+   "sole": true,
+   "lowest": true
+  },
+  "tri-in-squ/n22": {
+   "move": 0.7140245320796287,
+   "turn": 23.968037461429567,
+   "order": 0.11211931715360268,
+   "tilt": 0.045454545454545456,
+   "sole": true,
+   "lowest": true
+  },
+  "squ-in-squ/n17": {
+   "move": 0.7580062008556577,
+   "turn": 20.68096871269577,
+   "order": 0.02897720990312011,
+   "tilt": 0.47058823529411764,
+   "sole": true,
+   "lowest": true
+  },
+  "squ-in-squ/n29": {
+   "move": 0.48660699910526956,
+   "turn": 24.348248346673355,
+   "order": 0.3943490704673092,
+   "tilt": 0.4827586206896552,
+   "sole": true,
+   "lowest": true
+  },
+  "tri-in-squ/n23": {
+   "move": 0.6162845031405865,
+   "turn": 34.49308011627575,
+   "order": 0.16504959217606255,
+   "tilt": 0.391304347826087,
+   "sole": true,
+   "lowest": true
+  },
+  "squ-in-squ/n19": {
+   "move": 0.5236530765003294,
+   "turn": 25.218163172810875,
+   "order": 0.35612371603511955,
+   "tilt": 0.42105263157894735,
+   "sole": true,
+   "lowest": true
+  },
+  "squ-in-cir/n13": {
+   "move": 0.3301753681845203,
+   "turn": 18.8727566565131,
+   "order": 0.6630513517608511,
+   "tilt": null,
+   "sole": true,
+   "lowest": true
+  },
+  "squ-in-cir/n30": {
+   "move": 0.504941825237855,
+   "turn": 20.75655607481431,
+   "order": 0.12034579493839544,
+   "tilt": null,
+   "sole": true,
+   "lowest": true
+  },
+  "squ-in-squ/n28": {
+   "move": 0.42471838262359213,
+   "turn": 19.773516857118576,
+   "order": 0.1900647448815329,
+   "tilt": 0.39285714285714285,
+   "sole": true,
+   "lowest": true
+  },
+  "squ-in-cir/n23": {
+   "move": 0.500669177332974,
+   "turn": 28.925779888050453,
+   "order": 0.3449598911414492,
+   "tilt": null,
+   "sole": true,
+   "lowest": true
+  }
+ },
+ "per_instance": {
+  "hex-in-squ/n9": {
+   "rigid": {
+    "move": 0.05461808670139846,
+    "turn": 8.162723131730468,
+    "order": 0.37977993640880575,
+    "tilt": 1.0,
+    "sole": false,
+    "lowest": true
+   },
+   "harden": {
+    "move": 0.10955906580346499,
+    "turn": 14.558857574274217,
+    "order": 0.4277278170371894,
+    "tilt": 1.0,
+    "sole": false,
+    "lowest": true
+   }
+  },
+  "tri-in-squ/n17": {
+   "harden": {
+    "move": 0.591958520522786,
+    "turn": 22.06977574664489,
+    "order": 0.09347218699759337,
+    "tilt": 0.058823529411764705,
+    "sole": false,
+    "lowest": false
+   },
+   "rigid": {
+    "move": 0.5578257964850203,
+    "turn": 28.91672734005566,
+    "order": 0.14937961799501506,
+    "tilt": 0.058823529411764705,
+    "sole": false,
+    "lowest": false
+   }
+  },
+  "tri-in-squ/n18": {
+   "harden": {
+    "move": 0.6316050238713126,
+    "turn": 24.92508415238864,
+    "order": 0.08433898406463324,
+    "tilt": 0.2777777777777778,
+    "sole": false,
+    "lowest": false
+   },
+   "rigid": {
+    "move": 0.44744422706109604,
+    "turn": 20.172889036897743,
+    "order": 0.04277073324286059,
+    "tilt": 0.05555555555555555,
+    "sole": false,
+    "lowest": true
+   }
+  },
+  "squ-in-squ/n8": {
+   "harden": {
+    "move": 0.2286352096424423,
+    "turn": 21.48729709710625,
+    "order": 0.8987741957267456,
+    "tilt": 0.0,
+    "sole": false,
+    "lowest": true
+   },
+   "rigid": {
+    "move": 0.24419140613707588,
+    "turn": 0.9289078253558498,
+    "order": 0.9129599008420352,
+    "tilt": 0.0,
+    "sole": false,
+    "lowest": true
+   }
+  },
+  "tri-in-squ/n9": {
+   "harden": {
+    "move": 0.4791485052498535,
+    "turn": 38.43213021719182,
+    "order": 0.08172457974736926,
+    "tilt": 1.0,
+    "sole": false,
+    "lowest": false
+   },
+   "rigid": {
+    "move": 0.2475781095460564,
+    "turn": 13.754775622640688,
+    "order": 0.1353522645249483,
+    "tilt": 0.4444444444444444,
+    "sole": false,
+    "lowest": true
+   }
+  },
+  "squ-in-squ/n27": {
+   "harden": {
+    "move": 0.31024541991109644,
+    "turn": 22.179464767029295,
+    "order": 0.3478821827546237,
+    "tilt": 0.4444444444444444,
+    "sole": false,
+    "lowest": false
+   },
+   "rigid": {
+    "move": 0.6165038606961392,
+    "turn": 18.00136817489747,
+    "order": 0.6330230651599393,
+    "tilt": 0.25925925925925924,
+    "sole": true,
+    "lowest": true
+   }
+  },
+  "squ-in-tri/n9": {
+   "rigid": {
+    "move": 0.1071590362619511,
+    "turn": 0.8830617773237437,
+    "order": 0.04552187664412143,
+    "tilt": 0.0,
+    "sole": false,
+    "lowest": true
+   },
+   "harden": {
+    "move": 0.2559788178858064,
+    "turn": 28.07040546995387,
+    "order": 0.23970635822690864,
+    "tilt": 0.0,
+    "sole": false,
+    "lowest": true
+   }
+  },
+  "squ-in-squ/n13": {
+   "harden": {
+    "move": 0.48943769593321745,
+    "turn": 23.56479169437298,
+    "order": 0.5222357300052143,
+    "tilt": 0.07692307692307693,
+    "sole": false,
+    "lowest": true
+   },
+   "rigid": {
+    "move": 0.27112600882206345,
+    "turn": 5.358133992996333,
+    "order": 0.9406575717214631,
+    "tilt": 0.07692307692307693,
+    "sole": false,
+    "lowest": true
+   }
+  },
+  "tri-in-squ/n26": {
+   "harden": {
+    "move": 0.6910311079971306,
+    "turn": 41.30173193151142,
+    "order": 0.13368772662288433,
+    "tilt": 0.3076923076923077,
+    "sole": false,
+    "lowest": false
+   },
+   "rigid": {
+    "move": 0.3985071063662301,
+    "turn": 30.65316649006068,
+    "order": 0.09113098383842201,
+    "tilt": 0.0,
+    "sole": true,
+    "lowest": true
+   }
+  },
+  "hex-in-squ/n18": {
+   "harden": {
+    "move": 0.11497338131183099,
+    "turn": 15.117382297560258,
+    "order": 0.5869336553784602,
+    "tilt": 0.0,
+    "sole": false,
+    "lowest": true
+   },
+   "rigid": {
+    "move": 0.059579667367278925,
+    "turn": 2.1945063031842773,
+    "order": 0.7526127495078389,
+    "tilt": 0.0,
+    "sole": false,
+    "lowest": true
+   }
+  },
+  "tri-in-squ/n28": {
+   "harden": {
+    "move": 0.6663862321771407,
+    "turn": 26.209085717802257,
+    "order": 0.1648874216714013,
+    "tilt": 0.6428571428571429,
+    "sole": false,
+    "lowest": false
+   },
+   "rigid": {
+    "move": 0.36352586214858656,
+    "turn": 21.37436510954653,
+    "order": 0.10850585639503717,
+    "tilt": 0.21428571428571427,
+    "sole": false,
+    "lowest": false
+   }
+  },
+  "squ-in-squ/n14": {
+   "rigid": {
+    "move": 0.3946602854862736,
+    "turn": 0.45674424662926394,
+    "order": 0.9357959399194044,
+    "tilt": 0.0,
+    "sole": false,
+    "lowest": true
+   },
+   "harden": {
+    "move": 0.6142390569809462,
+    "turn": 18.765565491645493,
+    "order": 0.8543388722849621,
+    "tilt": 0.0,
+    "sole": false,
+    "lowest": true
+   }
+  },
+  "tri-in-tri/n18": {
+   "harden": {
+    "move": 0.45707049870326266,
+    "turn": 31.477571107315182,
+    "order": 0.2751272025546532,
+    "tilt": 0.0,
+    "sole": false,
+    "lowest": true
+   },
+   "rigid": {
+    "move": 0.46973700253403056,
+    "turn": 29.0017724021443,
+    "order": 0.3025362862587295,
+    "tilt": 0.0,
+    "sole": false,
+    "lowest": true
+   }
+  },
+  "squ-in-cir/n25": {
+   "rigid": {
+    "move": 0.488800611421018,
+    "turn": 28.520642615826187,
+    "order": 0.3907384541980164,
+    "tilt": null,
+    "sole": false,
+    "lowest": false
+   },
+   "harden": {
+    "move": 0.7474640173862481,
+    "turn": 20.914258855689468,
+    "order": 0.31014270641773933,
+    "tilt": null,
+    "sole": true,
+    "lowest": true
+   }
+  },
+  "squ-in-cir/n27": {
+   "rigid": {
+    "move": 0.512224876238806,
+    "turn": 21.640750180848755,
+    "order": 0.25400687025836055,
+    "tilt": null,
+    "sole": false,
+    "lowest": false
+   },
+   "harden": {
+    "move": 0.6162303465319747,
+    "turn": 20.549089324779228,
+    "order": 0.4376796974903507,
+    "tilt": null,
+    "sole": true,
+    "lowest": true
+   }
+  },
+  "squ-in-cir/n14": {
+   "harden": {
+    "move": 0.560354910930005,
+    "turn": 26.5409819615459,
+    "order": 0.07097445461989313,
+    "tilt": null,
+    "sole": false,
+    "lowest": false
+   },
+   "rigid": {
+    "move": 0.2718938672718724,
+    "turn": 18.74921030172389,
+    "order": 0.7688520555073752,
+    "tilt": null,
+    "sole": false,
+    "lowest": false
+   }
+  },
+  "tri-in-tri/n26": {
+   "harden": {
+    "move": 0.5442055240626382,
+    "turn": 33.247762242918526,
+    "order": 0.18812712397060563,
+    "tilt": 0.5769230769230769,
+    "sole": false,
+    "lowest": false
+   },
+   "rigid": {
+    "move": 0.4215932287661922,
+    "turn": 26.489251934254256,
+    "order": 0.2087581749598274,
+    "tilt": 0.07692307692307693,
+    "sole": true,
+    "lowest": true
+   }
+  },
+  "tri-in-squ/n8": {
+   "harden": {
+    "move": 0.2587742130959739,
+    "turn": 25.443553134222125,
+    "order": 0.20320919795296297,
+    "tilt": 0.0,
+    "sole": false,
+    "lowest": true
+   },
+   "rigid": {
+    "move": 0.39324882273511536,
+    "turn": 35.04417718888299,
+    "order": 0.09588423152884938,
+    "tilt": 0.0,
+    "sole": false,
+    "lowest": true
+   }
+  },
+  "squ-in-cir/n15": {
+   "rigid": {
+    "move": 0.45089414944703965,
+    "turn": 23.229874570294264,
+    "order": 0.48905975837408866,
+    "tilt": null,
+    "sole": false,
+    "lowest": false
+   },
+   "harden": {
+    "move": 0.29205021061172165,
+    "turn": 20.128701133622748,
+    "order": 0.2081068371616387,
+    "tilt": null,
+    "sole": false,
+    "lowest": true
+   }
+  },
+  "tri-in-tri/n25": {
+   "rigid": {
+    "move": 0.3204531177754687,
+    "turn": 27.41485090795567,
+    "order": 0.1930963651246223,
+    "tilt": 0.0,
+    "sole": false,
+    "lowest": true
+   },
+   "harden": {
+    "move": 0.7452443961191139,
+    "turn": 28.79987653063216,
+    "order": 0.22184255797666783,
+    "tilt": 0.4,
+    "sole": false,
+    "lowest": false
+   }
+  },
+  "squ-in-squ/n6": {
+   "harden": {
+    "move": 0.6572450094293926,
+    "turn": 23.677445807256316,
+    "order": 0.5313382198536762,
+    "tilt": 0.16666666666666666,
+    "sole": false,
+    "lowest": true
+   },
+   "rigid": {
+    "move": 0.24698998496658567,
+    "turn": 9.52917290963423,
+    "order": 0.875364815120994,
+    "tilt": 0.16666666666666666,
+    "sole": false,
+    "lowest": true
+   }
+  },
+  "tri-in-squ/n13": {
+   "harden": {
+    "move": 0.48478504278979373,
+    "turn": 34.030897511301255,
+    "order": 0.07879792136835118,
+    "tilt": 0.0,
+    "sole": false,
+    "lowest": true
+   },
+   "rigid": {
+    "move": 0.5885135246496616,
+    "turn": 27.60281654336037,
+    "order": 0.08954689362821375,
+    "tilt": 0.0,
+    "sole": false,
+    "lowest": true
+   }
+  },
+  "squ-in-squ/n26": {
+   "rigid": {
+    "move": 0.40204608055127744,
+    "turn": 13.920662643268901,
+    "order": 0.939262828193545,
+    "tilt": 0.3076923076923077,
+    "sole": false,
+    "lowest": true
+   },
+   "harden": {
+    "move": 0.429301554207634,
+    "turn": 22.359083421143946,
+    "order": 0.14948963294792578,
+    "tilt": 0.34615384615384615,
+    "sole": false,
+    "lowest": true
+   }
+  },
+  "squ-in-squ/n11": {
+   "rigid": {
+    "move": 0.6215866438113679,
+    "turn": 12.069057253769415,
+    "order": 0.7390928978064718,
+    "tilt": 0.36363636363636365,
+    "sole": false,
+    "lowest": false
+   },
+   "harden": {
+    "move": 0.4924896972963896,
+    "turn": 25.083590532754556,
+    "order": 0.3903622232102502,
+    "tilt": 0.45454545454545453,
+    "sole": true,
+    "lowest": true
+   }
+  },
+  "squ-in-tri/n15": {
+   "harden": {
+    "move": 0.24281162889428298,
+    "turn": 22.574933130627826,
+    "order": 0.2312940689802886,
+    "tilt": 0.0,
+    "sole": false,
+    "lowest": true
+   },
+   "rigid": {
+    "move": 0.19254216470595234,
+    "turn": 20.28230994515773,
+    "order": 0.2502789186997531,
+    "tilt": 0.0,
+    "sole": false,
+    "lowest": true
+   }
+  },
+  "tri-in-tri/n22": {
+   "rigid": {
+    "move": 0.33706896814950804,
+    "turn": 20.73035606861749,
+    "order": 0.2734256348591585,
+    "tilt": 0.18181818181818182,
+    "sole": true,
+    "lowest": true
+   },
+   "harden": {
+    "move": 0.668203906150634,
+    "turn": 25.697055070817566,
+    "order": 0.2871362310416286,
+    "tilt": 0.045454545454545456,
+    "sole": false,
+    "lowest": false
+   }
+  },
+  "squ-in-tri/n21": {
+   "rigid": {
+    "move": 0.1655143209242196,
+    "turn": 9.169001831822056,
+    "order": 0.25018765857689573,
+    "tilt": 0.0,
+    "sole": false,
+    "lowest": true
+   },
+   "harden": {
+    "move": 0.3003595796227059,
+    "turn": 19.32338083076215,
+    "order": 0.15382579270307076,
+    "tilt": 0.0,
+    "sole": false,
+    "lowest": true
+   }
+  },
+  "squ-in-tri/n23": {
+   "harden": {
+    "move": 0.5816629492613442,
+    "turn": 26.42921517538035,
+    "order": 0.2873078272946995,
+    "tilt": 0.13043478260869565,
+    "sole": false,
+    "lowest": true
+   },
+   "rigid": {
+    "move": 0.24098986378745482,
+    "turn": 11.369475552074245,
+    "order": 0.15013360770505396,
+    "tilt": 0.21739130434782608,
+    "sole": false,
+    "lowest": true
+   }
+  },
+  "squ-in-tri/n20": {
+   "harden": {
+    "move": 0.28649629276702915,
+    "turn": 20.439727952369445,
+    "order": 0.3060262783540028,
+    "tilt": 0.0,
+    "sole": false,
+    "lowest": true
+   },
+   "rigid": {
+    "move": 0.15638622249160763,
+    "turn": 10.229323041283122,
+    "order": 0.19543922732994376,
+    "tilt": 0.0,
+    "sole": false,
+    "lowest": true
+   }
+  },
+  "squ-in-cir/n21": {
+   "harden": {
+    "move": 0.7889193933247037,
+    "turn": 18.759516854904682,
+    "order": 0.09391841637848808,
+    "tilt": null,
+    "sole": false,
+    "lowest": false
+   },
+   "rigid": {
+    "move": 0.42651389898061215,
+    "turn": 14.839101307254811,
+    "order": 0.9067115058979559,
+    "tilt": null,
+    "sole": false,
+    "lowest": true
+   }
+  },
+  "squ-in-cir/n22": {
+   "harden": {
+    "move": 0.8190041110367609,
+    "turn": 21.95465313634252,
+    "order": 0.4454302287374245,
+    "tilt": null,
+    "sole": false,
+    "lowest": false
+   },
+   "rigid": {
+    "move": 0.56312632968176,
+    "turn": 20.85096633993137,
+    "order": 0.375341521229982,
+    "tilt": null,
+    "sole": false,
+    "lowest": false
+   }
+  },
+  "squ-in-cir/n19": {
+   "rigid": {
+    "move": 0.24428601156366628,
+    "turn": 24.881401838202287,
+    "order": 0.7083008400101993,
+    "tilt": null,
+    "sole": false,
+    "lowest": false
+   },
+   "harden": {
+    "move": 0.39310301513741003,
+    "turn": 23.512591514118768,
+    "order": 0.15873668648766348,
+    "tilt": null,
+    "sole": false,
+    "lowest": false
+   }
+  },
+  "hex-in-squ/n15": {
+   "harden": {
+    "move": 0.12415616788298275,
+    "turn": 14.103360038277179,
+    "order": 0.7806911060976811,
+    "tilt": 0.0,
+    "sole": false,
+    "lowest": true
+   },
+   "rigid": {
+    "move": 0.051353636691823454,
+    "turn": 3.7226603659367035,
+    "order": 0.8660144973842671,
+    "tilt": 0.0,
+    "sole": false,
+    "lowest": true
+   }
+  },
+  "hex-in-squ/n10": {
+   "harden": {
+    "move": 0.28009109320489095,
+    "turn": 11.113662352152575,
+    "order": 0.3727689300879279,
+    "tilt": 0.7,
+    "sole": false,
+    "lowest": false
+   },
+   "rigid": {
+    "move": 0.491752371917316,
+    "turn": 13.556782451810376,
+    "order": 0.6826554738817784,
+    "tilt": 0.4,
+    "sole": false,
+    "lowest": false
+   }
+  },
+  "squ-in-squ/n7": {
+   "harden": {
+    "move": 0.5255530534119423,
+    "turn": 26.41799483201099,
+    "order": 0.9513158885121875,
+    "tilt": 0.0,
+    "sole": false,
+    "lowest": true
+   },
+   "rigid": {
+    "move": 0.45674792350922316,
+    "turn": 0.6859123318851772,
+    "order": 0.9401889165305176,
+    "tilt": 0.0,
+    "sole": false,
+    "lowest": true
+   }
+  },
+  "hex-in-squ/n12": {
+   "harden": {
+    "move": 0.09880116962966763,
+    "turn": 15.040118737834147,
+    "order": 0.599850706349653,
+    "tilt": 0.0,
+    "sole": false,
+    "lowest": true
+   },
+   "rigid": {
+    "move": 0.06578078186624549,
+    "turn": 2.8270341776163757,
+    "order": 0.6865836604639802,
+    "tilt": 0.0,
+    "sole": false,
+    "lowest": true
+   }
+  },
+  "hex-in-squ/n19": {
+   "harden": {
+    "move": 0.12718656759553604,
+    "turn": 16.294706751165155,
+    "order": 0.6430821498334542,
+    "tilt": 0.10526315789473684,
+    "sole": false,
+    "lowest": true
+   },
+   "rigid": {
+    "move": 0.19890304456301194,
+    "turn": 7.289832494469749,
+    "order": 0.6197295733563329,
+    "tilt": 0.10526315789473684,
+    "sole": false,
+    "lowest": true
+   }
+  },
+  "hex-in-squ/n14": {
+   "rigid": {
+    "move": 0.10720439990715416,
+    "turn": 3.813942834509981,
+    "order": 0.82719141022794,
+    "tilt": 0.21428571428571427,
+    "sole": false,
+    "lowest": true
+   },
+   "harden": {
+    "move": 0.1291571711563371,
+    "turn": 19.237806329603377,
+    "order": 0.7189647228701793,
+    "tilt": 0.07142857142857142,
+    "sole": false,
+    "lowest": true
+   }
+  },
+  "squ-in-cir/n20": {
+   "harden": {
+    "move": 0.5409325032734098,
+    "turn": 22.684163839304613,
+    "order": 0.3146445714519637,
+    "tilt": null,
+    "sole": false,
+    "lowest": false
+   },
+   "rigid": {
+    "move": 0.5451342506520249,
+    "turn": 23.34221638996986,
+    "order": 0.44029118529422734,
+    "tilt": null,
+    "sole": false,
+    "lowest": false
+   }
+  },
+  "tri-in-tri/n16": {
+   "rigid": {
+    "move": 0.2451937451149279,
+    "turn": 13.959400481118594,
+    "order": 0.26552730652803697,
+    "tilt": 0.0,
+    "sole": false,
+    "lowest": true
+   },
+   "harden": {
+    "move": 0.5945961812808763,
+    "turn": 37.6664281678975,
+    "order": 0.286898072826764,
+    "tilt": 0.0,
+    "sole": false,
+    "lowest": true
+   }
+  },
+  "squ-in-tri/n17": {
+   "harden": {
+    "move": 0.3460796815446253,
+    "turn": 23.776326082240722,
+    "order": 0.304912215759872,
+    "tilt": 0.23529411764705882,
+    "sole": false,
+    "lowest": true
+   },
+   "rigid": {
+    "move": 0.1459625081878745,
+    "turn": 6.27392499653246,
+    "order": 0.31129558522847,
+    "tilt": 0.29411764705882354,
+    "sole": false,
+    "lowest": true
+   }
+  },
+  "squ-in-tri/n6": {
+   "rigid": {
+    "move": 0.07975519280689015,
+    "turn": 1.1505850089795566,
+    "order": 0.09699638769285863,
+    "tilt": 0.0,
+    "sole": false,
+    "lowest": true
+   },
+   "harden": {
+    "move": 0.22150580248138177,
+    "turn": 18.673544243397213,
+    "order": 0.23593884171189095,
+    "tilt": 0.0,
+    "sole": false,
+    "lowest": true
+   }
+  },
+  "hex-in-squ/n20": {
+   "rigid": {
+    "move": 0.07105233447420792,
+    "turn": 5.039736765970722,
+    "order": 0.7459372250537089,
+    "tilt": 0.0,
+    "sole": false,
+    "lowest": true
+   },
+   "harden": {
+    "move": 0.0660342041629664,
+    "turn": 17.3396801717217,
+    "order": 0.7076522867978071,
+    "tilt": 0.0,
+    "sole": false,
+    "lowest": true
+   }
+  },
+  "tri-in-tri/n14": {
+   "harden": {
+    "move": 0.4506088846828181,
+    "turn": 23.5067411370317,
+    "order": 0.356041128347824,
+    "tilt": 0.0,
+    "sole": false,
+    "lowest": true
+   },
+   "rigid": {
+    "move": 0.13565046740940742,
+    "turn": 10.843615484690236,
+    "order": 0.24410307246362345,
+    "tilt": 0.0,
+    "sole": false,
+    "lowest": true
+   }
+  },
+  "squ-in-cir/n16": {
+   "rigid": {
+    "move": 0.5948142477126819,
+    "turn": 20.895067744874066,
+    "order": 0.2038004946999575,
+    "tilt": null,
+    "sole": false,
+    "lowest": false
+   },
+   "harden": {
+    "move": 0.4847911368510352,
+    "turn": 21.733974432847052,
+    "order": 0.3478826759646292,
+    "tilt": null,
+    "sole": false,
+    "lowest": false
+   }
+  },
+  "squ-in-cir/n29": {
+   "harden": {
+    "move": 1.037950982873983,
+    "turn": 22.988926341790613,
+    "order": 0.2839827091568737,
+    "tilt": null,
+    "sole": true,
+    "lowest": true
+   },
+   "rigid": {
+    "move": 0.5662297381852996,
+    "turn": 21.523405131085195,
+    "order": 0.16694991603244377,
+    "tilt": null,
+    "sole": false,
+    "lowest": false
+   }
+  },
+  "squ-in-tri/n27": {
+   "rigid": {
+    "move": 0.27650313369862534,
+    "turn": 10.078177768026967,
+    "order": 0.34091306124325294,
+    "tilt": 0.0,
+    "sole": false,
+    "lowest": true
+   },
+   "harden": {
+    "move": 0.3317189607467734,
+    "turn": 18.186655707789715,
+    "order": 0.10880277844316143,
+    "tilt": 0.0,
+    "sole": false,
+    "lowest": true
+   }
+  },
+  "squ-in-squ/n23": {
+   "rigid": {
+    "move": 0.26497810170590735,
+    "turn": 1.4537906759298154,
+    "order": 0.9378801715375251,
+    "tilt": 0.0,
+    "sole": false,
+    "lowest": true
+   },
+   "harden": {
+    "move": 0.32614157212669626,
+    "turn": 22.249160143762808,
+    "order": 0.6271332852647543,
+    "tilt": 0.0,
+    "sole": false,
+    "lowest": true
+   }
+  },
+  "hex-in-squ/n8": {
+   "harden": {
+    "move": 0.05800729933884141,
+    "turn": 20.220274019573335,
+    "order": 0.7486478399710375,
+    "tilt": 0.0,
+    "sole": false,
+    "lowest": true
+   },
+   "rigid": {
+    "move": 0.043812881147420844,
+    "turn": 0.48483045760451104,
+    "order": 0.9458749559986012,
+    "tilt": 0.0,
+    "sole": false,
+    "lowest": true
+   }
+  },
+  "tri-in-squ/n22": {
+   "rigid": {
+    "move": 0.42009346142239845,
+    "turn": 15.286996579513257,
+    "order": 0.058122365052497384,
+    "tilt": 0.5909090909090909,
+    "sole": false,
+    "lowest": false
+   },
+   "harden": {
+    "move": 0.7140245320796287,
+    "turn": 23.968037461429567,
+    "order": 0.11211931715360268,
+    "tilt": 0.045454545454545456,
+    "sole": true,
+    "lowest": true
+   }
+  },
+  "squ-in-squ/n17": {
+   "harden": {
+    "move": 0.7580062008556577,
+    "turn": 20.68096871269577,
+    "order": 0.02897720990312011,
+    "tilt": 0.47058823529411764,
+    "sole": true,
+    "lowest": true
+   },
+   "rigid": {
+    "move": 0.37456019700170357,
+    "turn": 6.760889602593738,
+    "order": 0.5646704771743161,
+    "tilt": 0.11764705882352941,
+    "sole": false,
+    "lowest": false
+   }
+  },
+  "squ-in-squ/n18": {
+   "rigid": {
+    "move": 0.37589058761692323,
+    "turn": 9.999351688052656,
+    "order": 0.7746805788343669,
+    "tilt": 0.3333333333333333,
+    "sole": false,
+    "lowest": true
+   },
+   "harden": {
+    "move": 0.5432934911824251,
+    "turn": 23.57071845798488,
+    "order": 0.19077329443056174,
+    "tilt": 0.5,
+    "sole": false,
+    "lowest": true
+   }
+  },
+  "squ-in-squ/n24": {
+   "rigid": {
+    "move": 0.16822699390864831,
+    "turn": 0.6412264965859994,
+    "order": 0.922472915599565,
+    "tilt": 0.0,
+    "sole": false,
+    "lowest": true
+   },
+   "harden": {
+    "move": 0.22886308050409074,
+    "turn": 24.838800082288284,
+    "order": 0.7874337917250747,
+    "tilt": 0.0,
+    "sole": false,
+    "lowest": true
+   }
+  },
+  "squ-in-squ/n29": {
+   "harden": {
+    "move": 0.48660699910526956,
+    "turn": 24.348248346673355,
+    "order": 0.3943490704673092,
+    "tilt": 0.4827586206896552,
+    "sole": true,
+    "lowest": true
+   },
+   "rigid": {
+    "move": 0.4396783500867009,
+    "turn": 5.030788784538296,
+    "order": 0.8780450798130722,
+    "tilt": 0.27586206896551724,
+    "sole": false,
+    "lowest": false
+   }
+  },
+  "squ-in-tri/n11": {
+   "harden": {
+    "move": 0.47952391656488536,
+    "turn": 23.636554266737893,
+    "order": 0.3394034110433644,
+    "tilt": 0.09090909090909091,
+    "sole": false,
+    "lowest": true
+   },
+   "rigid": {
+    "move": 0.16406644386143168,
+    "turn": 5.357174517123166,
+    "order": 0.46164381813109034,
+    "tilt": 0.2727272727272727,
+    "sole": false,
+    "lowest": true
+   }
+  },
+  "squ-in-cir/n17": {
+   "rigid": {
+    "move": 0.35751485158316004,
+    "turn": 21.388502112283657,
+    "order": 0.19497139653864543,
+    "tilt": null,
+    "sole": false,
+    "lowest": false
+   },
+   "harden": {
+    "move": 0.4427049045935335,
+    "turn": 27.10815751827515,
+    "order": 0.15945850709035977,
+    "tilt": null,
+    "sole": false,
+    "lowest": false
+   }
+  },
+  "hex-in-squ/n17": {
+   "rigid": {
+    "move": 0.15171148874081544,
+    "turn": 5.979878664980271,
+    "order": 0.6938424960871885,
+    "tilt": 0.0,
+    "sole": true,
+    "lowest": true
+   },
+   "harden": {
+    "move": 0.1577562808999023,
+    "turn": 14.239283318589584,
+    "order": 0.33673064556530286,
+    "tilt": 0.11764705882352941,
+    "sole": false,
+    "lowest": false
+   }
+  },
+  "squ-in-squ/n12": {
+   "harden": {
+    "move": 0.511617419898989,
+    "turn": 22.2416564508369,
+    "order": 0.39982104432938503,
+    "tilt": 0.4166666666666667,
+    "sole": false,
+    "lowest": true
+   },
+   "rigid": {
+    "move": 0.39484344661367626,
+    "turn": 14.143800331533836,
+    "order": 0.9059218498345271,
+    "tilt": 0.3333333333333333,
+    "sole": false,
+    "lowest": true
+   }
+  },
+  "squ-in-cir/n24": {
+   "harden": {
+    "move": 0.4316434317290225,
+    "turn": 22.18273339007754,
+    "order": 0.024716418916563558,
+    "tilt": null,
+    "sole": false,
+    "lowest": false
+   },
+   "rigid": {
+    "move": 0.5050873389666345,
+    "turn": 19.17565989529928,
+    "order": 0.33980300438485284,
+    "tilt": null,
+    "sole": true,
+    "lowest": true
+   }
+  },
+  "squ-in-tri/n12": {
+   "harden": {
+    "move": 0.4639845799671131,
+    "turn": 28.512324821551815,
+    "order": 0.21745629705138592,
+    "tilt": 0.16666666666666666,
+    "sole": false,
+    "lowest": true
+   },
+   "rigid": {
+    "move": 0.16560212604968758,
+    "turn": 5.923906136823443,
+    "order": 0.37298448232450987,
+    "tilt": 0.16666666666666666,
+    "sole": false,
+    "lowest": true
+   }
+  },
+  "tri-in-squ/n10": {
+   "harden": {
+    "move": 0.4973506809445835,
+    "turn": 22.287024559878606,
+    "order": 0.09293128600353714,
+    "tilt": 0.6,
+    "sole": false,
+    "lowest": true
+   },
+   "rigid": {
+    "move": 0.4527003419415115,
+    "turn": 27.875514587484854,
+    "order": 0.08845519557082147,
+    "tilt": 0.6,
+    "sole": false,
+    "lowest": true
+   }
+  },
+  "tri-in-squ/n23": {
+   "rigid": {
+    "move": 0.32118875417765314,
+    "turn": 23.19577386562244,
+    "order": 0.14288566438364275,
+    "tilt": 0.30434782608695654,
+    "sole": false,
+    "lowest": false
+   },
+   "harden": {
+    "move": 0.6162845031405865,
+    "turn": 34.49308011627575,
+    "order": 0.16504959217606255,
+    "tilt": 0.391304347826087,
+    "sole": true,
+    "lowest": true
+   }
+  },
+  "squ-in-cir/n7": {
+   "harden": {
+    "move": 0.5613003234715116,
+    "turn": 19.91855868893358,
+    "order": 0.44320150182971096,
+    "tilt": null,
+    "sole": false,
+    "lowest": true
+   },
+   "rigid": {
+    "move": 0.2784016403849299,
+    "turn": 17.28034696996,
+    "order": 0.41795824856422253,
+    "tilt": null,
+    "sole": false,
+    "lowest": true
+   }
+  },
+  "squ-in-tri/n19": {
+   "harden": {
+    "move": 0.4538582675444722,
+    "turn": 17.613884542069215,
+    "order": 0.40941486046835324,
+    "tilt": 0.05263157894736842,
+    "sole": false,
+    "lowest": true
+   },
+   "rigid": {
+    "move": 0.20749414203535663,
+    "turn": 6.428899094899468,
+    "order": 0.19157977771236,
+    "tilt": 0.05263157894736842,
+    "sole": false,
+    "lowest": true
+   }
+  },
+  "squ-in-tri/n26": {
+   "harden": {
+    "move": 0.425656651302435,
+    "turn": 24.059526808212848,
+    "order": 0.26814487768792744,
+    "tilt": 0.038461538461538464,
+    "sole": false,
+    "lowest": true
+   },
+   "rigid": {
+    "move": 0.3535763879286053,
+    "turn": 14.39247944530353,
+    "order": 0.6208889473221813,
+    "tilt": 0.0,
+    "sole": false,
+    "lowest": true
+   }
+  },
+  "squ-in-tri/n24": {
+   "harden": {
+    "move": 0.39039794047520854,
+    "turn": 24.662915676618862,
+    "order": 0.3985438753091381,
+    "tilt": 0.25,
+    "sole": false,
+    "lowest": false
+   },
+   "rigid": {
+    "move": 0.17258771720677682,
+    "turn": 5.989115162544526,
+    "order": 0.2175331288491539,
+    "tilt": 0.16666666666666666,
+    "sole": false,
+    "lowest": true
+   }
+  },
+  "squ-in-squ/n15": {
+   "harden": {
+    "move": 0.31025149486546827,
+    "turn": 27.010604013210905,
+    "order": 0.8791104081909927,
+    "tilt": 0.0,
+    "sole": false,
+    "lowest": true
+   },
+   "rigid": {
+    "move": 0.17367530944623275,
+    "turn": 0.5829030941897385,
+    "order": 0.925139016521241,
+    "tilt": 0.0,
+    "sole": false,
+    "lowest": true
+   }
+  },
+  "squ-in-squ/n21": {
+   "harden": {
+    "move": 0.4730577346688578,
+    "turn": 19.120995874334884,
+    "order": 0.6511675851341105,
+    "tilt": 0.09523809523809523,
+    "sole": false,
+    "lowest": true
+   },
+   "rigid": {
+    "move": 0.33562665109594964,
+    "turn": 5.358226688925854,
+    "order": 0.9503574718518419,
+    "tilt": 0.14285714285714285,
+    "sole": false,
+    "lowest": true
+   }
+  },
+  "squ-in-tri/n30": {
+   "rigid": {
+    "move": 0.30300291008802277,
+    "turn": 6.562984434851959,
+    "order": 0.48569211747212737,
+    "tilt": 0.03333333333333333,
+    "sole": false,
+    "lowest": true
+   },
+   "harden": {
+    "move": 0.2962697197290671,
+    "turn": 22.51105263047173,
+    "order": 0.30294647297766886,
+    "tilt": 0.06666666666666667,
+    "sole": false,
+    "lowest": true
+   }
+  },
+  "tri-in-squ/n19": {
+   "rigid": {
+    "move": 0.5091633860600419,
+    "turn": 28.82185845409409,
+    "order": 0.02837297101303403,
+    "tilt": 0.15789473684210525,
+    "sole": false,
+    "lowest": true
+   },
+   "harden": {
+    "move": 0.607039441678616,
+    "turn": 30.43715018899735,
+    "order": 0.052893828778666684,
+    "tilt": 0.10526315789473684,
+    "sole": false,
+    "lowest": false
+   }
+  },
+  "hex-in-squ/n16": {
+   "rigid": {
+    "move": 0.09629560965740354,
+    "turn": 7.866701758014967,
+    "order": 0.4820909029187853,
+    "tilt": 1.0,
+    "sole": false,
+    "lowest": true
+   },
+   "harden": {
+    "move": 0.1360624236013086,
+    "turn": 14.233258235603131,
+    "order": 0.19297148868853867,
+    "tilt": 1.0,
+    "sole": false,
+    "lowest": true
+   }
+  },
+  "squ-in-tri/n25": {
+   "harden": {
+    "move": 0.33725534123369644,
+    "turn": 21.798514672063266,
+    "order": 0.11011350766002347,
+    "tilt": 0.08,
+    "sole": false,
+    "lowest": true
+   },
+   "rigid": {
+    "move": 0.23786590300112312,
+    "turn": 10.384983046671177,
+    "order": 0.24198874257601447,
+    "tilt": 0.04,
+    "sole": false,
+    "lowest": true
+   }
+  },
+  "squ-in-tri/n8": {
+   "harden": {
+    "move": 0.5367584110985192,
+    "turn": 27.096606526224456,
+    "order": 0.6831812234088123,
+    "tilt": 0.125,
+    "sole": false,
+    "lowest": true
+   },
+   "rigid": {
+    "move": 0.18088388559164353,
+    "turn": 9.248944900505595,
+    "order": 0.2609272170383714,
+    "tilt": 0.125,
+    "sole": false,
+    "lowest": true
+   }
+  },
+  "tri-in-tri/n23": {
+   "harden": {
+    "move": 0.5708842492283495,
+    "turn": 30.74682277968576,
+    "order": 0.15641143861606852,
+    "tilt": 0.0,
+    "sole": false,
+    "lowest": true
+   },
+   "rigid": {
+    "move": 0.36494343004295293,
+    "turn": 25.844758572623046,
+    "order": 0.27553754722170015,
+    "tilt": 0.0,
+    "sole": false,
+    "lowest": true
+   }
+  },
+  "tri-in-tri/n29": {
+   "harden": {
+    "move": 0.5889589466471165,
+    "turn": 29.14414136870281,
+    "order": 0.1919659809789643,
+    "tilt": 0.0,
+    "sole": false,
+    "lowest": true
+   },
+   "rigid": {
+    "move": 0.296217201611754,
+    "turn": 15.421831204167848,
+    "order": 0.13002114045883995,
+    "tilt": 0.0,
+    "sole": false,
+    "lowest": true
+   }
+  },
+  "hex-in-squ/n6": {
+   "harden": {
+    "move": 0.16556521397355475,
+    "turn": 17.202149637844332,
+    "order": 0.8091596252867487,
+    "tilt": 0.0,
+    "sole": false,
+    "lowest": true
+   },
+   "rigid": {
+    "move": 0.6214486845747809,
+    "turn": 29.567276558576427,
+    "order": 0.9123364462287157,
+    "tilt": 0.0,
+    "sole": false,
+    "lowest": true
+   }
+  },
+  "squ-in-squ/n19": {
+   "harden": {
+    "move": 0.5236530765003294,
+    "turn": 25.218163172810875,
+    "order": 0.35612371603511955,
+    "tilt": 0.42105263157894735,
+    "sole": true,
+    "lowest": true
+   },
+   "rigid": {
+    "move": 0.34812755543300217,
+    "turn": 6.535852044392473,
+    "order": 0.9290088803928052,
+    "tilt": 0.10526315789473684,
+    "sole": false,
+    "lowest": false
+   }
+  },
+  "tri-in-squ/n27": {
+   "rigid": {
+    "move": 0.4570603555447518,
+    "turn": 30.537133855204065,
+    "order": 0.06787785756194116,
+    "tilt": 0.1111111111111111,
+    "sole": true,
+    "lowest": true
+   },
+   "harden": {
+    "move": 0.8356178231601986,
+    "turn": 26.240535046273106,
+    "order": 0.08674572930948107,
+    "tilt": 0.3333333333333333,
+    "sole": false,
+    "lowest": false
+   }
+  },
+  "squ-in-cir/n26": {
+   "harden": {
+    "move": 0.5242437218486062,
+    "turn": 20.006363995671883,
+    "order": 0.3649743576305734,
+    "tilt": null,
+    "sole": false,
+    "lowest": false
+   },
+   "rigid": {
+    "move": 0.3224209326308764,
+    "turn": 25.610748421834273,
+    "order": 0.206669957721036,
+    "tilt": null,
+    "sole": true,
+    "lowest": true
+   }
+  },
+  "squ-in-tri/n14": {
+   "harden": {
+    "move": 0.4031026284084486,
+    "turn": 24.774680028660384,
+    "order": 0.19944990678165275,
+    "tilt": 0.0,
+    "sole": false,
+    "lowest": true
+   },
+   "rigid": {
+    "move": 0.10023956003615153,
+    "turn": 0.6907332019221359,
+    "order": 0.30193326824101324,
+    "tilt": 0.0,
+    "sole": false,
+    "lowest": true
+   }
+  },
+  "tri-in-squ/n21": {
+   "rigid": {
+    "move": 0.5056024857261943,
+    "turn": 22.16603325891126,
+    "order": 0.035831630668079886,
+    "tilt": 0.2857142857142857,
+    "sole": false,
+    "lowest": true
+   },
+   "harden": {
+    "move": 0.5285740671198987,
+    "turn": 28.4544082039661,
+    "order": 0.12133100104236835,
+    "tilt": 0.2857142857142857,
+    "sole": false,
+    "lowest": true
+   }
+  },
+  "tri-in-squ/n30": {
+   "harden": {
+    "move": 0.6283675376071732,
+    "turn": 27.371409176301555,
+    "order": 0.05522630633985152,
+    "tilt": 0.6333333333333333,
+    "sole": false,
+    "lowest": false
+   },
+   "rigid": {
+    "move": 0.6420347373860561,
+    "turn": 29.022194121473333,
+    "order": 0.04737059216186886,
+    "tilt": 0.4666666666666667,
+    "sole": true,
+    "lowest": true
+   }
+  },
+  "squ-in-squ/n16": {
+   "harden": {
+    "move": 0.04356888059785626,
+    "turn": 20.87423225631629,
+    "order": 0.8592040936311395,
+    "tilt": 0.0,
+    "sole": false,
+    "lowest": true
+   },
+   "rigid": {
+    "move": 0.029274073347882124,
+    "turn": 0.4730482796048887,
+    "order": 0.9473890429782796,
+    "tilt": 0.0,
+    "sole": false,
+    "lowest": true
+   }
+  },
+  "tri-in-squ/n7": {
+   "rigid": {
+    "move": 0.4083478728779626,
+    "turn": 21.878802662638435,
+    "order": 0.12542105443372745,
+    "tilt": 0.0,
+    "sole": false,
+    "lowest": true
+   },
+   "harden": {
+    "move": 0.46017596263505084,
+    "turn": 25.97958354096042,
+    "order": 0.1636299919263365,
+    "tilt": 0.0,
+    "sole": false,
+    "lowest": true
+   }
+  },
+  "squ-in-tri/n7": {
+   "harden": {
+    "move": 0.37119364207474614,
+    "turn": 19.776047554508313,
+    "order": 0.4569603924504033,
+    "tilt": 0.14285714285714285,
+    "sole": false,
+    "lowest": true
+   },
+   "rigid": {
+    "move": 0.2251422006518062,
+    "turn": 10.635673568714246,
+    "order": 0.5337234747540889,
+    "tilt": 0.42857142857142855,
+    "sole": false,
+    "lowest": true
+   }
+  },
+  "squ-in-tri/n13": {
+   "rigid": {
+    "move": 0.20343927205413098,
+    "turn": 10.900301683981173,
+    "order": 0.10191314848363228,
+    "tilt": 0.07692307692307693,
+    "sole": false,
+    "lowest": true
+   },
+   "harden": {
+    "move": 0.3198851970671454,
+    "turn": 23.46258933227649,
+    "order": 0.14805245642829656,
+    "tilt": 0.07692307692307693,
+    "sole": false,
+    "lowest": true
+   }
+  },
+  "hex-in-squ/n11": {
+   "rigid": {
+    "move": 0.21514998426475343,
+    "turn": 10.841860320543804,
+    "order": 0.20050290547751734,
+    "tilt": 0.09090909090909091,
+    "sole": false,
+    "lowest": false
+   },
+   "harden": {
+    "move": 0.4088176700583485,
+    "turn": 14.360316543169928,
+    "order": 0.2550986423489388,
+    "tilt": 0.2727272727272727,
+    "sole": false,
+    "lowest": false
+   }
+  },
+  "tri-in-squ/n11": {
+   "rigid": {
+    "move": 0.31332806187102,
+    "turn": 24.496601115856855,
+    "order": 0.10486426947283572,
+    "tilt": 0.36363636363636365,
+    "sole": false,
+    "lowest": false
+   },
+   "harden": {
+    "move": 0.6560452818401036,
+    "turn": 31.07137367894471,
+    "order": 0.1642668990334608,
+    "tilt": 0.45454545454545453,
+    "sole": false,
+    "lowest": true
+   }
+  },
+  "squ-in-cir/n12": {
+   "rigid": {
+    "move": 0.49306425739669424,
+    "turn": 27.396419362484632,
+    "order": 0.3717822849504742,
+    "tilt": null,
+    "sole": false,
+    "lowest": true
+   },
+   "harden": {
+    "move": 0.4885095168913378,
+    "turn": 14.244085483944199,
+    "order": 0.3683590596720236,
+    "tilt": null,
+    "sole": false,
+    "lowest": false
+   }
+  },
+  "squ-in-squ/n30": {
+   "rigid": {
+    "move": 0.3864159802806652,
+    "turn": 13.710873022175601,
+    "order": 0.5517639218685263,
+    "tilt": 0.23333333333333334,
+    "sole": false,
+    "lowest": true
+   },
+   "harden": {
+    "move": 0.6499561268673014,
+    "turn": 24.297549066299617,
+    "order": 0.22239327426208355,
+    "tilt": 0.23333333333333334,
+    "sole": false,
+    "lowest": true
+   }
+  },
+  "tri-in-squ/n20": {
+   "rigid": {
+    "move": 0.49395991912708753,
+    "turn": 26.327941552226516,
+    "order": 0.11910413214139165,
+    "tilt": 0.4,
+    "sole": false,
+    "lowest": true
+   },
+   "harden": {
+    "move": 1.0098470978729337,
+    "turn": 31.32105241094399,
+    "order": 0.09418860171991576,
+    "tilt": 0.4,
+    "sole": false,
+    "lowest": true
+   }
+  },
+  "tri-in-tri/n20": {
+   "rigid": {
+    "move": 0.17324996061275452,
+    "turn": 16.68309859972175,
+    "order": 0.28806660683332497,
+    "tilt": 0.25,
+    "sole": true,
+    "lowest": true
+   },
+   "harden": {
+    "move": 0.539110116910742,
+    "turn": 27.703899697233176,
+    "order": 0.3201256433893634,
+    "tilt": 0.4,
+    "sole": false,
+    "lowest": false
+   }
+  },
+  "squ-in-tri/n22": {
+   "rigid": {
+    "move": 0.1837540863985343,
+    "turn": 13.93770967095514,
+    "order": 0.3622904036986771,
+    "tilt": 0.0,
+    "sole": false,
+    "lowest": true
+   },
+   "harden": {
+    "move": 0.5070993725684608,
+    "turn": 21.869268603095687,
+    "order": 0.2723355338276859,
+    "tilt": 0.0,
+    "sole": false,
+    "lowest": true
+   }
+  },
+  "squ-in-tri/n18": {
+   "harden": {
+    "move": 0.4326187141367895,
+    "turn": 24.243730786952263,
+    "order": 0.16585487491707054,
+    "tilt": 0.16666666666666666,
+    "sole": false,
+    "lowest": true
+   },
+   "rigid": {
+    "move": 0.2765143849449603,
+    "turn": 12.193213576681238,
+    "order": 0.39577891083974104,
+    "tilt": 0.1111111111111111,
+    "sole": false,
+    "lowest": true
+   }
+  },
+  "tri-in-tri/n24": {
+   "harden": {
+    "move": 0.46436939714249936,
+    "turn": 32.65317851888512,
+    "order": 0.1282291289655609,
+    "tilt": 0.0,
+    "sole": false,
+    "lowest": true
+   },
+   "rigid": {
+    "move": 0.3824496135139591,
+    "turn": 23.76984694389615,
+    "order": 0.20471456602130195,
+    "tilt": 0.0,
+    "sole": false,
+    "lowest": true
+   }
+  },
+  "hex-in-squ/n13": {
+   "harden": {
+    "move": 0.16703096272797296,
+    "turn": 14.232271631049658,
+    "order": 0.22666542688144975,
+    "tilt": 0.15384615384615385,
+    "sole": false,
+    "lowest": true
+   },
+   "rigid": {
+    "move": 0.3244098489211624,
+    "turn": 17.090922670317706,
+    "order": 0.7423495876576068,
+    "tilt": 0.15384615384615385,
+    "sole": false,
+    "lowest": true
+   }
+  },
+  "squ-in-cir/n6": {
+   "rigid": {
+    "move": 0.5187541764595515,
+    "turn": 16.3446461888152,
+    "order": 0.9700869986635313,
+    "tilt": null,
+    "sole": false,
+    "lowest": true
+   },
+   "harden": {
+    "move": 0.6347431075688384,
+    "turn": 18.369097064944082,
+    "order": 0.587835453259499,
+    "tilt": null,
+    "sole": false,
+    "lowest": true
+   }
+  },
+  "tri-in-tri/n13": {
+   "harden": {
+    "move": 0.4455410199310092,
+    "turn": 37.09002981498056,
+    "order": 0.22700754506700205,
+    "tilt": 0.3076923076923077,
+    "sole": false,
+    "lowest": false
+   },
+   "rigid": {
+    "move": 0.32753188093241153,
+    "turn": 16.509912892862143,
+    "order": 0.20284979032062586,
+    "tilt": 0.38461538461538464,
+    "sole": false,
+    "lowest": false
+   }
+  },
+  "squ-in-cir/n11": {
+   "rigid": {
+    "move": 0.2471536014819878,
+    "turn": 32.14646360599927,
+    "order": 0.5520796455318082,
+    "tilt": null,
+    "sole": false,
+    "lowest": true
+   },
+   "harden": {
+    "move": 0.41346818484806963,
+    "turn": 19.81531271538833,
+    "order": 0.2206034548101993,
+    "tilt": null,
+    "sole": false,
+    "lowest": true
+   }
+  },
+  "tri-in-tri/n30": {
+   "harden": {
+    "move": 0.6005167267293823,
+    "turn": 27.74782374022254,
+    "order": 0.23907995690497844,
+    "tilt": 0.0,
+    "sole": false,
+    "lowest": false
+   },
+   "rigid": {
+    "move": 0.30027223596472385,
+    "turn": 20.877790049620394,
+    "order": 0.15492153983994783,
+    "tilt": 0.0,
+    "sole": false,
+    "lowest": true
+   }
+  },
+  "squ-in-cir/n10": {
+   "rigid": {
+    "move": 0.12880155880843025,
+    "turn": 16.406709601316038,
+    "order": 0.3705071038626146,
+    "tilt": null,
+    "sole": false,
+    "lowest": true
+   },
+   "harden": {
+    "move": 0.226964048768224,
+    "turn": 20.568632933316398,
+    "order": 0.29424924105148575,
+    "tilt": null,
+    "sole": false,
+    "lowest": true
+   }
+  },
+  "tri-in-squ/n12": {
+   "harden": {
+    "move": 0.569180323253793,
+    "turn": 26.399030410652678,
+    "order": 0.11148044840756785,
+    "tilt": 0.25,
+    "sole": false,
+    "lowest": false
+   },
+   "rigid": {
+    "move": 0.4355208234623366,
+    "turn": 27.14719441377771,
+    "order": 0.015970313903358194,
+    "tilt": 0.25,
+    "sole": false,
+    "lowest": false
+   }
+  },
+  "tri-in-squ/n16": {
+   "rigid": {
+    "move": 0.4132666829194876,
+    "turn": 20.092502964584668,
+    "order": 0.048813714067426156,
+    "tilt": 0.25,
+    "sole": true,
+    "lowest": true
+   },
+   "harden": {
+    "move": 0.4578004372481914,
+    "turn": 30.814762056264023,
+    "order": 0.28162724610453,
+    "tilt": 0.5,
+    "sole": false,
+    "lowest": false
+   }
+  },
+  "tri-in-squ/n15": {
+   "rigid": {
+    "move": 0.7064210594160597,
+    "turn": 19.326192279186156,
+    "order": 0.10026825671722747,
+    "tilt": 0.5333333333333333,
+    "sole": false,
+    "lowest": true
+   },
+   "harden": {
+    "move": 0.6155408321851303,
+    "turn": 32.53235653272839,
+    "order": 0.1942443527199005,
+    "tilt": 0.13333333333333333,
+    "sole": false,
+    "lowest": false
+   }
+  },
+  "tri-in-squ/n24": {
+   "harden": {
+    "move": 0.6497837043007498,
+    "turn": 28.95615176471354,
+    "order": 0.07828152338947668,
+    "tilt": 0.3333333333333333,
+    "sole": false,
+    "lowest": false
+   },
+   "rigid": {
+    "move": 0.5046757042581561,
+    "turn": 23.91048372046781,
+    "order": 0.024270405752443523,
+    "tilt": 0.041666666666666664,
+    "sole": true,
+    "lowest": true
+   }
+  },
+  "tri-in-tri/n7": {
+   "harden": {
+    "move": 0.5201880949788638,
+    "turn": 23.524050133256914,
+    "order": 0.6930386862851688,
+    "tilt": 0.0,
+    "sole": false,
+    "lowest": true
+   },
+   "rigid": {
+    "move": 0.258172115801189,
+    "turn": 1.7164178519847593,
+    "order": 0.4049244816306717,
+    "tilt": 0.0,
+    "sole": false,
+    "lowest": true
+   }
+  },
+  "tri-in-squ/n14": {
+   "harden": {
+    "move": 0.6882674624064165,
+    "turn": 37.234380609069724,
+    "order": 0.13690805467029388,
+    "tilt": 0.42857142857142855,
+    "sole": false,
+    "lowest": true
+   },
+   "rigid": {
+    "move": 0.35851180476657435,
+    "turn": 19.824628704723168,
+    "order": 0.08907065808708133,
+    "tilt": 0.42857142857142855,
+    "sole": false,
+    "lowest": true
+   }
+  },
+  "tri-in-tri/n8": {
+   "rigid": {
+    "move": 0.18843484256945542,
+    "turn": 16.232575456775187,
+    "order": 0.2473936628957286,
+    "tilt": 0.0,
+    "sole": false,
+    "lowest": true
+   },
+   "harden": {
+    "move": 0.5037702392298208,
+    "turn": 34.08447288203885,
+    "order": 0.2770645975324814,
+    "tilt": 0.0,
+    "sole": false,
+    "lowest": true
+   }
+  },
+  "squ-in-cir/n13": {
+   "rigid": {
+    "move": 0.3638092106366742,
+    "turn": 9.851837486387852,
+    "order": 0.9035020128069785,
+    "tilt": null,
+    "sole": false,
+    "lowest": false
+   },
+   "harden": {
+    "move": 0.3301753681845203,
+    "turn": 18.8727566565131,
+    "order": 0.6630513517608511,
+    "tilt": null,
+    "sole": true,
+    "lowest": true
+   }
+  },
+  "tri-in-tri/n9": {
+   "rigid": {
+    "move": 0.1689197753205701,
+    "turn": 11.81435855646429,
+    "order": 0.360769073498294,
+    "tilt": 0.0,
+    "sole": false,
+    "lowest": true
+   },
+   "harden": {
+    "move": 0.41667465066828313,
+    "turn": 34.97146513460162,
+    "order": 0.31332547922051435,
+    "tilt": 0.0,
+    "sole": false,
+    "lowest": true
+   }
+  },
+  "squ-in-cir/n9": {
+   "rigid": {
+    "move": 0.24350863209398035,
+    "turn": 39.35444416646931,
+    "order": 0.8944334668685205,
+    "tilt": null,
+    "sole": false,
+    "lowest": true
+   },
+   "harden": {
+    "move": 0.4868662211910635,
+    "turn": 25.899695736630196,
+    "order": 0.1927662588411005,
+    "tilt": null,
+    "sole": false,
+    "lowest": true
+   }
+  },
+  "tri-in-squ/n29": {
+   "harden": {
+    "move": 0.6572391886620905,
+    "turn": 24.833947204939328,
+    "order": 0.1512192685583337,
+    "tilt": 0.2413793103448276,
+    "sole": false,
+    "lowest": false
+   },
+   "rigid": {
+    "move": 0.5109440952248053,
+    "turn": 31.694415624560953,
+    "order": 0.030753583858662233,
+    "tilt": 0.13793103448275862,
+    "sole": true,
+    "lowest": true
+   }
+  },
+  "squ-in-tri/n28": {
+   "harden": {
+    "move": 0.3101760394828993,
+    "turn": 24.133793325647975,
+    "order": 0.09941589756853236,
+    "tilt": 0.0,
+    "sole": false,
+    "lowest": true
+   },
+   "rigid": {
+    "move": 0.14653130182772398,
+    "turn": 4.700966696051864,
+    "order": 0.21407627925120926,
+    "tilt": 0.0,
+    "sole": false,
+    "lowest": true
+   }
+  },
+  "tri-in-squ/n25": {
+   "harden": {
+    "move": 0.6976743609910794,
+    "turn": 33.68394836813506,
+    "order": 0.19977072029979878,
+    "tilt": 0.04,
+    "sole": false,
+    "lowest": false
+   },
+   "rigid": {
+    "move": 0.5478438636165657,
+    "turn": 25.74642025751068,
+    "order": 0.080976456020739,
+    "tilt": 0.12,
+    "sole": true,
+    "lowest": true
+   }
+  },
+  "tri-in-tri/n12": {
+   "rigid": {
+    "move": 0.2620244141214454,
+    "turn": 18.628266929840926,
+    "order": 0.3896668565128633,
+    "tilt": 0.5,
+    "sole": false,
+    "lowest": true
+   },
+   "harden": {
+    "move": 0.550540504324047,
+    "turn": 21.860750592737244,
+    "order": 0.4297678906575839,
+    "tilt": 0.3333333333333333,
+    "sole": false,
+    "lowest": false
+   }
+  },
+  "squ-in-cir/n30": {
+   "harden": {
+    "move": 0.504941825237855,
+    "turn": 20.75655607481431,
+    "order": 0.12034579493839544,
+    "tilt": null,
+    "sole": true,
+    "lowest": true
+   },
+   "rigid": {
+    "move": 0.4077619356715357,
+    "turn": 18.268349264662923,
+    "order": 0.18009943689923572,
+    "tilt": null,
+    "sole": false,
+    "lowest": false
+   }
+  },
+  "squ-in-tri/n16": {
+   "harden": {
+    "move": 0.3913435805207522,
+    "turn": 23.984584810754743,
+    "order": 0.4137457759554458,
+    "tilt": 0.0625,
+    "sole": false,
+    "lowest": true
+   },
+   "rigid": {
+    "move": 0.12210887425567538,
+    "turn": 4.578967617870577,
+    "order": 0.3334952540831641,
+    "tilt": 0.0,
+    "sole": false,
+    "lowest": true
+   }
+  },
+  "squ-in-tri/n29": {
+   "rigid": {
+    "move": 0.12705690196798022,
+    "turn": 10.779692471828598,
+    "order": 0.3763748332614187,
+    "tilt": 0.06896551724137931,
+    "sole": false,
+    "lowest": true
+   },
+   "harden": {
+    "move": 0.29823636447329144,
+    "turn": 19.784444751944942,
+    "order": 0.3959515764797654,
+    "tilt": 0.10344827586206896,
+    "sole": false,
+    "lowest": true
+   }
+  },
+  "tri-in-tri/n15": {
+   "harden": {
+    "move": 0.4472965278105929,
+    "turn": 30.92813082880202,
+    "order": 0.21858894750757848,
+    "tilt": 0.0,
+    "sole": false,
+    "lowest": true
+   },
+   "rigid": {
+    "move": 0.093522927116888,
+    "turn": 5.894971768169339,
+    "order": 0.28927966951961065,
+    "tilt": 0.0,
+    "sole": false,
+    "lowest": true
+   }
+  },
+  "squ-in-squ/n25": {
+   "harden": {
+    "move": 0.04590416049035711,
+    "turn": 25.940864837003303,
+    "order": 0.9197600195197907,
+    "tilt": 0.0,
+    "sole": false,
+    "lowest": true
+   },
+   "rigid": {
+    "move": 0.1532975680102393,
+    "turn": 0.5392847135091067,
+    "order": 0.9466528541744924,
+    "tilt": 0.0,
+    "sole": false,
+    "lowest": true
+   }
+  },
+  "tri-in-tri/n17": {
+   "rigid": {
+    "move": 0.2711682357180415,
+    "turn": 20.440117330893536,
+    "order": 0.19147035209478105,
+    "tilt": 0.0,
+    "sole": false,
+    "lowest": false
+   },
+   "harden": {
+    "move": 0.51621395274592,
+    "turn": 30.5450211132185,
+    "order": 0.2016789086378132,
+    "tilt": 0.0,
+    "sole": false,
+    "lowest": false
+   }
+  },
+  "squ-in-squ/n9": {
+   "rigid": {
+    "move": 0.03230202912841045,
+    "turn": 0.41762257067312836,
+    "order": 0.9612425794405017,
+    "tilt": 0.0,
+    "sole": false,
+    "lowest": true
+   },
+   "harden": {
+    "move": 0.04489212812148241,
+    "turn": 24.65432715577939,
+    "order": 0.9839439725434949,
+    "tilt": 0.0,
+    "sole": false,
+    "lowest": true
+   }
+  },
+  "squ-in-tri/n10": {
+   "harden": {
+    "move": 0.26382243445751347,
+    "turn": 21.053228952507244,
+    "order": 0.11656495236683946,
+    "tilt": 0.0,
+    "sole": false,
+    "lowest": true
+   },
+   "rigid": {
+    "move": 0.12646315141163472,
+    "turn": 9.403956291482203,
+    "order": 0.5524947347461576,
+    "tilt": 0.0,
+    "sole": false,
+    "lowest": true
+   }
+  },
+  "squ-in-cir/n18": {
+   "rigid": {
+    "move": 0.5405512576012959,
+    "turn": 24.327942600691173,
+    "order": 0.15518712459577755,
+    "tilt": null,
+    "sole": false,
+    "lowest": true
+   },
+   "harden": {
+    "move": 0.8363481223781117,
+    "turn": 23.36045592931719,
+    "order": 0.23876012929938598,
+    "tilt": null,
+    "sole": false,
+    "lowest": true
+   }
+  },
+  "squ-in-squ/n22": {
+   "harden": {
+    "move": 0.36163106910638526,
+    "turn": 21.944216589235623,
+    "order": 0.5462984449054874,
+    "tilt": 0.045454545454545456,
+    "sole": false,
+    "lowest": true
+   },
+   "rigid": {
+    "move": 0.15498131511392463,
+    "turn": 0.8003752636031067,
+    "order": 0.9476257271550533,
+    "tilt": 0.0,
+    "sole": false,
+    "lowest": true
+   }
+  },
+  "tri-in-squ/n6": {
+   "rigid": {
+    "move": 0.2076595887635032,
+    "turn": 31.839311444119797,
+    "order": 0.19428670182072996,
+    "tilt": 0.0,
+    "sole": false,
+    "lowest": true
+   },
+   "harden": {
+    "move": 0.33678394949215906,
+    "turn": 23.621373877426432,
+    "order": 0.33515371666000565,
+    "tilt": 0.0,
+    "sole": false,
+    "lowest": true
+   }
+  },
+  "squ-in-squ/n20": {
+   "rigid": {
+    "move": 0.3855611723323639,
+    "turn": 11.417022458759373,
+    "order": 0.8730263339344742,
+    "tilt": 0.3,
+    "sole": false,
+    "lowest": true
+   },
+   "harden": {
+    "move": 0.38122052998082123,
+    "turn": 18.676048106424428,
+    "order": 0.19170580395750542,
+    "tilt": 0.25,
+    "sole": false,
+    "lowest": true
+   }
+  },
+  "squ-in-squ/n28": {
+   "rigid": {
+    "move": 0.45714804637725914,
+    "turn": 18.381274513339893,
+    "order": 0.7135357721296273,
+    "tilt": 0.32142857142857145,
+    "sole": false,
+    "lowest": false
+   },
+   "harden": {
+    "move": 0.42471838262359213,
+    "turn": 19.773516857118576,
+    "order": 0.1900647448815329,
+    "tilt": 0.39285714285714285,
+    "sole": true,
+    "lowest": true
+   }
+  },
+  "squ-in-cir/n23": {
+   "harden": {
+    "move": 0.500669177332974,
+    "turn": 28.925779888050453,
+    "order": 0.3449598911414492,
+    "tilt": null,
+    "sole": true,
+    "lowest": true
+   },
+   "rigid": {
+    "move": 0.3282257894052339,
+    "turn": 29.22831176381935,
+    "order": 0.2539155020647129,
+    "tilt": null,
+    "sole": false,
+    "lowest": false
+   }
+  },
+  "squ-in-cir/n28": {
+   "harden": {
+    "move": 0.7110998444731064,
+    "turn": 22.29847169837715,
+    "order": 0.33681695377589543,
+    "tilt": null,
+    "sole": false,
+    "lowest": false
+   },
+   "rigid": {
+    "move": 0.43975626220266795,
+    "turn": 25.549780008765993,
+    "order": 0.3539914328089403,
+    "tilt": null,
+    "sole": true,
+    "lowest": true
+   }
+  },
+  "tri-in-tri/n10": {
+   "harden": {
+    "move": 0.3759489024243651,
+    "turn": 21.96491003413524,
+    "order": 0.26878041074718656,
+    "tilt": 0.0,
+    "sole": false,
+    "lowest": true
+   },
+   "rigid": {
+    "move": 0.19523722270341412,
+    "turn": 1.7079871872849957,
+    "order": 0.26006738035481225,
+    "tilt": 0.0,
+    "sole": false,
+    "lowest": true
+   }
+  },
+  "tri-in-tri/n11": {
+   "harden": {
+    "move": 0.32081993183929336,
+    "turn": 25.261086275795286,
+    "order": 0.26085637016910057,
+    "tilt": 0.7272727272727273,
+    "sole": false,
+    "lowest": true
+   },
+   "rigid": {
+    "move": 0.3317529360067967,
+    "turn": 31.244353779329597,
+    "order": 0.33996146605624505,
+    "tilt": 0.7272727272727273,
+    "sole": false,
+    "lowest": true
+   }
+  },
+  "tri-in-tri/n27": {
+   "harden": {
+    "move": 0.5765125272818475,
+    "turn": 29.092943288350437,
+    "order": 0.2635896314315186,
+    "tilt": 0.0,
+    "sole": false,
+    "lowest": true
+   },
+   "rigid": {
+    "move": 0.4057720810557615,
+    "turn": 26.720438078491775,
+    "order": 0.18052749224421338,
+    "tilt": 0.0,
+    "sole": false,
+    "lowest": true
+   }
+  },
+  "hex-in-squ/n7": {
+   "harden": {
+    "move": 0.46633100272635075,
+    "turn": 17.33840112942334,
+    "order": 0.2745475138847996,
+    "tilt": 0.0,
+    "sole": false,
+    "lowest": true
+   },
+   "rigid": {
+    "move": 0.5165653388590576,
+    "turn": 21.726559591360818,
+    "order": 0.5366350092050883,
+    "tilt": 0.0,
+    "sole": false,
+    "lowest": true
+   }
+  },
+  "tri-in-tri/n28": {
+   "rigid": {
+    "move": 0.5657121496496308,
+    "turn": 20.649952688681157,
+    "order": 0.20169115220024403,
+    "tilt": 0.0,
+    "sole": false,
+    "lowest": true
+   },
+   "harden": {
+    "move": 0.5882651337598067,
+    "turn": 31.81239830453344,
+    "order": 0.17914444093864076,
+    "tilt": 0.0,
+    "sole": false,
+    "lowest": false
+   }
+  },
+  "tri-in-tri/n21": {
+   "rigid": {
+    "move": 0.26541247172382976,
+    "turn": 16.47553781750948,
+    "order": 0.24237591180558063,
+    "tilt": 0.47619047619047616,
+    "sole": true,
+    "lowest": true
+   },
+   "harden": {
+    "move": 0.5026155168433617,
+    "turn": 27.20785583144569,
+    "order": 0.23986796343419178,
+    "tilt": 0.6190476190476191,
+    "sole": false,
+    "lowest": false
+   }
+  },
+  "tri-in-tri/n19": {
+   "harden": {
+    "move": 0.5481686043801988,
+    "turn": 30.37876633505225,
+    "order": 0.2671171806765097,
+    "tilt": 0.0,
+    "sole": false,
+    "lowest": true
+   },
+   "rigid": {
+    "move": 0.16392556388629323,
+    "turn": 7.546457275341501,
+    "order": 0.2865476474889708,
+    "tilt": 0.0,
+    "sole": false,
+    "lowest": true
+   }
+  }
+ }
+}

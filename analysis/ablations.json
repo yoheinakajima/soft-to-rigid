@@ -341,6 +341,353 @@
    }
   }
  },
+ "batches": {
+  "instances": 28,
+  "per_instance": {
+   "cir-in-squ/n11": {
+    "harden": [
+     true,
+     true,
+     true
+    ],
+    "rigid": [
+     true,
+     true,
+     true
+    ]
+   },
+   "cir-in-squ/n17": {
+    "harden": [
+     true,
+     true,
+     true
+    ],
+    "rigid": [
+     true,
+     true,
+     true
+    ]
+   },
+   "cir-in-squ/n23": {
+    "harden": [
+     true,
+     false,
+     true
+    ],
+    "rigid": [
+     true,
+     false,
+     true
+    ]
+   },
+   "cir-in-squ/n29": {
+    "harden": [
+     true,
+     true,
+     true
+    ],
+    "rigid": [
+     true,
+     true,
+     true
+    ]
+   },
+   "hex-in-squ/n8": {
+    "harden": [
+     true,
+     true,
+     true
+    ],
+    "rigid": [
+     true,
+     true,
+     true
+    ]
+   },
+   "hex-in-squ/n12": {
+    "harden": [
+     true,
+     true,
+     true
+    ],
+    "rigid": [
+     true,
+     true,
+     true
+    ]
+   },
+   "hex-in-squ/n16": {
+    "harden": [
+     true,
+     true,
+     true
+    ],
+    "rigid": [
+     true,
+     true,
+     true
+    ]
+   },
+   "hex-in-squ/n20": {
+    "harden": [
+     true,
+     true,
+     true
+    ],
+    "rigid": [
+     true,
+     true,
+     true
+    ]
+   },
+   "squ-in-cir/n11": {
+    "harden": [
+     true,
+     true,
+     true
+    ],
+    "rigid": [
+     true,
+     true,
+     true
+    ]
+   },
+   "squ-in-cir/n17": {
+    "harden": [
+     false,
+     false,
+     false
+    ],
+    "rigid": [
+     false,
+     false,
+     false
+    ]
+   },
+   "squ-in-cir/n23": {
+    "harden": [
+     false,
+     false,
+     false
+    ],
+    "rigid": [
+     false,
+     false,
+     false
+    ]
+   },
+   "squ-in-cir/n29": {
+    "harden": [
+     false,
+     false,
+     false
+    ],
+    "rigid": [
+     false,
+     false,
+     false
+    ]
+   },
+   "squ-in-squ/n11": {
+    "harden": [
+     true,
+     true,
+     false
+    ],
+    "rigid": [
+     false,
+     false,
+     false
+    ]
+   },
+   "squ-in-squ/n17": {
+    "harden": [
+     false,
+     false,
+     false
+    ],
+    "rigid": [
+     false,
+     false,
+     false
+    ]
+   },
+   "squ-in-squ/n23": {
+    "harden": [
+     true,
+     true,
+     true
+    ],
+    "rigid": [
+     true,
+     true,
+     true
+    ]
+   },
+   "squ-in-squ/n29": {
+    "harden": [
+     false,
+     true,
+     true
+    ],
+    "rigid": [
+     false,
+     false,
+     false
+    ]
+   },
+   "squ-in-tri/n11": {
+    "harden": [
+     true,
+     true,
+     true
+    ],
+    "rigid": [
+     true,
+     true,
+     true
+    ]
+   },
+   "squ-in-tri/n17": {
+    "harden": [
+     false,
+     false,
+     false
+    ],
+    "rigid": [
+     false,
+     false,
+     false
+    ]
+   },
+   "squ-in-tri/n23": {
+    "harden": [
+     false,
+     false,
+     false
+    ],
+    "rigid": [
+     false,
+     false,
+     false
+    ]
+   },
+   "squ-in-tri/n29": {
+    "harden": [
+     true,
+     true,
+     true
+    ],
+    "rigid": [
+     true,
+     true,
+     true
+    ]
+   },
+   "tri-in-squ/n11": {
+    "harden": [
+     true,
+     true,
+     true
+    ],
+    "rigid": [
+     false,
+     true,
+     true
+    ]
+   },
+   "tri-in-squ/n17": {
+    "harden": [
+     false,
+     false,
+     false
+    ],
+    "rigid": [
+     false,
+     false,
+     false
+    ]
+   },
+   "tri-in-squ/n23": {
+    "harden": [
+     false,
+     false,
+     false
+    ],
+    "rigid": [
+     false,
+     false,
+     false
+    ]
+   },
+   "tri-in-squ/n29": {
+    "harden": [
+     false,
+     false,
+     false
+    ],
+    "rigid": [
+     false,
+     false,
+     false
+    ]
+   },
+   "tri-in-tri/n11": {
+    "harden": [
+     true,
+     true,
+     true
+    ],
+    "rigid": [
+     true,
+     true,
+     true
+    ]
+   },
+   "tri-in-tri/n17": {
+    "harden": [
+     false,
+     false,
+     false
+    ],
+    "rigid": [
+     false,
+     false,
+     false
+    ]
+   },
+   "tri-in-tri/n23": {
+    "harden": [
+     true,
+     true,
+     true
+    ],
+    "rigid": [
+     true,
+     true,
+     true
+    ]
+   },
+   "tri-in-tri/n29": {
+    "harden": [
+     true,
+     false,
+     false
+    ],
+    "rigid": [
+     true,
+     true,
+     true
+    ]
+   }
+  },
+  "harden_batches_reached": 49,
+  "harden_instances_all3": 14,
+  "harden_instances_some_not_all": 4,
+  "rigid_batches_reached": 46,
+  "rigid_instances_all3": 14,
+  "rigid_instances_some_not_all": 2
+ },
  "C13-budget-clean": {
   "instances": 28,
   "1x32": {

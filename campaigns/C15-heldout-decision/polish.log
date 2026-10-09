@@ -1,0 +1,12 @@
+C15-heldout-decision: 270 candidates, 270 to polish
+0 hex-in-tri/n6/harden-best/B1/default/s38 ok 1.0s
+25 hex-in-tri/n7/rigid-best/B1/default/s6 ok 2.1s
+50 oct-in-squ/n8/rigid-best/B1/default/s63 ok 1.5s
+75 tri-in-cir/n9/rigid-best/B1/default/s46 ok 0.2s
+100 tri-in-cir/n10/rigid-best/B1/default/s63 ok 2.3s
+125 oct-in-squ/n12/rigid-best/B1/default/s2 ok 5.4s
+150 tri-in-cir/n13/harden-best/B1/default/s19 ok 0.9s
+175 tri-in-cir/n14/rigid-best/B1/default/s38 ok 2.2s
+200 hex-in-tri/n16/rigid-best/B1/default/s39 ok 4.6s
+225 tri-in-cir/n17/rigid-best/B1/default/s36 ok 3.5s
+250 tri-in-cir/n19/harden-best/B1/default/s29 ok 2.0s

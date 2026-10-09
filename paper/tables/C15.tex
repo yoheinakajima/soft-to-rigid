@@ -1,0 +1,16 @@
+\begin{table}[t]\centering\small
+\begin{tabular}{lrcccc}
+\toprule
+family & $N$ & harden : rigid & pilot : rigid & pilot chose harden & reached (rigid / harden / pilot) \\
+\midrule
+pentagons in square & 15 & 1 : 8 & 0 : 1 & 3 & 8 / 4 / 8 \\
+octagons in square & 15 & 0 : 3 & 0 : 0 & 6 & 11 / 9 / 11 \\
+hexagons in triangle & 15 & 0 : 2 & 0 : 1 & 8 & 10 / 9 / 10 \\
+triangles in circle & 15 & 2 : 4 & 2 : 1 & 3 & 11 / 10 / 12 \\
+\midrule
+all & 60 & 3 : 17 & 2 : 3 & 20 & 40 / 32 / 41 \\
+\bottomrule
+\end{tabular}
+\caption{Held-out families (C15), $n=6$--$20$, 64 runs per policy. $a:b$ counts instances where the first policy\textquotesingle s result is lower than the second\textquotesingle s and the reverse. The pilot spends 8 runs on each path, then 48 on the one whose pilot went lower.}
+\label{tab:decision}
+\end{table}

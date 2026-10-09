@@ -1,0 +1,207 @@
+{
+ "C11-snap": {
+  "all": {
+   "harden_vs_snap": {
+    "a_lower": 17,
+    "b_lower": 36,
+    "ties": 135,
+    "p_lower": 0.012660335802414213,
+    "a_only_reached": 6,
+    "b_only_reached": 16,
+    "p_reached": 0.052478790283203125
+   },
+   "snap_vs_rigid": {
+    "a_lower": 20,
+    "b_lower": 20,
+    "ties": 148,
+    "p_lower": 1.0,
+    "a_only_reached": 6,
+    "b_only_reached": 4,
+    "p_reached": 0.75390625
+   }
+  },
+  "families": {
+   "squ-in-squ": {
+    "N": 28,
+    "harden_vs_snap": {
+     "a_lower": 6,
+     "b_lower": 0,
+     "ties": 22,
+     "p_lower": 0.03125,
+     "a_only_reached": 2,
+     "b_only_reached": 0,
+     "p_reached": 0.5
+    },
+    "snap_vs_rigid": {
+     "a_lower": 1,
+     "b_lower": 2,
+     "ties": 25,
+     "p_lower": 1.0,
+     "a_only_reached": 0,
+     "b_only_reached": 0,
+     "p_reached": 1.0
+    }
+   },
+   "squ-in-cir": {
+    "N": 28,
+    "harden_vs_snap": {
+     "a_lower": 5,
+     "b_lower": 11,
+     "ties": 12,
+     "p_lower": 0.210113525390625,
+     "a_only_reached": 0,
+     "b_only_reached": 3,
+     "p_reached": 0.25
+    },
+    "snap_vs_rigid": {
+     "a_lower": 10,
+     "b_lower": 6,
+     "ties": 12,
+     "p_lower": 0.454498291015625,
+     "a_only_reached": 3,
+     "b_only_reached": 1,
+     "p_reached": 0.625
+    }
+   },
+   "squ-in-tri": {
+    "N": 29,
+    "harden_vs_snap": {
+     "a_lower": 0,
+     "b_lower": 1,
+     "ties": 28,
+     "p_lower": 1.0,
+     "a_only_reached": 0,
+     "b_only_reached": 1,
+     "p_reached": 1.0
+    },
+    "snap_vs_rigid": {
+     "a_lower": 0,
+     "b_lower": 0,
+     "ties": 29,
+     "p_lower": 1.0,
+     "a_only_reached": 0,
+     "b_only_reached": 0,
+     "p_reached": 1.0
+    }
+   },
+   "tri-in-tri": {
+    "N": 28,
+    "harden_vs_snap": {
+     "a_lower": 0,
+     "b_lower": 8,
+     "ties": 20,
+     "p_lower": 0.0078125,
+     "a_only_reached": 0,
+     "b_only_reached": 6,
+     "p_reached": 0.03125
+    },
+    "snap_vs_rigid": {
+     "a_lower": 0,
+     "b_lower": 2,
+     "ties": 26,
+     "p_lower": 0.5,
+     "a_only_reached": 0,
+     "b_only_reached": 0,
+     "p_reached": 1.0
+    }
+   },
+   "tri-in-squ": {
+    "N": 28,
+    "harden_vs_snap": {
+     "a_lower": 6,
+     "b_lower": 14,
+     "ties": 8,
+     "p_lower": 0.11531829833984375,
+     "a_only_reached": 4,
+     "b_only_reached": 6,
+     "p_reached": 0.75390625
+    },
+    "snap_vs_rigid": {
+     "a_lower": 8,
+     "b_lower": 9,
+     "ties": 11,
+     "p_lower": 1.0,
+     "a_only_reached": 3,
+     "b_only_reached": 3,
+     "p_reached": 1.0
+    }
+   },
+   "hex-in-squ": {
+    "N": 18,
+    "harden_vs_snap": {
+     "a_lower": 0,
+     "b_lower": 2,
+     "ties": 16,
+     "p_lower": 0.5,
+     "a_only_reached": 0,
+     "b_only_reached": 0,
+     "p_reached": 1.0
+    },
+    "snap_vs_rigid": {
+     "a_lower": 1,
+     "b_lower": 1,
+     "ties": 16,
+     "p_lower": 1.0,
+     "a_only_reached": 0,
+     "b_only_reached": 0,
+     "p_reached": 1.0
+    }
+   },
+   "cir-in-squ": {
+    "N": 29,
+    "harden_vs_snap": {
+     "a_lower": 0,
+     "b_lower": 0,
+     "ties": 29,
+     "p_lower": 1.0,
+     "a_only_reached": 0,
+     "b_only_reached": 0,
+     "p_reached": 1.0
+    },
+    "snap_vs_rigid": {
+     "a_lower": 0,
+     "b_lower": 0,
+     "ties": 29,
+     "p_lower": 1.0,
+     "a_only_reached": 0,
+     "b_only_reached": 0,
+     "p_reached": 1.0
+    }
+   }
+  }
+ },
+ "C12-grow-area": {
+  "all": {
+   "harden_vs_grow-area": {
+    "a_lower": 20,
+    "b_lower": 31,
+    "ties": 137,
+    "p_lower": 0.16077960181198847,
+    "a_only_reached": 6,
+    "b_only_reached": 15,
+    "p_reached": 0.0783538818359375
+   },
+   "grow-area_vs_rigid": {
+    "a_lower": 15,
+    "b_lower": 14,
+    "ties": 159,
+    "p_lower": 1.0,
+    "a_only_reached": 2,
+    "b_only_reached": 1,
+    "p_reached": 1.0
+   }
+  },
+  "families": {
+   "squ-in-squ": {
+    "N": 28,
+    "harden_vs_grow-area": {
+     "a_lower": 5,
+     "b_lower": 1,
+     "ties": 22,
+     "p_lower": 0.21875,
+     "a_only_reached": 2,
+     "b_only_reached": 0,
+     "p_reached": 0.5
+    },
+    "grow-area_vs_rigid": {
+     "

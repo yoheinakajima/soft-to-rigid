@@ -1,4 +1,4 @@
-\begin{thebibliography}{65}
+\begin{thebibliography}{60}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -62,11 +62,12 @@ T.~Berthold, D.~Kamp, G.~Mexi, S.~Pokutta, and I.~P{\'o}lik.
 \newblock arXiv:2605.04850, 2026.
 \newblock Supplement: \url{https://github.com/DominikKamp/Packing}.
 
-\bibitem[Birattari and Dorigo(2005)]{Birattari2005}
+\bibitem[Birattari and Dorigo(2007)]{Birattari2005}
 M.~Birattari and M.~Dorigo.
 \newblock How to assess and report the performance of a stochastic algorithm on
-  a benchmark problem: Mean or best result on a number of runs?
-\newblock Technical report, Universit{\'e} Libre de Bruxelles, 2005.
+  a benchmark problem: mean or best result on a number of runs?
+\newblock \emph{Optimization Letters}, 1, 2007.
+\newblock \doi{10.1007/s11590-006-0011-8}.
 
 \bibitem[Blake and Zisserman(1987)]{blake}
 A.~Blake and A.~Zisserman.
@@ -79,28 +80,6 @@ A.~Bortfeldt and G.~W{\"a}scher.
 \newblock \emph{European Journal of Operational Research}, 229\penalty0
   (1):\penalty0 1--20, 2013.
 \newblock \doi{10.1016/j.ejor.2012.12.006}.
-
-\bibitem[Chaudhuri et~al.(2010)Chaudhuri, Berthier, and Sastry]{Chaudhuri2010}
-P.~Chaudhuri, L.~Berthier, and S.~Sastry.
-\newblock Jamming transitions in amorphous packings of frictionless spheres
-  occur over a continuous range of volume fractions.
-\newblock \emph{Physical Review Letters}, 104:\penalty0 165701, 2010.
-\newblock \doi{10.1103/PhysRevLett.104.165701}.
-
-\bibitem[Christensen et~al.(2017)Christensen, Khan, Pokutta, and
-  Tetali]{Christensen2017}
-H.~I. Christensen, A.~Khan, S.~Pokutta, and P.~Tetali.
-\newblock Approximation and online algorithms for multidimensional bin packing:
-  A survey.
-\newblock \emph{Computer Science Review}, 24:\penalty0 63--79, 2017.
-\newblock \doi{10.1016/j.cosrev.2016.12.001}.
-
-\bibitem[Conway and Sloane(1999)]{ConwaySloane}
-J.~H. Conway and N.~J.~A. Sloane.
-\newblock \emph{Sphere Packings, Lattices and Groups}, volume 290 of
-  \emph{Grundlehren der mathematischen Wissenschaften}.
-\newblock Springer, 3 edition, 1999.
-\newblock \doi{10.1007/978-1-4757-6568-7}.
 
 \bibitem[Dolan and Mor{\'e}(2002)]{Dolan2002}
 E.~D. Dolan and J.~J. Mor{\'e}.
@@ -211,17 +190,6 @@ P.~Gupta and S.~Raman.
 \newblock Differentiable packing of irregular {3D} objects with adaptive
   container estimation.
 \newblock arXiv:2606.16333, 2026.
-
-\bibitem[Hales et~al.(2017)Hales, Adams, Bauer, Dang, Harrison, Hoang,
-  Kaliszyk, Magron, McLaughlin, Nguyen, Nguyen, Nipkow, Obua, Pleso, Rute,
-  Solovyev, Ta, Tran, Trieu, Urban, Vu, and Zumkeller]{Hales2017}
-T.~Hales, M.~Adams, G.~Bauer, T.~D. Dang, J.~Harrison, L.~T. Hoang,
-  C.~Kaliszyk, V.~Magron, S.~McLaughlin, T.~T. Nguyen, Q.~T. Nguyen, T.~Nipkow,
-  S.~Obua, J.~Pleso, J.~Rute, A.~Solovyev, T.~H.~A. Ta, N.~T. Tran, T.~D.
-  Trieu, J.~Urban, K.~Vu, and R.~Zumkeller.
-\newblock A formal proof of the {K}epler conjecture.
-\newblock \emph{Forum of Mathematics, Pi}, 5:\penalty0 e2, 2017.
-\newblock \doi{10.1017/fmp.2017.1}.
 
 \bibitem[Hansen et~al.(2021)Hansen, Auger, Ros, Mersmann, Tu{\v{s}}ar, and
   Brockhoff]{Hansen2021}
@@ -434,13 +402,6 @@ G.~van Anders, D.~Klotsa, A.~S. Karas, P.~M. Dodd, and S.~C. Glotzer.
 \newblock Digital alchemy for materials design: Colloids and beyond.
 \newblock \emph{ACS Nano}, 2015.
 \newblock \doi{10.1021/acsnano.5b04181}.
-
-\bibitem[Verma et~al.(2015)Verma, Pedrosa, Korupolu, Oppenheimer, Tune, and
-  Wilkes]{Verma2015}
-A.~Verma, L.~Pedrosa, M.~R. Korupolu, D.~Oppenheimer, E.~Tune, and J.~Wilkes.
-\newblock Large-scale cluster management at {G}oogle with {B}org.
-\newblock In \emph{Proceedings of the European Conference on Computer Systems
-  (EuroSys)}, 2015.
 
 \bibitem[Wang et~al.(2018)Wang, Hermes, Kotni, Wu, Tasios, Liu, de~Nijs,
   van~der Wee, Murray, Dijkstra, van Blaaderen, et~al.]{Wang2018}

@@ -31,6 +31,24 @@
    "lo95": 40,
    "hi95": 56,
    "mean": 48.152
+  },
+  "rigid-harden": {
+   "lo95": 3,
+   "hi95": 24,
+   "median": 14,
+   "share_positive": 0.99
+  },
+  "rigid-grow": {
+   "lo95": 5,
+   "hi95": 27,
+   "median": 16,
+   "share_positive": 0.994
+  },
+  "grow-harden": {
+   "lo95": -13,
+   "hi95": 9,
+   "median": -2,
+   "share_positive": 0.295
   }
  },
  "by_n_range": {

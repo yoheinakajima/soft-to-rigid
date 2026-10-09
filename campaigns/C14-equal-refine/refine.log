@@ -1,0 +1,451 @@
+squ-in-squ/n11/harden-best/B1/default/s14 copied
+squ-in-squ/n11/harden-best/B1/default/s22 copied
+squ-in-squ/n11/harden-best/B1/default/s31 ok 3.8s
+squ-in-squ/n11/grow-best/B1/default/s8 copied
+squ-in-squ/n11/grow-best/B1/default/s6 ok 8.9s
+squ-in-squ/n11/grow-best/B1/default/s14 ok 4.9s
+squ-in-squ/n11/rigid-best/B1/default/s32 copied
+squ-in-squ/n11/rigid-best/B1/default/s1 ok 7.6s
+squ-in-squ/n11/rigid-best/B1/default/s19 ok 8.0s
+squ-in-squ/n11/sa-best/B1/default/s12 copied
+squ-in-squ/n11/sa-best/B1/default/s30 ok 8.9s
+squ-in-squ/n11/sa-best/B1/default/s23 ok 4.8s
+squ-in-squ/n11/pc-best/B1/default/s19 ok 2.8s
+squ-in-squ/n11/pc-best/B1/default/s29 ok 2.1s
+squ-in-squ/n11/pc-best/B1/default/s2 ok 6.0s
+squ-in-squ/n17/harden-best/B1/default/s16 copied
+squ-in-squ/n17/harden-best/B1/default/s25 ok 7.7s
+squ-in-squ/n17/harden-best/B1/default/s22 ok 9.8s
+squ-in-squ/n17/grow-best/B1/default/s19 copied
+squ-in-squ/n17/grow-best/B1/default/s17 ok 3.0s
+squ-in-squ/n17/grow-best/B1/default/s26 ok 6.4s
+squ-in-squ/n17/rigid-best/B1/default/s2 copied
+squ-in-squ/n17/rigid-best/B1/default/s8 ok 6.4s
+squ-in-squ/n17/rigid-best/B1/default/s6 ok 4.2s
+squ-in-squ/n17/sa-best/B1/default/s21 copied
+squ-in-squ/n17/sa-best/B1/default/s26 ok 11.1s
+squ-in-squ/n17/sa-best/B1/default/s4 ok 11.3s
+squ-in-squ/n17/pc-best/B1/default/s6 ok 27.1s
+squ-in-squ/n17/pc-best/B1/default/s10 ok 25.9s
+squ-in-squ/n17/pc-best/B1/default/s14 ok 35.3s
+squ-in-squ/n23/harden-best/B1/default/s14 copied
+squ-in-squ/n23/harden-best/B1/default/s11 copied
+squ-in-squ/n23/harden-best/B1/default/s1 copied
+squ-in-squ/n23/grow-best/B1/default/s4 copied
+squ-in-squ/n23/grow-best/B1/default/s3 copied
+squ-in-squ/n23/grow-best/B1/default/s11 copied
+squ-in-squ/n23/rigid-best/B1/default/s14 copied
+squ-in-squ/n23/rigid-best/B1/default/s17 copied
+squ-in-squ/n23/rigid-best/B1/default/s5 copied
+squ-in-squ/n23/sa-best/B1/default/s26 copied
+squ-in-squ/n23/sa-best/B1/default/s19 copied
+squ-in-squ/n23/sa-best/B1/default/s27 copied
+squ-in-squ/n23/pc-best/B1/default/s14 ok 69.8s
+squ-in-squ/n23/pc-best/B1/default/s6 ok 58.4s
+squ-in-squ/n23/pc-best/B1/default/s26 ok 23.1s
+squ-in-squ/n29/harden-best/B1/default/s13 copied
+squ-in-squ/n29/harden-best/B1/default/s29 ok 67.4s
+squ-in-squ/n29/harden-best/B1/default/s26 ok 40.8s
+squ-in-squ/n29/grow-best/B1/default/s13 copied
+squ-in-squ/n29/grow-best/B1/default/s3 ok 12.3s
+squ-in-squ/n29/grow-best/B1/default/s1 ok 14.1s
+squ-in-squ/n29/rigid-best/B1/default/s28 copied
+squ-in-squ/n29/rigid-best/B1/default/s6 ok 8.1s
+squ-in-squ/n29/rigid-best/B1/default/s9 ok 21.3s
+squ-in-squ/n29/sa-best/B1/default/s15 copied
+squ-in-squ/n29/sa-best/B1/default/s21 ok 22.1s
+squ-in-squ/n29/sa-best/B1/default/s11 ok 17.6s
+squ-in-squ/n29/pc-best/B1/default/s27 ok 126.3s
+squ-in-squ/n29/pc-best/B1/default/s22 ok 297.4s
+squ-in-squ/n29/pc-best/B1/default/s11 ok 99.7s
+squ-in-cir/n11/harden-best/B1/default/s30 copied
+squ-in-cir/n11/harden-best/B1/default/s17 copied
+squ-in-cir/n11/harden-best/B1/default/s26 copied
+squ-in-cir/n11/grow-best/B1/default/s25 copied
+squ-in-cir/n11/grow-best/B1/default/s19 copied
+squ-in-cir/n11/grow-best/B1/default/s28 copied
+squ-in-cir/n11/rigid-best/B1/default/s16 copied
+squ-in-cir/n11/rigid-best/B1/default/s6 copied
+squ-in-cir/n11/rigid-best/B1/default/s29 copied
+squ-in-cir/n11/sa-best/B1/default/s12 copied
+squ-in-cir/n11/sa-best/B1/default/s3 ok 0.6s
+squ-in-cir/n11/sa-best/B1/default/s15 ok 1.2s
+squ-in-cir/n11/pc-best/B1/default/s21 copied
+squ-in-cir/n11/pc-best/B1/default/s5 ok 1.5s
+squ-in-cir/n11/pc-best/B1/default/s4 ok 1.7s
+squ-in-cir/n17/harden-best/B1/default/s8 copied
+squ-in-cir/n17/harden-best/B1/default/s10 ok 3.2s
+squ-in-cir/n17/harden-best/B1/default/s25 ok 3.4s
+squ-in-cir/n17/grow-best/B1/default/s21 copied
+squ-in-cir/n17/grow-best/B1/default/s3 ok 5.4s
+squ-in-cir/n17/grow-best/B1/default/s17 ok 6.9s
+squ-in-cir/n17/rigid-best/B1/default/s30 copied
+squ-in-cir/n17/rigid-best/B1/default/s9 ok 2.9s
+squ-in-cir/n17/rigid-best/B1/default/s14 ok 1.9s
+squ-in-cir/n17/sa-best/B1/default/s11 copied
+squ-in-cir/n17/sa-best/B1/default/s31 ok 2.3s
+squ-in-cir/n17/sa-best/B1/default/s14 ok 1.5s
+squ-in-cir/n17/pc-best/B1/default/s18 copied
+squ-in-cir/n17/pc-best/B1/default/s1 ok 8.9s
+squ-in-cir/n17/pc-best/B1/default/s28 ok 18.5s
+squ-in-cir/n23/harden-best/B1/default/s32 copied
+squ-in-cir/n23/harden-best/B1/default/s20 ok 32.1s
+squ-in-cir/n23/harden-best/B1/default/s29 ok 21.0s
+squ-in-cir/n23/grow-best/B1/default/s21 copied
+squ-in-cir/n23/grow-best/B1/default/s5 ok 7.1s
+squ-in-cir/n23/grow-best/B1/default/s22 ok 10.4s
+squ-in-cir/n23/rigid-best/B1/default/s27 copied
+squ-in-cir/n23/rigid-best/B1/default/s12 ok 7.8s
+squ-in-cir/n23/rigid-best/B1/default/s6 ok 68.4s
+squ-in-cir/n23/sa-best/B1/default/s4 copied
+squ-in-cir/n23/sa-best/B1/default/s10 ok 52.2s
+squ-in-cir/n23/sa-best/B1/default/s29 ok 38.6s
+squ-in-cir/n23/pc-best/B1/default/s25 ok 55.2s
+squ-in-cir/n23/pc-best/B1/default/s10 ok 42.3s
+squ-in-cir/n23/pc-best/B1/default/s3 ok 45.2s
+squ-in-cir/n29/harden-best/B1/default/s13 copied
+squ-in-cir/n29/harden-best/B1/default/s27 ok 51.0s
+squ-in-cir/n29/harden-best/B1/default/s3 ok 33.9s
+squ-in-cir/n29/grow-best/B1/default/s20 copied
+squ-in-cir/n29/grow-best/B1/default/s30 ok 13.1s
+squ-in-cir/n29/grow-best/B1/default/s2 ok 31.9s
+squ-in-cir/n29/rigid-best/B1/default/s27 copied
+squ-in-cir/n29/rigid-best/B1/default/s32 ok 16.0s
+squ-in-cir/n29/rigid-best/B1/default/s3 ok 7.6s
+squ-in-cir/n29/sa-best/B1/default/s18 copied
+squ-in-cir/n29/sa-best/B1/default/s5 ok 40.5s
+squ-in-cir/n29/sa-best/B1/default/s30 ok 66.6s
+squ-in-cir/n29/pc-best/B1/default/s21 ok 22.4s
+squ-in-cir/n29/pc-best/B1/default/s6 ok 143.8s
+squ-in-cir/n29/pc-best/B1/default/s13 ok 181.3s
+squ-in-tri/n11/harden-best/B1/default/s27 copied
+squ-in-tri/n11/harden-best/B1/default/s28 copied
+squ-in-tri/n11/harden-best/B1/default/s14 copied
+squ-in-tri/n11/grow-best/B1/default/s18 copied
+squ-in-tri/n11/grow-best/B1/default/s28 copied
+squ-in-tri/n11/grow-best/B1/default/s4 copied
+squ-in-tri/n11/rigid-best/B1/default/s24 copied
+squ-in-tri/n11/rigid-best/B1/default/s10 copied
+squ-in-tri/n11/rigid-best/B1/default/s25 copied
+squ-in-tri/n11/sa-best/B1/default/s32 copied
+squ-in-tri/n11/sa-best/B1/default/s27 copied
+squ-in-tri/n11/sa-best/B1/default/s16 copied
+squ-in-tri/n11/pc-best/B1/default/s31 copied
+squ-in-tri/n11/pc-best/B1/default/s16 ok 1.5s
+squ-in-tri/n11/pc-best/B1/default/s6 ok 0.7s
+squ-in-tri/n17/harden-best/B1/default/s7 copied
+squ-in-tri/n17/harden-best/B1/default/s31 ok 1.3s
+squ-in-tri/n17/harden-best/B1/default/s4 ok 1.1s
+squ-in-tri/n17/grow-best/B1/default/s20 copied
+squ-in-tri/n17/grow-best/B1/default/s24 ok 0.9s
+squ-in-tri/n17/grow-best/B1/default/s30 ok 1.3s
+squ-in-tri/n17/rigid-best/B1/default/s19 copied
+squ-in-tri/n17/rigid-best/B1/default/s9 ok 1.6s
+squ-in-tri/n17/rigid-best/B1/default/s2 ok 1.0s
+squ-in-tri/n17/sa-best/B1/default/s22 copied
+squ-in-tri/n17/sa-best/B1/default/s29 ok 1.0s
+squ-in-tri/n17/sa-best/B1/default/s16 ok 1.3s
+squ-in-tri/n17/pc-best/B1/default/s20 ok 3.0s
+squ-in-tri/n17/pc-best/B1/default/s29 ok 3.0s
+squ-in-tri/n17/pc-best/B1/default/s13 ok 1.0s
+squ-in-tri/n23/harden-best/B1/default/s3 copied
+squ-in-tri/n23/harden-best/B1/default/s8 ok 1.8s
+squ-in-tri/n23/harden-best/B1/default/s14 ok 1.7s
+squ-in-tri/n23/grow-best/B1/default/s31 copied
+squ-in-tri/n23/grow-best/B1/default/s6 ok 2.2s
+squ-in-tri/n23/grow-best/B1/default/s8 ok 2.3s
+squ-in-tri/n23/rigid-best/B1/default/s27 copied
+squ-in-tri/n23/rigid-best/B1/default/s18 ok 2.6s
+squ-in-tri/n23/rigid-best/B1/default/s5 ok 3.6s
+squ-in-tri/n23/sa-best/B1/default/s32 copied
+squ-in-tri/n23/sa-best/B1/default/s7 ok 3.4s
+squ-in-tri/n23/sa-best/B1/default/s22 ok 2.9s
+squ-in-tri/n23/pc-best/B1/default/s27 ok 7.5s
+squ-in-tri/n23/pc-best/B1/default/s31 ok 6.5s
+squ-in-tri/n23/pc-best/B1/default/s13 ok 37.9s
+squ-in-tri/n29/harden-best/B1/default/s15 copied
+squ-in-tri/n29/harden-best/B1/default/s9 copied
+squ-in-tri/n29/harden-best/B1/default/s26 copied
+squ-in-tri/n29/grow-best/B1/default/s10 copied
+squ-in-tri/n29/grow-best/B1/default/s1 copied
+squ-in-tri/n29/grow-best/B1/default/s20 copied
+squ-in-tri/n29/rigid-best/B1/default/s15 copied
+squ-in-tri/n29/rigid-best/B1/default/s31 copied
+squ-in-tri/n29/rigid-best/B1/default/s32 copied
+squ-in-tri/n29/sa-best/B1/default/s26 copied
+squ-in-tri/n29/sa-best/B1/default/s25 copied
+squ-in-tri/n29/sa-best/B1/default/s10 ok 5.1s
+squ-in-tri/n29/pc-best/B1/default/s11 ok 13.2s
+squ-in-tri/n29/pc-best/B1/default/s22 ok 28.7s
+squ-in-tri/n29/pc-best/B1/default/s28 ok 35.4s
+tri-in-tri/n11/harden-best/B1/default/s31 copied
+tri-in-tri/n11/harden-best/B1/default/s2 ok 3.0s
+tri-in-tri/n11/harden-best/B1/default/s7 ok 2.1s
+tri-in-tri/n11/grow-best/B1/default/s2 copied
+tri-in-tri/n11/grow-best/B1/default/s10 ok 1.6s
+tri-in-tri/n11/grow-best/B1/default/s18 ok 2.2s
+tri-in-tri/n11/rigid-best/B1/default/s15 copied
+tri-in-tri/n11/rigid-best/B1/default/s23 ok 1.4s
+tri-in-tri/n11/rigid-best/B1/default/s9 ok 1.6s
+tri-in-tri/n11/sa-best/B1/default/s14 copied
+tri-in-tri/n11/sa-best/B1/default/s22 ok 1.9s
+tri-in-tri/n11/sa-best/B1/default/s5 ok 1.6s
+tri-in-tri/n11/pc-best/B1/default/s6 ok 1.9s
+tri-in-tri/n11/pc-best/B1/default/s30 ok 2.7s
+tri-in-tri/n11/pc-best/B1/default/s11 ok 4.3s
+tri-in-tri/n17/harden-best/B1/default/s23 copied
+tri-in-tri/n17/harden-best/B1/default/s24 ok 6.7s
+tri-in-tri/n17/harden-best/B1/default/s21 ok 4.4s
+tri-in-tri/n17/grow-best/B1/default/s13 copied
+tri-in-tri/n17/grow-best/B1/default/s1 ok 7.3s
+tri-in-tri/n17/grow-best/B1/default/s27 ok 7.2s
+tri-in-tri/n17/rigid-best/B1/default/s24 copied
+tri-in-tri/n17/rigid-best/B1/default/s30 ok 5.8s
+tri-in-tri/n17/rigid-best/B1/default/s3 ok 2.6s
+tri-in-tri/n17/sa-best/B1/default/s32 copied
+tri-in-tri/n17/sa-best/B1/default/s19 ok 7.1s
+tri-in-tri/n17/sa-best/B1/default/s17 ok 6.9s
+tri-in-tri/n17/pc-best/B1/default/s29 copied
+tri-in-tri/n17/pc-best/B1/default/s23 ok 7.8s
+tri-in-tri/n17/pc-best/B1/default/s19 ok 7.7s
+tri-in-tri/n23/harden-best/B1/default/s30 copied
+tri-in-tri/n23/harden-best/B1/default/s23 copied
+tri-in-tri/n23/harden-best/B1/default/s4 copied
+tri-in-tri/n23/grow-best/B1/default/s24 copied
+tri-in-tri/n23/grow-best/B1/default/s14 copied
+tri-in-tri/n23/grow-best/B1/default/s28 copied
+tri-in-tri/n23/rigid-best/B1/default/s2 copied
+tri-in-tri/n23/rigid-best/B1/default/s32 copied
+tri-in-tri/n23/rigid-best/B1/default/s29 copied
+tri-in-tri/n23/sa-best/B1/default/s15 copied
+tri-in-tri/n23/sa-best/B1/default/s12 ok 3.6s
+tri-in-tri/n23/sa-best/B1/default/s5 ok 11.5s
+tri-in-tri/n23/pc-best/B1/default/s3 ok 60.9s
+tri-in-tri/n23/pc-best/B1/default/s1 ok 63.3s
+tri-in-tri/n23/pc-best/B1/default/s24 ok 30.5s
+tri-in-tri/n29/harden-best/B1/default/s22 copied
+tri-in-tri/n29/harden-best/B1/default/s16 ok 41.3s
+tri-in-tri/n29/harden-best/B1/default/s17 ok 57.5s
+tri-in-tri/n29/grow-best/B1/default/s28 copied
+tri-in-tri/n29/grow-best/B1/default/s26 copied
+tri-in-tri/n29/grow-best/B1/default/s10 copied
+tri-in-tri/n29/rigid-best/B1/default/s10 copied
+tri-in-tri/n29/rigid-best/B1/default/s19 copied
+tri-in-tri/n29/rigid-best/B1/default/s18 copied
+tri-in-tri/n29/sa-best/B1/default/s2 copied
+tri-in-tri/n29/sa-best/B1/default/s11 ok 49.5s
+tri-in-tri/n29/sa-best/B1/default/s1 ok 92.9s
+tri-in-tri/n29/pc-best/B1/default/s9 ok 56.6s
+tri-in-tri/n29/pc-best/B1/default/s2 ok 133.6s
+tri-in-tri/n29/pc-best/B1/default/s15 ok 107.0s
+tri-in-squ/n11/harden-best/B1/default/s3 copied
+tri-in-squ/n11/harden-best/B1/default/s27 ok 4.0s
+tri-in-squ/n11/harden-best/B1/default/s7 ok 2.2s
+tri-in-squ/n11/grow-best/B1/default/s7 copied
+tri-in-squ/n11/grow-best/B1/default/s31 copied
+tri-in-squ/n11/grow-best/B1/default/s20 ok 2.5s
+tri-in-squ/n11/rigid-best/B1/default/s28 copied
+tri-in-squ/n11/rigid-best/B1/default/s29 ok 2.9s
+tri-in-squ/n11/rigid-best/B1/default/s2 ok 3.2s
+tri-in-squ/n11/sa-best/B1/default/s26 copied
+tri-in-squ/n11/sa-best/B1/default/s30 ok 2.9s
+tri-in-squ/n11/sa-best/B1/default/s3 ok 2.0s
+tri-in-squ/n11/pc-best/B1/default/s12 ok 3.6s
+tri-in-squ/n11/pc-best/B1/default/s15 ok 1.3s
+tri-in-squ/n11/pc-best/B1/default/s16 ok 7.8s
+tri-in-squ/n17/harden-best/B1/default/s4 copied
+tri-in-squ/n17/harden-best/B1/default/s7 ok 9.5s
+tri-in-squ/n17/harden-best/B1/default/s32 ok 10.1s
+tri-in-squ/n17/grow-best/B1/default/s18 copied
+tri-in-squ/n17/grow-best/B1/default/s25 ok 8.7s
+tri-in-squ/n17/grow-best/B1/default/s15 ok 6.3s
+tri-in-squ/n17/rigid-best/B1/default/s31 copied
+tri-in-squ/n17/rigid-best/B1/default/s32 ok 10.4s
+tri-in-squ/n17/rigid-best/B1/default/s5 ok 9.9s
+tri-in-squ/n17/sa-best/B1/default/s10 copied
+tri-in-squ/n17/sa-best/B1/default/s14 ok 17.5s
+tri-in-squ/n17/sa-best/B1/default/s2 ok 9.5s
+tri-in-squ/n17/pc-best/B1/default/s8 ok 26.9s
+tri-in-squ/n17/pc-best/B1/default/s10 ok 12.9s
+tri-in-squ/n17/pc-best/B1/default/s16 ok 9.2s
+tri-in-squ/n23/harden-best/B1/default/s3 copied
+tri-in-squ/n23/harden-best/B1/default/s20 ok 24.4s
+tri-in-squ/n23/harden-best/B1/default/s4 ok 21.2s
+tri-in-squ/n23/grow-best/B1/default/s27 copied
+tri-in-squ/n23/grow-best/B1/default/s22 ok 18.6s
+tri-in-squ/n23/grow-best/B1/default/s15 ok 42.7s
+tri-in-squ/n23/rigid-best/B1/default/s3 copied
+tri-in-squ/n23/rigid-best/B1/default/s9 ok 27.3s
+tri-in-squ/n23/rigid-best/B1/default/s4 ok 26.4s
+tri-in-squ/n23/sa-best/B1/default/s16 copied
+tri-in-squ/n23/sa-best/B1/default/s21 ok 19.7s
+tri-in-squ/n23/sa-best/B1/default/s4 ok 26.9s
+tri-in-squ/n23/pc-best/B1/default/s2 ok 39.1s
+tri-in-squ/n23/pc-best/B1/default/s15 ok 68.1s
+tri-in-squ/n23/pc-best/B1/default/s12 ok 95.8s
+tri-in-squ/n29/harden-best/B1/default/s27 copied
+tri-in-squ/n29/harden-best/B1/default/s2 ok 60.1s
+tri-in-squ/n29/harden-best/B1/default/s13 ok 85.2s
+tri-in-squ/n29/grow-best/B1/default/s17 copied
+tri-in-squ/n29/grow-best/B1/default/s13 ok 56.8s
+tri-in-squ/n29/grow-best/B1/default/s23 ok 66.8s
+tri-in-squ/n29/rigid-best/B1/default/s32 copied
+tri-in-squ/n29/rigid-best/B1/default/s16 ok 55.8s
+tri-in-squ/n29/rigid-best/B1/default/s13 ok 91.5s
+tri-in-squ/n29/sa-best/B1/default/s24 copied
+tri-in-squ/n29/sa-best/B1/default/s13 ok 253.5s
+tri-in-squ/n29/sa-best/B1/default/s32 ok 45.4s
+tri-in-squ/n29/pc-best/B1/default/s12 ok 128.1s
+tri-in-squ/n29/pc-best/B1/default/s16 ok 91.5s
+tri-in-squ/n29/pc-best/B1/default/s3 ok 170.0s
+hex-in-squ/n8/harden-best/B1/default/s11 copied
+hex-in-squ/n8/harden-best/B1/default/s1 copied
+hex-in-squ/n8/harden-best/B1/default/s3 copied
+hex-in-squ/n8/grow-best/B1/default/s21 copied
+hex-in-squ/n8/grow-best/B1/default/s15 copied
+hex-in-squ/n8/grow-best/B1/default/s1 copied
+hex-in-squ/n8/rigid-best/B1/default/s25 copied
+hex-in-squ/n8/rigid-best/B1/default/s9 copied
+hex-in-squ/n8/rigid-best/B1/default/s23 copied
+hex-in-squ/n8/sa-best/B1/default/s29 copied
+hex-in-squ/n8/sa-best/B1/default/s20 copied
+hex-in-squ/n8/sa-best/B1/default/s30 copied
+hex-in-squ/n8/pc-best/B1/default/s23 copied
+hex-in-squ/n8/pc-best/B1/default/s16 ok 1.3s
+hex-in-squ/n8/pc-best/B1/default/s14 ok 1.0s
+hex-in-squ/n12/harden-best/B1/default/s30 copied
+hex-in-squ/n12/harden-best/B1/default/s13 copied
+hex-in-squ/n12/harden-best/B1/default/s1 copied
+hex-in-squ/n12/grow-best/B1/default/s16 copied
+hex-in-squ/n12/grow-best/B1/default/s20 copied
+hex-in-squ/n12/grow-best/B1/default/s7 copied
+hex-in-squ/n12/rigid-best/B1/default/s27 copied
+hex-in-squ/n12/rigid-best/B1/default/s8 copied
+hex-in-squ/n12/rigid-best/B1/default/s20 copied
+hex-in-squ/n12/sa-best/B1/default/s29 copied
+hex-in-squ/n12/sa-best/B1/default/s11 ok 5.1s
+hex-in-squ/n12/sa-best/B1/default/s23 ok 3.0s
+hex-in-squ/n12/pc-best/B1/default/s31 copied
+hex-in-squ/n12/pc-best/B1/default/s5 ok 5.5s
+hex-in-squ/n12/pc-best/B1/default/s23 ok 4.4s
+hex-in-squ/n16/harden-best/B1/default/s14 copied
+hex-in-squ/n16/harden-best/B1/default/s26 copied
+hex-in-squ/n16/harden-best/B1/default/s23 copied
+hex-in-squ/n16/grow-best/B1/default/s10 copied
+hex-in-squ/n16/grow-best/B1/default/s25 ok 2.7s
+hex-in-squ/n16/grow-best/B1/default/s16 ok 7.5s
+hex-in-squ/n16/rigid-best/B1/default/s3 copied
+hex-in-squ/n16/rigid-best/B1/default/s24 copied
+hex-in-squ/n16/rigid-best/B1/default/s16 copied
+hex-in-squ/n16/sa-best/B1/default/s16 copied
+hex-in-squ/n16/sa-best/B1/default/s31 ok 9.8s
+hex-in-squ/n16/sa-best/B1/default/s24 ok 6.1s
+hex-in-squ/n16/pc-best/B1/default/s23 copied
+hex-in-squ/n16/pc-best/B1/default/s18 ok 21.6s
+hex-in-squ/n16/pc-best/B1/default/s6 ok 27.3s
+hex-in-squ/n20/harden-best/B1/default/s28 copied
+hex-in-squ/n20/harden-best/B1/default/s23 copied
+hex-in-squ/n20/harden-best/B1/default/s2 copied
+hex-in-squ/n20/grow-best/B1/default/s7 copied
+hex-in-squ/n20/grow-best/B1/default/s18 copied
+hex-in-squ/n20/grow-best/B1/default/s9 copied
+hex-in-squ/n20/rigid-best/B1/default/s12 copied
+hex-in-squ/n20/rigid-best/B1/default/s31 copied
+hex-in-squ/n20/rigid-best/B1/default/s4 copied
+hex-in-squ/n20/sa-best/B1/default/s9 copied
+hex-in-squ/n20/sa-best/B1/default/s12 ok 31.4s
+hex-in-squ/n20/sa-best/B1/default/s28 ok 29.8s
+hex-in-squ/n20/pc-best/B1/default/s11 ok 36.2s
+hex-in-squ/n20/pc-best/B1/default/s25 ok 99.2s
+hex-in-squ/n20/pc-best/B1/default/s22 ok 35.7s
+cir-in-squ/n11/harden-best/B1/default/s3 copied
+cir-in-squ/n11/harden-best/B1/default/s6 copied
+cir-in-squ/n11/harden-best/B1/default/s28 copied
+cir-in-squ/n11/grow-best/B1/default/s9 copied
+cir-in-squ/n11/grow-best/B1/default/s14 copied
+cir-in-squ/n11/grow-best/B1/default/s5 copied
+cir-in-squ/n11/rigid-best/B1/default/s3 copied
+cir-in-squ/n11/rigid-best/B1/default/s6 copied
+cir-in-squ/n11/rigid-best/B1/default/s28 copied
+cir-in-squ/n11/sa-best/B1/default/s32 copied
+cir-in-squ/n11/sa-best/B1/default/s15 ok 0.2s
+cir-in-squ/n11/sa-best/B1/default/s31 ok 0.2s
+cir-in-squ/n11/pc-best/B1/default/s4 ok 0.9s
+cir-in-squ/n11/pc-best/B1/default/s2 ok 0.4s
+cir-in-squ/n11/pc-best/B1/default/s3 ok 0.9s
+cir-in-squ/n17/harden-best/B1/default/s2 copied
+cir-in-squ/n17/harden-best/B1/default/s3 copied
+cir-in-squ/n17/harden-best/B1/default/s5 copied
+cir-in-squ/n17/grow-best/B1/default/s3 copied
+cir-in-squ/n17/grow-best/B1/default/s5 copied
+cir-in-squ/n17/grow-best/B1/default/s9 copied
+cir-in-squ/n17/rigid-best/B1/default/s2 copied
+cir-in-squ/n17/rigid-best/B1/default/s3 copied
+cir-in-squ/n17/rigid-best/B1/default/s5 copied
+cir-in-squ/n17/sa-best/B1/default/s5 copied
+cir-in-squ/n17/sa-best/B1/default/s22 ok 0.8s
+cir-in-squ/n17/sa-best/B1/default/s21 ok 0.2s
+cir-in-squ/n17/pc-best/B1/default/s12 copied
+cir-in-squ/n17/pc-best/B1/default/s24 ok 1.0s
+cir-in-squ/n17/pc-best/B1/default/s9 ok 0.5s
+cir-in-squ/n23/harden-best/B1/default/s25 copied
+cir-in-squ/n23/harden-best/B1/default/s28 copied
+cir-in-squ/n23/harden-best/B1/default/s32 ok 0.6s
+cir-in-squ/n23/grow-best/B1/default/s9 copied
+cir-in-squ/n23/grow-best/B1/default/s28 copied
+cir-in-squ/n23/grow-best/B1/default/s7 copied
+cir-in-squ/n23/rigid-best/B1/default/s25 copied
+cir-in-squ/n23/rigid-best/B1/default/s28 copied
+cir-in-squ/n23/rigid-best/B1/default/s32 ok 0.7s
+cir-in-squ/n23/sa-best/B1/default/s3 copied
+cir-in-squ/n23/sa-best/B1/default/s4 ok 0.7s
+cir-in-squ/n23/sa-best/B1/default/s2 ok 0.7s
+cir-in-squ/n23/pc-best/B1/default/s7 copied
+cir-in-squ/n23/pc-best/B1/default/s27 ok 1.4s
+cir-in-squ/n23/pc-best/B1/default/s29 ok 1.8s
+cir-in-squ/n29/harden-best/B1/default/s24 copied
+cir-in-squ/n29/harden-best/B1/default/s19 copied
+cir-in-squ/n29/harden-best/B1/default/s3 copied
+cir-in-squ/n29/grow-best/B1/default/s20 copied
+cir-in-squ/n29/grow-best/B1/default/s27 copied
+cir-in-squ/n29/grow-best/B1/default/s25 copied
+cir-in-squ/n29/rigid-best/B1/default/s24 copied
+cir-in-squ/n29/rigid-best/B1/default/s19 copied
+cir-in-squ/n29/rigid-best/B1/default/s3 copied
+cir-in-squ/n29/sa-best/B1/default/s12 copied
+cir-in-squ/n29/sa-best/B1/default/s29 ok 2.1s
+cir-in-squ/n29/sa-best/B1/default/s23 ok 3.9s
+cir-in-squ/n29/pc-best/B1/default/s21 copied
+cir-in-squ/n29/pc-best/B1/default/s8 ok 10.3s
+cir-in-squ/n29/pc-best/B1/default/s16 ok 4.7s
+{
+ "instances": 28,
+ "raw": {
+  "harden": 6,
+  "grow": 19,
+  "rigid": 3,
+  "sa": 1,
+  "pc": 0
+ },
+ "equal_top3": {
+  "harden": 23,
+  "grow": 20,
+  "rigid": 19,
+  "sa": 17,
+  "pc": 4
+ },
+ "c07_policy": {
+  "harden": 24,
+  "grow": 20,
+  "rigid": 18,
+  "sa": 14,
+  "pc": 2
+ },
+ "tighten_seconds_mean": {
+  "harden": 13.5,
+  "grow": 13.2,
+  "rigid": 11.6,
+  "sa": 17.5,
+  "pc": 34.3
+ }
+}

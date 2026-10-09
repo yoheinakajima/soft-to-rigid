@@ -1,6 +1,6 @@
 # Journal
 
-*Generated from the ledger (`ledger/events.jsonl`, 57389 events) by `packing/project.py`. Do not edit.*
+*Generated from the ledger (`ledger/events.jsonl`, 60351 events) by `packing/project.py`. Do not edit.*
 
 Every campaign was planned before it ran. Each entry gives the question, what we expected, what happened, and what we decided.
 
@@ -189,4 +189,17 @@ C09 changed run length and restart count together and used instances selected fo
 - **Decided:** Per the rule: no arm separates harden and rigid (two-sided sign tests p = 0.18, 1, 0.29). The hypothesis that hardening improves more with longer runs is not supported; the paper withdraws the C09 claim and reports C09 only in the appendix as confounded.
 
 [Full report](campaigns/C13-budget-clean/REPORT.md)
+
+## C15-heldout-decision — Does choosing the path pay on families never used before?
+
+*Planned 2026-10-09 · status: closed*
+
+C07-C13 show that the better path depends on the family, but that was learned on seven families. Here four families never used to develop, tune or analyse any method (pentagons in a square, octagons in a square, hexagons in a triangle, triangles in a circle; n = 6..20; best known values parsed from Friedman's captions at a pinned commit) test a decision procedure rather than a description. Each instance gets 64 harden-best and 64 rigid-best runs at budget 1, with the frozen C06 settings, from which three policies of 64 runs each are formed: always-rigid (rigid seeds 1-64), always-harden (harden seeds 1-64), and pilot (harden seeds 1-8 and rigid seeds 1-8, then seeds 9-56 of the path whose pilot reached the lower legalised size; ties go to rigid).
+
+- **Expected:** From the mechanism hypotheses in the paper (orientation matters late; odd and near-round pieces gain nothing): pentagons and triangles in a circle favour rigid starts or tie; octagons and hexagons in a triangle mostly tie. The pilot policy is at least as good as always-rigid.
+- **Rule:** Primary: pilot vs always-rigid, counting instances where each policy's result is strictly lower (relative 1e-9); exact two-sided sign test. If the pilot is lower on more instances with p < 0.05, the paper reports path choice by pilot as a method that transfers to new families; if p >= 0.05, it reports no detected benefit (not equivalence); if always-rigid is lower with p < 0.05, it reports that the pilot costs more than it gains. Secondary, descriptive: per family, always-harden vs always-rigid counts, compared with the hypotheses above; the number of instances on which the pilot picked harden; reached counts per policy.
+- **Found:** Held-out families (pentagons and octagons in a square, hexagons in a triangle, triangles in a circle; n = 6-20; 60 instances; 64 runs per policy). Pilot (8 harden + 8 rigid runs, then 48 on the pilot winner) vs always-rigid: lower on 2 vs 3 instances, 55 ties (two-sided p = 1). Always-harden vs always-rigid: 3 vs 17 (p = 0.0026); pentagons 1 vs 8. Pilot vs always-harden: 14 vs 2. Best known reached: rigid 40, harden 32, pilot 41. The pilot picked harden on 20 of 60 instances. Hardening helps on none of these families; the pilot avoids its losses but does not beat always-rigid.
+- **Decided:** Per the rule: pilot vs always-rigid 2 vs 3, p = 1 >= 0.05, so the paper reports no detected benefit from choosing the path by pilot on held-out families (not equivalence). Secondary hypotheses: pentagons favour rigid (confirmed, 1 vs 8); octagons and hexagons in a triangle mostly tie (12 and 13 ties of 15, remaining instances favour rigid); triangles in a circle rigid or tie (2 vs 4, 9 ties).
+
+[Full report](campaigns/C15-heldout-decision/REPORT.md)
 

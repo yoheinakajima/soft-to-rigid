@@ -1,0 +1,5 @@
+C16-squares-long: 103 candidates, 95 to polish
+0 squ-in-squ/n17/harden-best/B10/default/s16 ok 14.8s
+25 squ-in-squ/n21/harden-best/B10/default/s14 ok 9.9s
+50 squ-in-squ/n23/rigid-best/B10/default/s11 ok 6.1s
+75 squ-in-squ/n26/harden-best/B10/default/s13 ok 12.4s

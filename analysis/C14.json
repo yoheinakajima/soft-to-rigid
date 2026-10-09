@@ -1,0 +1,31 @@
+{
+ "instances": 28,
+ "raw": {
+  "harden": 6,
+  "grow": 19,
+  "rigid": 3,
+  "sa": 1,
+  "pc": 0
+ },
+ "equal_top3": {
+  "harden": 23,
+  "grow": 20,
+  "rigid": 19,
+  "sa": 17,
+  "pc": 4
+ },
+ "c07_policy": {
+  "harden": 24,
+  "grow": 20,
+  "rigid": 18,
+  "sa": 14,
+  "pc": 2
+ },
+ "tighten_seconds_mean": {
+  "harden": 13.5,
+  "grow": 13.2,
+  "rigid": 11.6,
+  "sa": 17.5,
+  "pc": 34.3
+ }
+}

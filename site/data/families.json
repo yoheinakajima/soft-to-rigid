@@ -1,4 +1,26 @@
 {
+ "pen-in-squ": {
+  "family": "pen-in-squ",
+  "title": "Unit regular pentagons in a square",
+  "dim": 2,
+  "piece": "pentagon",
+  "container": "square",
+  "measure": "side",
+  "sources": [
+   "https://erich-friedman.github.io/packing/peninsqu/"
+  ]
+ },
+ "tri-in-cir": {
+  "family": "tri-in-cir",
+  "title": "Unit equilateral triangles in a circle",
+  "dim": 2,
+  "piece": "triangle",
+  "container": "circle",
+  "measure": "radius",
+  "sources": [
+   "https://erich-friedman.github.io/packing/triincir/"
+  ]
+ },
  "squ-in-cir": {
   "family": "squ-in-cir",
   "title": "Unit squares in a circle",
@@ -30,6 +52,28 @@
   "measure": "side",
   "sources": [
    "https://erich-friedman.github.io/packing/triinsqu/"
+  ]
+ },
+ "oct-in-squ": {
+  "family": "oct-in-squ",
+  "title": "Unit regular octagons in a square",
+  "dim": 2,
+  "piece": "octagon",
+  "container": "square",
+  "measure": "side",
+  "sources": [
+   "https://erich-friedman.github.io/packing/octinsqu/"
+  ]
+ },
+ "hex-in-tri": {
+  "family": "hex-in-tri",
+  "title": "Unit regular hexagons in an equilateral triangle",
+  "dim": 2,
+  "piece": "hexagon",
+  "container": "triangle",
+  "measure": "side",
+  "sources": [
+   "https://erich-friedman.github.io/packing/hexintri/"
   ]
  },
  "tri-in-tri": {
