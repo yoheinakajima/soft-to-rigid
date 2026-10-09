@@ -3,9 +3,55 @@
  "title": "Does a longer schedule change which path finds the lowest point?",
  "question": "On the contested instances, give harden-best and rigid-best 3x and 10x the budget (32 runs each). Does the gap between the paths close, persist, or reverse with more time, and does either path find a packing below a published value?",
  "hypothesis": "More time lowers both paths' lowest points; the path that wins at budget 1 on an instance still wins at budget 10 on most instances.",
- "decision_rule": "Same instances as C08. Metric: lowest tightened size over 32 runs per instance, method and budget. Report the per-budget count of instances where each path is lowest, and certify anything below a catalogue value.",
+ "decision_rule": "The 20 most contested of C08's instances (largest relative differences). Metric: lowest tightened size over 32 runs per instance, method and budget. Report the per-budget count of instances where each path is lowest, and certify anything below a catalogue value.",
  "created": "2026-10-08",
- "instances": "same as C08",
+ "instances": [
+  {
+   "family": "squ-in-cir",
+   "ns": [
+    5,
+    12,
+    19,
+    21
+   ]
+  },
+  {
+   "family": "squ-in-squ",
+   "ns": [
+    19,
+    28,
+    29
+   ]
+  },
+  {
+   "family": "squ-in-tri",
+   "ns": [
+    24
+   ]
+  },
+  {
+   "family": "tri-in-squ",
+   "ns": [
+    9,
+    16,
+    19,
+    24,
+    26,
+    27,
+    29,
+    30
+   ]
+  },
+  {
+   "family": "tri-in-tri",
+   "ns": [
+    12,
+    25,
+    28,
+    30
+   ]
+  }
+ ],
  "methods": [
   "harden-best",
   "rigid-best"
@@ -14,6 +60,13 @@
   3,
   10
  ],
- "seeds": 32,
- "polish": true
+ "seeds": 16,
+ "polish": true,
+ "amendments": [
+  {
+   "date": "2026-10-08",
+   "change": "Revised before the first run, for compute: 16 seeds instead of 32 and the 20 most contested instances instead of up to 40 (a budget-10 run costs about ten budget-1 runs)."
+  }
+ ],
+ "instances_source": "scripts/contested.py over C07-breadth-best: 50 contested, 20 used (largest relative differences)"
 }

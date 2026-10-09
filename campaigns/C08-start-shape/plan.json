@@ -5,7 +5,78 @@
  "hypothesis": "On instances whose best known packing tilts pieces against each other (squares n = 11, 17-19, 26-29 in a square), softer starts reach lower sizes; on triangles and slack grids the reverse.",
  "decision_rule": "Instances: the contested instances of C07, defined as those where the lowest sizes of harden-best and rigid-best differ by more than 1e-6 relative, capped at 40 by taking the largest relative differences. Metric: lowest tightened size over 32 runs per instance and tau0 (same tightening policy as C04). Report, per family, the number of instances where each tau0 attains the lowest size; test monotonicity descriptively (no significance test).",
  "created": "2026-10-08",
- "instances": "filled from C07 by scripts/contested.py before the first run",
+ "instances": [
+  {
+   "family": "hex-in-squ",
+   "ns": [
+    10
+   ]
+  },
+  {
+   "family": "squ-in-cir",
+   "ns": [
+    5,
+    12,
+    17,
+    19,
+    20,
+    21,
+    23,
+    24,
+    25,
+    26,
+    28,
+    29,
+    30
+   ]
+  },
+  {
+   "family": "squ-in-squ",
+   "ns": [
+    11,
+    17,
+    19,
+    27,
+    28,
+    29
+   ]
+  },
+  {
+   "family": "squ-in-tri",
+   "ns": [
+    24
+   ]
+  },
+  {
+   "family": "tri-in-squ",
+   "ns": [
+    9,
+    16,
+    18,
+    19,
+    22,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30
+   ]
+  },
+  {
+   "family": "tri-in-tri",
+   "ns": [
+    12,
+    13,
+    21,
+    25,
+    26,
+    28,
+    30
+   ]
+  }
+ ],
  "methods": [
   "harden-tau"
  ],
@@ -49,5 +120,6 @@
     }
    }
   ]
- }
+ },
+ "instances_source": "scripts/contested.py over C07-breadth-best: 50 contested, 40 used (largest relative differences)"
 }
