@@ -6,8 +6,8 @@ This paper changes the pieces instead. \emph{Hardening} starts every piece as th
 Here we ask whether that is a property of the path or of the problems we tried. We compare hardening with four other paths through shape space on seven families of shapes and containers (\totalruns{} runs in \ncampaigns{} campaigns), with equal budgets and equal tuning effort. Since a packing search is judged by the best packing it ever finds, the comparison is by the \emph{lowest} container size each method reaches, after exact tightening. Our findings:
 \begin{itemize}\itemsep1pt
 \item No path is best everywhere. Over all families, rigid starts with the same schedule reach the lowest size about as often as hardening or slightly more often (Table~\ref{tab:main}).
-\item Which path wins depends on the family. For squares in a square, hardening reaches the lowest size on almost every instance and is often the only method that does; for triangles, rigid or growing starts are better (Section~\ref{sec:learned}).
-\item Hardening gains more than rigid starts from longer schedules, and partly rounded starts are a good compromise when the family is unknown; at equal budget, mixing two paths is no better than doubling one.
+\item Which path wins depends on the family. For squares in a square, hardening reaches the lowest size on 27 of 28 instances and is the only method that low on five; for triangles, rigid or growing starts are better (Section~\ref{sec:learned}).
+\item On twenty contested instances, hardening gained more than rigid starts from longer schedules, and partly rounded starts did about as well as the better of the two extremes. At equal budget, mixing two paths was no better than doubling one.
 \item Tuned simulated annealing is competitive on several families; perturbation--compression is far behind at this budget.
 \end{itemize}
 Every run can be replayed, every claim verified, and every decision traced in the repository and its site; each experiment was planned in writing before it ran.

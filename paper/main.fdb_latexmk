@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex main"] 1791531067.87455 "main.aux" "main.bbl" "main" 1791531094.43979 0
+["bibtex main"] 1791531533.34651 "main.aux" "main.bbl" "main" 1791531544.5534 0
   "./refs.bib" 1791499961.23647 3577 cff78e98c5984d7999994b7b8a2aa1de ""
   "/usr/share/texlive/texmf-dist/bibtex/bst/natbib/plainnat.bst" 1233624470 26816 ffe5423d2019860bad9f54bc402fac15 ""
-  "main.aux" 1791531094.35455 7962 32d6b12ebc98681ae98481e97ce25de0 "pdflatex"
+  "main.aux" 1791531544.45458 7962 bb95320e94d1698ab83bee0f154314a6 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1791531094.00318 "main.tex" "main.pdf" "main" 1791531094.43998 0
+["pdflatex"] 1791531544.03554 "main.tex" "main.pdf" "main" 1791531544.55359 0
   "/etc/texmf/web2c/texmf.cnf" 1790956343 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/root/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm0600.600pk" 1791475910.94907 7260 ea16bf9d795457856dccdd91a4bf2117 ""
   "/root/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm0800.600pk" 1791475911.90693 9268 3bbf5c86a12044f0619685b39c0290f6 ""
@@ -126,20 +126,20 @@
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1790956389 6831101 819653806f6db0f84764971e8823f2a8 ""
   "figures/gaps.pdf" 1791531012.68655 31224 1f45b939c44527c0c102a3d823a9bf22 ""
   "figures/strip_squ19.pdf" 1791531013.18655 38298 a97929efe50fe5ade705bd7850fb77ad ""
-  "main.aux" 1791531094.35455 7962 32d6b12ebc98681ae98481e97ce25de0 "pdflatex"
-  "main.bbl" 1791531067.88968 3322 1db370f1881ee73f6d659ebe4ed377f5 "bibtex main"
-  "main.out" 1791531094.35455 953 23b90a1dea2bf727b7f181ffe18b4b81 "pdflatex"
+  "main.aux" 1791531544.45458 7962 bb95320e94d1698ab83bee0f154314a6 "pdflatex"
+  "main.bbl" 1791531533.36242 3322 1db370f1881ee73f6d659ebe4ed377f5 "bibtex main"
+  "main.out" 1791531544.45458 953 23b90a1dea2bf727b7f181ffe18b4b81 "pdflatex"
   "main.tex" 1791531067.26796 1426 497df2e84f045c08bd6d368003899512 ""
   "numbers.tex" 1791531031.81864 6597 1d8adb7a66914fe30e9af2944ceb6a90 ""
-  "sections/abstract.tex" 1791531031.80655 1154 575ac11ccabd515700ff2b88f52e054f ""
+  "sections/abstract.tex" 1791531532.67058 1159 5c9302520af2f0f0e681e679ab0200ce ""
   "sections/appendix.tex" 1791531056.78534 936 c97c92da0f1917130041093e6e6f050a ""
   "sections/body.tex" 1791513234.29749 144 5ff49393b0de85ac6f5758f00d1d8e28 ""
-  "sections/breadth.tex" 1791523008.23807 2372 686b174dbf5f39a62ba45091986b46a2 ""
-  "sections/intro.tex" 1791531056.78114 2597 c22b2caea2cad7af9e710fa62418a692 ""
-  "sections/learned.tex" 1791531056.78079 4047 2039d621aeabfc2179e96ab1218ffcde ""
-  "sections/limits.tex" 1791531093.90282 1635 aafc99c53f62bcbe87b9cce9ce312b30 ""
-  "sections/method.tex" 1791501126.84077 3271 b29c270c9c3c0905e27c6cd3b71d577f ""
-  "sections/story.tex" 1791531031.80759 1817 6440d007a973a1c898013c5549e423af ""
+  "sections/breadth.tex" 1791531543.89531 2623 4ba709baf8910a0cac2b75e0e9603368 ""
+  "sections/intro.tex" 1791531532.67002 2631 842140a5f4445449ec2da2018277eb8d ""
+  "sections/learned.tex" 1791531532.67081 4341 b5c7a6c013e3492000282903435f0ffc ""
+  "sections/limits.tex" 1791531532.66942 1652 92846e668316ab0a2a1925ddf8eb183e ""
+  "sections/method.tex" 1791531532.66783 3292 f70966560a1f8b53416014781b73cda6 ""
+  "sections/story.tex" 1791531532.66924 1889 173ef7a7c9a99263e71827c9de380469 ""
   "tables/C04-breadth.tex" 1791531005.53789 938 d8fd766b7a2ebb1e7aec02fc3194b153 ""
   "tables/C05-cubes.tex" 1791531005.54987 1044 b40e1d275931bfb5e84ff2810459868f ""
   "tables/C07-breadth-best.tex" 1791531005.54904 1205 ff745bf3ae834167e346e21a91488282 ""
