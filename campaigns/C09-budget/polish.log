@@ -1,0 +1,6 @@
+C09-budget: 102 candidates, 102 to polish
+0 squ-in-cir/n5/rigid-best/B3/default/s15 ok 1.2s
+25 squ-in-cir/n19/harden-best/B3/default/s2 ok 7.6s
+50 squ-in-tri/n24/rigid-best/B3/default/s12 ok 6.3s
+75 squ-in-squ/n28/rigid-best/B10/default/s11 ok 5.9s
+100 tri-in-tri/n30/rigid-best/B10/default/s3 ok 31.0s

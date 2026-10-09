@@ -207,8 +207,8 @@ def _cells(campaign, rows, files, polish=True, rel_lim=None, cap=None, gap_lim=N
     return cells
 
 
-def ingest(campaign):
-    rt, G = open_ledger()
+def ingest(campaign, opened=None):
+    rt, G = opened or open_ledger()
     cdir = os.path.join(ROOT, 'campaigns', campaign)
     plan = json.load(open(os.path.join(cdir, 'plan.json')))
     if not G.objects('campaign', where={'cid': campaign}):
@@ -282,14 +282,16 @@ def export():
 if __name__ == '__main__':
     ap = argparse.ArgumentParser()
     sub = ap.add_subparsers(dest='cmd')
-    a = sub.add_parser('ingest'); a.add_argument('campaign')
+    a = sub.add_parser('ingest'); a.add_argument('campaign', nargs='+')
     a = sub.add_parser('finding'); a.add_argument('text'); a.add_argument('--evidence', nargs='*', default=[]); a.add_argument('--campaign')
     a = sub.add_parser('close'); a.add_argument('campaign'); a.add_argument('decision')
     sub.add_parser('export')
     a = sub.add_parser('rebuild'); a.add_argument('--upto')
     args = ap.parse_args()
     if args.cmd == 'ingest':
-        ingest(args.campaign)
+        opened = open_ledger()
+        for c in args.campaign:
+            ingest(c, opened)
     elif args.cmd == 'finding':
         finding(args.text, args.evidence, args.campaign)
     elif args.cmd == 'close':

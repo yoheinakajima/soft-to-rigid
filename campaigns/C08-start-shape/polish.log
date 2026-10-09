@@ -5,3 +5,5 @@ C08-start-shape: 187 candidates, 187 to polish
 75 squ-in-cir/n20/harden-tau/B1/tau0.25/s2 ok 6.1s
 100 squ-in-cir/n24/harden-tau/B1/tau0.5/s10 ok 17.9s
 125 tri-in-tri/n25/harden-tau/B1/tau0/s32 ok 34.5s
+150 squ-in-cir/n28/harden-tau/B1/tau0.25/s29 ok 47.9s
+175 tri-in-squ/n29/harden-tau/B1/tau1/s27 ok 78.0s

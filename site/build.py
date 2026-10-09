@@ -33,11 +33,17 @@ for f in glob.glob(os.path.join(ROOT, 'campaigns', '*', 'replays', '**', '*.json
     dst = os.path.join(OUT, os.path.relpath(f, ROOT)); os.makedirs(os.path.dirname(dst), exist_ok=True); shutil.copy(f, dst)
 if os.path.isdir(os.path.join(ROOT, 'claims')):
     shutil.copytree(os.path.join(ROOT, 'claims'), os.path.join(OUT, 'claims'))
-for extra in ('paper.html', 'paper.pdf'):
-    src = os.path.join(ROOT, 'paper', 'build', extra)
-    if os.path.exists(src): shutil.copy(src, os.path.join(OUT, extra))
-if not os.path.exists(os.path.join(OUT, 'paper.html')):
-    open(os.path.join(OUT, 'paper.html'), 'w').write((head + '<header><h1>Paper</h1><p class="lede">The paper is being written. Its outline is in <a href="{{REPO}}/blob/main/paper/OUTLINE.md">paper/OUTLINE.md</a>.</p></header>' + foot)
-        .replace('{{TITLE}}', 'Paper').replace('{{DESC}}', 'The paper').replace('{{SCRIPTS}}', '').replace('{{REPO}}', REPO).replace('{{COMMIT}}', commit).replace('{{BUILT}}', built))
+pdf = os.path.join(ROOT, 'paper', 'main.pdf')
+if os.path.exists(pdf):
+    shutil.copy(pdf, os.path.join(OUT, 'paper.pdf'))
+abstract = open(os.path.join(ROOT, 'paper', 'sections', 'abstract.tex')).read()
+import re as _re
+nums = dict(_re.findall(r'\\newcommand\{\\(\w+)\}\{([^}]*)\}', open(os.path.join(ROOT, 'paper', 'numbers.tex')).read()))
+abstract = _re.sub(r'\\(\w+)\{\}', lambda m: nums.get(m.group(1), m.group(0)), abstract).replace('{,}', ',')
+body = f'''<header><div class="eyebrow">paper · draft rebuilt with every commit</div><h1>Soft-to-Rigid: Packing Congruent Shapes by Hardening Disks into Polygons</h1>
+<p class="lede">{abstract}</p><div class="links"><a href="paper.pdf">PDF</a><a href="{{{{REPO}}}}/tree/main/paper">LaTeX source</a><a href="journal.html">Journal</a></div></header>
+<section class="wide"><object data="paper.pdf" type="application/pdf" style="width:100%;height:85vh;border:1px solid var(--rule)"><p><a href="paper.pdf">Download the PDF</a>.</p></object></section>'''
+open(os.path.join(OUT, 'paper.html'), 'w').write((head + body + foot).replace('{{TITLE}}', 'Paper').replace('{{DESC}}', 'Soft-to-Rigid: the paper').replace('{{SCRIPTS}}', '')
+    .replace('{{REPO}}', REPO).replace('{{COMMIT}}', commit).replace('{{BUILT}}', built).replace('<a href="paper.html">', '<a href="paper.html" aria-current="page">'))
 open(os.path.join(OUT, '.nojekyll'), 'w').write('')
 print('built', OUT)

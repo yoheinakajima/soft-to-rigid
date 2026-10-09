@@ -1,0 +1,8 @@
+{
+ "rigid64": 138,
+ "rigid32+harden32": 139,
+ "rigid32+grow32": 137,
+ "mixed_only": 4,
+ "rigid64_only": 3,
+ "p": 0.5
+}

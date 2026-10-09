@@ -78,5 +78,14 @@
     }
    }
   ]
- }
+ },
+ "polish_rel": 0.01,
+ "polish_cap": 1,
+ "polish_gap": 0.002,
+ "amendments": [
+  {
+   "date": "2026-10-08",
+   "change": "Before the first run: 3D tightening takes minutes per packing, so in each cell only the best run is tightened, and only if it is within 1% of the best known value (or within 2e-3 of it)."
+  }
+ ]
 }

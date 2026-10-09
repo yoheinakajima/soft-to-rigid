@@ -1,0 +1,87 @@
+\begin{thebibliography}{13}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Blake and Zisserman(1987)]{blake}
+Andrew Blake and Andrew Zisserman.
+\newblock \emph{Visual Reconstruction}.
+\newblock MIT Press, 1987.
+
+\bibitem[Erd{\H o}s and Graham(1975)]{erdosgraham}
+Paul Erd{\H o}s and Ronald~L. Graham.
+\newblock On packing squares with equal squares.
+\newblock \emph{Journal of Combinatorial Theory, Series A}, 19:\penalty0
+  119--123, 1975.
+
+\bibitem[Friedman({\natexlab{a}})]{friedmancenter}
+Erich Friedman.
+\newblock Erich's packing center.
+\newblock \url{https://erich-friedman.github.io/packing/}, {\natexlab{a}}.
+\newblock Source repository commit of 7 October 2026.
+
+\bibitem[Friedman({\natexlab{b}})]{friedmansurvey}
+Erich Friedman.
+\newblock Packing unit squares in squares: a survey and new results.
+\newblock Electronic Journal of Combinatorics, Dynamic Survey DS7,
+  {\natexlab{b}}.
+\newblock Squares-in-squares catalogue now maintained by D.~Ellsworth,
+  \url{https://kingbird.myphotos.cc/packing/squares_in_squares.html}.
+
+\bibitem[Gensane and Ryckelynck(2005)]{gensane}
+Thierry Gensane and Philippe Ryckelynck.
+\newblock Improved dense packings of congruent squares in a square.
+\newblock \emph{Discrete \& Computational Geometry}, 34:\penalty0 97--109,
+  2005.
+
+\bibitem[Kirkpatrick et~al.(1983)Kirkpatrick, Gelatt, and Vecchi]{kirkpatrick}
+Scott Kirkpatrick, C.~Daniel Gelatt, and Mario~P. Vecchi.
+\newblock Optimization by simulated annealing.
+\newblock \emph{Science}, 220:\penalty0 671--680, 1983.
+
+\bibitem[Lubachevsky and Stillinger(1990)]{lubachevsky}
+Boris~D. Lubachevsky and Frank~H. Stillinger.
+\newblock Geometric properties of random disk packings.
+\newblock \emph{Journal of Statistical Physics}, 60:\penalty0 561--583, 1990.
+
+\bibitem[Nakajima(2026{\natexlab{a}})]{activegraph}
+Yohei Nakajima.
+\newblock The log is the agent: Event-sourced reactive graphs for auditable,
+  forkable agentic systems.
+\newblock arXiv:2605.21997, 2026{\natexlab{a}}.
+
+\bibitem[Nakajima(2026{\natexlab{b}})]{nakajima12}
+Yohei Nakajima.
+\newblock Twelve unit cubes in a cube of side 2.93152.
+\newblock Submitted to Geombinatorics; code and certificate at
+  \url{https://github.com/yoheinakajima/soft-to-rigid-packing},
+  doi:10.5281/zenodo.23248095, 2026{\natexlab{b}}.
+
+\bibitem[Specht()]{packomania}
+Eckard Specht.
+\newblock Packomania: circles in a square.
+\newblock \url{http://www.packomania.com/csq/csq.html}.
+\newblock Accessed 8 October 2026.
+
+\bibitem[{Tencent Hunyuan}()]{hyra}
+{Tencent Hunyuan}.
+\newblock Hyra-results: packing records.
+\newblock
+  \url{https://github.com/Tencent-Hunyuan/Hyra-results/tree/main/AI4Science/packing_records}.
+\newblock File \texttt{cubincub\_n12.json}, side 2.9327717687048653; accessed 8
+  October 2026.
+
+\bibitem[{The Squares Project}()]{squaresproject}
+{The Squares Project}.
+\newblock An atlas of the square packing problem.
+\newblock \url{https://jlevy.github.io/squares/}.
+\newblock Accessed 8 October 2026.
+
+\bibitem[Trump(1979)]{trump}
+Walter Trump.
+\newblock Packing 11 unit squares in a square.
+\newblock \url{https://trump.de/square-packing/}, 1979.
+
+\end{thebibliography}

@@ -16,14 +16,14 @@
     const camps = [...new Set(D.cells.filter(c => c.family === f).map(c => c.campaign))].sort();
     const camp = camps.includes(D.mainCampaign) ? D.mainCampaign : camps[camps.length - 1];
     document.getElementById('camp').textContent = camp;
-    const cs = D.cells.filter(c => c.family === f && c.campaign === camp);
+    const cs = D.cells.filter(c => c.family === f && c.campaign === camp).map(c => Object.assign({}, c, { method: c.method.replace('-best', ''), rawMethod: c.method }));
     const ns = [...new Set(cs.map(c => c.n))].sort((a, b) => a - b);
     let h = '<tr><th>n</th><th>best known</th>' + meths.map(m => `<th>${m}</th>`).join('') + '</tr>';
     for (const n of ns) {
       const row = cs.filter(c => c.n === n), rec = row[0].record;
       h += `<tr><td>${n}</td><td>${rec.toFixed(5)}</td>` + meths.map(m => {
         const c = row.find(x => x.method === m); if (!c) return '<td></td>';
-        const file = SiteData.replayFile(D, c), g = c.best_gap;
+        const file = SiteData.replayFile(D, Object.assign({}, c, { method: c.rawMethod })), g = c.lowest - c.record;
         const gap = Math.abs(g) < 1e-9 ? '0' : Math.abs(g) < 1e-3 ? g.toExponential(1) : g.toFixed(4);
         return `<td><span class="${c.solved ? 'ok' : 'no'}">${c.below ? '★' : c.solved ? '✓' : '·'}</span> ${c.hits_1e3}/${c.runs} ${gap} ${file ? `<button type="button" data-file="${file}" aria-label="replay ${m} n=${n}">▶</button>` : ''}</td>`;
       }).join('') + '</tr>';

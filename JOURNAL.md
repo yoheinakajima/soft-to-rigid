@@ -1,6 +1,6 @@
 # Journal
 
-*Generated from the ledger (`ledger/events.jsonl`, 18457 events) by `packing/project.py`. Do not edit.*
+*Generated from the ledger (`ledger/events.jsonl`, 45363 events) by `packing/project.py`. Do not edit.*
 
 Every campaign was planned before it ran. Each entry gives the question, what we expected, what happened, and what we decided.
 
@@ -68,6 +68,19 @@ With every method tuned the same way (C01-C03) and given the same number of pair
 
 [Full report](campaigns/C04-breadth/REPORT.md)
 
+## C05-cubes — Cubes in a cube: three paths, two settings
+
+*Planned 2026-10-08 · status: closed*
+
+The n = 12 cube record came from hardening balls into cubes with the original (untuned) schedule. In 3D, at n = 9 to 14, how do harden, grow and rigid compare at the record's budget, with the original settings and with each method's 2D-tuned settings?
+
+- **Expected:** harden is the only path that gets below 2.93277 at n = 12 under either setting; at n = 9 all three reach Friedman's packing.
+- **Rule:** Same 'solved' metric as C04 (tightened run within 1e-9 of the best known value, 1e-5 if truncated, or below it). Report per n, method and setting. sa and pc are not implemented in 3D; the comparison is limited to the three gradient paths. If a tightened run beats a catalogue value it is certified as in C04.
+- **Found:** Cubes, 32 runs per method at the record's budget. harden has the lowest side of the three paths at n = 11, 12 and 13 under both settings; all three reach Friedman's n = 9 packing; with 2D-tuned settings harden and rigid also reach his n = 10 packing (2 + 1/sqrt 2), which the original schedule never reached. At n = 13 tuned harden tightens to 2.956145, consistent with Friedman's 2.956+ to the printed precision. No run went below a catalogue value: the n = 12 record (2.9315185) came from seed 52, outside this campaign's seeds 1-32; the best here is 2.942809. Rigid starts end at the trivial side 3 for n >= 12.
+- **Decided:** Hypothesis partly supported: harden is the lowest path for n = 11-13 under both settings, but nothing went below 2.93277 in 32 seeds. Reported as a 3D replication of the family pattern, not as a new record.
+
+[Full report](campaigns/C05-cubes/REPORT.md)
+
 ## C06-tune-best — Re-tune every method for its lowest point, on harder held-out instances
 
 *Planned 2026-10-08 · status: closed*
@@ -80,4 +93,58 @@ C01-C03 chose each method's settings by median gap, but the question that matter
 - **Decided:** Frozen by scripts/score_best.py into methods/*-best.json: harden and rigid both mu 0.16, noise x8 (identical settings, so C07 compares their paths alone); grow mu 0.08, gamma0 0.1; sa T0 1e-3, mu 0.02; pc kick 0.05, relax 19200. Several winners lie on a grid edge; as pre-registered, no extension.
 
 [Full report](campaigns/C06-tune-best/REPORT.md)
+
+## C07-breadth-best — The breadth comparison again, with every method tuned for its lowest point
+
+*Planned 2026-10-08 · status: closed*
+
+Repeat C04 exactly (same 188 instances, 32 seeds, budget, tightening policy) with the settings chosen by C06. Which method is most likely to produce the lowest packing on each instance?
+
+- **Expected:** As in C04: harden reaches the best known value where it needs tilted pieces (e.g. squares n = 11, 17-19, 26-29), and rigid or grow where the best packing is a grid with spare room. Best-of tuning should not reverse that split.
+- **Rule:** Headline metric (pre-registered): per instance, each method's lowest tightened size over 32 runs; an instance is solved by a method if that lowest size is within 1e-9 of the best known value (within the printed precision when the catalogue value is truncated) or below it. Report, per family and overall, the number of instances where each method attains the lowest size among the five (ties counted for all tied methods), and the number solved. One-sided sign test of harden vs each method on instances solved by exactly one of the two. Medians are reported only as secondary information. Same tightening policy as C04.
+- **Found:** Main comparison with every method tuned for its lowest point (188 instances, 32 runs each, equal budget, after exact tightening). Instances where the method's lowest size is the lowest of all five: rigid 155, grow 144, harden 142, sa 125, pc 72; the only method that low: rigid 16, harden 13, grow 9, sa 6, pc 1. Best known value reached: rigid 133, grow 129, harden 125, sa 115, pc 71. Sign tests (instances solved by exactly one of the pair): rigid vs harden 14 vs 6 (one-sided p = 0.058), grow vs harden 13 vs 9, harden vs sa 21 vs 11, harden vs pc 59 vs 5. Best-of tuning helped sa most (69 to 115 instances solved). No packing below a published value; 43 instances unsolved by every method.
+- **Found:** The family pattern survives re-tuning. Squares in a square: harden's lowest is the lowest of all methods on 27 of 28 instances and the only one that low on 5; with identical settings, rigid is lowest on 23. harden alone reaches Wainwright's n = 19 packing (and Trump's n = 11). Triangles in a square and in a triangle: rigid is lowest on 22 and 26 instances against harden's 14 and 18. Run as a pair, harden and rigid together solve 139 instances, more than any pair without harden (rigid and grow: 137), though with twice the runs.
+- **Decided:** Same conclusion as C04 under lowest-point tuning: no general superiority for hardening (rigid solves more, p = 0.058); hardening is the path for squares in a square, rigid or grow for triangles. Next: C08 (how soft the start must be, on the 40 most contested instances), C09 (longer budgets on 20 of them) and C10 (does adding hardening runs beat adding more rigid runs).
+
+[Full report](campaigns/C07-breadth-best/REPORT.md)
+
+## C08-start-shape — How soft must the start be? A dose-response on the starting shape
+
+*Planned 2026-10-08 · status: closed*
+
+With every other setting fixed at the shared best-of setting of harden and rigid (mu 0.16, noise x8), vary only how rounded the pieces start: tau0 = 1 (inscribed disk, harden), 0.5, 0.25 and 0 (rigid). Does the lowest point move monotonically with tau0, and does the answer depend on the family?
+
+- **Expected:** On instances whose best known packing tilts pieces against each other (squares n = 11, 17-19, 26-29 in a square), softer starts reach lower sizes; on triangles and slack grids the reverse.
+- **Rule:** Instances: the contested instances of C07, defined as those where the lowest sizes of harden-best and rigid-best differ by more than 1e-6 relative, capped at 40 by taking the largest relative differences. Metric: lowest tightened size over 32 runs per instance and tau0 (same tightening policy as C04). Report, per family, the number of instances where each tau0 attains the lowest size; test monotonicity descriptively (no significance test).
+- **Found:** Starting softness on the 40 most contested instances of C07 (all other settings equal): tau0 = 1, 0.5, 0.25, 0 reach the lowest size on 7, 15, 18 and 17 instances. Squares in a square favour soft starts (3, 4, 2, 0); triangles favour rigid or slightly rounded ones (2, 7, 8, 10). Partly rounded starts (0.25-0.5) are never far from the best choice. The contested set leans to instances where rigid won in C07 (28 of 40), which favours small tau0.
+- **Decided:** Hypothesis supported for its two named cases (soft for squares in a square, rigid for triangles); no monotone rule across families. A half-rounded start is reported as a reasonable default when the family is unknown.
+
+[Full report](campaigns/C08-start-shape/REPORT.md)
+
+## C09-budget — Does a longer schedule change which path finds the lowest point?
+
+*Planned 2026-10-08 · status: closed*
+
+On the contested instances, give harden-best and rigid-best 3x and 10x the budget (32 runs each). Does the gap between the paths close, persist, or reverse with more time, and does either path find a packing below a published value?
+
+- **Expected:** More time lowers both paths' lowest points; the path that wins at budget 1 on an instance still wins at budget 10 on most instances.
+- **Rule:** The 20 most contested of C08's instances (largest relative differences). Metric: lowest tightened size over 32 runs per instance, method and budget. Report the per-budget count of instances where each path is lowest, and certify anything below a catalogue value.
+- **Found:** Longer schedules on the 20 most contested instances: harden is lowest on 3, 5 and 9 instances at budget 1, 3 and 10, rigid on 17, 16 and 16; harden reaches the best known value on 1, 2 and 6, rigid on 10, 10 and 9. Hardening gains more from time. At budget 10 harden reaches Schadt's squares-in-square n = 29 packing (5.933833) and Wainwright's n = 19 in 11 of 16 runs; both paths tighten to 3.1292935 for triangles in a square n = 19 (catalogue 3.12929+) and harden to 3.6726370 for n = 27 (3.6726+), both consistent with the catalogue to its printed precision. Nothing below a published value.
+- **Found:** Precision note on the C09 finding: at budget 10, 11 of 16 harden runs for squares-in-square n = 19 come within 1e-4 of Wainwright's value before tightening; the three that were tightened all match it to 1e-14. Both runs tightened at n = 29 match Schadt's 5.933833462677 to 1e-12.
+- **Decided:** Hypothesis partly supported: rigid's wins at budget 1 mostly persist, but harden closes the gap with more time (3 -> 9 instances lowest). Instances were chosen where the paths differed, mostly in rigid's favour, so part of the change may be regression toward even.
+
+[Full report](campaigns/C09-budget/REPORT.md)
+
+## C10-portfolio — Is a second path worth more than more of the same path?
+
+*Planned 2026-10-08 · status: closed*
+
+Run together, harden and rigid solve more instances than either alone, but with twice the runs. Run rigid-best for 32 more seeds (33-64) on all 188 instances and compare rigid with 64 runs against rigid 32 + harden 32 (same total budget), and against rigid 32 + grow 32.
+
+- **Expected:** Mixing paths beats doubling one path: rigid 32 + harden 32 solves more instances than rigid 64, because the paths fail on different instances (squares in a square vs triangles).
+- **Rule:** Count instances solved (as in C07) by: rigid 64 (C07 seeds 1-32 + C10 seeds 33-64), rigid 32 + harden 32, rigid 32 + grow 32. One-sided sign test of the mixed portfolio against rigid 64 over instances solved by exactly one. Report lowest-point counts as in C07.
+- **Found:** Portfolio at equal total budget: 32 rigid runs plus 32 harden runs solve 139 of 188 instances, 64 rigid runs 138, and 32 rigid plus 32 grow 137. Instances solved by exactly one of mixed vs doubled: 4 vs 3 (one-sided p = 0.5). A second path is worth about as much as doubling the runs of the best single path; it does not beat it.
+- **Decided:** Hypothesis not supported: mixing paths (139) is no better than doubling rigid (138) at equal budget. The paper reports that the paths are complementary by family but that, without knowing the family's character in advance, extra rigid runs are as good as adding hardening runs.
+
+[Full report](campaigns/C10-portfolio/REPORT.md)
 

@@ -27,7 +27,7 @@
   <h2>Check anything</h2>
   <p>Every run is a line in a campaign's <code>runs.jsonl</code>, planned before it ran. Every packing below a published value is certified twice, in floating point and in exact rational arithmetic. Replays of the best run of every instance and method are on the <a href="families.html">family pages</a>.</p>
 <pre>git clone {{REPO}}.git && cd soft-to-rigid
-node engine/run.js campaigns/C04-breadth/plan.json --limit 5      # rerun any campaign (resumable)
+node engine/run.js campaigns/C07-breadth-best/plan.json   # rerun any campaign (resumable, deterministic)
 python3 -m packing.ledger export                                    # the research ledger, as events
 python3 verify.py claims/&lt;claim&gt;/claim.json                         # check a claim</pre>
 </section>

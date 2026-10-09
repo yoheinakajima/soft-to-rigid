@@ -166,9 +166,6 @@ def main():
     open(os.path.join(ROOT, 'paper', 'numbers.tex'), 'w').write('\n'.join(nums) + '\n')
 
 
-if __name__ == '__main__':
-    main()
-
 
 def extra_campaigns(st):
     """C08 (start shape), C09 (budget), C10 (portfolio): tables and macros."""
@@ -228,7 +225,7 @@ def extra_campaigns(st):
             nums.append(r'\newcommand{\Cbudget%sHarden}{%d}\newcommand{\Cbudget%sRigid}{%d}' % ({1: 'One', 3: 'Three', 10: 'Ten'}[B], h, {1: 'One', 3: 'Three', 10: 'Ten'}[B], r))
         L = [r'\begin{table}[t]\centering\small', r'\begin{tabular}{rrrrr}', r'\toprule',
              r'budget & harden lowest & rigid lowest & harden reaches best known & rigid reaches best known\\', r'\midrule']
-        L += [f'{B}$\times$ & {h} & {r} & {a} & {b}' + r'\\' for B, h, r, a, b in rows]
+        L += [str(B) + r'$\times$' + f' & {h} & {r} & {a} & {b}' + r'\\' for B, h, r, a, b in rows]
         L += [r'\bottomrule', r'\end{tabular}', r'\caption{Longer schedules (C09) on the 20 most contested instances: number of instances where each path reaches the lower of the two lowest sizes (ties counted for both), and where it reaches the best known value. Budget 1 is C07 (32 runs); budgets 3 and 10 use 16 runs.}', r'\label{tab:budget}', r'\end{table}']
         open(os.path.join(tabdir, 'C09-budget.tex'), 'w').write('\n'.join(L) + '\n')
         nums.append(r'\newcommand{\CbudgetN}{%d}' % len(insts))
@@ -249,3 +246,7 @@ def extra_campaigns(st):
                   open(os.path.join(ROOT, 'analysis', 'C10-portfolio.json'), 'w'), indent=1)
         print('C10', r64, rh, rg, a, b, p)
     return nums
+
+
+if __name__ == '__main__':
+    main()
