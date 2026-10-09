@@ -207,7 +207,7 @@ def main():
             k = m.capitalize()
             nums += [rf'\newcommand{{\Long{k}Lowest}}{{{ls["lowest"][m]}}}', rf'\newcommand{{\Long{k}Sole}}{{{ls["sole"][m]}}}', rf'\newcommand{{\Long{k}Reached}}{{{ls["reached"][m]}}}']
         hn = ls['harden_vs_rigid_new_only']
-        nums.append(rf'\newcommand{{\LongHardenOnlyReachedNewNs}}{{{" and ".join(str(n) for n in ls["reached_only"]["harden"] if n not in (19, 28, 29)) or "none"}}}')
+        nums.append(rf'\newcommand{{\LongHardenOnlyReachedNewNs}}{{{" and ".join("$n=%d$" % n for n in ls["reached_only"]["harden"] if n not in (19, 28, 29)) or "none"}}}')
         nums += [rf'\newcommand{{\LongNewHLower}}{{{hn["a_lower"]}}}', rf'\newcommand{{\LongNewRLower}}{{{hn["b_lower"]}}}', rf'\newcommand{{\LongNewP}}{{{fmt_p(hn["p_lower"])}}}', rf'\newcommand{{\LongNewN}}{{{hn["a_lower"] + hn["b_lower"] + hn["ties"]}}}']
         hv = ls['harden_vs_rigid']
         nums += [rf'\newcommand{{\LongHLower}}{{{hv["a_lower"]}}}', rf'\newcommand{{\LongRLower}}{{{hv["b_lower"]}}}', rf'\newcommand{{\LongP}}{{{fmt_p(hv["p_lower"])}}}',

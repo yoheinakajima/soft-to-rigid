@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex main"] 1791580798.73464 "main.aux" "main.bbl" "main" 1791580799.35393 0
+["bibtex main"] 1791580798.73464 "main.aux" "main.bbl" "main" 1791581321.10512 0
   "./refs.bib" 1791578477.64982 20124 883110550e085ecebc2dd508a8a4079a ""
   "/usr/share/texlive/texmf-dist/bibtex/bst/natbib/abbrvnat.bst" 1233624470 26532 66bed5cc59495faaa3f9ae9af9fa5e42 ""
-  "main.aux" 1791580799.24046 24239 ace5fecbe2138f9a5971a26a60770b69 "pdflatex"
+  "main.aux" 1791581320.98199 24239 ace5fecbe2138f9a5971a26a60770b69 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1791580798.75743 "main.tex" "main.pdf" "main" 1791580799.35423 0
+["pdflatex"] 1791581320.42295 "main.tex" "main.pdf" "main" 1791581321.10538 0
   "/etc/texmf/web2c/texmf.cnf" 1790956343 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/root/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm0600.600pk" 1791475910.94907 7260 ea16bf9d795457856dccdd91a4bf2117 ""
   "/root/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm0800.600pk" 1791475911.90693 9268 3bbf5c86a12044f0619685b39c0290f6 ""
@@ -136,7 +136,7 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1790956345 76223 f098eabfe5be69ad97a2bcd02e616204 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1790956389 6831101 819653806f6db0f84764971e8823f2a8 ""
-  "ablations.tex" 1791580714.18132 3488 63e3c05ed933634746de290e90540805 ""
+  "ablations.tex" 1791581299.31878 3496 1dad371201146443ba90aa297ad3a5db ""
   "decision.tex" 1791579749.62865 348 1d9b77250f5c7f6c2b903eeaf625b572 ""
   "figures/bestofk.pdf" 1791580797.51646 20587 f08c174603fffe2411f2bd3a207649e8 ""
   "figures/gaps.pdf" 1791566426.81485 31224 91f477a704ded9c037657621f70917d8 ""
@@ -144,20 +144,20 @@
   "figures/mechanism.pdf" 1791580756.44446 103363 008c65da9600e6725c2a8889620144d1 ""
   "figures/strip_squ19.pdf" 1791531013.18655 38298 a97929efe50fe5ade705bd7850fb77ad ""
   "figures/strip_tri12.pdf" 1791564255.18272 26957 c4ef2cd3d2bdb1a96d9d2f8c54bd9c5b ""
-  "main.aux" 1791580799.24046 24239 ace5fecbe2138f9a5971a26a60770b69 "pdflatex"
+  "main.aux" 1791581320.98199 24239 ace5fecbe2138f9a5971a26a60770b69 "pdflatex"
   "main.bbl" 1791580798.75317 19055 5eef13dabbea80b0d269aa9f497d1df2 "bibtex main"
-  "main.out" 1791580799.24446 1267 0ea1c64c2447cf0c35fcc7492e20decf "pdflatex"
+  "main.out" 1791581320.98199 1267 0ea1c64c2447cf0c35fcc7492e20decf "pdflatex"
   "main.tex" 1791580740.83168 1744 2a4a12d4164a9de7e429f1b9e131fd30 ""
   "mechanism.tex" 1791580756.6067 2077 5cb9eb676fd4cceb7018c73be40a7f20 ""
   "numbers.tex" 1791580782.42785 6592 f3fb76af2c284ffb1f8f031e901927ae ""
   "refine.tex" 1791578154.43317 444 5a2772969b50e63617948341b2f40f47 ""
-  "sections/abstract.tex" 1791580740.83251 1857 896d916c36926eb6b72b58769055d07b ""
+  "sections/abstract.tex" 1791581311.60862 1943 790221e10e66f902b7617d1b015799de ""
   "sections/appendix.tex" 1791580769.10368 1939 1deb057f956817c79304974848634ca4 ""
   "sections/body.tex" 1791561134.66764 194 847f664d819d1aee42a1e4f57e1cc66a ""
   "sections/breadth.tex" 1791580769.10347 7534 0ba189c95a87f88c4610ff808e8fbfbe ""
-  "sections/intro.tex" 1791580769.10302 4339 e078044b32a0a498bb1c43e6f65e5374 ""
-  "sections/learned.tex" 1791580740.83361 12270 40d242f90f31df971ddc29ea4412502c ""
-  "sections/limits.tex" 1791580756.74835 3330 fce91750e5cce753f433058542300930 ""
+  "sections/intro.tex" 1791581319.98221 4493 94dd91e46836d027807e7fe02ca1d603 ""
+  "sections/learned.tex" 1791581311.6092 12279 a514a8efeb4bac9db42830d74a001fd7 ""
+  "sections/limits.tex" 1791581311.60957 3375 5a375a1ca2d475022df748a3b31b817a ""
   "sections/matters.tex" 1791580756.74772 3588 2d800f6fc7d633088248765c849427de ""
   "sections/method.tex" 1791580756.74794 6848 78784ac2ae452d7ac4fca7df01bf2b2b ""
   "sections/related.tex" 1791571565.49192 5380 a88d155fd321ca58fedc7cee888c5951 ""
@@ -169,8 +169,8 @@
   "tables/C08-start-shape.tex" 1791580782.42541 743 95233c4a9f1ac5f6b80ac207f9a96375 ""
   "tables/C09-budget.tex" 1791580782.42668 588 8af50adf214c9152b39661191aa501a2 ""
   "tables/C15.tex" 1791579749.62885 918 e4528d399a763f228265d03b3f188b51 ""
-  "tables/C16.tex" 1791580713.52168 1876 0eba4c6dee7bd3ab8d6e443458249e36 ""
-  "tables/ablations.tex" 1791580714.17962 1155 65219e1b48c952ac42350a6f98b56f4b ""
+  "tables/C16.tex" 1791581298.54965 1876 0eba4c6dee7bd3ab8d6e443458249e36 ""
+  "tables/ablations.tex" 1791581299.31676 1155 65219e1b48c952ac42350a6f98b56f4b ""
   "tables/diag.tex" 1791580797.72361 1115 87bab0589c423ca6f418cd996d812894 ""
   (generated)
   "main.aux"
