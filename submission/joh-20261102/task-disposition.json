@@ -62,9 +62,11 @@
       "evidence": [
         "verification/report.json::checks.C10",
         "verification/report.json::checks.C15",
-        "interpretive-corrections.jsonl"
+        "interpretive-corrections.jsonl",
+        "verification/registered-tests.json",
+        "review-disposition.json"
       ],
-      "result_or_gap": "Inference corrected in draft; C10 additive native finding is proposed outside ledger. No native application: ActiveGraph absent and empty-DB rebuild unsafe."
+      "result_or_gap": "Plan-specific sidedness and all listed saved-count comparisons reported, including C07 directional failure; incorrect doubled-tail wording corrected. C10 historical records preserved; native finding remains proposed outside runtime."
     },
     {
       "id": "SOFT-008",
@@ -97,9 +99,11 @@
       "disposition": "done-with-scientific-limit",
       "evidence": [
         "reproduce.md",
-        "verification/input-manifest.json"
+        "verification/input-manifest.json",
+        "version-pins.json",
+        "verification/review-analysis-inputs.json"
       ],
-      "result_or_gap": "Safe fixed-output route and manifests implemented; original historical environment and full optimization reproduction not established."
+      "result_or_gap": "Distinct immutable study and verification pins, audited saved-output/helper arithmetic and hash lists. Historical optimization environment/full reproduction remain unestablished."
     },
     {
       "id": "SOFT-012",
@@ -174,9 +178,12 @@
       "disposition": "done-with-review-gap",
       "evidence": [
         "verification/report.json",
-        "verification/pdf-qa.json"
+        "verification/pdf-qa.json",
+        "review-disposition.json",
+        "verification/registered-tests.json",
+        "tool-provenance.json"
       ],
-      "result_or_gap": "Bounded checks and rendered packet QA complete, including manager AI preparation review; final human scientific approval and factual clearance remain."
+      "result_or_gap": "Two separately prompted Claude/Gemini model critiques followed by source-grounded dispositions of all26 findings and bounded fixes. Software/hash/build/visual checks pass; no independent human peer review is claimed and final exact-version approval remains."
     },
     {
       "id": "SOFT-020",

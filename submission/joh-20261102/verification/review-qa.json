@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "reviewed_candidate": "879db26ac809697ba48c7336337a7b08dd689245",
+  "findings_dispositioned": 26,
+  "fixed_saved_comparisons": 34,
+  "original_input_hashes": 639,
+  "additional_review_input_hashes": 15,
+  "sign_tail_identity_count_pairs": 5151,
+  "verification_evidence_commit": "9d3b33242558eb8d36f6508b394cb016df2cd26b",
+  "checks": [
+    "original639inputmanifest byte-identical to reviewed candidate",
+    "both native saved-witness float/exact routes pass",
+    "original study diff empty",
+    "cited verification paths match immutable Git objects",
+    "model UI labels/unknown backend revisions documented",
+    "no new optimizer, provider experiment or ledger runtime"
+  ],
+  "scope": "AI-assisted saved-output/software and mathematical checks, not independent human verification"
+}

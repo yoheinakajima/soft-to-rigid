@@ -4,15 +4,16 @@ This route checks fixed saved evidence. It is deliberately different from regene
 
 ## Fixed inputs and bounded execution
 
-Use study commit `07e3cbd3c4855e5e19344885fbf672c3d7a0f039` plus the journal-preparation PR. `verification/input-manifest.json` enumerates every source input consumed, with byte count and SHA256. The verifier uses Python 3 standard-library JSON, arithmetic and file reads. It writes only `submission/joh-20261102/verification/` and the new draft's evidence/tuning/witness tables. It does not import ActiveGraph, a numerical optimizer or a provider. It never fills missing caches.
+Use original study commit `07e3cbd3c4855e5e19344885fbf672c3d7a0f039` and the separate immutable verification commit `9d3b33242558eb8d36f6508b394cb016df2cd26b`. Exact cited file paths and Git-object hashes are in `version-pins.json`; final PDF/source packaging is a later review artifact, not a recursive self-pin. `verification/input-manifest.json` enumerates every source input consumed, with byte count and SHA256. The verifier uses Python 3 standard-library JSON, arithmetic and file reads. It writes only `submission/joh-20261102/verification/` and the new draft's evidence/tuning/witness tables. It does not import ActiveGraph, a numerical optimizer or a provider. It never fills missing caches.
 
-One command performs the authorized verification route:
+The saved-output and review-arithmetic commands are:
 
 ```sh
 python3 scripts/verify_joh_packet.py
+python3 scripts/analyze_joh_reviews.py
 ```
 
-It reconstructs C10 from serialized event objects/patches as data; recomputes C15 policy selection and all stored policy outcomes from fixed raw rows and existing polishing caches; checks C16 deterministic reuse and new-only comparison; recomputes C14 fixed-subset tightening rankings from saved outputs; extracts C06 grid boundaries; and runs `verify.py` plus `packing.certify` on four explicitly enlarged saved square witnesses. It fails on absent inputs, duplicate run IDs, errors or discrepant results. Each native checker has a 30-second timeout. No solver or pipeline rebuild is needed. The input dataset is approximately tens of megabytes, not the full historical campaign/replay corpus.
+It reconstructs C10 from serialized event objects/patches as data; recomputes C15 policy selection and all stored policy outcomes from fixed raw rows and existing polishing caches; checks C16 deterministic reuse and new-only comparison; recomputes C14 fixed-subset tightening rankings from saved outputs; extracts C06 grid boundaries; and runs `verify.py` plus `packing.certify` on four explicitly enlarged saved square witnesses. It fails on absent inputs, duplicate run IDs, errors or discrepant results. Each native checker has a 30-second timeout. No solver or pipeline rebuild is needed. The original 639-input hash list is unchanged. Review arithmetic separately hashes15 saved inputs and recomputes exact sign-test tails and diagnostic ratios; its plot source uses only saved best-of-k curves. It imports no native project module. Native LaTeX picture/tabular output avoids unavailable optional styles; no package installation is needed. This is not a new experimental campaign.
 
 The witness enlargement is deterministic arithmetic, not optimization: source centers are scaled by 1.000001; container side is `1.00001 * stored_side + 0.000001`. The resulting feasibility proof concerns that enlarged side, not the original contact objective. Both values, exact run IDs, inputs and native outputs are recorded. No below-catalogue record is asserted.
 
@@ -27,6 +28,7 @@ The additive C10 interpretation record is a **native-finding proposal**, not an 
 No app-native LaTeX compiler/editor tool was exposed in this worker's tool inventory. The existing Tectonic 0.16.9 installation and cached bundle were used; no TeX runtime, plugin, package or font was installed. This is a multi-file manuscript, not a standalone editor document.
 
 ```sh
+tectonic --only-cached --keep-logs --untrusted paper/joh-20261102/figures/bestofk.tex
 tectonic --only-cached --keep-logs --keep-intermediates --untrusted paper/joh-20261102/main.tex
 tectonic --only-cached --keep-logs --keep-intermediates --untrusted paper/joh-20261102/supplement.tex
 ```

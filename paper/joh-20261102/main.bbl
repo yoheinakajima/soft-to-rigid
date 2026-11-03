@@ -66,7 +66,7 @@ Timo Berthold, Dominik Kamp, Gioni Mexi, Sebastian Pokutta, and Imre P{\'o}lik.
 Mauro Birattari and Marco Dorigo.
 \newblock How to assess and report the performance of a stochastic algorithm on
   a benchmark problem: mean or best result on a number of runs?
-\newblock \emph{Optimization Letters}, 1, 2007.
+\newblock \emph{Optimization Letters}, 1:\penalty0 309--311, 2007.
 \newblock \doi{10.1007/s11590-006-0011-8}.
 
 \bibitem[Blake and Zisserman(1987)]{blake}
@@ -131,6 +131,12 @@ Paul Erd{\H o}s and Ronald~L. Graham.
 \newblock \emph{Journal of Combinatorial Theory, Series A}, 19:\penalty0
   119--123, 1975.
 
+\bibitem[Friedman(2009)]{friedmansurvey}
+Erich Friedman.
+\newblock Packing unit squares in squares: a survey and new results.
+\newblock Electronic Journal of Combinatorics, Dynamic Survey DS7,
+  \url{https://erich-friedman.github.io/papers/squares/squares.html}, 2009.
+
 \bibitem[Friedman(n.d.{\natexlab{a}})]{friedmancenter}
 Erich Friedman.
 \newblock Erich's packing center.
@@ -143,14 +149,6 @@ Erich Friedman.
 \newblock Erich's Packing Center,
   \url{https://erich-friedman.github.io/packing/cubincub/}, n.d.{\natexlab{b}}.
 \newblock Updated 3 July 2026; accessed 8 October 2026.
-
-\bibitem[Friedman(n.d.{\natexlab{c}})]{friedmansurvey}
-Erich Friedman.
-\newblock Packing unit squares in squares: a survey and new results.
-\newblock Electronic Journal of Combinatorics, Dynamic Survey DS7,
-  n.d.{\natexlab{c}}.
-\newblock Squares-in-squares catalogue now maintained by D.~Ellsworth,
-  \url{https://kingbird.myphotos.cc/packing/squares_in_squares.html}.
 
 \bibitem[Galindo-Torres et~al.(2010)Galindo-Torres, Mu{\~n}oz, and
   Alonso-Marroqu{\'\i}n]{GalindoTorres2010}
@@ -166,14 +164,14 @@ Jeroen Gardeyn, Greet Vanden~Berghe, and Tony Wauters.
 \newblock arXiv:2509.13329, 2025.
 \newblock Version 4, 6 October 2026; inspected for problem compatibility.
 
-\bibitem[Geng et~al.(2017)Geng, van Anders, Dodd, Dshemuchadse, and
+\bibitem[Geng et~al.(2019)Geng, van Anders, Dodd, Dshemuchadse, and
   Glotzer]{Geng2019}
 Yina Geng, Greg van Anders, Paul~M. Dodd, Julia Dshemuchadse, and Sharon~C.
   Glotzer.
 \newblock Engineering entropy for the inverse design of colloidal crystals from
   hard shapes.
-\newblock arXiv:1712.02471, 2017.
-\newblock Published in Science Advances (2019).
+\newblock \emph{Science Advances}, 5:\penalty0 eaaw0514, 2019.
+\newblock \doi{10.1126/sciadv.aaw0514}.
 
 \bibitem[Gensane(2004)]{Gensane2004}
 Thierry Gensane.
@@ -257,7 +255,8 @@ Donald~R. Jones.
 \bibitem[Kallus et~al.(2010)Kallus, Elser, and Gravel]{Kallus2010}
 Yoav Kallus, Veit Elser, and Simon Gravel.
 \newblock A method for dense packing discovery.
-\newblock arXiv:1003.3301, 2010.
+\newblock \emph{Physical Review E}, 82:\penalty0 056707, 2010.
+\newblock \doi{10.1103/PhysRevE.82.056707}.
 
 \bibitem[Kirkpatrick et~al.(1983)Kirkpatrick, Gelatt, and Vecchi]{kirkpatrick}
 Scott Kirkpatrick, C.~Daniel Gelatt, and Mario~P. Vecchi.
@@ -298,7 +297,8 @@ Jingwei Lu, Pengwen Chen, Chin-Chih Chang, Lu~Sha, Dennis Jen-Hsin Huang,
 \bibitem[Lubachevsky and Graham(1997)]{LubachevskyGraham1997}
 Boris~D. Lubachevsky and Ronald~L. Graham.
 \newblock Curved hexagonal packings of equal disks in a circle.
-\newblock \emph{Discrete \& Computational Geometry}, 1997.
+\newblock \emph{Discrete \& Computational Geometry}, 18:\penalty0 179--194,
+  1997.
 \newblock \doi{10.1007/PL00009314}.
 
 \bibitem[Lubachevsky and Stillinger(1990)]{lubachevsky}
@@ -325,8 +325,7 @@ Hossein Mobahi and John~W. Fisher~III.
 Yohei Nakajima.
 \newblock Public build log: twelve-cube packing priority caveat.
 \newblock \url{https://yohei.me/}, 2026{\natexlab{a}}.
-\newblock Entry dated 8 October; observed 2 November 2026. Priority attribution
-  unresolved.
+\newblock Entry dated 8 October; observed 2 November 2026.
 
 \bibitem[Nakajima(2026{\natexlab{b}})]{softtorigidpacking}
 Yohei Nakajima.
@@ -378,8 +377,9 @@ Eckard Specht.
 \bibitem[{The Squares Project}(n.d.)]{squaresproject}
 {The Squares Project}.
 \newblock An atlas of the square packing problem.
-\newblock \url{https://jlevy.github.io/squares/}, n.d.
-\newblock Accessed 8 October 2026.
+\newblock \url{https://squaremath.org/}, n.d.
+\newblock Study snapshot accessed at jlevy.github.io/squares on 8 October 2026;
+  canonical redirect verified 2 November 2026.
 
 \bibitem[Torquato(2018)]{Torquato2018}
 S.~Torquato.
@@ -447,6 +447,6 @@ Alejandro Zarzuelo.
 \newblock platonic-packing: {P}latonic solids in {P}latonic containers by
   soft-to-rigid continuation.
 \newblock \url{https://github.com/alejandrozu/platonic-packing}, 2026.
-\newblock Commit cd6d4bf, 9 October 2026; the search was still running.
+\newblock Commit cd6d4bf, 9 October 2026.
 
 \end{thebibliography}

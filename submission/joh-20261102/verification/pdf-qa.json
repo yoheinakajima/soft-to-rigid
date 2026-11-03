@@ -4,8 +4,8 @@
   "pdfs": [
     {
       "path": "paper/joh-20261102/main.pdf",
-      "sha256": "4318e6649b080006516baeeed7fcde31edc6a858d8c2dff2c3fa1ca8dc2b0bb6",
-      "pages": 22,
+      "sha256": "9952a73f310606c4a97cff6f5184ecbab31ec7049956db322497d74d03605409",
+      "pages": 23,
       "overfull_boxes": 0,
       "undefined_references": 0,
       "missing_character_warnings": 0,
@@ -13,8 +13,8 @@
     },
     {
       "path": "paper/joh-20261102/supplement.pdf",
-      "sha256": "9139ecd999efe704065456b7a33443426eea2ecfc6f7b6063f008d3a433e2c36",
-      "pages": 3,
+      "sha256": "9b6dd752c7b06bb479af15df6d9d382c4cffd3f8987b6a5263ba6c64afd933fd",
+      "pages": 6,
       "overfull_boxes": 0,
       "undefined_references": 0,
       "missing_character_warnings": 0,
@@ -22,7 +22,7 @@
     }
   ],
   "visual_status": "PASS: no clipping, overlap, missing glyphs, broken tables or unresolved references observed",
-  "scope": "All 22 manuscript and 3 supplement pages inspected in contact sheets after unpublished-note/reference and disclosure-gate correction; full-page manuscript 6, 17, 19 and supplement 3 inspected. No clipping, overlap, orphan closing page or unresolved citations observed.",
+  "scope": "All23 main and6 SI pages rendered and inspected in contact sheets after two-model corrections; full-page main6/8/10/16 and SI2/3/4/5/6 inspected. Registered-test table, best-of-k plot, immutable links and endpoint/enlargement qualifiers are readable. No clipping, overlap, unresolved references or orphan closing fragment observed.",
   "build_tool": "existing Tectonic 0.16.9, cached resources only; no TeX installation",
   "environment_limit": "Times New Roman and Arial are system fonts; portability requires those fonts or reviewed replacements. All PDF fonts embedded.",
   "scientific_limit": "Visual QA does not establish external scientific review, rights clearance or original-contact feasibility certificates.",
@@ -33,22 +33,41 @@
     ],
     "main_changed_text_pages": [
       2,
+      3,
+      4,
       5,
       6,
       7,
       8,
       9,
+      10,
+      11,
+      12,
+      13,
       14,
+      15,
+      16,
       17,
-      19
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
     ],
     "supplement_changed_text_pages": [
-      3
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
     ],
     "preserved_limits": [
-      "scientific inference and witness scope unchanged",
-      "human responsibility and AI assistance retained",
-      "companion editorial status unconfirmed and disputed priority retained; no mandatory separate-journal closure gate"
+      "mixed results, no general external competitiveness or causal mechanism",
+      "nominal cost units and tuning/selection limits",
+      "non-equivalence, C15 smoke tests, C16 reuse and original-contact certification limits",
+      "scientific PDFs omit operational author/editorial readiness status; status stays in packet"
     ]
   }
 }
