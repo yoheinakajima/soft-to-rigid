@@ -1,0 +1,18 @@
+\begin{table}[t]\centering\small
+\begin{tabular}{lrrrrr}
+\toprule
+family & instances & $\tau_0=1$ (harden) & $0.5$ & $0.25$ & $0$ (rigid)\\
+\midrule
+squares in square & 6 & 3 & 4 & 2 & 0\\
+squares in circle & 13 & 2 & 3 & 6 & 5\\
+squares in triangle & 1 & 0 & 1 & 1 & 1\\
+triangles in triangle & 7 & 0 & 4 & 3 & 5\\
+triangles in square & 12 & 2 & 3 & 5 & 5\\
+hexagons in square & 1 & 0 & 0 & 1 & 1\\
+\midrule
+all & 40 & 7 & 15 & 18 & 17\\
+\bottomrule
+\end{tabular}
+\caption{How soft the start must be (C08): on the 40 most contested instances of C07, the number of instances where each starting softness $\tau_0$ reaches the lowest size (32 runs each, all other settings equal; ties counted for every tied value).}
+\label{tab:tau}
+\end{table}

@@ -1,0 +1,47 @@
+{
+  "original_study_commit": "07e3cbd3c4855e5e19344885fbf672c3d7a0f039",
+  "verification_evidence_commit": "9d3b33242558eb8d36f6508b394cb016df2cd26b",
+  "cited_verification_paths": [
+    {
+      "commit": "9d3b33242558eb8d36f6508b394cb016df2cd26b",
+      "path": "scripts/verify_joh_packet.py",
+      "sha256": "5df84d51cd930b3eb6e489e09454a4ca04fbaf4c41e23c4bab38b0e28c6757cc"
+    },
+    {
+      "commit": "9d3b33242558eb8d36f6508b394cb016df2cd26b",
+      "path": "scripts/analyze_joh_reviews.py",
+      "sha256": "a7e20cbd3c3127b6e3dfac15731d911539728c9e7b60989290e1bd4a1f9c66ef"
+    },
+    {
+      "commit": "9d3b33242558eb8d36f6508b394cb016df2cd26b",
+      "path": "submission/joh-20261102/verification/input-manifest.json",
+      "sha256": "c4d236cfafdb421b933cd312889205d9371f993d616ac5c1bccd5a60d590b504"
+    },
+    {
+      "commit": "9d3b33242558eb8d36f6508b394cb016df2cd26b",
+      "path": "submission/joh-20261102/verification/report.json",
+      "sha256": "dbd13ce507b180af53f65c767f6605187c330e125cb34c5c20b995e0de2f2fa6"
+    },
+    {
+      "commit": "9d3b33242558eb8d36f6508b394cb016df2cd26b",
+      "path": "submission/joh-20261102/verification/C15-policy-crosswalk.json",
+      "sha256": "4915d11b465f73009a74f8482aa2f4febc3e9fd7b87170b9850ce20fe3aab9ba"
+    },
+    {
+      "commit": "9d3b33242558eb8d36f6508b394cb016df2cd26b",
+      "path": "submission/joh-20261102/verification/registered-tests.json",
+      "sha256": "5e77a9c675375b77c713caf23729477426a673ce62907bd0aceade14fc2aab90"
+    },
+    {
+      "commit": "9d3b33242558eb8d36f6508b394cb016df2cd26b",
+      "path": "submission/joh-20261102/verification/budget-ratios.json",
+      "sha256": "ac4f4b3a0292a6b7b7bb6712292b9d8dd8ab717045d8a464693c85df68c6d843"
+    },
+    {
+      "commit": "9d3b33242558eb8d36f6508b394cb016df2cd26b",
+      "path": "submission/joh-20261102/verification/review-analysis-inputs.json",
+      "sha256": "9a14f9ef21fd5be0577a432b60ea50b000b7294e27d61a3bed07641faab8be50"
+    }
+  ],
+  "purpose": "Distinct immutable study and verification identities; final PDFs/manifests are later review artifacts, not recursively self-pinned"
+}

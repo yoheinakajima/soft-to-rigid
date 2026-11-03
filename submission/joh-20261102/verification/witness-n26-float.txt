@@ -1,0 +1,4 @@
+saved-study witness, deliberately enlarged container; not a new record  n = 26  s = 5.62137755676308
+min wall gap = 2.629594154557e-05
+min pair gap = 9.999999980581e-07
+VALID

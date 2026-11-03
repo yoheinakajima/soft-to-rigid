@@ -1,0 +1,452 @@
+\begin{thebibliography}{63}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Aiex et~al.(2007)Aiex, Resende, and Ribeiro]{Aiex2007}
+Renata~M. Aiex, Mauricio G.~C. Resende, and Celso~C. Ribeiro.
+\newblock {TTT} plots: a perl program to create time-to-target plots.
+\newblock \emph{Optimization Letters}, 1\penalty0 (4):\penalty0 355--366, 2007.
+\newblock \doi{10.1007/s11590-006-0031-4}.
+
+\bibitem[Allgower and Georg(1990)]{AllgowerGeorg1990}
+Eugene~L. Allgower and Kurt Georg.
+\newblock \emph{Numerical Continuation Methods: An Introduction}.
+\newblock Springer, 1990.
+
+\bibitem[Alonso-Marroqu{\'\i}n(2008)]{AlonsoMarroquin2008}
+Fernando Alonso-Marroqu{\'\i}n.
+\newblock Spheropolygons: A new method to simulate conservative and dissipative
+  interactions between {2D} complex-shaped rigid bodies.
+\newblock \emph{EPL}, 83\penalty0 (1):\penalty0 14001, 2008.
+\newblock \doi{10.1209/0295-5075/83/14001}.
+
+\bibitem[Anjos and Vannelli(2002)]{AnjosVannelli2002}
+Miguel~F. Anjos and Anthony Vannelli.
+\newblock An attractor-repeller approach to floorplanning.
+\newblock \emph{Mathematical Methods of Operations Research}, 56\penalty0
+  (1):\penalty0 3--27, 2002.
+\newblock \doi{10.1007/s001860200197}.
+
+\bibitem[Ara{\'u}jo et~al.(2019)Ara{\'u}jo, {\"O}zcan, Atkin, and
+  Baumers]{Araujo2019}
+Luiz J.~P. Ara{\'u}jo, Ender {\"O}zcan, Jason A.~D. Atkin, and Martin Baumers.
+\newblock Analysis of irregular three-dimensional packing problems in additive
+  manufacturing: a new taxonomy and dataset.
+\newblock \emph{International Journal of Production Research}, 57\penalty0
+  (18):\penalty0 5920--5934, 2019.
+\newblock \doi{10.1080/00207543.2018.1534016}.
+
+\bibitem[Bennell et~al.(2010)Bennell, Scheithauer, Stoyan, and
+  Romanova]{Bennell2010}
+Julia Bennell, Guntram Scheithauer, Yuri Stoyan, and Tatiana Romanova.
+\newblock Tools of mathematical modeling of arbitrary object packing problems.
+\newblock \emph{Annals of Operations Research}, 179\penalty0 (1):\penalty0
+  343--368, 2010.
+\newblock \doi{10.1007/s10479-008-0456-5}.
+
+\bibitem[Bennell and Oliveira(2008)]{Bennell2008}
+Julia~A. Bennell and Jose~F. Oliveira.
+\newblock The geometry of nesting problems: A tutorial.
+\newblock \emph{European Journal of Operational Research}, 184\penalty0
+  (2):\penalty0 397--415, 2008.
+\newblock \doi{10.1016/j.ejor.2006.11.038}.
+
+\bibitem[Berthold et~al.(2026)Berthold, Kamp, Mexi, Pokutta, and
+  P{\'o}lik]{Berthold2026}
+Timo Berthold, Dominik Kamp, Gioni Mexi, Sebastian Pokutta, and Imre P{\'o}lik.
+\newblock Out-of-the-box global optimization for packing problems: New models
+  and improved solutions.
+\newblock arXiv:2605.04850, 2026.
+\newblock Supplement: \url{https://github.com/DominikKamp/Packing}.
+
+\bibitem[Birattari and Dorigo(2007)]{Birattari2005}
+Mauro Birattari and Marco Dorigo.
+\newblock How to assess and report the performance of a stochastic algorithm on
+  a benchmark problem: mean or best result on a number of runs?
+\newblock \emph{Optimization Letters}, 1:\penalty0 309--311, 2007.
+\newblock \doi{10.1007/s11590-006-0011-8}.
+
+\bibitem[Blake and Zisserman(1987)]{blake}
+Andrew Blake and Andrew Zisserman.
+\newblock \emph{Visual Reconstruction}.
+\newblock MIT Press, 1987.
+
+\bibitem[Bortfeldt and W{\"a}scher(2013)]{Bortfeldt2013}
+Andreas Bortfeldt and Gerhard W{\"a}scher.
+\newblock Constraints in container loading -- a state-of-the-art review.
+\newblock \emph{European Journal of Operational Research}, 229\penalty0
+  (1):\penalty0 1--20, 2013.
+\newblock \doi{10.1016/j.ejor.2012.12.006}.
+
+\bibitem[{@BuilderOfAgents}(2026)]{n13repo}
+{@BuilderOfAgents}.
+\newblock 13 unit cubes in a cube: soft-to-rigid, continued.
+\newblock \url{https://github.com/tronford/cubes-in-cube-n13}, 2026.
+\newblock Commit c9b9b4e, 9 October 2026.
+
+\bibitem[Dolan and Mor{\'e}(2002)]{Dolan2002}
+Elizabeth~D. Dolan and Jorge~J. Mor{\'e}.
+\newblock Benchmarking optimization software with performance profiles.
+\newblock \emph{Mathematical Programming}, 91\penalty0 (2):\penalty0 201--213,
+  2002.
+\newblock \doi{10.1007/s101070100263}.
+
+\bibitem[Donev et~al.(2005)Donev, Torquato, and Stillinger]{Donev2005a}
+Aleksandar Donev, Salvatore Torquato, and Frank~H. Stillinger.
+\newblock Neighbor list collision-driven molecular dynamics simulation for
+  nonspherical hard particles. {I}. algorithmic details.
+\newblock \emph{Journal of Computational Physics}, 202\penalty0 (2):\penalty0
+  737--764, 2005.
+\newblock \doi{10.1016/j.jcp.2004.08.014}.
+
+\bibitem[Dowsland et~al.(1998)Dowsland, Dowsland, and Bennell]{Dowsland1998}
+Kathryn~A. Dowsland, William~B. Dowsland, and Julia~A. Bennell.
+\newblock Jostling for position: local improvement for irregular cutting
+  patterns.
+\newblock \emph{Journal of the Operational Research Society}, 49\penalty0
+  (6):\penalty0 647--658, 1998.
+\newblock \doi{10.1057/palgrave.jors.2600563}.
+
+\bibitem[Egeblad et~al.(2007)Egeblad, Nielsen, and Odgaard]{Egeblad2007}
+Jens Egeblad, Benny~K. Nielsen, and Allan Odgaard.
+\newblock Fast neighborhood search for two- and three-dimensional nesting
+  problems.
+\newblock \emph{European Journal of Operational Research}, 183\penalty0
+  (3):\penalty0 1249--1266, 2007.
+\newblock \doi{10.1016/j.ejor.2005.11.063}.
+
+\bibitem[Engel et~al.(2012)Engel, Damasceno, and Glotzer]{Engel2012}
+Michael Engel, Pablo~F. Damasceno, and Sharon~C. Glotzer.
+\newblock Crystalline assemblies and densest packings of a family of truncated
+  tetrahedra and the role of directional entropic forces.
+\newblock \emph{ACS Nano}, 6\penalty0 (1):\penalty0 609--614, 2012.
+\newblock \doi{10.1021/nn204012y}.
+
+\bibitem[Erd{\H o}s and Graham(1975)]{erdosgraham}
+Paul Erd{\H o}s and Ronald~L. Graham.
+\newblock On packing squares with equal squares.
+\newblock \emph{Journal of Combinatorial Theory, Series A}, 19:\penalty0
+  119--123, 1975.
+
+\bibitem[Friedman(2009)]{friedmansurvey}
+Erich Friedman.
+\newblock Packing unit squares in squares: a survey and new results.
+\newblock Electronic Journal of Combinatorics, Dynamic Survey DS7,
+  \url{https://erich-friedman.github.io/papers/squares/squares.html}, 2009.
+
+\bibitem[Friedman(n.d.{\natexlab{a}})]{friedmancenter}
+Erich Friedman.
+\newblock Erich's packing center.
+\newblock \url{https://erich-friedman.github.io/packing/}, n.d.{\natexlab{a}}.
+\newblock Source repository commit of 7 October 2026.
+
+\bibitem[Friedman(n.d.{\natexlab{b}})]{friedmancubes}
+Erich Friedman.
+\newblock Cubes in cubes.
+\newblock Erich's Packing Center,
+  \url{https://erich-friedman.github.io/packing/cubincub/}, n.d.{\natexlab{b}}.
+\newblock Updated 3 July 2026; accessed 8 October 2026.
+
+\bibitem[Galindo-Torres et~al.(2010)Galindo-Torres, Mu{\~n}oz, and
+  Alonso-Marroqu{\'\i}n]{GalindoTorres2010}
+S.~A. Galindo-Torres, J.~D. Mu{\~n}oz, and F.~Alonso-Marroqu{\'\i}n.
+\newblock Minkowski-{V}oronoi diagrams as a method to generate random packings
+  of spheropolygons for the simulation of soils.
+\newblock \emph{Physical Review E}, 82\penalty0 (5):\penalty0 056713, 2010.
+\newblock \doi{10.1103/PhysRevE.82.056713}.
+
+\bibitem[Gardeyn et~al.(2025)Gardeyn, Vanden~Berghe, and Wauters]{Gardeyn2025}
+Jeroen Gardeyn, Greet Vanden~Berghe, and Tony Wauters.
+\newblock An open-source heuristic to reboot {2D} nesting research.
+\newblock arXiv:2509.13329, 2025.
+\newblock Version 4, 6 October 2026; inspected for problem compatibility.
+
+\bibitem[Geng et~al.(2019)Geng, van Anders, Dodd, Dshemuchadse, and
+  Glotzer]{Geng2019}
+Yina Geng, Greg van Anders, Paul~M. Dodd, Julia Dshemuchadse, and Sharon~C.
+  Glotzer.
+\newblock Engineering entropy for the inverse design of colloidal crystals from
+  hard shapes.
+\newblock \emph{Science Advances}, 5:\penalty0 eaaw0514, 2019.
+\newblock \doi{10.1126/sciadv.aaw0514}.
+
+\bibitem[Gensane(2004)]{Gensane2004}
+Thierry Gensane.
+\newblock Dense packings of equal spheres in a cube.
+\newblock \emph{Electronic Journal of Combinatorics}, 11:\penalty0 R33, 2004.
+\newblock \doi{10.37236/1786}.
+
+\bibitem[Gensane and Ryckelynck(2005)]{gensane}
+Thierry Gensane and Philippe Ryckelynck.
+\newblock Improved dense packings of congruent squares in a square.
+\newblock \emph{Discrete \& Computational Geometry}, 34:\penalty0 97--109,
+  2005.
+
+\bibitem[Georgiev et~al.(2025)Georgiev, G{\'o}mez-Serrano, Tao, and
+  Wagner]{Georgiev2025}
+Bogdan Georgiev, Javier G{\'o}mez-Serrano, Terence Tao, and Adam~Zsolt Wagner.
+\newblock Mathematical exploration and discovery at scale.
+\newblock arXiv:2511.02864, 2025.
+
+\bibitem[Gupta and Raman(2026)]{Gupta2026}
+Palak Gupta and Shanmuganathan Raman.
+\newblock Differentiable packing of irregular {3D} objects with adaptive
+  container estimation.
+\newblock arXiv:2606.16333, 2026.
+
+\bibitem[Hansen et~al.(2021)Hansen, Auger, Ros, Mersmann, Tu{\v{s}}ar, and
+  Brockhoff]{Hansen2021}
+Nikolaus Hansen, Anne Auger, Raymond Ros, Olaf Mersmann, Tea Tu{\v{s}}ar, and
+  Dimo Brockhoff.
+\newblock {COCO}: a platform for comparing continuous optimizers in a black-box
+  setting.
+\newblock \emph{Optimization Methods and Software}, 36\penalty0 (1):\penalty0
+  114--144, 2021.
+\newblock \doi{10.1080/10556788.2020.1808977}.
+
+\bibitem[Hazan et~al.(2016)Hazan, Levy, and Shalev-Shwartz]{Hazan2016}
+Elad Hazan, Kfir~Y. Levy, and Shai Shalev-Shwartz.
+\newblock On graduated optimization for stochastic non-convex problems.
+\newblock In \emph{Proceedings of the 33rd International Conference on Machine
+  Learning}, volume~48 of \emph{PMLR}, pages 1833--1841, 2016.
+
+\bibitem[Imamichi et~al.(2009)Imamichi, Yagiura, and Nagamochi]{Imamichi2009}
+Takashi Imamichi, Mutsunori Yagiura, and Hiroshi Nagamochi.
+\newblock An iterated local search algorithm based on nonlinear programming for
+  the irregular strip packing problem.
+\newblock \emph{Discrete Optimization}, 6:\penalty0 345--361, 2009.
+\newblock \doi{10.1016/j.disopt.2009.04.002}.
+
+\bibitem[{itsnaka}(2026)]{squish}
+{itsnaka}.
+\newblock {SQUISH} certificates.
+\newblock \url{https://github.com/itsnaka/squish-certs}, 2026.
+
+\bibitem[Jiao et~al.(2008)Jiao, Stillinger, and Torquato]{Jiao2008}
+Yang Jiao, Frank~H. Stillinger, and Salvatore Torquato.
+\newblock Optimal packings of superdisks and the role of symmetry.
+\newblock \emph{Physical Review Letters}, 100\penalty0 (24):\penalty0 245504,
+  2008.
+\newblock \doi{10.1103/PhysRevLett.100.245504}.
+
+\bibitem[Jiao et~al.(2009)Jiao, Stillinger, and Torquato]{Jiao2009}
+Yang Jiao, Frank~H. Stillinger, and Salvatore Torquato.
+\newblock Optimal packings of superballs.
+\newblock \emph{Physical Review E}, 79\penalty0 (4):\penalty0 041309, 2009.
+\newblock \doi{10.1103/PhysRevE.79.041309}.
+
+\bibitem[Jin et~al.(2015)Jin, Lu, and Li]{Jin2015}
+Weiwei Jin, Peng Lu, and Shuixiang Li.
+\newblock Evolution of the dense packings of spherotetrahedral particles: from
+  ideal tetrahedra to spheres.
+\newblock \emph{Scientific Reports}, 5:\penalty0 15640, 2015.
+\newblock \doi{10.1038/srep15640}.
+
+\bibitem[Jones(2014)]{Jones2014}
+Donald~R. Jones.
+\newblock A fully general, exact algorithm for nesting irregular shapes.
+\newblock \emph{Journal of Global Optimization}, 59\penalty0 (2):\penalty0
+  367--404, 2014.
+\newblock \doi{10.1007/s10898-013-0129-z}.
+
+\bibitem[Kallus et~al.(2010)Kallus, Elser, and Gravel]{Kallus2010}
+Yoav Kallus, Veit Elser, and Simon Gravel.
+\newblock A method for dense packing discovery.
+\newblock \emph{Physical Review E}, 82:\penalty0 056707, 2010.
+\newblock \doi{10.1103/PhysRevE.82.056707}.
+
+\bibitem[Kirkpatrick et~al.(1983)Kirkpatrick, Gelatt, and Vecchi]{kirkpatrick}
+Scott Kirkpatrick, C.~Daniel Gelatt, and Mario~P. Vecchi.
+\newblock Optimization by simulated annealing.
+\newblock \emph{Science}, 220:\penalty0 671--680, 1983.
+
+\bibitem[Kraft(1988)]{kraft}
+Dieter Kraft.
+\newblock A software package for sequential quadratic programming.
+\newblock Technical Report DFVLR-FB 88-28, DFVLR, 1988.
+
+\bibitem[Lai et~al.(2023)Lai, Hao, Xiao, and Glover]{Lai2023}
+Xiangjing Lai, Jin-Kao Hao, Renbin Xiao, and Fred Glover.
+\newblock Perturbation-based thresholding search for packing equal circles and
+  spheres.
+\newblock \emph{INFORMS Journal on Computing}, 35\penalty0 (4):\penalty0
+  725--746, 2023.
+\newblock \doi{10.1287/ijoc.2023.1290}.
+
+\bibitem[Leao et~al.(2020)Leao, Toledo, Oliveira, Carravilla, and
+  Alvarez-Vald{\'e}s]{Leao2020}
+Aline A.~S. Leao, Franklina M.~B. Toledo, Jos{\'e}~Fernando Oliveira,
+  Maria~Ant{\'o}nia Carravilla, and Ram{\'o}n Alvarez-Vald{\'e}s.
+\newblock Irregular packing problems: A review of mathematical models.
+\newblock \emph{European Journal of Operational Research}, 282\penalty0
+  (3):\penalty0 803--822, 2020.
+\newblock \doi{10.1016/j.ejor.2019.04.045}.
+
+\bibitem[Lu et~al.(2015)Lu, Chen, Chang, Sha, Huang, Teng, and Cheng]{Lu2015}
+Jingwei Lu, Pengwen Chen, Chin-Chih Chang, Lu~Sha, Dennis Jen-Hsin Huang,
+  Chin-Chi Teng, and Chung-Kuan Cheng.
+\newblock {ePlace}: Electrostatics-based placement using fast {F}ourier
+  transform and {N}esterov's method.
+\newblock \emph{ACM Transactions on Design Automation of Electronic Systems},
+  20\penalty0 (2), 2015.
+\newblock \doi{10.1145/2699873}.
+
+\bibitem[Lubachevsky and Graham(1997)]{LubachevskyGraham1997}
+Boris~D. Lubachevsky and Ronald~L. Graham.
+\newblock Curved hexagonal packings of equal disks in a circle.
+\newblock \emph{Discrete \& Computational Geometry}, 18:\penalty0 179--194,
+  1997.
+\newblock \doi{10.1007/PL00009314}.
+
+\bibitem[Lubachevsky and Stillinger(1990)]{lubachevsky}
+Boris~D. Lubachevsky and Frank~H. Stillinger.
+\newblock Geometric properties of random disk packings.
+\newblock \emph{Journal of Statistical Physics}, 60:\penalty0 561--583, 1990.
+
+\bibitem[Luo et~al.(2008)Luo, Anjos, and Vannelli]{Luo2008}
+Chaomin Luo, Miguel~F. Anjos, and Anthony Vannelli.
+\newblock A nonlinear optimization methodology for {VLSI} fixed-outline
+  floorplanning.
+\newblock \emph{Journal of Combinatorial Optimization}, 16\penalty0
+  (4):\penalty0 378--401, 2008.
+\newblock \doi{10.1007/s10878-008-9148-y}.
+
+\bibitem[Mobahi and Fisher~III(2015)]{Mobahi2015}
+Hossein Mobahi and John~W. Fisher~III.
+\newblock A theoretical analysis of optimization by {G}aussian continuation.
+\newblock In \emph{Proceedings of the AAAI Conference on Artificial
+  Intelligence}, pages 1205--1211, 2015.
+\newblock \doi{10.1609/aaai.v29i1.9356}.
+
+\bibitem[Nakajima(2026{\natexlab{a}})]{prioritycontext2026}
+Yohei Nakajima.
+\newblock Public build log: twelve-cube packing priority caveat.
+\newblock \url{https://yohei.me/}, 2026{\natexlab{a}}.
+\newblock Entry dated 8 October; observed 2 November 2026.
+
+\bibitem[Nakajima(2026{\natexlab{b}})]{softtorigidpacking}
+Yohei Nakajima.
+\newblock soft-to-rigid-packing: code and certificate for 12 unit cubes in a
+  cube.
+\newblock \url{https://github.com/yoheinakajima/soft-to-rigid-packing},
+  2026{\natexlab{b}}.
+\newblock doi:10.5281/zenodo.23248095.
+
+\bibitem[Novikov et~al.(2025)Novikov, V{\~u}, Eisenberger, Dupont, Huang,
+  et~al.]{Novikov2025}
+Alexander Novikov, Ng{\^a}n V{\~u}, Marvin Eisenberger, Emilien Dupont, Po-Sen
+  Huang, et~al.
+\newblock {AlphaEvolve}: A coding agent for scientific and algorithmic
+  discovery.
+\newblock arXiv:2506.13131, 2025.
+
+\bibitem[Peralta et~al.(2018)Peralta, Andretta, and Oliveira]{Peralta2018}
+Jeinny Peralta, Marina Andretta, and Jos{\'e}~Fernando Oliveira.
+\newblock Packing circles and irregular polygons using separation lines.
+\newblock In \emph{Proceedings of the 7th International Conference on
+  Operations Research and Enterprise Systems (ICORES)}, pages 71--77, 2018.
+\newblock \doi{10.5220/0006602700710077}.
+
+\bibitem[Romanova et~al.(2018)Romanova, Bennell, Stoyan, and
+  Pankratov]{Romanova2018}
+Tatiana Romanova, Julia Bennell, Yuri Stoyan, and Alexander Pankratov.
+\newblock Packing of concave polyhedra with continuous rotations using
+  nonlinear optimisation.
+\newblock \emph{European Journal of Operational Research}, 268\penalty0
+  (1):\penalty0 37--53, 2018.
+\newblock \doi{10.1016/j.ejor.2018.01.025}.
+
+\bibitem[Specht(n.d.)]{packomania}
+Eckard Specht.
+\newblock Packomania: circles in a square.
+\newblock \url{http://www.packomania.com/csq/csq.html}, n.d.
+\newblock Accessed 8 October 2026.
+
+\bibitem[{Tencent Hunyuan}(n.d.)]{hyra}
+{Tencent Hunyuan}.
+\newblock Hyra-results: packing records.
+\newblock
+  \url{https://github.com/Tencent-Hunyuan/Hyra-results/tree/main/AI4Science/packing_records},
+  n.d.
+\newblock File \texttt{cubincub\_n12.json}, side 2.9327717687048653; accessed 8
+  October 2026.
+
+\bibitem[{The Squares Project}(n.d.)]{squaresproject}
+{The Squares Project}.
+\newblock An atlas of the square packing problem.
+\newblock \url{https://squaremath.org/}, n.d.
+\newblock Study snapshot accessed at jlevy.github.io/squares on 8 October 2026;
+  canonical redirect verified 2 November 2026.
+
+\bibitem[Torquato(2018)]{Torquato2018}
+S.~Torquato.
+\newblock Perspective: Basic understanding of condensed phases of matter via
+  packing models.
+\newblock \emph{Journal of Chemical Physics}, 149\penalty0 (2):\penalty0
+  020901, 2018.
+\newblock \doi{10.1063/1.5036657}.
+
+\bibitem[Torquato and Jiao(2009)]{TorquatoJiao2009}
+Salvatore Torquato and Yang Jiao.
+\newblock Dense packings of the {P}latonic and {A}rchimedean solids.
+\newblock \emph{Nature}, 460\penalty0 (7257):\penalty0 876--879, 2009.
+\newblock \doi{10.1038/nature08239}.
+
+\bibitem[Trump(1979)]{trump}
+Walter Trump.
+\newblock Packing 11 unit squares in a square.
+\newblock \url{https://trump.de/square-packing/}, 1979.
+
+\bibitem[Umetani et~al.(2009)Umetani, Yagiura, Imahori, Imamichi, Nonobe, and
+  Ibaraki]{Umetani2009}
+Shunji Umetani, Mutsunori Yagiura, Shinji Imahori, Takashi Imamichi, Koji
+  Nonobe, and Toshihide Ibaraki.
+\newblock Solving the irregular strip packing problem via guided local search
+  for overlap minimization.
+\newblock \emph{International Transactions in Operational Research},
+  16\penalty0 (6):\penalty0 661--683, 2009.
+\newblock \doi{10.1111/j.1475-3995.2009.00707.x}.
+
+\bibitem[van Anders et~al.(2015)van Anders, Klotsa, Karas, Dodd, and
+  Glotzer]{vanAnders2015}
+Greg van Anders, Daphne Klotsa, Andrew~S. Karas, Paul~M. Dodd, and Sharon~C.
+  Glotzer.
+\newblock Digital alchemy for materials design: Colloids and beyond.
+\newblock \emph{ACS Nano}, 2015.
+\newblock \doi{10.1021/acsnano.5b04181}.
+
+\bibitem[Wang et~al.(2018)Wang, Hermes, Kotni, Wu, Tasios, Liu, de~Nijs,
+  van~der Wee, Murray, Dijkstra, van Blaaderen, et~al.]{Wang2018}
+Da~Wang, Michiel Hermes, Ramakrishna Kotni, Yaoting Wu, Nikos Tasios, Yang Liu,
+  Bart de~Nijs, Ernest~B. van~der Wee, Christopher~B. Murray, Marjolein
+  Dijkstra, Alfons van Blaaderen, et~al.
+\newblock Interplay between spherical confinement and particle shape on the
+  self-assembly of rounded cubes.
+\newblock \emph{Nature Communications}, 9:\penalty0 2228, 2018.
+\newblock \doi{10.1038/s41467-018-04644-4}.
+
+\bibitem[W{\"a}scher et~al.(2007)W{\"a}scher, Hau{\ss}ner, and
+  Schumann]{Wascher2007}
+Gerhard W{\"a}scher, Heike Hau{\ss}ner, and Holger Schumann.
+\newblock An improved typology of cutting and packing problems.
+\newblock \emph{European Journal of Operational Research}, 183\penalty0
+  (3):\penalty0 1109--1130, 2007.
+\newblock \doi{10.1016/j.ejor.2005.12.047}.
+
+\bibitem[Yudhiono(2026)]{tesseractrepo}
+Hocky Yudhiono.
+\newblock Tesseracts in a box.
+\newblock \url{https://github.com/hockyy/tesseract-packing}, 2026.
+\newblock Commit e75c790, 9 October 2026.
+
+\bibitem[Zarzuelo(2026)]{platonicrepo}
+Alejandro Zarzuelo.
+\newblock platonic-packing: {P}latonic solids in {P}latonic containers by
+  soft-to-rigid continuation.
+\newblock \url{https://github.com/alejandrozu/platonic-packing}, 2026.
+\newblock Commit cd6d4bf, 9 October 2026.
+
+\end{thebibliography}

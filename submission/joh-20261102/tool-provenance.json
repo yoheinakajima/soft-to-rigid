@@ -1,0 +1,245 @@
+{
+  "source_base": "07e3cbd3c4855e5e19344885fbf672c3d7a0f039",
+  "observed_on": "2026-11-02 America/Los_Angeles",
+  "historical_commits": [
+    {
+      "commit": "07e3cbd3c4855e5e19344885fbf672c3d7a0f039",
+      "date": "2026-10-09",
+      "subject": "Paper: rebuilt PDF and arXiv source bundle",
+      "ai_tool_labels_in_commit_trailers": [
+        "Claude Opus 5.5"
+      ],
+      "claude_code_session_trailer_present": false
+    },
+    {
+      "commit": "51ea7553af66f3f2472583e0beaf284a6d99fb45",
+      "date": "2026-10-09",
+      "subject": "arXiv submission package: source bundle, form metadata, PDF",
+      "ai_tool_labels_in_commit_trailers": [
+        "Claude Opus 5.5"
+      ],
+      "claude_code_session_trailer_present": true
+    },
+    {
+      "commit": "a7abfffb6faf2146e747d247e053e5b9afcc49b0",
+      "date": "2026-10-09",
+      "subject": "Wall: all tiles on one clock (Play restarts them together); fix zoom for growing tiles",
+      "ai_tool_labels_in_commit_trailers": [
+        "Claude Opus 5.5"
+      ],
+      "claude_code_session_trailer_present": true
+    },
+    {
+      "commit": "0248c7ba86ff6f5b7cb8e73db5d09daf462b397f",
+      "date": "2026-10-09",
+      "subject": "Site and README aligned with the paper: answer in four lines, paired replays, experiment-by-experiment findings, journal index and anchors, experiment selector on family pages, held-out families, claims page context, paper-page abstract rendering; analysis-only campaigns in the journal; fix replay start-time bug",
+      "ai_tool_labels_in_commit_trailers": [
+        "Claude Opus 5.5"
+      ],
+      "claude_code_session_trailer_present": true
+    },
+    {
+      "commit": "286d29ca30d948879b1f9b2cd4ffb2310c344b49",
+      "date": "2026-10-09",
+      "subject": "Fix step-cap formula in method text",
+      "ai_tool_labels_in_commit_trailers": [
+        "Claude Opus 5.5"
+      ],
+      "claude_code_session_trailer_present": true
+    },
+    {
+      "commit": "398766a985f71fc1f2b3e7012719041793eb481a",
+      "date": "2026-10-09",
+      "subject": "Address Explore Science review: step details in method, C06 run counts, reference budget values, C14 scope and instance set, tuning-domain note, SA regime and grid caveats, square-anchored grid caveat, post-hoc tightened-pilot check for C15",
+      "ai_tool_labels_in_commit_trailers": [
+        "Claude Opus 5.5"
+      ],
+      "claude_code_session_trailer_present": true
+    },
+    {
+      "commit": "e981ba83f115460a18e7ab8ecb68de48a563bbf9",
+      "date": "2026-10-09",
+      "subject": "Final copy edits before pre-submission review: abstract and intro wording (targeted follow-up, deforms into target shape, n=17 and n=26), policy-specific pilot sentence, provenance statement, limitation scope",
+      "ai_tool_labels_in_commit_trailers": [
+        "Claude Opus 5.5"
+      ],
+      "claude_code_session_trailer_present": true
+    },
+    {
+      "commit": "992db4b66e72282e469e1a57157ab59b396e98f1",
+      "date": "2026-10-09",
+      "subject": "Fourth review round: time-aligned orientation measure, C16 table with repeated runs marked and new-only sensitivity, post-hoc equal tightening at C16 headline instances, C14 table, title 'alternative search', policy-specific C15 wording, downstream credit precision, timing scope",
+      "ai_tool_labels_in_commit_trailers": [
+        "Claude Opus 5.5"
+      ],
+      "claude_code_session_trailer_present": true
+    },
+    {
+      "commit": "7925bd16b812627731130e23faed5746cc4b9b74",
+      "date": "2026-10-09",
+      "subject": "Reframe as a complementary search: C16 (squares in a square at 10x budget) ingested; title, abstract, intro, practical rule and site headline rewritten; corrections from an independent check (C16 overlap with C09 disclosed, C10 squares-only portfolio reported, batch and speed claims narrowed)",
+      "ai_tool_labels_in_commit_trailers": [
+        "Claude Opus 5.5"
+      ],
+      "claude_code_session_trailer_present": true
+    },
+    {
+      "commit": "fcb2a3b438eb60fe46f479bc0b8c1081503a455f",
+      "date": "2026-10-09",
+      "subject": "WIP: C14 and C15 results and findings; C16 runs (tightening in progress); paper revised per third review round (held-out decision test, equal tightening, repeated batches, paired resampling, mechanism figure, downstream use, corrected Jin and Birattari framing)",
+      "ai_tool_labels_in_commit_trailers": [
+        "Claude Opus 5.5"
+      ],
+      "claude_code_session_trailer_present": true
+    },
+    {
+      "commit": "0cdae896d83e92b42f3b3b939c6a8e7491ddf8a8",
+      "date": "2026-10-09",
+      "subject": "Pre-register C14 (equal tightening), C15 (held-out families: pilot path choice vs always-rigid), C16 (squares in a square at 10x budget); held-out catalogue families",
+      "ai_tool_labels_in_commit_trailers": [
+        "Claude Opus 5.5"
+      ],
+      "claude_code_session_trailer_present": true
+    },
+    {
+      "commit": "afdcfc189fcc83f50ffc63c827794e85650cbf0a",
+      "date": "2026-10-09",
+      "subject": "C13 clean budget study ingested (C09 claim withdrawn); paper corrections from an independent check (pre-registered verdicts stated, non-detection not equivalence, run totals, budget overshoot, heatmap wording); correction findings appended to the ledger",
+      "ai_tool_labels_in_commit_trailers": [
+        "Claude Opus 5.5"
+      ],
+      "claude_code_session_trailer_present": true
+    },
+    {
+      "commit": "cf58f0d9b0e33298740f22e9ea56c1ff949d38a4",
+      "date": "2026-10-09",
+      "subject": "C11 snap and C12 grow-area ingested; paper revised per reviews (related work, why it matters, ablations, two-sided tests, budget correction, bootstrap/best-of-k/heatmap); exact enclosure proof in certificate; front-page wall of replays",
+      "ai_tool_labels_in_commit_trailers": [
+        "Claude Opus 5.5"
+      ],
+      "claude_code_session_trailer_present": true
+    },
+    {
+      "commit": "9db84537c28487588133c8e131d98196187d8e3d",
+      "date": "2026-10-09",
+      "subject": "Pre-register C11 (snap: path vs start), C12 (area-matched growth), C13 (clean budget study); engine paths snap and grow-area",
+      "ai_tool_labels_in_commit_trailers": [
+        "Claude Opus 5.5"
+      ],
+      "claude_code_session_trailer_present": true
+    },
+    {
+      "commit": "a60834aa86103503eb5a1ba64223f361326aeb88",
+      "date": "2026-10-09",
+      "subject": "Paper: corrections from an independent check of every number and claim against the raw data",
+      "ai_tool_labels_in_commit_trailers": [
+        "Claude Opus 5.5"
+      ],
+      "claude_code_session_trailer_present": true
+    },
+    {
+      "commit": "b1bc4aa3a71a309936be90f3f3a506b7d2bb53ec",
+      "date": "2026-10-09",
+      "subject": "All campaigns ingested (C00-C10), findings and decisions; paper draft (8 pp) generated from the ledger; site with replays, journal, paper",
+      "ai_tool_labels_in_commit_trailers": [
+        "Claude Opus 5.5"
+      ],
+      "claude_code_session_trailer_present": true
+    },
+    {
+      "commit": "533f895f3913febe52d708a39119a9d6bfdcdd3a",
+      "date": "2026-10-08",
+      "subject": "C08, C10 runs; paper draft sections; figures; analysis for C08-C10",
+      "ai_tool_labels_in_commit_trailers": [
+        "Claude Opus 5.5"
+      ],
+      "claude_code_session_trailer_present": true
+    },
+    {
+      "commit": "74ef9819b870463ae4b7ec008323c7026310ac2d",
+      "date": "2026-10-08",
+      "subject": "Pre-register C10 portfolio test",
+      "ai_tool_labels_in_commit_trailers": [
+        "Claude Opus 5.5"
+      ],
+      "claude_code_session_trailer_present": true
+    },
+    {
+      "commit": "706af43e3906701dd524ef9de200c9e70ff44a9d",
+      "date": "2026-10-08",
+      "subject": "C08/C09 instance lists fixed from C07 before their first run",
+      "ai_tool_labels_in_commit_trailers": [
+        "Claude Opus 5.5"
+      ],
+      "claude_code_session_trailer_present": true
+    },
+    {
+      "commit": "84ec07124c33ca43961b9e14fc51b5dbcac59ec5",
+      "date": "2026-10-08",
+      "subject": "C04 tightened and ingested; C06 best-of tuning; rebuildable ledger (notes.jsonl); findings and decision for C04",
+      "ai_tool_labels_in_commit_trailers": [
+        "Claude Opus 5.5"
+      ],
+      "claude_code_session_trailer_present": true
+    },
+    {
+      "commit": "e868005816ee11159b7dd1d2a3cbd307e4994cbb",
+      "date": "2026-10-08",
+      "subject": "C04 runs complete (30,080); lowest-point metrics; C06/C07 pre-registered (tuning by lowest point); C04 amendments",
+      "ai_tool_labels_in_commit_trailers": [
+        "Claude Opus 5.5"
+      ],
+      "claude_code_session_trailer_present": true
+    },
+    {
+      "commit": "f1d0d91a7b04e8ca7e467597be075ea8c59626d1",
+      "date": "2026-10-08",
+      "subject": "C04 in progress (partial runs); site, figures, analysis, paper skeleton; truncated-record tolerance",
+      "ai_tool_labels_in_commit_trailers": [
+        "Claude Opus 5.5"
+      ],
+      "claude_code_session_trailer_present": true
+    },
+    {
+      "commit": "414286369a0c084fcea4eaf87bc343c129a08533",
+      "date": "2026-10-08",
+      "subject": "Tuning campaigns C02-C03, frozen method settings, 3D engine and claims, projections; start C04 breadth",
+      "ai_tool_labels_in_commit_trailers": [
+        "Claude Opus 5.5"
+      ],
+      "claude_code_session_trailer_present": true
+    },
+    {
+      "commit": "d9b2f535741c529149bedf391542899875bac75d",
+      "date": "2026-10-08",
+      "subject": "Engine, catalogue, ledger, verifiers; campaigns C00 (reproduce) and C01 (tune)",
+      "ai_tool_labels_in_commit_trailers": [
+        "Claude Opus 5.5"
+      ],
+      "claude_code_session_trailer_present": true
+    }
+  ],
+  "interpretation": "Commit tool labels are historical provenance, not authenticated provider model telemetry or journal authorship. Session links and raw/private review content deliberately omitted.",
+  "original_assistance": "Public manuscript acknowledgement: code, experiments and verification developed with Claude (Anthropic) under author direction. Commit-labelled model: Claude Opus 5.5. Exact API identifiers/runtime versions and complete original prompt/review records unavailable.",
+  "original_review": "Commit398766a records Explore Science feedback; earlier subjects mention review rounds and independent checks but do not identify all reviewers/models or establish independent human review.",
+  "current_assistance": "Codex (OpenAI), paper worker configured gpt-6.1-sol high; manager AI review, exact manager model not established here. Substantive manuscript/code/audit/review assistance and execution of fixed-input verification/build tools.",
+  "experimental_apparatus": "Packing outcomes from JavaScript/Python numerical search and saved-output analysis; AI tools assist research, implementation and writing rather than serve as language-model experimental subjects.",
+  "verification_limit": "Preparation verification code was itself AI-assisted. Separate native float/exact software checks do not establish independent human validation; final human author review remains required.",
+  "original_packaging": "Claude-assisted arXiv source-bundle/metadata/PDF preparation and checking; public commits51ea755/07e3cbd plus retained preparation evidence; no exact model telemetry receipt. Private transcript and unrelated material omitted.",
+  "independent_preparation_reviews": [
+    {
+      "ui": "https://claude.ai/chat/ae38b5d2-4add-4232-a21e-c942129cfec0",
+      "label": "Claude Opus 5.5 Extra UI; self-label claude-opus-5-5",
+      "backend_revision": "unknown; UI/self-label is not authenticated backend telemetry",
+      "candidate": "879db26ac809697ba48c7336337a7b08dd689245",
+      "scope": "text/source/mathematics and selected rendered pages; no raw-run recount or independent feasibility checking"
+    },
+    {
+      "ui": "https://gemini.google.com/app/7c546f32db0da7bf",
+      "label": "Gemini Pro UI",
+      "backend_revision": "unreported",
+      "candidate": "879db26ac809697ba48c7336337a7b08dd689245",
+      "scope": "text/logic critique; later retracted missing-qualifier premises for G1/G3/G4; no engine/certificate execution"
+    }
+  ]
+}

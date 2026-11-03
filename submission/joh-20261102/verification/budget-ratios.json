@@ -1,0 +1,30 @@
+[
+  {
+    "method": "sa",
+    "n": 20,
+    "mean_pair_evals": 448878,
+    "reference_pair_evals": 438032,
+    "mean_over_reference": 1.0247607480732002
+  },
+  {
+    "method": "sa",
+    "n": 30,
+    "mean_pair_evals": 714120,
+    "reference_pair_evals": 696566,
+    "mean_over_reference": 1.0252007706376711
+  },
+  {
+    "method": "pc",
+    "n": 20,
+    "mean_pair_evals": 690285,
+    "reference_pair_evals": 438032,
+    "mean_over_reference": 1.5758780180443437
+  },
+  {
+    "method": "pc",
+    "n": 30,
+    "mean_pair_evals": 1176434,
+    "reference_pair_evals": 696566,
+    "mean_over_reference": 1.688905286792637
+  }
+]

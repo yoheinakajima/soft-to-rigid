@@ -1,0 +1,85 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{graphicx,booktabs,xcolor}
+\usepackage[authoryear,round]{natbib}
+
+\usepackage{placeins}
+\renewcommand{\thetable}{S\arabic{table}}
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+\setsansfont{Arial}
+% Use locally cached scalable math fonts at all sizes; no TeX download.
+\DeclareFontShape{OML}{cmm}{m}{it}{<->cmmi10}{}
+\DeclareFontShape{OMS}{cmsy}{m}{n}{<->cmsy10}{}
+\DeclareFontShape{OT1}{cmr}{m}{n}{<->cmr10}{}
+\DeclareFontFamily{U}{msb}{}
+\DeclareFontShape{U}{msb}{m}{n}{<->msbm10}{}
+\DeclareFontFamily{U}{msa}{}
+\DeclareFontShape{U}{msa}{m}{n}{<->cmsy10}{}
+\renewcommand{\checkmark}{\textnormal{Y}}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue!50!black,citecolor=blue!50!black,urlcolor=blue!50!black}
+\title{Online Resource 1: Evidence, inference and replication notes\\Soft-to-Rigid: Shape Continuation as an Alternative Search for Packing Congruent Shapes}
+\author{Yohei Nakajima\\\small Journal of Heuristics\\\small Untapped Capital, Bellevue, Washington, USA\\\small \href{mailto:yohei@untapped.vc}{\texttt{yohei@untapped.vc}}\\\small ORCID: \href{https://orcid.org/0009-0009-1293-6053}{0009-0009-1293-6053}}
+\date{2 November 2026}
+\begin{document}
+\sloppy
+\maketitle
+\noindent\textbf{Evidence provenance.} This supplement accompanies the controlled-study article and uses the fixed study commit \path{07e3cbd3c4855e5e19344885fbf672c3d7a0f039}. Separately versioned verification evidence is at \url{https://github.com/yoheinakajima/soft-to-rigid/tree/9d3b33242558eb8d36f6508b394cb016df2cd26b/submission/joh-20261102/verification}; its script is \path{scripts/verify_joh_packet.py}. Historical campaign reports and the public arXiv v1 remain separately identified.
+
+\section{What the evidence supports}
+Shape evolution and rounded particle families precede this study. The present contribution is a finite-container, prescribed-target heuristic comparison, with mixed results and explicit failure boundaries. Equal gradient step counts, reference-based baseline pair-evaluation budgets and separate tightening must not be conflated with equal total CPU time. The external-comparison audit found geometry-compatible polygon subsets of Berthold et al., but no matched external performance experiment was conducted. Sparrow's fixed-width strip objective is different. The manuscript claims neither external competitiveness nor causal mechanism, equivalence, a general selector or new controlled-study records.
+
+\section{Fixed evidence map}
+\begin{itemize}
+\item C00--C10: original campaign plans, raw outputs, selected decimated replays, polishing caches and the serialized event export. The export was inspected as data, without an ActiveGraph runtime or ledger rebuild.
+\item C11--C16: versioned campaign files and saved analysis outputs, including \path{analysis/ablations.json}, \path{C14.json} and \path{C15.json}. These later campaigns are absent from the original event export, so a universal event-log provenance claim would be inaccurate.
+\item Manuscript tables and figures retain the native generated macro/table snapshots at the study commit. New audit tables here are generated only by \path{scripts/verify_joh_packet.py} from saved evidence.
+\item \path{submission/joh-20261102/verification/input-manifest.json}: exact input paths, sizes and SHA256 hashes. \path{report.json}: bounded verification scope and computed checks. \path{C15-policy-crosswalk.json}: selected policy/run/value identities.
+\end{itemize}
+The source repository contains the full run files. This curated supplement provides pointers and selected verification artifacts rather than duplicating the entire campaign corpus.
+
+\section{Registered tests, exploratory analyses and reuse}
+\begin{table}[ht]\centering\small\caption{Selected endpoint-specific comparisons; counts are discordant instances.}\label{tab:evidence}\input{evidence-summary}\end{table}\FloatBarrier
+Table~\ref{tab:evidence} summarizes selected endpoint-specific comparisons. C10 compares 32 rigid plus 32 hardening runs against 64 rigid runs. Its registered one-sided test and this article's descriptive two-sided test are both disclosed; the observed near-tie is not equivalence.
+
+C15's primary endpoint compares lowest sizes after the specified policy selection and tightening. A reached-count comparison is a different endpoint. One geometry smoke test per family/path at $n=8$, seed 3, preceded the written plan; the families were otherwise withheld from tuning and method analysis. The tightened-pilot check is post hoc. Absence of a favorable family prevents a general inference about a selector's ability to find one.
+
+C16 is a targeted squares follow-up. Hardening and rigid runs at $n=19,28,29$ repeat C09 exactly. The bounded verifier checks all 96 such rows by objective, pose, steps and pair evaluations; they are not new independent confirmations. New-only inference excludes these three instances.
+
+The benchmark instances are designed, related geometries. Multiple comparisons, post-selection, ties and catalogue tolerances limit general inference. Bootstrap sensitivity from a single seed pool is not repeated-batch reliability. Mechanism measurements on selected best replays remain descriptive, with contact geometry/forces coupled to orientation.
+
+\subsection{Plan-specified comparisons and timing}
+Let $a,b$ be first-only versus second-only discordants, or strictly lower sizes for size endpoints. For $X\sim\mathrm{Bin}(a+b,1/2)$, the one-sided value in favor of the first method is $p_1=\Pr(X\ge a)$ and $p_2=\min(1,2\min\{\Pr(X\ge a),\Pr(X\le a)\})$. Thus $p_2\le2p_1$ for either registered direction. C04/C07 test in favor of hardening; C10 tests in favor of the mixed allocation. C11/C12 compare reached counts within each family, C13 compares sizes for each listed arm, C15 tests pilot versus rigid size, and C16 tests hardening versus rigid size. The C13 longer-versus-base contrasts and final C16 new-only row are descriptive follow-ups, not additional registered tests; their plan-$p$ entries are dashed. Table~\ref{tab:registered} reports all listed comparisons, not just favorable ones. In the result column, first/second gives the observed direction at nominal $p<0.05$ and ND means no difference detected under the stated tail. A nominal $p<0.05$ is interpreted with its observed direction and without multiplicity control; otherwise no difference is detected. For example, C07 hardening versus rigid has registered $p_1=0.979305$ and descriptive $p_2=0.115318$, so its directional hypothesis fails.
+
+\input{registered-tests}
+
+C04's plan and partial run files first appear together in Git commit \texttt{4142863}; Git alone does not establish a pre-run committed registration. Its headline/tightening amendments were made during the campaign. C07/C10/C11--C13/C15/C16 plan files appear in earlier commits than their corresponding recorded raw files, but commit order is not an independently authenticated execution timestamp. C15's disclosed smoke tests precede its plan. C16's reused C09 rows predate C16. These qualifications limit the blanket label ``preregistered''; the table records the written plan's endpoint and tail rather than certifying all execution chronology. C11's rule attributing mechanism after non-detection is not adopted; its square reached test is inconclusive (2:0, $p=0.5$), as is C12's (2:0, $p=0.5$). All C04/C07 registered first-direction tests are unsupported against rigid and grow; only the stated favorable comparisons with the in-house baselines pass the nominal threshold where shown, with C07 annealing also not below 0.05.
+
+\section{Tuning and tightening scope}
+\begin{table}[ht]\centering\small\caption{C06 selected settings. Symbols follow the manuscript: $\mu$ pressure, $\nu$ noise multiplier, $\gamma_0$ initial scale and $T_0$ annealing temperature; kick and relaxation steps describe pc.}\label{tab:tuning}\input{tuning-summary}\end{table}\FloatBarrier
+Table~\ref{tab:tuning} reports the selected settings. C06 used one nine-configuration grid for each method, selecting the lowest-of-16 score over eight held-out instances larger than the main test set. All selected settings are on both axis boundaries. Comparable tuning effort is not proof of comparable tuning adequacy. The study retains this limitation; grids were not expanded after observing results.
+
+C14's equal tightening covers a fixed 28-instance subset and three lowest legalised runs per method, with no eligibility gate. The saved cache is sufficient for checking this subset without a solver call. It does not establish robustness for all 188 instances. C16's separate tightening check concerns four selected hardening-only outcomes and remains post hoc.
+
+Recorded simulator timings exclude tuning, numerical tightening and verification. Historical hardware and dependency versions are not fully specified. No current machine identity is substituted for the historical study environment. The manuscript therefore makes only the scope-limited timing statement supported by the stored diagnostics.
+
+\section{Numerical witnesses versus exact certification}
+There are no below-catalogue claim folders in the controlled-study tree. Numeric reached counts mean the saved size passes the analysis's catalogue tolerance; they do not prove exact equality, optimality or record status. The current exact 2D verifier covers circles, triangles, squares and hexagons, not pentagons/octagons.
+
+\begin{table}[ht]\centering\small\caption{Stored numerical objectives and separately enlarged bounds checked exactly.}\label{tab:witness}\input{witness-summary}\end{table}\FloatBarrier
+Table~\ref{tab:witness} identifies four selected hardening outcomes: $n=11,19$ from C07 and $n=17,26$ from C16. Each exact certificate concerns an explicitly enlarged witness: centers scaled by 1.000001 and side set to $1.00001L+0.000001$. Both native floating-point and rational checkers pass on the supplied derived files. These are feasible upper bounds near the contact outcomes, \emph{not certificates at the original saved objective}. No optimization, retuning, new run or new record claim is involved. Input poses, run identifiers, enlargement rule and checker outputs are in the packet. The added side clearances are approximately $4.0$--$5.7\times10^{-5}$, far above the $10^{-9}$ non-truncated reached tolerance. Consequently these checks do not certify the original reached endpoint. Certification of every contact outcome remains outside the verified scope.
+
+\section{Safe replication boundary}
+The curated route reads fixed JSON/JSONL and executes only \path{verify.py} and \path{packing.certify} on four supplied enlarged witnesses. Missing caches cause an assertion failure, never numerical recomputation. It does not import \path{packing.ledger}, ActiveGraph, a solver or a provider. In contrast, the native decision/refine/post-hoc modules can call tightening on cache miss; a ledger rebuild can trigger behaviors. Those commands must not be substituted for a read-only audit.
+
+The package was prepared using Python's standard library and existing Tectonic tooling. Compilation uses an existing font environment, documented separately. Full original-campaign reproduction requires a specified run design and a historical environment specification; it is not implied by saved-output checks.
+
+\clearpage
+\section{Availability, rights and disclosures}
+Original study code and data are pinned at \path{07e3cbd3c4855e5e19344885fbf672c3d7a0f039}. The separate verification commit is \path{9d3b33242558eb8d36f6508b394cb016df2cd26b}, at the repository URL above, under \path{submission/joh-20261102/verification}; its scripts reside under \path{scripts/}. Code is MIT; public manuscript v1 is CC BY 4.0; third-party rights remain applicable. The prior cube bound is cited with unresolved priority, not reproduced as a new result. Funding, relationships and substantive AI-assistance disclosures are in the manuscript; preparation model reviews and software checks are not independent human journal review.
+
+\section{External formulation compatibility}
+Berthold et al., arXiv:2605.04850v1, Section~6.1, minimize outer circumradius $R$ for inner regular $m$-gons of circumradius one inside an outer regular $\ell$-gon. Scaling inner pieces to unit side gives outer side $R\sin(\pi/\ell)/\sin(\pi/m)$. This is a geometric conversion, not a performance comparison. Their Section~4.1 varies circle radii and maximizes their sum in a unit square or fixed-perimeter rectangle; Section~5 uses unit circles in a minimum-area variable ellipse. These specific formulations differ from congruent disks in a minimum-size square, without excluding every possible adaptation. Sparrow's fixed-width strip objective also differs from finite-container scale. No matched external experiment or competitiveness claim is made.
+\end{document}

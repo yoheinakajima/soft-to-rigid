@@ -1,0 +1,65 @@
+{
+  "source_base": "07e3cbd3c4855e5e19344885fbf672c3d7a0f039",
+  "files": [
+    {
+      "path": "analysis/C04-breadth.json",
+      "sha256": "a38b648e346c8ed7bd70e730a9034f2112d7178f40439e494e584751d8b95bbf"
+    },
+    {
+      "path": "analysis/C07-breadth-best.json",
+      "sha256": "a8e6eafd988cb5c9df297a01b627e33b8201bd574f883d44878fe1c47c23c213"
+    },
+    {
+      "path": "analysis/C15.json",
+      "sha256": "ba7632e8d15d3a6ddd63da30825af9827842f82d362b35909e19680b6df78536"
+    },
+    {
+      "path": "analysis/ablations.json",
+      "sha256": "50281cece763ff47735936d860a1e9e44538acbb33bcc4ce94bd5559d8b2a578"
+    },
+    {
+      "path": "analysis/reference_budget.json",
+      "sha256": "09d0f75844354939dbc9be66e8f0a6140936d145a969053ad1e3e3c9f3cc7c19"
+    },
+    {
+      "path": "analysis/stats.json",
+      "sha256": "ea2d55ea7a93a593479c1857ddc5d2f8c83e3aa0f0290cbbb8f7dca535865952"
+    },
+    {
+      "path": "campaigns/C04-breadth/plan.json",
+      "sha256": "57b89bab3474ef10910c1827652ef58d6e212418692f0e1b8f67c8298840979e"
+    },
+    {
+      "path": "campaigns/C07-breadth-best/plan.json",
+      "sha256": "3a7c13209470bae15f5acbd0435b8d5ef00867a6ab5f07140c79ded8c3edf890"
+    },
+    {
+      "path": "campaigns/C10-portfolio/plan.json",
+      "sha256": "0fff5cf8d21351c08844bded115f8b4c99cfc926962712c84a183eeb5471e5ae"
+    },
+    {
+      "path": "campaigns/C11-snap/plan.json",
+      "sha256": "8b87da503de17d58b7179686257a67edaff865fbb2ea5af58c0ef61692ce2df8"
+    },
+    {
+      "path": "campaigns/C12-grow-area/plan.json",
+      "sha256": "a36bb1ee1908ec16ff25e48b5e9fb47bd587be78706b62132c6146d1b131df1d"
+    },
+    {
+      "path": "campaigns/C13-budget-clean/plan.json",
+      "sha256": "0e67658faf4fb9f8e09b84ef40f2a5245a388784b6ec65c39d897ddad992619c"
+    },
+    {
+      "path": "campaigns/C15-heldout-decision/plan.json",
+      "sha256": "d9e11c86e36df98196b3c9d548754464a8ffa0cb6506d64e162c4ccb0967f16c"
+    },
+    {
+      "path": "campaigns/C16-squares-long/plan.json",
+      "sha256": "d6e32a72d09229c8558b2811946f3acc583cb2fc3a3e952f59d8c6a92141c485"
+    },
+    {
+      "path": "ledger/events.jsonl",
+      "sha256": "e45dfc2e8de34690d18715f1d6f18d8176dfaea6208682575025b95d4e1546c9"
+    }
+  ]
+}

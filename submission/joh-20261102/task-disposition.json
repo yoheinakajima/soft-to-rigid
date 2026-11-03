@@ -1,0 +1,238 @@
+{
+  "observed_on": "2026-11-02 America/Los_Angeles",
+  "source_base": "07e3cbd3c4855e5e19344885fbf672c3d7a0f039",
+  "status": "reviewable source preparation; not submission-ready",
+  "tasks": [
+    {
+      "id": "SOFT-001",
+      "disposition": "done-with-final-action-gate",
+      "evidence": [
+        "verification/input-manifest.json",
+        "README.md"
+      ],
+      "result_or_gap": "Version identities frozen; freshly attest exclusive consideration of the current JoH work and accurately disclose the separate note. No mandatory separate-journal closure/contact gate."
+    },
+    {
+      "id": "SOFT-002",
+      "disposition": "done",
+      "evidence": [
+        "audit.md",
+        "../../paper/joh-20261102/sections/intro.tex"
+      ],
+      "result_or_gap": "Narrow finite-container study contribution; Jin and continuation precedence credited; no universal novelty claim."
+    },
+    {
+      "id": "SOFT-003",
+      "disposition": "done",
+      "evidence": [
+        "audit.md"
+      ],
+      "result_or_gap": "Exact geometry/objective compatibility mapped; external performance claim removed, no solver experiment needed for narrowed paper."
+    },
+    {
+      "id": "SOFT-004",
+      "disposition": "done",
+      "evidence": [
+        "verification/report.json::checks.C06_grid",
+        "audit.md"
+      ],
+      "result_or_gap": "All five C06 grid-corner winners computed; tuning adequacy bounded."
+    },
+    {
+      "id": "SOFT-005",
+      "disposition": "done-with-scientific-limit",
+      "evidence": [
+        "audit.md",
+        "reproduce.md"
+      ],
+      "result_or_gap": "Units/postprocessing/cost scope explicit; historical hardware/dependency identity remains unavailable."
+    },
+    {
+      "id": "SOFT-006",
+      "disposition": "done",
+      "evidence": [
+        "verification/report.json::checks.C14",
+        "audit.md"
+      ],
+      "result_or_gap": "C14 saved-output comparison independently matched; subset/post-hoc limits retained, no optimization."
+    },
+    {
+      "id": "SOFT-007",
+      "disposition": "done-with-native-application-gap",
+      "evidence": [
+        "verification/report.json::checks.C10",
+        "verification/report.json::checks.C15",
+        "interpretive-corrections.jsonl",
+        "verification/registered-tests.json",
+        "review-disposition.json"
+      ],
+      "result_or_gap": "Plan-specific sidedness and all listed saved-count comparisons reported, including C07 directional failure; incorrect doubled-tail wording corrected. C10 historical records preserved; native finding remains proposed outside runtime."
+    },
+    {
+      "id": "SOFT-008",
+      "disposition": "done",
+      "evidence": [
+        "verification/report.json::checks.C16"
+      ],
+      "result_or_gap": "All 96 reused harden/rigid rows verified; new-only inference retained."
+    },
+    {
+      "id": "SOFT-009",
+      "disposition": "done",
+      "evidence": [
+        "audit.md",
+        "../../paper/joh-20261102/sections/learned.tex"
+      ],
+      "result_or_gap": "Mechanism remains descriptive and failed registered interpretations retained."
+    },
+    {
+      "id": "SOFT-010",
+      "disposition": "done-with-scientific-limit",
+      "evidence": [
+        "verification/report.json::checks.selected_witnesses",
+        "audit.md"
+      ],
+      "result_or_gap": "Four enlarged saved square witnesses pass native float/exact checks; not original-contact certification or all-family exact coverage."
+    },
+    {
+      "id": "SOFT-011",
+      "disposition": "done-with-scientific-limit",
+      "evidence": [
+        "reproduce.md",
+        "verification/input-manifest.json",
+        "version-pins.json",
+        "verification/review-analysis-inputs.json"
+      ],
+      "result_or_gap": "Distinct immutable study and verification pins, audited saved-output/helper arithmetic and hash lists. Historical optimization environment/full reproduction remain unestablished."
+    },
+    {
+      "id": "SOFT-012",
+      "disposition": "done-applicable-reuse-check",
+      "evidence": [
+        "audit.md",
+        "owner-worksheet.md"
+      ],
+      "result_or_gap": "Code/manuscript/third-party rights separated. Current article cites prior bound/method without reproducing theorem, coordinate table, cube figure or exact-certificate derivation; permissions apply only to actual applicable protected reuse. No publisher acceptance or blanket rights clearance assumed."
+    },
+    {
+      "id": "SOFT-013",
+      "disposition": "done",
+      "evidence": [
+        "../../paper/joh-20261102/main.tex",
+        "../../paper/joh-20261102/main.pdf"
+      ],
+      "result_or_gap": "Distinct journal candidate with ordinary date and no operational readiness banner; compliant abstract/keywords, author-year references, preserved result snapshots and supplied metadata. Approval status stays in README/worksheet; factual companion/scientific limits remain in the article."
+    },
+    {
+      "id": "SOFT-014",
+      "disposition": "done",
+      "evidence": [
+        "../../paper/joh-20261102/supplement.tex",
+        "../../paper/joh-20261102/supplement.pdf",
+        "reproduce.md"
+      ],
+      "result_or_gap": "Curated SI/evidence map, availability prose and fixed-input manifest prepared."
+    },
+    {
+      "id": "SOFT-015",
+      "disposition": "done-public-metadata",
+      "evidence": [
+        "owner-worksheet.md",
+        "author-metadata.json",
+        "tool-use-provenance.md",
+        "tool-provenance.json"
+      ],
+      "result_or_gap": "Author-approved sole-author, Untapped Capital affiliation, Bellevue location, email and ORCID supplied. Checksum passes; registry identity unverified, no OAuth assertion."
+    },
+    {
+      "id": "SOFT-016",
+      "disposition": "done-disclosures-final-approval",
+      "evidence": [
+        "owner-worksheet.md",
+        "../../paper/joh-20261102/main.tex",
+        "author-metadata.json",
+        "tool-use-provenance.md",
+        "tool-provenance.json"
+      ],
+      "result_or_gap": "Funding/supporter role and public software/investment relationships disclosed; original/current AI assistance reconstructed from source/history/preparation evidence. Unknown versions remain explicit. Final exact-version approval required."
+    },
+    {
+      "id": "SOFT-017",
+      "disposition": "done-disclosure-final-approval",
+      "evidence": [
+        "overlap.md"
+      ],
+      "result_or_gap": "Related-note version already located privately; exact reuse/distinction and public priority caveat mapped. Approve truthful actual-history cover disclosure; current editorial status may remain unconfirmed. Closure, withdrawal or contact is not an established JoH prerequisite."
+    },
+    {
+      "id": "SOFT-018",
+      "disposition": "draft-needs-final-action-gate",
+      "evidence": [
+        "cover-letter.md",
+        "overlap.md"
+      ],
+      "result_or_gap": "Unsent cover letter contains supplied identity/funding/roles and tool disclosure. Approve accurate related-note history/overlap, current-JoH-work exclusivity and the final sending action; no mandatory closure/contact requirement for the distinct note."
+    },
+    {
+      "id": "SOFT-019",
+      "disposition": "done-with-review-gap",
+      "evidence": [
+        "verification/report.json",
+        "verification/pdf-qa.json",
+        "review-disposition.json",
+        "verification/registered-tests.json",
+        "tool-provenance.json"
+      ],
+      "result_or_gap": "Two separately prompted Claude/Gemini model critiques followed by source-grounded dispositions of all26 findings and bounded fixes. Software/hash/build/visual checks pass; no independent human peer review is claimed and final exact-version approval remains."
+    },
+    {
+      "id": "SOFT-020",
+      "disposition": "later-owner-gate",
+      "evidence": [
+        "owner-worksheet.md",
+        "README.md"
+      ],
+      "result_or_gap": "Public policy/route/fees recorded; no authenticated portal, identity assertion, upload or submission. Exact final action approval deferred."
+    },
+    {
+      "id": "SOFT-021",
+      "disposition": "conditional-not-needed",
+      "evidence": [
+        "audit.md"
+      ],
+      "result_or_gap": "External competitiveness removed; no external solver campaign authorized or required for retained claim."
+    },
+    {
+      "id": "SOFT-022",
+      "disposition": "conditional-not-needed",
+      "evidence": [
+        "audit.md"
+      ],
+      "result_or_gap": "Existing-grid/budget/tightening limitations retained; no new tuning/cost campaign required for bounded current comparison."
+    },
+    {
+      "id": "SOFT-023",
+      "disposition": "conditional-not-needed",
+      "evidence": [
+        "audit.md"
+      ],
+      "result_or_gap": "No causal mechanism or validated selector claim retained; prospective research omitted."
+    },
+    {
+      "id": "SOFT-024",
+      "disposition": "optional-not-added",
+      "evidence": [
+        "audit.md"
+      ],
+      "result_or_gap": "Existing readable figures retained; no new performance curves from incomplete historical timing."
+    },
+    {
+      "id": "SOFT-025",
+      "disposition": "optional-not-released",
+      "evidence": [
+        "README.md"
+      ],
+      "result_or_gap": "Commit-pinned availability/manifests prepared; no public code/data release, tag, DOI deposit or external archive."
+    }
+  ]
+}

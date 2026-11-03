@@ -1,0 +1,367 @@
+{
+  "base_commit": "07e3cbd3c4855e5e19344885fbf672c3d7a0f039",
+  "execution": "saved-input read-only analysis; no runtime or solver imports",
+  "checks": {
+    "C10": {
+      "rigid64": 138,
+      "rigid32+harden32": 139,
+      "rigid32+grow32": 137,
+      "mixed_only": 4,
+      "rigid64_only": 3,
+      "p": 1.0,
+      "instances": 188,
+      "registered_one_sided_p": 0.5,
+      "source": "saved event object/patch data, no event replay runtime"
+    },
+    "C15": {
+      "instances": 60,
+      "raw_rows": 7680,
+      "pilot_vs_rigid": {
+        "a_lower": 2,
+        "b_lower": 3,
+        "ties": 55,
+        "p": 1.0
+      },
+      "reached": {
+        "always-rigid": 40,
+        "always-harden": 32,
+        "pilot": 41
+      },
+      "cache_misses": 0,
+      "smoke_test_note": "Before this plan was written, one smoke-test run per family (seed 3, n = 8, harden and rigid) was made to check the geometry; nothing else about these families was looked at."
+    },
+    "C16": {
+      "raw_rows": 1120,
+      "reused_harden_rigid_rows": 96,
+      "reused_instances": [
+        19,
+        28,
+        29
+      ],
+      "new_only_instances": 11,
+      "new_only": {
+        "a_lower": 3,
+        "b_lower": 0,
+        "ties": 8,
+        "p_lower": 0.25
+      },
+      "reused_run_ids": [
+        "squ-in-squ/n19/harden-best/B10/default/s1",
+        "squ-in-squ/n19/harden-best/B10/default/s3",
+        "squ-in-squ/n19/harden-best/B10/default/s5",
+        "squ-in-squ/n19/harden-best/B10/default/s7",
+        "squ-in-squ/n19/harden-best/B10/default/s9",
+        "squ-in-squ/n19/harden-best/B10/default/s11",
+        "squ-in-squ/n19/harden-best/B10/default/s13",
+        "squ-in-squ/n19/harden-best/B10/default/s15",
+        "squ-in-squ/n19/rigid-best/B10/default/s1",
+        "squ-in-squ/n19/rigid-best/B10/default/s3",
+        "squ-in-squ/n19/rigid-best/B10/default/s5",
+        "squ-in-squ/n19/rigid-best/B10/default/s7",
+        "squ-in-squ/n19/rigid-best/B10/default/s9",
+        "squ-in-squ/n19/rigid-best/B10/default/s11",
+        "squ-in-squ/n19/rigid-best/B10/default/s13",
+        "squ-in-squ/n19/rigid-best/B10/default/s15",
+        "squ-in-squ/n28/harden-best/B10/default/s1",
+        "squ-in-squ/n28/harden-best/B10/default/s3",
+        "squ-in-squ/n28/harden-best/B10/default/s5",
+        "squ-in-squ/n28/harden-best/B10/default/s7",
+        "squ-in-squ/n28/harden-best/B10/default/s9",
+        "squ-in-squ/n28/harden-best/B10/default/s11",
+        "squ-in-squ/n28/harden-best/B10/default/s13",
+        "squ-in-squ/n28/harden-best/B10/default/s15",
+        "squ-in-squ/n28/rigid-best/B10/default/s1",
+        "squ-in-squ/n28/rigid-best/B10/default/s3",
+        "squ-in-squ/n28/rigid-best/B10/default/s5",
+        "squ-in-squ/n28/rigid-best/B10/default/s7",
+        "squ-in-squ/n28/rigid-best/B10/default/s9",
+        "squ-in-squ/n28/rigid-best/B10/default/s11",
+        "squ-in-squ/n28/rigid-best/B10/default/s13",
+        "squ-in-squ/n28/rigid-best/B10/default/s15",
+        "squ-in-squ/n29/harden-best/B10/default/s1",
+        "squ-in-squ/n29/harden-best/B10/default/s3",
+        "squ-in-squ/n29/harden-best/B10/default/s5",
+        "squ-in-squ/n29/harden-best/B10/default/s7",
+        "squ-in-squ/n29/harden-best/B10/default/s9",
+        "squ-in-squ/n29/harden-best/B10/default/s11",
+        "squ-in-squ/n29/harden-best/B10/default/s13",
+        "squ-in-squ/n29/harden-best/B10/default/s15",
+        "squ-in-squ/n29/rigid-best/B10/default/s1",
+        "squ-in-squ/n29/rigid-best/B10/default/s3",
+        "squ-in-squ/n29/rigid-best/B10/default/s5",
+        "squ-in-squ/n29/rigid-best/B10/default/s7",
+        "squ-in-squ/n29/rigid-best/B10/default/s9",
+        "squ-in-squ/n29/rigid-best/B10/default/s11",
+        "squ-in-squ/n29/rigid-best/B10/default/s13",
+        "squ-in-squ/n29/rigid-best/B10/default/s15",
+        "squ-in-squ/n19/harden-best/B10/default/s2",
+        "squ-in-squ/n19/harden-best/B10/default/s4",
+        "squ-in-squ/n19/harden-best/B10/default/s6",
+        "squ-in-squ/n19/harden-best/B10/default/s8",
+        "squ-in-squ/n19/harden-best/B10/default/s10",
+        "squ-in-squ/n19/harden-best/B10/default/s12",
+        "squ-in-squ/n19/harden-best/B10/default/s14",
+        "squ-in-squ/n19/harden-best/B10/default/s16",
+        "squ-in-squ/n19/rigid-best/B10/default/s2",
+        "squ-in-squ/n19/rigid-best/B10/default/s4",
+        "squ-in-squ/n19/rigid-best/B10/default/s6",
+        "squ-in-squ/n19/rigid-best/B10/default/s8",
+        "squ-in-squ/n19/rigid-best/B10/default/s10",
+        "squ-in-squ/n19/rigid-best/B10/default/s12",
+        "squ-in-squ/n19/rigid-best/B10/default/s14",
+        "squ-in-squ/n19/rigid-best/B10/default/s16",
+        "squ-in-squ/n28/harden-best/B10/default/s2",
+        "squ-in-squ/n28/harden-best/B10/default/s4",
+        "squ-in-squ/n28/harden-best/B10/default/s6",
+        "squ-in-squ/n28/harden-best/B10/default/s8",
+        "squ-in-squ/n28/harden-best/B10/default/s10",
+        "squ-in-squ/n28/harden-best/B10/default/s12",
+        "squ-in-squ/n28/harden-best/B10/default/s14",
+        "squ-in-squ/n28/harden-best/B10/default/s16",
+        "squ-in-squ/n28/rigid-best/B10/default/s2",
+        "squ-in-squ/n28/rigid-best/B10/default/s4",
+        "squ-in-squ/n28/rigid-best/B10/default/s6",
+        "squ-in-squ/n28/rigid-best/B10/default/s8",
+        "squ-in-squ/n28/rigid-best/B10/default/s10",
+        "squ-in-squ/n28/rigid-best/B10/default/s12",
+        "squ-in-squ/n28/rigid-best/B10/default/s14",
+        "squ-in-squ/n28/rigid-best/B10/default/s16",
+        "squ-in-squ/n29/harden-best/B10/default/s2",
+        "squ-in-squ/n29/harden-best/B10/default/s4",
+        "squ-in-squ/n29/harden-best/B10/default/s6",
+        "squ-in-squ/n29/harden-best/B10/default/s8",
+        "squ-in-squ/n29/harden-best/B10/default/s10",
+        "squ-in-squ/n29/harden-best/B10/default/s12",
+        "squ-in-squ/n29/harden-best/B10/default/s14",
+        "squ-in-squ/n29/harden-best/B10/default/s16",
+        "squ-in-squ/n29/rigid-best/B10/default/s2",
+        "squ-in-squ/n29/rigid-best/B10/default/s4",
+        "squ-in-squ/n29/rigid-best/B10/default/s6",
+        "squ-in-squ/n29/rigid-best/B10/default/s8",
+        "squ-in-squ/n29/rigid-best/B10/default/s10",
+        "squ-in-squ/n29/rigid-best/B10/default/s12",
+        "squ-in-squ/n29/rigid-best/B10/default/s14",
+        "squ-in-squ/n29/rigid-best/B10/default/s16"
+      ]
+    },
+    "C14": {
+      "instances": 28,
+      "counts": {
+        "raw": {
+          "harden": 6,
+          "grow": 19,
+          "rigid": 3,
+          "sa": 1,
+          "pc": 0
+        },
+        "equal_top3": {
+          "harden": 23,
+          "grow": 20,
+          "rigid": 19,
+          "sa": 17,
+          "pc": 4
+        },
+        "c07_policy": {
+          "harden": 24,
+          "grow": 20,
+          "rigid": 18,
+          "sa": 14,
+          "pc": 2
+        }
+      },
+      "optimization_calls": 0
+    },
+    "selected_witnesses": [
+      {
+        "n": 11,
+        "source_campaign": "C07-breadth-best",
+        "run": "squ-in-squ/n11/harden-best/B1/default/s14",
+        "stored_objective": 3.8770835900228153,
+        "certified_enlarged_bound": 3.877123360858716,
+        "center_factor": 1.000001,
+        "bound_factor": 1.00001,
+        "bound_addition": 1e-06,
+        "not_a_certificate_at_stored_objective": true,
+        "checks": {
+          "float": "PASS",
+          "exact": "PASS"
+        }
+      },
+      {
+        "n": 19,
+        "source_campaign": "C07-breadth-best",
+        "run": "squ-in-squ/n19/harden-best/B1/default/s10",
+        "stored_objective": 4.885618083164127,
+        "certified_enlarged_bound": 4.885667939344959,
+        "center_factor": 1.000001,
+        "bound_factor": 1.00001,
+        "bound_addition": 1e-06,
+        "not_a_certificate_at_stored_objective": true,
+        "checks": {
+          "float": "PASS",
+          "exact": "PASS"
+        }
+      },
+      {
+        "n": 17,
+        "source_campaign": "C16-squares-long",
+        "run": "squ-in-squ/n17/harden-best/B10/default/s16",
+        "stored_objective": 4.675530093604554,
+        "certified_enlarged_bound": 4.67557784890549,
+        "center_factor": 1.000001,
+        "bound_factor": 1.00001,
+        "bound_addition": 1e-06,
+        "not_a_certificate_at_stored_objective": true,
+        "checks": {
+          "float": "PASS",
+          "exact": "PASS"
+        }
+      },
+      {
+        "n": 26,
+        "source_campaign": "C16-squares-long",
+        "run": "squ-in-squ/n26/harden-best/B10/default/s13",
+        "stored_objective": 5.621320343559644,
+        "certified_enlarged_bound": 5.62137755676308,
+        "center_factor": 1.000001,
+        "bound_factor": 1.00001,
+        "bound_addition": 1e-06,
+        "not_a_certificate_at_stored_objective": true,
+        "checks": {
+          "float": "PASS",
+          "exact": "PASS"
+        }
+      }
+    ],
+    "C06_grid": [
+      {
+        "method": "harden",
+        "configs": 9,
+        "selected": {
+          "mu": 0.16,
+          "noiseScale": 8
+        },
+        "ranges": {
+          "mu": [
+            0.02,
+            0.08,
+            0.16
+          ],
+          "noiseScale": [
+            1,
+            2,
+            8
+          ]
+        },
+        "boundary": {
+          "mu": true,
+          "noiseScale": true
+        }
+      },
+      {
+        "method": "grow",
+        "configs": 9,
+        "selected": {
+          "mu": 0.08,
+          "gamma0": 0.1
+        },
+        "ranges": {
+          "mu": [
+            0.02,
+            0.04,
+            0.08
+          ],
+          "gamma0": [
+            0.1,
+            0.2,
+            0.5
+          ]
+        },
+        "boundary": {
+          "mu": true,
+          "gamma0": true
+        }
+      },
+      {
+        "method": "rigid",
+        "configs": 9,
+        "selected": {
+          "mu": 0.16,
+          "noiseScale": 8
+        },
+        "ranges": {
+          "mu": [
+            0.02,
+            0.08,
+            0.16
+          ],
+          "noiseScale": [
+            1,
+            2,
+            8
+          ]
+        },
+        "boundary": {
+          "mu": true,
+          "noiseScale": true
+        }
+      },
+      {
+        "method": "sa",
+        "configs": 9,
+        "selected": {
+          "saT0": 0.001,
+          "mu": 0.02
+        },
+        "ranges": {
+          "saT0": [
+            0.001,
+            0.003,
+            0.01
+          ],
+          "mu": [
+            0.0025,
+            0.005,
+            0.02
+          ]
+        },
+        "boundary": {
+          "saT0": true,
+          "mu": true
+        }
+      },
+      {
+        "method": "pc",
+        "configs": 9,
+        "selected": {
+          "pcKick": 0.05,
+          "pcRelax": 19200
+        },
+        "ranges": {
+          "pcKick": [
+            0.05,
+            0.15,
+            0.4
+          ],
+          "pcRelax": [
+            1200,
+            4800,
+            19200
+          ]
+        },
+        "boundary": {
+          "pcKick": true,
+          "pcRelax": true
+        }
+      }
+    ]
+  },
+  "input_files": 639,
+  "status": "PASS",
+  "scope_limits": [
+    "Not exhaustive raw-data reproduction of all campaigns",
+    "No certification at the original contact objective",
+    "No pentagon/octagon exact certification",
+    "No canonical ledger runtime, optimizer, provider or service invoked"
+  ]
+}
