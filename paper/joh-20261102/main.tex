@@ -1,0 +1,62 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{graphicx,booktabs,xcolor}
+\usepackage[authoryear,round]{natbib}
+
+\usepackage{placeins}
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+\setsansfont{Arial}
+% Use locally cached scalable math fonts at all sizes; no TeX download.
+\DeclareFontShape{OML}{cmm}{m}{it}{<->cmmi10}{}
+\DeclareFontShape{OMS}{cmsy}{m}{n}{<->cmsy10}{}
+\DeclareFontShape{OT1}{cmr}{m}{n}{<->cmr10}{}
+\DeclareFontFamily{U}{msb}{}
+\DeclareFontShape{U}{msb}{m}{n}{<->msbm10}{}
+\DeclareFontFamily{U}{msa}{}
+\DeclareFontShape{U}{msa}{m}{n}{<->cmsy10}{}
+\renewcommand{\checkmark}{\textnormal{Y}}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue!50!black,citecolor=blue!50!black,urlcolor=blue!50!black}
+\input{numbers}
+\input{stats}
+\input{ablations}
+\IfFileExists{decision.tex}{\input{decision}}{}
+\IfFileExists{refine.tex}{\input{refine}}{}
+\input{mechanism}
+\input{evidence-macros}
+
+\title{Soft-to-Rigid: Shape Continuation as an Alternative Search\\ for Packing Congruent Shapes}
+\author{Yohei Nakajima\\\small Affiliation, corresponding contact and ORCID: author confirmation pending}
+\date{Journal preparation draft, 2 November 2026}
+
+\setlength{\emergencystretch}{1em}
+\begin{document}
+\maketitle
+\begin{center}\fbox{\parbox{0.92\linewidth}{\small\textbf{Author-review draft; not submitted.} Submission identity, funding/conflicts, rights, AI-use details and companion-note status require author confirmation. The public arXiv v1 and historical study artifacts are preserved.}}\end{center}
+
+\begin{abstract}
+\input{sections/abstract}
+\end{abstract}
+\noindent\textbf{Keywords:} geometric packing; shape continuation; stochastic search; computational experiments; reproducibility
+
+\input{sections/body}
+
+\sloppy
+\section*{Statements and Declarations}
+\paragraph{Data and code availability.} Study code, campaign plans, raw run outputs, saved analyses and selected replays are available at \url{https://github.com/yoheinakajima/soft-to-rigid/tree/07e3cbd3c4855e5e19344885fbf672c3d7a0f039}. The original event export covers C00--C10; later analyses also read versioned campaign files directly. Online Resource 1 describes the evidence map, limitations of certification and a saved-output verification route. A new optimizer campaign is not needed to inspect the reported stored results. Code is distributed under the repository's MIT license; third-party records and witnesses retain their respective rights. A versioned preparation manifest accompanies this draft.
+\paragraph{Funding and competing interests.} Author confirmation pending. No absence of funding, financial interests or nonfinancial interests is asserted by this draft.
+\paragraph{Author contributions and approval.} The public v1 names Yohei Nakajima as sole author. Contributions, author details and approval of this journal draft must be confirmed before submission.
+\paragraph{Ethics and consent.} The reported experiments concern computational geometry rather than human or animal participants. The corresponding not-applicable declarations remain subject to author confirmation.
+\paragraph{AI assistance.} The public study acknowledges that code, experiments and verification were developed with Claude (Anthropic) under the author's direction. This journal preparation draft was edited and audited with Codex (OpenAI). Exact tool/version/date details and the human verification performed must be confirmed by the author before submission. AI systems are not authors; responsibility and approval remain with the human author. This assistance is substantive and is not represented as copy editing alone.
+\paragraph{Related work and overlap.} Public v1 is \url{https://arxiv.org/abs/2610.14463v1}, distributed under CC BY 4.0. The earlier twelve-cube note is described in the public bibliography as submitted to Geombinatorics; current editorial status, permissions and overlap clearance are unverified. The draft distinguishes that prior discovery from the present controlled study. No assertion of exclusive consideration is made until the author confirms current status.
+
+\FloatBarrier
+\bibliographystyle{plainnat}
+\setlength{\bibsep}{1pt plus 0.3ex}
+\renewcommand{\bibfont}{\footnotesize}
+\bibliography{refs}
+
+\input{sections/appendix}
+\end{document}

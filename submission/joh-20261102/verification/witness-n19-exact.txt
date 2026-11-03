@@ -1,0 +1,3 @@
+saved-study witness, deliberately enlarged container; not a new record n = 19 s = 4.885667939344959
+exact check: all pieces inside, every pair strictly separated; unit 4-gon + 1e-9 margin enclosed by the surrogate (worst slack 4.00e-09)
+CERTIFIED

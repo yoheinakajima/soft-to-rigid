@@ -1,0 +1,15 @@
+# Related work, preprint and overlap memo — author review required
+
+This journal draft extends the public study at arXiv:2610.14463v1, submitted October 10, 2026, CC BY 4.0. All 34 corresponding source/figure files retrieved from public v1 matched the original `paper/` at study commit `07e3cbd3c4855e5e19344885fbf672c3d7a0f039`. The journal preparation draft is distinct and does not replace v1.
+
+The public bibliography describes **Twelve unit cubes in a cube of side 2.93152** as submitted to Geombinatorics and points to `https://github.com/yoheinakajima/soft-to-rigid-packing` and DOI `10.5281/zenodo.23248095`. Current private editorial status and reuse rights are not established by this public record. No private correspondence or completed private declaration is included in this Git packet.
+
+Potential overlap to disclose: the hardening construction/simulator lineage; the earlier reported 12-cube bound, numerical bound and certificate; any reused description, figure or witness. The present paper's contribution is its broader controlled comparison, tuning and budget audit, ablations, negative transfer/policy findings and reproducibility evidence. C05 is a new controlled experiment with its own seeds/budget; it did not produce the earlier record in its smaller run set. The earlier record must not be counted as a new result of C05 or used to imply independent external validation.
+
+Before submission the author must identify the exact companion version and current journal status, confirm whether any material is already licensed/transferred, identify exact text/figures/data reused, and authorize the accurate overlap disclosure and any required companion attachment. If materially overlapping work remains under review, the distinction and editor-facing disclosure must be settled before asserting exclusive consideration. Do not infer publication, acceptance, withdrawal or reusable rights from a citation, repository or prior submission.
+
+The cover letter contains a proposed disclosure paragraph with unresolved attestations clearly marked. No editor was contacted, no companion file reformatted, no document uploaded and no agreement accepted.
+
+## Public priority caveat added during manager review
+
+The official [public build log](https://yohei.me/) entry dated October 8 states that novelty relative to Haowei Lin's arrangement remains disputed. The companion repository [README at efe7a920142350a4f0678633490c3e3dbed71fa0](https://github.com/yoheinakajima/soft-to-rigid-packing/blob/efe7a920142350a4f0678633490c3e3dbed71fa0/README.md) still describes an improvement over its July 2026 Hyra comparator. These public assertions do not resolve priority. A feasibility certificate proves a bound, not originality, chronology or attribution. The journal intro/story now use a prior reported feasible bound and dated catalogue comparators; no undisputed new-record/improvement claim is necessary to the controlled-study contribution. Priority/rights remain unresolved for author/editor disclosure. No companion repository, website or correspondence was changed.

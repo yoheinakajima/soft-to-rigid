@@ -1,0 +1,73 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{graphicx,booktabs,xcolor}
+\usepackage[authoryear,round]{natbib}
+
+\usepackage{placeins}
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+\setsansfont{Arial}
+% Use locally cached scalable math fonts at all sizes; no TeX download.
+\DeclareFontShape{OML}{cmm}{m}{it}{<->cmmi10}{}
+\DeclareFontShape{OMS}{cmsy}{m}{n}{<->cmsy10}{}
+\DeclareFontShape{OT1}{cmr}{m}{n}{<->cmr10}{}
+\DeclareFontFamily{U}{msb}{}
+\DeclareFontShape{U}{msb}{m}{n}{<->msbm10}{}
+\DeclareFontFamily{U}{msa}{}
+\DeclareFontShape{U}{msa}{m}{n}{<->cmsy10}{}
+\renewcommand{\checkmark}{\textnormal{Y}}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue!50!black,citecolor=blue!50!black,urlcolor=blue!50!black}
+\title{Online Resource 1: Evidence, inference and replication notes\\Soft-to-Rigid: Shape Continuation as an Alternative Search for Packing Congruent Shapes}
+\author{Yohei Nakajima\\\small Journal of Heuristics preparation draft; affiliation/contact pending author confirmation}
+\date{2 November 2026}
+\begin{document}
+\sloppy
+\maketitle
+\noindent\textbf{Draft status.} This resource accompanies a distinct journal preparation draft, not an actual submission. It uses the fixed study commit \path{07e3cbd3c4855e5e19344885fbf672c3d7a0f039}. It does not replace arXiv v1 or historical campaign reports. A source-owned packet contains the input manifest, saved-output verifier, detailed audit and unresolved author worksheets.
+
+\section{What the evidence supports}
+Shape evolution and rounded particle families precede this study. The present contribution is a finite-container, prescribed-target heuristic comparison, with mixed results and explicit failure boundaries. Equal gradient step counts, reference-based baseline pair-evaluation budgets and separate tightening must not be conflated with equal total CPU time. The external-comparison audit found geometry-compatible polygon subsets of Berthold et al., but no matched external performance experiment was conducted. Sparrow's fixed-width strip objective is different. The manuscript claims neither external competitiveness nor causal mechanism, equivalence, a general selector or new controlled-study records.
+
+\section{Fixed evidence map}
+\begin{itemize}
+\item C00--C10: original campaign plans, raw outputs, selected decimated replays, polishing caches and the serialized event export. The export was inspected as data, without an ActiveGraph runtime or ledger rebuild.
+\item C11--C16: versioned campaign files and saved analysis outputs, including \path{analysis/ablations.json}, \path{C14.json} and \path{C15.json}. These later campaigns are absent from the original event export, so a universal event-log provenance claim would be inaccurate.
+\item Manuscript tables and figures retain the native generated macro/table snapshots at the study commit. New audit tables here are generated only by \path{scripts/verify_joh_packet.py} from saved evidence.
+\item \path{submission/joh-20261102/verification/input-manifest.json}: exact input paths, sizes and SHA256 hashes. \path{report.json}: bounded verification scope and computed checks. \path{C15-policy-crosswalk.json}: selected policy/run/value identities.
+\end{itemize}
+The source repository contains the full run files. This curated supplement provides pointers and selected verification artifacts rather than duplicating the entire campaign corpus.
+
+\section{Registered tests, exploratory analyses and reuse}
+\begin{center}\small\input{evidence-summary}\end{center}
+C10 compares 32 rigid plus 32 hardening runs against 64 rigid runs. Its registered one-sided test and the journal's descriptive two-sided test are both disclosed; the observed near-tie is not equivalence. A proposed additive interpretive correction accompanies the source packet, without editing the old decision or report.
+
+C15's primary endpoint compares lowest sizes after the specified policy selection and tightening. A reached-count comparison is a different endpoint. One geometry smoke test per family/path at $n=8$, seed 3, preceded the written plan; the families were otherwise withheld from tuning and method analysis. The tightened-pilot check is post hoc. Absence of a favorable family prevents a general inference about a selector's ability to find one.
+
+C16 is a targeted squares follow-up. Hardening and rigid runs at $n=19,28,29$ repeat C09 exactly. The bounded verifier checks all 96 such rows by objective, pose, steps and pair evaluations; they are not new independent confirmations. New-only inference excludes these three instances.
+
+The benchmark instances are designed, related geometries. Multiple comparisons, post-selection, ties and catalogue tolerances limit general inference. Bootstrap sensitivity from a single seed pool is not repeated-batch reliability. Mechanism measurements on selected best replays remain descriptive, with contact geometry/forces coupled to orientation.
+
+\section{Tuning and tightening scope}
+\begin{center}\small\input{tuning-summary}\end{center}
+C06 used one nine-configuration grid for each method, selecting the lowest-of-16 score over eight held-out instances larger than the main test set. All selected settings are on both axis boundaries. Comparable tuning effort is not proof of comparable tuning adequacy. The journal draft retains this limitation rather than expanding grids after observing results.
+
+C14's equal tightening covers a fixed 28-instance subset and three lowest legalised runs per method, with no eligibility gate. The saved cache is sufficient for checking this subset without a solver call. It does not establish robustness for all 188 instances. C16's separate tightening check concerns four selected hardening-only outcomes and remains post hoc.
+
+Recorded simulator timings exclude tuning, numerical tightening and verification. Historical hardware and dependency versions are not fully specified. No current machine identity is substituted for the historical study environment. The manuscript therefore makes only the scope-limited timing statement supported by the stored diagnostics.
+
+\section{Numerical witnesses versus exact certification}
+There are no below-catalogue claim folders in the controlled-study tree. Numeric reached counts mean the saved size passes the analysis's catalogue tolerance; they do not prove exact equality, optimality or record status. The current exact 2D verifier covers circles, triangles, squares and hexagons, not pentagons/octagons.
+
+\begin{center}\small\input{witness-summary}\end{center}
+The four rows identify selected hardening outcomes: $n=11,19$ from C07 and $n=17,26$ from C16. Each exact certificate concerns an explicitly enlarged witness: centers scaled by 1.000001 and side set to $1.00001L+0.000001$. Both native floating-point and rational checkers pass on the supplied derived files. These are feasible upper bounds near the contact outcomes, \emph{not certificates at the original saved objective}. No optimization, retuning, new run or new record claim is involved. Input poses, run identifiers, enlargement rule and checker outputs are in the packet. Certification of every contact outcome remains outside the verified scope.
+
+\section{Safe replication boundary}
+The curated route reads fixed JSON/JSONL and executes only \path{verify.py} and \path{packing.certify} on four supplied enlarged witnesses. Missing caches cause an assertion failure, never numerical recomputation. It does not import \path{packing.ledger}, ActiveGraph, a solver or a provider. In contrast, the native decision/refine/post-hoc modules can call tightening on cache miss; a ledger rebuild can trigger behaviors. Those commands must not be substituted for a read-only audit.
+
+The package was prepared using Python's standard library and existing Tectonic tooling. Compilation uses an existing font environment, documented separately. Full original-campaign reproduction requires an explicitly authorized run design and a historical environment specification; it is not implied by saved-output checks.
+
+\section{Availability, rights and author confirmation}
+Code and study artifacts are linked at \url{https://github.com/yoheinakajima/soft-to-rigid/tree/07e3cbd3c4855e5e19344885fbf672c3d7a0f039}. Root code license is MIT; public manuscript v1 is CC BY 4.0. Third-party catalogue/witness rights and companion-note permissions require separate treatment. The public bibliography calls the earlier twelve-cube note submitted to Geombinatorics; current private status and reuse rights are unconfirmed. The public build log also flags disputed priority attribution for the earlier cube bound, which is unnecessary to this controlled-study contribution. The author must confirm corresponding details, funding/conflicts, contribution/approval, actual AI-use history and exclusivity before submission. No private correspondence or filled private answer is part of this supplement.
+\end{document}

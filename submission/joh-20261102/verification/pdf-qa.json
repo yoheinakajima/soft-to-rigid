@@ -1,0 +1,29 @@
+{
+  "observed_on": "2026-11-02 America/Los_Angeles",
+  "checker": "rendered-page inspection plus Poppler metadata/font/text checks",
+  "pdfs": [
+    {
+      "path": "paper/joh-20261102/main.pdf",
+      "sha256": "8abb94c91b3a35ee04f4a24f63f5f9c683679e1b0be1001aeb7278f51054df4d",
+      "pages": 22,
+      "overfull_boxes": 0,
+      "undefined_references": 0,
+      "missing_character_warnings": 0,
+      "all_fonts_embedded": true
+    },
+    {
+      "path": "paper/joh-20261102/supplement.pdf",
+      "sha256": "5325ea152cf923f0e2646175407c16792fd7b13657604edfd5b6535f66622090",
+      "pages": 3,
+      "overfull_boxes": 0,
+      "undefined_references": 0,
+      "missing_character_warnings": 0,
+      "all_fonts_embedded": true
+    }
+  ],
+  "visual_status": "PASS: no clipping, overlap, missing glyphs, broken tables or unresolved references observed",
+  "scope": "All pages inspected in contact sheets; full-page inspection of title, cube/context, C14 inference, C16 table and SI evidence/witness pages. Intentional author-review/declaration placeholders remain.",
+  "build_tool": "existing Tectonic 0.16.9, cached resources only; no TeX installation",
+  "environment_limit": "Times New Roman and Arial are system fonts; portability requires those fonts or reviewed replacements. All PDF fonts embedded.",
+  "scientific_limit": "Visual QA does not establish external scientific review, rights clearance or original-contact feasibility certificates."
+}

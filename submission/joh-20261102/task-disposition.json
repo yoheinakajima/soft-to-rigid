@@ -1,0 +1,225 @@
+{
+  "observed_on": "2026-11-02 America/Los_Angeles",
+  "source_base": "07e3cbd3c4855e5e19344885fbf672c3d7a0f039",
+  "status": "reviewable source preparation; not submission-ready",
+  "tasks": [
+    {
+      "id": "SOFT-001",
+      "disposition": "done-with-owner-gap",
+      "evidence": [
+        "verification/input-manifest.json",
+        "README.md"
+      ],
+      "result_or_gap": "Version identities frozen; actual private submission status requires owner confirmation."
+    },
+    {
+      "id": "SOFT-002",
+      "disposition": "done",
+      "evidence": [
+        "audit.md",
+        "../../paper/joh-20261102/sections/intro.tex"
+      ],
+      "result_or_gap": "Narrow finite-container study contribution; Jin and continuation precedence credited; no universal novelty claim."
+    },
+    {
+      "id": "SOFT-003",
+      "disposition": "done",
+      "evidence": [
+        "audit.md"
+      ],
+      "result_or_gap": "Exact geometry/objective compatibility mapped; external performance claim removed, no solver experiment needed for narrowed paper."
+    },
+    {
+      "id": "SOFT-004",
+      "disposition": "done",
+      "evidence": [
+        "verification/report.json::checks.C06_grid",
+        "audit.md"
+      ],
+      "result_or_gap": "All five C06 grid-corner winners computed; tuning adequacy bounded."
+    },
+    {
+      "id": "SOFT-005",
+      "disposition": "done-with-scientific-limit",
+      "evidence": [
+        "audit.md",
+        "reproduce.md"
+      ],
+      "result_or_gap": "Units/postprocessing/cost scope explicit; historical hardware/dependency identity remains unavailable."
+    },
+    {
+      "id": "SOFT-006",
+      "disposition": "done",
+      "evidence": [
+        "verification/report.json::checks.C14",
+        "audit.md"
+      ],
+      "result_or_gap": "C14 saved-output comparison independently matched; subset/post-hoc limits retained, no optimization."
+    },
+    {
+      "id": "SOFT-007",
+      "disposition": "done-with-native-application-gap",
+      "evidence": [
+        "verification/report.json::checks.C10",
+        "verification/report.json::checks.C15",
+        "interpretive-corrections.jsonl"
+      ],
+      "result_or_gap": "Inference corrected in draft; C10 additive native finding is proposed outside ledger. No native application: ActiveGraph absent and empty-DB rebuild unsafe."
+    },
+    {
+      "id": "SOFT-008",
+      "disposition": "done",
+      "evidence": [
+        "verification/report.json::checks.C16"
+      ],
+      "result_or_gap": "All 96 reused harden/rigid rows verified; new-only inference retained."
+    },
+    {
+      "id": "SOFT-009",
+      "disposition": "done",
+      "evidence": [
+        "audit.md",
+        "../../paper/joh-20261102/sections/learned.tex"
+      ],
+      "result_or_gap": "Mechanism remains descriptive and failed registered interpretations retained."
+    },
+    {
+      "id": "SOFT-010",
+      "disposition": "done-with-scientific-limit",
+      "evidence": [
+        "verification/report.json::checks.selected_witnesses",
+        "audit.md"
+      ],
+      "result_or_gap": "Four enlarged saved square witnesses pass native float/exact checks; not original-contact certification or all-family exact coverage."
+    },
+    {
+      "id": "SOFT-011",
+      "disposition": "done-with-scientific-limit",
+      "evidence": [
+        "reproduce.md",
+        "verification/input-manifest.json"
+      ],
+      "result_or_gap": "Safe fixed-output route and manifests implemented; original historical environment and full optimization reproduction not established."
+    },
+    {
+      "id": "SOFT-012",
+      "disposition": "owner-input",
+      "evidence": [
+        "audit.md",
+        "owner-worksheet.md"
+      ],
+      "result_or_gap": "Code/manuscript/third-party rights separated; companion priority attribution and reuse rights unresolved, with no private agreement assumed."
+    },
+    {
+      "id": "SOFT-013",
+      "disposition": "done",
+      "evidence": [
+        "../../paper/joh-20261102/main.tex",
+        "../../paper/joh-20261102/main.pdf"
+      ],
+      "result_or_gap": "Distinct journal draft, compliant abstract/keywords, author-year references and preserved result snapshots; metadata placeholders visible."
+    },
+    {
+      "id": "SOFT-014",
+      "disposition": "done",
+      "evidence": [
+        "../../paper/joh-20261102/supplement.tex",
+        "../../paper/joh-20261102/supplement.pdf",
+        "reproduce.md"
+      ],
+      "result_or_gap": "Curated SI/evidence map, availability prose and fixed-input manifest prepared."
+    },
+    {
+      "id": "SOFT-015",
+      "disposition": "owner-input",
+      "evidence": [
+        "owner-worksheet.md"
+      ],
+      "result_or_gap": "Known public name retained; affiliation/contact/ORCID/contribution and final author approval unconfirmed."
+    },
+    {
+      "id": "SOFT-016",
+      "disposition": "owner-input",
+      "evidence": [
+        "owner-worksheet.md",
+        "../../paper/joh-20261102/main.tex"
+      ],
+      "result_or_gap": "Concrete declarations/AI-use draft supplied, without false none/approval assertions; owner facts and full history unresolved."
+    },
+    {
+      "id": "SOFT-017",
+      "disposition": "owner-input",
+      "evidence": [
+        "overlap.md"
+      ],
+      "result_or_gap": "Public companion submitted status kept; exact private current state/rights/overlap require owner clearance."
+    },
+    {
+      "id": "SOFT-018",
+      "disposition": "draft-needs-owner",
+      "evidence": [
+        "cover-letter.md",
+        "overlap.md"
+      ],
+      "result_or_gap": "Unsent letter prepared with unresolved attestations; reviewer identities not fabricated or contacted."
+    },
+    {
+      "id": "SOFT-019",
+      "disposition": "done-with-review-gap",
+      "evidence": [
+        "verification/report.json",
+        "verification/pdf-qa.json"
+      ],
+      "result_or_gap": "Bounded checks and rendered packet QA complete; independent manager/human scientific review and factual clearance remain."
+    },
+    {
+      "id": "SOFT-020",
+      "disposition": "later-owner-gate",
+      "evidence": [
+        "owner-worksheet.md",
+        "README.md"
+      ],
+      "result_or_gap": "Public policy/route/fees recorded; no authenticated portal, identity assertion, upload or submission. Exact final action approval deferred."
+    },
+    {
+      "id": "SOFT-021",
+      "disposition": "conditional-not-needed",
+      "evidence": [
+        "audit.md"
+      ],
+      "result_or_gap": "External competitiveness removed; no external solver campaign authorized or required for retained claim."
+    },
+    {
+      "id": "SOFT-022",
+      "disposition": "conditional-not-needed",
+      "evidence": [
+        "audit.md"
+      ],
+      "result_or_gap": "Existing-grid/budget/tightening limitations retained; no new tuning/cost campaign required for bounded current comparison."
+    },
+    {
+      "id": "SOFT-023",
+      "disposition": "conditional-not-needed",
+      "evidence": [
+        "audit.md"
+      ],
+      "result_or_gap": "No causal mechanism or validated selector claim retained; prospective research omitted."
+    },
+    {
+      "id": "SOFT-024",
+      "disposition": "optional-not-added",
+      "evidence": [
+        "audit.md"
+      ],
+      "result_or_gap": "Existing readable figures retained; no new performance curves from incomplete historical timing."
+    },
+    {
+      "id": "SOFT-025",
+      "disposition": "optional-not-released",
+      "evidence": [
+        "README.md"
+      ],
+      "result_or_gap": "Commit-pinned availability/manifests prepared; no public code/data release, tag, DOI deposit or external archive."
+    }
+  ]
+}
