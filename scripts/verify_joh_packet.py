@@ -200,7 +200,8 @@ def main():
     (DRAFT/'witness-summary.tex').write_text('\n'.join(wtex)+'\n')
     ttex=[r'\begin{tabular}{lp{0.38\linewidth}l}\toprule',r'method & selected parameters & grid boundary\\\midrule']
     for t in tuning:
-        params=', '.join(k+'='+str(v) for k,v in t['selected'].items())
+        symbols={'mu':r'$\mu$', 'noiseScale':r'$\nu$', 'gamma0':r'$\gamma_0$', 'saT0':r'$T_0$', 'pcKick':'kick', 'pcRelax':'relax steps'}
+        params=', '.join(symbols[k]+'='+str(v) for k,v in t['selected'].items())
         ttex.append(t['method']+' & '+params+' & '+('both' if all(t['boundary'].values()) else 'partial')+r'\\')
     ttex.append(r'\bottomrule\end{tabular}')
     (DRAFT/'tuning-summary.tex').write_text('\n'.join(ttex)+'\n')
@@ -212,7 +213,7 @@ def main():
     text=text.replace('best known','reference')
     text=text.replace('record budget','prior search budget')
     text=text.replace('our earlier $n=12$ record','the prior reported $n=12$ feasible bound')
-    text=text.replace('which these runs try to reproduce','whose priority attribution is unresolved; these runs attempt to reproduce its bound')
+    text=text.replace('which these runs try to reproduce','from a separate 192-start search; this is not a current-study catalogue target')
     (DRAFT/'tables/C05-cubes.tex').write_text(text)
     inputs.update(['packing/certify.py','verify.py','packing/ledger.py','packing/decision.py','packing/ablations.py','packing/polish.py','packing/refine.py','packing/stats.py','packing/analyze.py','analysis/C14.json','analysis/stats.json','analysis/reference_budget.json'])
     manifest={'source_commit':BASE,'purpose':'fixed evidence used by bounded journal verification; saved code not executed unless identified','files':[{'path':p,'sha256':hashlib.sha256((ROOT/p).read_bytes()).hexdigest(),'bytes':(ROOT/p).stat().st_size} for p in sorted(inputs)]}

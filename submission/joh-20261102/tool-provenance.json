@@ -225,5 +225,21 @@
   "current_assistance": "Codex (OpenAI), paper worker configured gpt-6.1-sol high; manager AI review, exact manager model not established here. Substantive manuscript/code/audit/review assistance and execution of fixed-input verification/build tools.",
   "experimental_apparatus": "Packing outcomes from JavaScript/Python numerical search and saved-output analysis; AI tools assist research, implementation and writing rather than serve as language-model experimental subjects.",
   "verification_limit": "Preparation verification code was itself AI-assisted. Separate native float/exact software checks do not establish independent human validation; final human author review remains required.",
-  "original_packaging": "Claude-assisted arXiv source-bundle/metadata/PDF preparation and checking; public commits51ea755/07e3cbd plus retained preparation evidence; no exact model telemetry receipt. Private transcript and unrelated material omitted."
+  "original_packaging": "Claude-assisted arXiv source-bundle/metadata/PDF preparation and checking; public commits51ea755/07e3cbd plus retained preparation evidence; no exact model telemetry receipt. Private transcript and unrelated material omitted.",
+  "independent_preparation_reviews": [
+    {
+      "ui": "https://claude.ai/chat/ae38b5d2-4add-4232-a21e-c942129cfec0",
+      "label": "Claude Opus 5.5 Extra UI; self-label claude-opus-5-5",
+      "backend_revision": "unknown; UI/self-label is not authenticated backend telemetry",
+      "candidate": "879db26ac809697ba48c7336337a7b08dd689245",
+      "scope": "text/source/mathematics and selected rendered pages; no raw-run recount or independent feasibility checking"
+    },
+    {
+      "ui": "https://gemini.google.com/app/7c546f32db0da7bf",
+      "label": "Gemini Pro UI",
+      "backend_revision": "unreported",
+      "candidate": "879db26ac809697ba48c7336337a7b08dd689245",
+      "scope": "text/logic critique; later retracted missing-qualifier premises for G1/G3/G4; no engine/certificate execution"
+    }
+  ]
 }

@@ -1,0 +1,162 @@
+{
+  "reviewed_head": "879db26ac809697ba48c7336337a7b08dd689245",
+  "scope": "model-assisted critique followed by source/evidence triage; not human peer review",
+  "findings": [
+    {
+      "id": "SR-01",
+      "disposition": "accepted-corrected",
+      "evidence": "Plans C04/C07/C10 are one-sided; C11/C12/C13/C15/C16 specify two-sided. The prior opposite-tail inequality sentence was mathematically false.",
+      "action": "Correct main/SI formula; 34 saved-count comparisons with exact p-values, directions and timing qualifications, including omitted C04/C07 comparisons. Preserve non-detection and registration limits."
+    },
+    {
+      "id": "SR-02",
+      "disposition": "accepted-corrected",
+      "evidence": "Baseline07e3cbd lacks new verification artifacts.",
+      "action": "Separate immutable original-study pin and ancestor evidence commit; check every cited path at each commit. No release/DOI/merge."
+    },
+    {
+      "id": "SR-03",
+      "disposition": "accepted-corrected",
+      "evidence": "Source confirms Figure/Algorithm mismatch, wrong scope cross-reference, replay overstatement, punctuation, macro spacing, misleading best-of-k axis and uncited appendix figure.",
+      "action": "Fix confirmed source/caption/crossrefs; regenerate only journal best-of-k from saved curves. Friedman survey year fixed from primary page."
+    },
+    {
+      "id": "SR-04",
+      "disposition": "accepted-corrected",
+      "evidence": "Saved diagnostics/reference JSON: SA/reference1.0247607,1.0252008; PC1.5758780,1.6889053 for square n20/30 means.",
+      "action": "Replace inaccurate denominators/global range with exact cell mean ratios; retain measured-machine exclusions, no general fairness/time inference."
+    },
+    {
+      "id": "SR-05",
+      "disposition": "accepted-corrected",
+      "evidence": "Source endpoints and checker coverage inspected; four enlarged bounds exceed non-truncated reached tolerance.",
+      "action": "Define radius/side, reached/tie/strict-lower rules, rename tightening heading and explicitly link enlarged checks, retaining no original-contact/optimality claim."
+    },
+    {
+      "id": "SR-06",
+      "disposition": "accepted-corrected",
+      "evidence": "Median tuning has27vs18 settings; C06corners allfive; default claims must remain implementation-specific.",
+      "action": "Use actual units/allocations, scoped practical implications/default, all corners and prior reported bound language."
+    },
+    {
+      "id": "SR-07",
+      "disposition": "accepted-corrected",
+      "evidence": "Saved C11 pooled size17:36 favors snap, whereas square size6:0 favors hardening; C12square reached2:0,p=.5 and size5:1,p=.21875.",
+      "action": "State exploratory direction and both endpoints; no causal mechanism claim."
+    },
+    {
+      "id": "SR-08",
+      "disposition": "accepted-corrected",
+      "evidence": "SI lacks journal name/table captions; AI disclosure needs Methods pointer; editorial history unnecessary in scientific text.",
+      "action": "Add SI metadata/numbered captions and Methods cross-reference; use this article wording; keep actual private editorial history outside Git and no invented status/closure."
+    },
+    {
+      "id": "SR-09",
+      "disposition": "partly-rejected-premise-useful-clarification",
+      "evidence": "Primary full text inspected: Berthold\u00a74.1 variable radii/maxsum;\u00a75 unitcircles/ellipse;\u00a76.1 regularpolygon normalization;\u00a77.2 up to30 solids. Generic solve wording and universal model exclusions were too broad.",
+      "action": "Retain explicit formulation-level compatibility, remove broad solve/range wording, add unit conversion in SI; no executable competitor or new comparison."
+    },
+    {
+      "id": "SR-10",
+      "disposition": "accepted-scope-rejected-iid-assumption",
+      "evidence": "C05 and earlier192-start search are distinct configurations/budgets/cohorts; no justified stationary Bernoulli rate.",
+      "action": "Separate cube-search history from C16 counts; use methodological comparator caption. Decline1/192 extrapolation; no new data."
+    },
+    {
+      "id": "SE-01",
+      "disposition": "accepted-corrected",
+      "evidence": "Publisher pages verify DCG18:179\u2013194 and OptimizationLetters1:309\u2013311.",
+      "action": "Complete volume/pages."
+    },
+    {
+      "id": "SE-02",
+      "disposition": "accepted-corrected",
+      "evidence": "arXiv records link same Kallus2010 PRE82:056707 and Geng2019 ScienceAdvances5:eaaw0514.",
+      "action": "Use verified published metadata/DOIs."
+    },
+    {
+      "id": "SE-03",
+      "disposition": "accepted-corrected",
+      "evidence": "Friedman author-hosted DS7 page explicitly dated2009.",
+      "action": "Use2009; no invented revision date."
+    },
+    {
+      "id": "SE-04",
+      "disposition": "accepted-corrected",
+      "evidence": "Process notes occur in prioritycontext/platonic reference entries.",
+      "action": "Remove process judgments, retain reproducible commit/access metadata and priority caveat in text."
+    },
+    {
+      "id": "SE-05",
+      "disposition": "accepted-corrected",
+      "evidence": "Original SquaresProject URL redirects to squaremath.org; historical study catalogue remains fixed.",
+      "action": "Use canonical URL with historical access provenance; no refreshed numerical catalogue or invented version/attribution."
+    },
+    {
+      "id": "SE-06",
+      "disposition": "accepted-corrected",
+      "evidence": "Checkmark already mapped to Y; diagnostic caption has missing punctuation.",
+      "action": "Explicit Y/tolerance legend and punctuation."
+    },
+    {
+      "id": "SE-07",
+      "disposition": "accepted-corrected",
+      "evidence": "SI uses implementation parameter names.",
+      "action": "Project selected values using manuscript symbols; keep necessary posthoc/provenance boundaries."
+    },
+    {
+      "id": "SE-08",
+      "disposition": "accepted-corrected",
+      "evidence": "Source phrase denotes triangles-in-triangle n29.",
+      "action": "Use unambiguous family and n notation."
+    },
+    {
+      "id": "SE-09",
+      "disposition": "accepted-corrected",
+      "evidence": "Saved best raw tri-in-tri n12 harden s21 L3.91497278656; cache3.91485421551; figure script uses replay frames.",
+      "action": "Identify legalised endpoint before tightening, not certificate."
+    },
+    {
+      "id": "SE-10",
+      "disposition": "accepted-corrected",
+      "evidence": "Appendix title could be confused with OnlineResource1.",
+      "action": "Rename Campaign and diagnostic details."
+    },
+    {
+      "id": "SE-11",
+      "disposition": "optional-not-added",
+      "evidence": "Existing prior-art scope already covers shape families and continuation; new KallusElser2011 precedent is not required for retained claim.",
+      "action": "No unverified extra citation."
+    },
+    {
+      "id": "G-SOFT-1",
+      "disposition": "retracted-premise-clarity-adopted",
+      "evidence": "Gemini withdrew missing-main-qualification premise; main already distinguishes enlargement/numeric endpoints.",
+      "action": "Add one precise main-to-SI enlarged-witness link, no duplicate generic warning."
+    },
+    {
+      "id": "G-SOFT-2",
+      "disposition": "accepted-editorial",
+      "evidence": "C10 history clause is meta-commentary; direct non-equivalence statement already present.",
+      "action": "Remove historic-report clause from main; chronology retained in audit/correction proposal."
+    },
+    {
+      "id": "G-SOFT-3",
+      "disposition": "retracted-premise-clarity-adopted",
+      "evidence": "Existing paragraph/caption/limits already say16runs and campaign-specific scope.",
+      "action": "Local within-C16-batch phrase; no universal guarantee or equal-complete-cost claim."
+    },
+    {
+      "id": "G-SOFT-4",
+      "disposition": "retracted-premise-clarity-adopted",
+      "evidence": "Existing limits contain grid edge/square-development limits.",
+      "action": "Tighten to allfivecorners and one comparable-effort/adequacy sentence; no redundant warning block."
+    },
+    {
+      "id": "G-SOFT-5",
+      "disposition": "optional-adopted",
+      "evidence": "Regularpolygon scale identity checked against primary\u00a76.1.",
+      "action": "Add SI conversion; no external performance result."
+    }
+  ]
+}
