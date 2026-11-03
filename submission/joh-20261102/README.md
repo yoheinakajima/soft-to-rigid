@@ -2,7 +2,7 @@
 
 **Reviewable draft; not submitted.** Prepared November 2, 2026 from study commit `07e3cbd3c4855e5e19344885fbf672c3d7a0f039`. The public arXiv v1, original `paper/`, plans/raw results/reports and native ledger remain unchanged. No new campaign, optimizer, paid service or live-model call was used.
 
-The distinct manuscript is [`../../paper/joh-20261102/main.tex`](../../paper/joh-20261102/main.tex) and its compiled PDF; Online Resource 1 is the adjacent `supplement.tex`/PDF. The abstract is 219 whitespace words before macro expansion and has five keywords. Author–year references replace numeric style. The source retains native generated result snapshots and uses a bounded saved-output projection for new SI tables. Human review of the final public declarations is pending.
+The distinct manuscript is [`../../paper/joh-20261102/main.tex`](../../paper/joh-20261102/main.tex) and its compiled PDF; Online Resource 1 is the adjacent `supplement.tex`/PDF. The abstract is 219 whitespace words before macro expansion and has five keywords. Author–year references replace numeric style. The source retains native generated result snapshots and uses a bounded saved-output projection for new SI tables. Approved public author metadata, funding and relevant roles are now included. Final human approval of the exact journal version remains pending.
 
 Read:
 
@@ -10,8 +10,9 @@ Read:
 2. `verification/report.json` — actual saved-output checks, including C10/C14/C15/C16 and native witness checks; `input-manifest.json` pins all inputs.
 3. `reproduce.md` — safe verification/build commands and cache-miss/runtime prohibitions.
 4. `interpretive-corrections.jsonl` — additive C10 correction proposal; no accepted ledger event or historical rewrite.
-5. `overlap.md`, `cover-letter.md`, `owner-worksheet.md` — concrete unsent materials and unfilled public-safe questions.
-6. `task-disposition.json` and `artifact-manifest.json` — task-ID evidence/gaps and final packet hashes.
+5. `overlap.md`, `cover-letter.md`, `owner-worksheet.md`, `author-metadata.json` — concrete unsent materials, approved public metadata and remaining action gates.
+6. `tool-use-provenance.md` and `tool-provenance.json` — reconstructed original/current assistance, evidence labels and unknown provider/review versions.
+7. `task-disposition.json` and `artifact-manifest.json` — task-ID evidence/gaps and final packet hashes.
 
 ## Results of preparation
 
@@ -21,7 +22,7 @@ The current within-implementation conclusions do not require outside solver runs
 
 ## Owner decisions needed before transmission
 
-Confirm final author/affiliation/contact/ORCID/contributions, funding/conflicts/AI-use history and human approval; companion Geombinatorics status/exact artifact, rights/overlap and exclusivity; and publication-model/cost choices. The worksheet is unfilled; do not commit private correspondence or completed private answers. The cover letter has explicit unresolved attestations and must not be sent as-is.
+Author identity, Untapped Capital affiliation/support and relevant public roles are now supplied; the ORCID checksum passes but registry identity is not independently verified. Tool reconstruction is complete to the inspected evidence, retaining unknown exact runtime/reviewer models instead of asking the author to reconstruct them. Remaining decisions concern final author approval, any additional material competing interest, companion Geombinatorics editorial/rights and overlap reconciliation, fresh exclusivity/portal attestations, and publication-model/cost choices. No private correspondence, agreement terms, ownership details or raw author statements are in this packet. The letter remains unsent until the exact final action is approved.
 
 Recommendation: use the narrowed existing-data study and subscription/no-APC route unless an OA mandate/preference applies. Optional OA was listed at USD 3,290/GBP 2,390/EUR 2,690 on November 2, 2026, taxes where applicable and priced by acceptance date. Current JoH author instructions, actual Snapp article type/anonymity/fields, production charges and account availability need rechecking at the final action gate. No account or authenticated portal was inspected.
 

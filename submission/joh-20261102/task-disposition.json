@@ -5,12 +5,12 @@
   "tasks": [
     {
       "id": "SOFT-001",
-      "disposition": "done-with-owner-gap",
+      "disposition": "done-with-final-action-gate",
       "evidence": [
         "verification/input-manifest.json",
         "README.md"
       ],
-      "result_or_gap": "Version identities frozen; actual private submission status requires owner confirmation."
+      "result_or_gap": "Version identities frozen; final exclusivity must be freshly checked and companion editorial status reconciled before transmission."
     },
     {
       "id": "SOFT-002",
@@ -117,7 +117,7 @@
         "../../paper/joh-20261102/main.tex",
         "../../paper/joh-20261102/main.pdf"
       ],
-      "result_or_gap": "Distinct journal draft, compliant abstract/keywords, author-year references and preserved result snapshots; metadata placeholders visible."
+      "result_or_gap": "Distinct journal draft, compliant abstract/keywords, author-year references, preserved result snapshots and supplied public author metadata; final approval remains explicit."
     },
     {
       "id": "SOFT-014",
@@ -131,20 +131,26 @@
     },
     {
       "id": "SOFT-015",
-      "disposition": "owner-input",
+      "disposition": "done-public-metadata",
       "evidence": [
-        "owner-worksheet.md"
+        "owner-worksheet.md",
+        "author-metadata.json",
+        "tool-use-provenance.md",
+        "tool-provenance.json"
       ],
-      "result_or_gap": "Known public name retained; affiliation/contact/ORCID/contribution and final author approval unconfirmed."
+      "result_or_gap": "Author-approved sole-author, Untapped Capital affiliation, Bellevue location, email and ORCID supplied. Checksum passes; registry identity unverified, no OAuth assertion."
     },
     {
       "id": "SOFT-016",
-      "disposition": "owner-input",
+      "disposition": "done-disclosures-final-approval",
       "evidence": [
         "owner-worksheet.md",
-        "../../paper/joh-20261102/main.tex"
+        "../../paper/joh-20261102/main.tex",
+        "author-metadata.json",
+        "tool-use-provenance.md",
+        "tool-provenance.json"
       ],
-      "result_or_gap": "Concrete declarations/AI-use draft supplied, without false none/approval assertions; owner facts and full history unresolved."
+      "result_or_gap": "Funding/supporter role and public software/investment relationships disclosed; original/current AI assistance reconstructed from source/history/preparation evidence. Unknown versions remain explicit. Final exact-version approval required."
     },
     {
       "id": "SOFT-017",
@@ -152,16 +158,16 @@
       "evidence": [
         "overlap.md"
       ],
-      "result_or_gap": "Public companion submitted status kept; exact private current state/rights/overlap require owner clearance."
+      "result_or_gap": "Companion overlap and public priority caveat recorded; actual editorial status and applicable reuse rights remain to be reconciled privately, without assuming acceptance, withdrawal or closure."
     },
     {
       "id": "SOFT-018",
-      "disposition": "draft-needs-owner",
+      "disposition": "draft-needs-final-action-gate",
       "evidence": [
         "cover-letter.md",
         "overlap.md"
       ],
-      "result_or_gap": "Unsent letter prepared with unresolved attestations; reviewer identities not fabricated or contacted."
+      "result_or_gap": "Unsent cover letter now contains supplied identity/funding/roles and tool disclosure. Companion rights/editorial reconciliation, fresh exclusivity and final sending approval remain."
     },
     {
       "id": "SOFT-019",
@@ -170,7 +176,7 @@
         "verification/report.json",
         "verification/pdf-qa.json"
       ],
-      "result_or_gap": "Bounded checks and rendered packet QA complete; independent manager/human scientific review and factual clearance remain."
+      "result_or_gap": "Bounded checks and rendered packet QA complete, including manager AI preparation review; final human scientific approval and factual clearance remain."
     },
     {
       "id": "SOFT-020",

@@ -4,7 +4,7 @@
   "pdfs": [
     {
       "path": "paper/joh-20261102/main.pdf",
-      "sha256": "8abb94c91b3a35ee04f4a24f63f5f9c683679e1b0be1001aeb7278f51054df4d",
+      "sha256": "075da1ccd2e028aa475917ae518ac4f0aec5366c9e5865bfa808ad0e764e4c4a",
       "pages": 22,
       "overfull_boxes": 0,
       "undefined_references": 0,
@@ -13,7 +13,7 @@
     },
     {
       "path": "paper/joh-20261102/supplement.pdf",
-      "sha256": "5325ea152cf923f0e2646175407c16792fd7b13657604edfd5b6535f66622090",
+      "sha256": "68f56a8090b9b1154c854d0a865be1a59286621e625769edfdad86ae542b681b",
       "pages": 3,
       "overfull_boxes": 0,
       "undefined_references": 0,
@@ -22,7 +22,7 @@
     }
   ],
   "visual_status": "PASS: no clipping, overlap, missing glyphs, broken tables or unresolved references observed",
-  "scope": "All pages inspected in contact sheets; full-page inspection of title, cube/context, C14 inference, C16 table and SI evidence/witness pages. Intentional author-review/declaration placeholders remain.",
+  "scope": "All 22 manuscript and 3 supplement pages inspected in contact sheets; full-page title/metadata, funding/conflicts/AI declarations and SI evidence/availability pages inspected after the author update. Final approval and companion editorial/rights gates remain explicit.",
   "build_tool": "existing Tectonic 0.16.9, cached resources only; no TeX installation",
   "environment_limit": "Times New Roman and Arial are system fonts; portability requires those fonts or reviewed replacements. All PDF fonts embedded.",
   "scientific_limit": "Visual QA does not establish external scientific review, rights clearance or original-contact feasibility certificates."

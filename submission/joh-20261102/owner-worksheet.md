@@ -1,16 +1,25 @@
-# Author and submission worksheet — unfilled template
+# Public author metadata and remaining action gates
 
-This version-controlled worksheet contains questions and public facts only. Keep completed personal answers and private editorial correspondence outside Git; provide the necessary final approved public declarations separately.
+Only approved public preparation facts and unfilled remaining questions appear here. Do not add private correspondence, ownership detail, agreement terms or raw owner statements to Git.
 
-- Author name in public v1: Yohei Nakajima. Confirm author list/order, contribution statement and approval of the exact journal draft.
-- Affiliation (or accurate unaffiliated treatment), city/country and public corresponding contact: **not confirmed**.
-- ORCID, if available: **not confirmed**. Do not invent an academic affiliation or another author.
-- Funding/support, relevant financial and nonfinancial interests: **not confirmed**. No default “none.”
-- Computational nonhuman/nonanimal scope supports a possible not-applicable ethics/consent statement; author must confirm actual scope.
-- Public v1 acknowledges Claude assistance with code, experiments and verification. Preparation now also uses Codex. Confirm actual tool/version/date/task history and human checks; distinguish substantive assistance from copy editing.
-- Current active submissions and approval to assert exclusive consideration: **not confirmed**.
-- Companion Geombinatorics note: exact artifact/version, present editorial status, overlap and rights/agreements: **not confirmed**. Supply private evidence privately.
-- Own versus third-party figure/data/witness permissions: final author confirmation pending. Do not assume root MIT covers all imported data or companion material.
-- Recommended initial publishing choice: subscription route with no APC, unless a mandate or explicit OA preference requires otherwise. Optional OA listed at USD 3,290/GBP 2,390/EUR 2,690 on November 2, 2026, taxes where applicable and priced by acceptance date. No fee, waiver or license decision is made here.
-- Exact portal article type, anonymity, declarations/attestations and any reviewer fields: recheck in an authorized session after packet review. No account action was taken.
-- Final action gate: approve the frozen manuscript/PDF/SI/cover-letter hashes, recipient journal and closed action set, cost cap/route, conditions and expiry. Approval to prepare does not authorize submission, withdrawal, payment, upload, agreement, arXiv change or public release.
+## Public preparation metadata now supplied
+
+- Sole human author: Yohei Nakajima.
+- Affiliation/location: Untapped Capital, Bellevue, Washington, USA.
+- Corresponding author: yohei@untapped.vc.
+- ORCID: 0009-0009-1293-6053. Checksum passes; registry identity/public record retrieval is not independently verified, and no OAuth authentication is claimed.
+- Funding: this research, including computational resources and model/API usage, was supported by Untapped Capital.
+- Role of supporter: the author is Untapped Capital's founder and general partner and directed the research/AI-assisted workflow. Do not describe an independent funder with no involvement.
+- Relevant disclosed interests and roles: financial interest through the founder/general partner role at Untapped Capital; creator of ActiveGraph, used to organize portions of study evidence; Untapped publicly lists Explore Science as a portfolio company, while the original study history records Explore Science feedback.
+- Actual assistance reconstruction: `tool-use-provenance.md` and `tool-provenance.json` distinguish original Claude coding/research/writing assistance, recorded review feedback, current Codex assistance and software checks. Unknown provider versions stay unknown rather than becoming questions for the author to reconstruct.
+
+These facts authorize manuscript preparation, not a journal submission or a certification that the author personally independently verified every derivation/reference/record. Final human approval of the exact version remains required.
+
+## Remaining gates before any transmission
+
+- Reconcile the companion Geombinatorics file's actual editorial status, exact overlap and applicable reuse rights privately. Public source describes the note as submitted; the file is not assumed accepted, withdrawn or closed. No private correspondence or agreement terms belong here.
+- Review the final public declarations, contribution/assistance description, rights/overlap memo and exact manuscript/PDF/SI/cover-letter hashes. Identify any additional material competing interest not covered by the disclosed roles rather than default to “none.”
+- Recheck current exclusive consideration and all actual portal attestations immediately before submission. No unqualified no-other-submission statement is made in the draft letter.
+- Check exact Snapp article type, anonymity, required metadata and reviewer suggestions/exclusions in a separately authorized session. Any nominees must be independent, real and verifiable; none has been fabricated or contacted.
+- Decide publication route and any cost cap. Recommendation remains subscription/no APC unless an OA mandate/preference applies. Optional OA was listed at USD 3,290/GBP 2,390/EUR 2,690 on November 2, 2026, taxes where applicable and priced by acceptance date. No payment or agreement is authorized.
+- Approve the final recipient, closed action set, conditions and expiry before any submission/contact/upload. Preparation does not authorize withdrawal, account action, fee/payment, agreement, arXiv change, public release, merge or deployment.
