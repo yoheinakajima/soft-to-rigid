@@ -10,7 +10,7 @@
         "verification/input-manifest.json",
         "README.md"
       ],
-      "result_or_gap": "Version identities frozen; final exclusivity must be freshly checked and companion editorial status reconciled before transmission."
+      "result_or_gap": "Version identities frozen; freshly attest exclusive consideration of the current JoH work and accurately disclose the separate note. No mandatory separate-journal closure/contact gate."
     },
     {
       "id": "SOFT-002",
@@ -103,12 +103,12 @@
     },
     {
       "id": "SOFT-012",
-      "disposition": "owner-input",
+      "disposition": "done-applicable-reuse-check",
       "evidence": [
         "audit.md",
         "owner-worksheet.md"
       ],
-      "result_or_gap": "Code/manuscript/third-party rights separated; companion priority attribution and reuse rights unresolved, with no private agreement assumed."
+      "result_or_gap": "Code/manuscript/third-party rights separated. Current article cites prior bound/method without reproducing theorem, coordinate table, cube figure or exact-certificate derivation; permissions apply only to actual applicable protected reuse. No publisher acceptance or blanket rights clearance assumed."
     },
     {
       "id": "SOFT-013",
@@ -154,11 +154,11 @@
     },
     {
       "id": "SOFT-017",
-      "disposition": "owner-input",
+      "disposition": "done-disclosure-final-approval",
       "evidence": [
         "overlap.md"
       ],
-      "result_or_gap": "Companion overlap and public priority caveat recorded; actual editorial status and applicable reuse rights remain to be reconciled privately, without assuming acceptance, withdrawal or closure."
+      "result_or_gap": "Related-note version already located privately; exact reuse/distinction and public priority caveat mapped. Approve truthful actual-history cover disclosure; current editorial status may remain unconfirmed. Closure, withdrawal or contact is not an established JoH prerequisite."
     },
     {
       "id": "SOFT-018",
@@ -167,7 +167,7 @@
         "cover-letter.md",
         "overlap.md"
       ],
-      "result_or_gap": "Unsent cover letter now contains supplied identity/funding/roles and tool disclosure. Companion rights/editorial reconciliation, fresh exclusivity and final sending approval remain."
+      "result_or_gap": "Unsent cover letter contains supplied identity/funding/roles and tool disclosure. Approve accurate related-note history/overlap, current-JoH-work exclusivity and the final sending action; no mandatory closure/contact requirement for the distinct note."
     },
     {
       "id": "SOFT-019",

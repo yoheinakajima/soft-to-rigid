@@ -1,4 +1,4 @@
-\begin{thebibliography}{64}
+\begin{thebibliography}{63}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -321,26 +321,19 @@ Hossein Mobahi and John~W. Fisher~III.
   Intelligence}, pages 1205--1211, 2015.
 \newblock \doi{10.1609/aaai.v29i1.9356}.
 
-\bibitem[Nakajima(2026{\natexlab{a}})]{nakajima12}
-Yohei Nakajima.
-\newblock Twelve unit cubes in a cube of side 2.93152.
-\newblock Submitted to Geombinatorics; code and certificate at
-  \url{https://github.com/yoheinakajima/soft-to-rigid-packing},
-  doi:10.5281/zenodo.23248095, 2026{\natexlab{a}}.
-
-\bibitem[Nakajima(2026{\natexlab{b}})]{prioritycontext2026}
+\bibitem[Nakajima(2026{\natexlab{a}})]{prioritycontext2026}
 Yohei Nakajima.
 \newblock Public build log: twelve-cube packing priority caveat.
-\newblock \url{https://yohei.me/}, 2026{\natexlab{b}}.
+\newblock \url{https://yohei.me/}, 2026{\natexlab{a}}.
 \newblock Entry dated 8 October; observed 2 November 2026. Priority attribution
   unresolved.
 
-\bibitem[Nakajima(2026{\natexlab{c}})]{softtorigidpacking}
+\bibitem[Nakajima(2026{\natexlab{b}})]{softtorigidpacking}
 Yohei Nakajima.
 \newblock soft-to-rigid-packing: code and certificate for 12 unit cubes in a
   cube.
 \newblock \url{https://github.com/yoheinakajima/soft-to-rigid-packing},
-  2026{\natexlab{c}}.
+  2026{\natexlab{b}}.
 \newblock doi:10.5281/zenodo.23248095.
 
 \bibitem[Novikov et~al.(2025)Novikov, V{\~u}, Eisenberger, Dupont, Huang,

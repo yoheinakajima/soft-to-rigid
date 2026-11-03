@@ -23,7 +23,7 @@ and two classical baselines on rigid pieces: \textbf{sa}, Metropolis simulated a
 \[
 E=\sum_{i<j}\big(2r-\operatorname{sd}_{ij}\big)_+^2+\sum_{i}\sum_{v}\big(\text{wall violation of }v\big)_+^2+\mu L,
 \]
-where $r=\gamma\tau\rho$, $\operatorname{sd}_{ij}$ is the signed distance between the cores (exact vertex--edge distance when apart, minus the separating-axis penetration depth when overlapping) and $v$ ranges over core vertices. The term $\mu L$ is inward pressure. Positions, angles and $L$ follow momentum gradient descent with analytic gradients and decaying Gaussian noise. In 3D the same holds for cubes with quaternion orientations and the 15-axis separating test \citep{nakajima12}.
+where $r=\gamma\tau\rho$, $\operatorname{sd}_{ij}$ is the signed distance between the cores (exact vertex--edge distance when apart, minus the separating-axis penetration depth when overlapping) and $v$ ranges over core vertices. The term $\mu L$ is inward pressure. Positions, angles and $L$ follow momentum gradient descent with analytic gradients and decaying Gaussian noise. In 3D the same holds for cubes with quaternion orientations and the 15-axis separating test \citep{softtorigidpacking}.
 
 \begin{figure}[t]
 \centering\fbox{\begin{minipage}{0.92\linewidth}\small
