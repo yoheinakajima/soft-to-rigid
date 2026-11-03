@@ -1,8 +1,7 @@
-\scriptsize
-\begin{longtable}{lllrllll}
-\caption{Plan-specified sign comparisons and descriptive two-sided values. H: hardening; R: rigid; G: grow. Counts are first versus second discordants.}\label{tab:registered}\\
-\toprule campaign & comparison/scope & endpoint & counts & sides & registered $p$ & $p_2$ & result\\\midrule\endfirsthead
-\toprule campaign & comparison/scope & endpoint & counts & sides & registered $p$ & $p_2$ & result\\\midrule\endhead
+\begin{table}[p]\centering\scriptsize\setlength{\tabcolsep}{3pt}
+\caption{Plan-specified sign comparisons and descriptive two-sided values. H: hardening; R: rigid; G: grow. Counts are first versus second discordants.}\label{tab:registered}
+\resizebox{\linewidth}{!}{\begin{tabular}{lllrllll}
+\toprule campaign & comparison/scope & endpoint & counts & sides & plan $p$ & $p_2$ & result\\\midrule
 C04 & H vs grow & reached & 11:9 & 1 & 0.411901 & 0.823803 & ND\\
 C04 & H vs R & reached & 7:18 & 1 & 0.992683 & 0.0432853 & ND\\
 C04 & H vs sa & reached & 57:5 & 1 & 1.53276e-12 & 3.06553e-12 & first\\
@@ -37,5 +36,5 @@ C13 & R long vs base & size & 5:0 & 2 & -- & 0.0625 & ND\\
 C15 & pilot vs R & size & 2:3 & 2 & 1 & 1 & ND\\
 C16 & H vs R, all & size & 6:0 & 2 & 0.03125 & 0.03125 & first\\
 C16 & H vs R, new only & size & 3:0 & 2 & -- & 0.25 & ND\\
-\bottomrule\end{longtable}
-\normalsize
+\bottomrule\end{tabular}}
+\end{table}\FloatBarrier

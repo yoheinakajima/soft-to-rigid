@@ -56,13 +56,13 @@ read('campaigns/C16-squares-long/plan.json');q=abl['C16-squares-long']['harden_v
 q=abl['C16-squares-long']['harden_vs_rigid_new_only'];add('C16','H vs R, new only','size',q['a_lower'],q['b_lower'],2,'11; descriptive exclusion',registered=False)
 # No inference over a random benchmark population or multiplicity adjustment implied.
 (O/'registered-tests.json').write_text(json.dumps({'basis':'fixed saved counts and plans; exact combinatorics, not new runs','tests':checks},indent=2)+'\n')
-tex=[r'\scriptsize',r'\begin{longtable}{lllrllll}',r'\caption{Plan-specified sign comparisons and descriptive two-sided values. H: hardening; R: rigid; G: grow. Counts are first versus second discordants.}\label{tab:registered}\\',r'\toprule campaign & comparison/scope & endpoint & counts & sides & registered $p$ & $p_2$ & result\\\midrule\endfirsthead',r'\toprule campaign & comparison/scope & endpoint & counts & sides & registered $p$ & $p_2$ & result\\\midrule\endhead']
+tex=[r'\begin{table}[p]\centering\scriptsize\setlength{\tabcolsep}{3pt}',r'\caption{Plan-specified sign comparisons and descriptive two-sided values. H: hardening; R: rigid; G: grow. Counts are first versus second discordants.}\label{tab:registered}',r'\resizebox{\linewidth}{!}{\begin{tabular}{lllrllll}',r'\toprule campaign & comparison/scope & endpoint & counts & sides & plan $p$ & $p_2$ & result\\\midrule']
 for q in checks:
  label=q['comparison']
  if q['campaign']in['C11','C12']:label=q['scope']
  label=label.replace('harden','H').replace('rigid','R').replace('longer vs','long vs').replace('squ-in-','sq/').replace('tri-in-','tri/').replace('hex-in-','hex/').replace('cir-in-','disk/')
  tex.append(f"{q['campaign']} & {label} & {q['endpoint']} & {q['a']}:{q['b']} & {q['sides']} & {fmt(q['registered_p']) if q['registered_p'] is not None else '--'} & {fmt(q['two_sided_p'])} & "+('first'if (q['registered_p'] if q['registered_p'] is not None else q['two_sided_p'])<.05 and q['a']>q['b']else'second'if (q['registered_p'] if q['registered_p'] is not None else q['two_sided_p'])<.05 and q['b']>q['a']else'ND')+r'\\')
-tex+=[r'\bottomrule\end{longtable}',r'\normalsize']
+tex+=[r'\bottomrule\end{tabular}}',r'\end{table}\FloatBarrier']
 (J/'registered-tests.tex').write_text('\n'.join(tex)+'\n')
 stats=read('analysis/stats.json');refs=read('analysis/reference_budget.json');diag=[]
 for m in ['sa','pc']:
@@ -71,7 +71,7 @@ for m in ['sa','pc']:
 (O/'budget-ratios.json').write_text(json.dumps(diag,indent=2)+'\n')
 # Figure from saved empirical curves, via native LaTeX picture primitives only.
 # No dependency installation and no experimental engine or statistics bootstrap.
-lines=[r'\documentclass{article}',r'\usepackage[paperwidth=7.2in,paperheight=1.65in,margin=0.03in]{geometry}',r'\usepackage{fontspec,graphicx,xcolor}',r'\setmainfont{Times New Roman}',r'\pagestyle{empty}\setlength{\parindent}{0pt}',r'\begin{document}\setlength{\unitlength}{1pt}\begin{picture}(512,112)',r'\put(7,55){\rotatebox{90}{\makebox(0,0){\fontsize{7}{8}\selectfont Share of subsets reaching catalogue}}}']
+lines=[r'\documentclass{article}',r'\usepackage[paperwidth=7.2in,paperheight=1.65in,margin=0.03in]{geometry}',r'\usepackage{fontspec,graphicx,xcolor}',r'\setmainfont{Times New Roman}',r'\pagestyle{empty}\setlength{\parindent}{0pt}',r'\begin{document}\setlength{\unitlength}{1pt}\begin{picture}(512,112)',r'\put(7,55){\rotatebox{90}{\makebox(0,0){\fontsize{7}{8}\selectfont Share reaching catalogue}}}']
 colors={'harden':'orange!80!black','rigid':'blue!60!black','grow':'green!45!black'}
 for i,(key,curves)in enumerate(stats['best_of_k']['curves'].items()):
  x0=30+i*80;y0=23;w=68;h=65
@@ -90,6 +90,6 @@ for i,(key,curves)in enumerate(stats['best_of_k']['curves'].items()):
 lines.append(r'\put(250,3){\makebox(0,0){\fontsize{7}{8}\selectfont subset size $k$ (observed pool: 32 runs)}}')
 for i,m in enumerate(colors):lines.append(f'\\put({360+i*49},105){{{{\\color{{{colors[m]}}}\\fontsize{{6}}{{7}}\\selectfont {m}}}}}')
 lines +=[r'\end{picture}\end{document}']
-(J/'figures/bestofk.tex').write_text('\n'.join(lines)+'\n')
+(J/'figures/bestofk.tex').write_text('\n'.join(line+'%' for line in lines)+'\n')
 (O/'review-analysis-inputs.json').write_text(json.dumps({'source_base':'07e3cbd3c4855e5e19344885fbf672c3d7a0f039','files':[{'path':p,'sha256':h}for p,h in sorted(inputs.items())]},indent=2)+'\n')
 print(json.dumps({'tests':len(checks),'inputs':len(inputs),'budgets':diag},indent=2))
