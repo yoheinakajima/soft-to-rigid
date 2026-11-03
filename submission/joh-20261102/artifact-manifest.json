@@ -2,7 +2,7 @@
   "source_base": "07e3cbd3c4855e5e19344885fbf672c3d7a0f039",
   "branch": "codex/joh-prep-20261102",
   "observed_on": "2026-11-02 America/Los_Angeles",
-  "state": "reviewable journal draft and evidence packet; not submitted",
+  "state": "reviewable journal candidate and evidence packet; unsubmitted and pending final author approval",
   "files": [
     {
       "path": "paper/joh-20261102/ablations.tex",
@@ -61,13 +61,13 @@
     },
     {
       "path": "paper/joh-20261102/main.pdf",
-      "sha256": "075da1ccd2e028aa475917ae518ac4f0aec5366c9e5865bfa808ad0e764e4c4a",
-      "bytes": 457563
+      "sha256": "132df131e5371692e8fafbfc47cd255933053a44094640e2c7d55e0300322776",
+      "bytes": 456901
     },
     {
       "path": "paper/joh-20261102/main.tex",
-      "sha256": "7728d1d7a312bacdc5a23ba9bfd82af86a55998597321f826c241ff63863f5cc",
-      "bytes": 6220
+      "sha256": "ca21b4ac70e5ab5c20b0abe8c65fb5860b3d0f4a51148d650d45b9ab68410c93",
+      "bytes": 5696
     },
     {
       "path": "paper/joh-20261102/mechanism.tex",
@@ -116,8 +116,8 @@
     },
     {
       "path": "paper/joh-20261102/sections/learned.tex",
-      "sha256": "f62c8df4a06ad90968ce46b7df568ba123cb962ebed828e8fbe8523edf82dfad",
-      "bytes": 13293
+      "sha256": "8c83129b65c47d518caeaacbebb2ec2e751f0ff78b7549f872c6ec225ddf827e",
+      "bytes": 13267
     },
     {
       "path": "paper/joh-20261102/sections/limits.tex",
@@ -151,13 +151,13 @@
     },
     {
       "path": "paper/joh-20261102/supplement.pdf",
-      "sha256": "68f56a8090b9b1154c854d0a865be1a59286621e625769edfdad86ae542b681b",
-      "bytes": 91953
+      "sha256": "da34e4ab4e12e41c9a89b801e7983daf9d000ec67de7abed553282ff00053640",
+      "bytes": 91493
     },
     {
       "path": "paper/joh-20261102/supplement.tex",
-      "sha256": "1befc563553bab6433af3d74164d388ef353be71cb0bff1cf5736dfd314db8d5",
-      "bytes": 9712
+      "sha256": "128f24aee798fbf5d80dab8e3db7d30ace1e39f56d02441e875d1d7cf3a8d70f",
+      "bytes": 9224
     },
     {
       "path": "paper/joh-20261102/tables/C04-breadth.tex",
@@ -221,8 +221,8 @@
     },
     {
       "path": "submission/joh-20261102/README.md",
-      "sha256": "bef9562b3009bafd604fc866f934821579fb025764c31069803c56ba00396747",
-      "bytes": 5011
+      "sha256": "2ddc31df8d6e2aa8d0c43f9f27aac546a098ac7d09baaf1b9359753ece095869",
+      "bytes": 5310
     },
     {
       "path": "submission/joh-20261102/audit.md",
@@ -246,8 +246,8 @@
     },
     {
       "path": "submission/joh-20261102/joh-review-sources.tar.gz",
-      "sha256": "34b192e89084a41b3b5b079ef2523aac3afff732a11583289ec94d11affa8af4",
-      "bytes": 251188
+      "sha256": "a119f97adf518837d2715aaa2e06a44003860cf3a1d52ef19ff5989c92466ab4",
+      "bytes": 250606
     },
     {
       "path": "submission/joh-20261102/overlap.md",
@@ -266,8 +266,8 @@
     },
     {
       "path": "submission/joh-20261102/task-disposition.json",
-      "sha256": "374a6198170e0e1b6ef9d5becd53643c4a1432e544a49d7fa9dedab4ecd5ee15",
-      "bytes": 8329
+      "sha256": "63325beb5b616391ed274c916e9bba29eb5e6245eaf3d7876dd266953697dad6",
+      "bytes": 8443
     },
     {
       "path": "submission/joh-20261102/tool-provenance.json",
@@ -291,8 +291,8 @@
     },
     {
       "path": "submission/joh-20261102/verification/pdf-qa.json",
-      "sha256": "7dff815f328c46620b6d943cdd1d621c08e8dac1d0d753d0908cf6dd627964a9",
-      "bytes": 1524
+      "sha256": "404641ab800baa79af4026bef1595ee76609851e74a1df4ff54f46b3cb0453dc",
+      "bytes": 2300
     },
     {
       "path": "submission/joh-20261102/verification/report.json",

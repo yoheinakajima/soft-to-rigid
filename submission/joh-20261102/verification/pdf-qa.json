@@ -4,7 +4,7 @@
   "pdfs": [
     {
       "path": "paper/joh-20261102/main.pdf",
-      "sha256": "075da1ccd2e028aa475917ae518ac4f0aec5366c9e5865bfa808ad0e764e4c4a",
+      "sha256": "132df131e5371692e8fafbfc47cd255933053a44094640e2c7d55e0300322776",
       "pages": 22,
       "overfull_boxes": 0,
       "undefined_references": 0,
@@ -13,7 +13,7 @@
     },
     {
       "path": "paper/joh-20261102/supplement.pdf",
-      "sha256": "68f56a8090b9b1154c854d0a865be1a59286621e625769edfdad86ae542b681b",
+      "sha256": "da34e4ab4e12e41c9a89b801e7983daf9d000ec67de7abed553282ff00053640",
       "pages": 3,
       "overfull_boxes": 0,
       "undefined_references": 0,
@@ -22,8 +22,45 @@
     }
   ],
   "visual_status": "PASS: no clipping, overlap, missing glyphs, broken tables or unresolved references observed",
-  "scope": "All 22 manuscript and 3 supplement pages inspected in contact sheets; full-page title/metadata, funding/conflicts/AI declarations and SI evidence/availability pages inspected after the author update. Final approval and companion editorial/rights gates remain explicit.",
+  "scope": "All 22 manuscript and 3 supplement pages inspected in contact sheets after candidate hygiene; full-page inspection of manuscript 1, 14, 16, 17 and supplement 1, 3. Text comparison identifies reflow/edits on manuscript pages 1–19 and supplement pages 1–3; manuscript appendix pages 20–22 have unchanged text. No clipping, overlap or orphan closing page observed.",
   "build_tool": "existing Tectonic 0.16.9, cached resources only; no TeX installation",
   "environment_limit": "Times New Roman and Arial are system fonts; portability requires those fonts or reviewed replacements. All PDF fonts embedded.",
-  "scientific_limit": "Visual QA does not establish external scientific review, rights clearance or original-contact feasibility certificates."
+  "scientific_limit": "Visual QA does not establish external scientific review, rights clearance or original-contact feasibility certificates.",
+  "candidate_hygiene": {
+    "operational_status_location": [
+      "submission/joh-20261102/README.md",
+      "submission/joh-20261102/owner-worksheet.md"
+    ],
+    "main_changed_text_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "supplement_changed_text_pages": [
+      1,
+      2,
+      3
+    ],
+    "preserved_limits": [
+      "scientific inference and witness scope",
+      "human responsibility and AI assistance",
+      "companion editorial status, reuse rights and disputed priority remain unverified"
+    ]
+  }
 }

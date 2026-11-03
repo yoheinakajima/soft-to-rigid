@@ -2,7 +2,7 @@
 
 **Reviewable draft; not submitted.** Prepared November 2, 2026 from study commit `07e3cbd3c4855e5e19344885fbf672c3d7a0f039`. The public arXiv v1, original `paper/`, plans/raw results/reports and native ledger remain unchanged. No new campaign, optimizer, paid service or live-model call was used.
 
-The distinct manuscript is [`../../paper/joh-20261102/main.tex`](../../paper/joh-20261102/main.tex) and its compiled PDF; Online Resource 1 is the adjacent `supplement.tex`/PDF. The abstract is 219 whitespace words before macro expansion and has five keywords. Author–year references replace numeric style. The source retains native generated result snapshots and uses a bounded saved-output projection for new SI tables. Approved public author metadata, funding and relevant roles are now included. Final human approval of the exact journal version remains pending.
+The distinct manuscript is [`../../paper/joh-20261102/main.tex`](../../paper/joh-20261102/main.tex) and its compiled PDF; Online Resource 1 is the adjacent `supplement.tex`/PDF. The abstract is 219 whitespace words before macro expansion and has five keywords. Author–year references replace numeric style. The source retains native generated result snapshots and uses a bounded saved-output projection for new SI tables. Approved public author metadata, funding and relevant roles are now included. Final human approval of the exact journal version remains pending. Operational preparation and approval status is recorded here and in the owner worksheet; the manuscript and supplement use ordinary article presentation without readiness banners. Their companion-status, rights, priority and scientific qualifications remain substantive limitations, not clearances.
 
 Read:
 
